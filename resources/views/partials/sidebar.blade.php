@@ -39,6 +39,11 @@
                     </a>
                 </li>
                 <li class="menu-item">
+                    <a href="{{ route('departments.index') }}" class="menu-link">
+                        <div data-i18n="Department">Department</div>
+                    </a>
+                </li>
+                <li class="menu-item">
                     <a href="{{route('activities')}}" class="menu-link">
                         <div data-i18n="Activity">Activity</div>
                     </a>

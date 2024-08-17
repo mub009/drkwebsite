@@ -74,6 +74,7 @@
                 .then(data => {
                     document.getElementById('content-area').innerHTML = data;
                 });
+                window.location.href = this.href;
         }
     </script>
 </body>

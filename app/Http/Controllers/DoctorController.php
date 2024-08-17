@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Department;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -12,14 +12,15 @@ class DoctorController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $query = Doctor::query();
-
+            $query = Doctor::join('departments', 'doctors.designation', '=', 'departments.id')
+                ->select('doctors.*', 'departments.department as department_name');
+    
             return DataTables::of($query)
                 ->addColumn('name', function ($row) {
                     return $row->name;
                 })
                 ->addColumn('designation', function ($row) {
-                    return $row->designation;
+                    return $row->department_name; // Use department name here
                 })
                 ->editColumn('created_at', function ($row) {
                     return $row->created_at->format('Y-m-d H:i:s');
@@ -28,13 +29,13 @@ class DoctorController extends Controller
                     $query->where('name', 'like', "%{$keyword}%");
                 })
                 ->filterColumn('designation', function($query, $keyword) {
-                    $query->where('designation', 'like', "%{$keyword}%");
+                    $query->where('department_name', 'like', "%{$keyword}%"); // Update filter to use department name
                 })
                 ->make(true);
         }
         return view('doctors');
     }
-
+    
     
     public function store(Request $request)
     {
@@ -106,5 +107,22 @@ class DoctorController extends Controller
             'data' => $doctor,
         ]);
     }
+
+   public function getDepartment()
+{
+    try {
+        $departments = Department::select('id', 'department')->get();
+        return response()->json([
+            'status' => true,
+            'data' => $departments
+        ]);
+    } catch (\Throwable $th) {
+        return response()->json([
+            'status' => false,
+            'message' => $th->getMessage(),
+        ], 500);
+    }
+}
+
     
 }

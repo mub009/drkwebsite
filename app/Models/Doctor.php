@@ -10,4 +10,8 @@ class Doctor extends Model
     protected $fillable = [
         'name', 'designation',
     ];
+    public function department()
+    {
+        return $this->belongsTo(Department::class, 'designation');
+    }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\DepartmentController;
 use Illuminate\Support\Facades\Route;
 
 // Registration Routes
@@ -36,6 +37,21 @@ Route::get('/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('docto
 Route::get('/doctors/{id}/update', [DoctorController::class, 'edit'])->name('doctors.update');
 Route::delete('/doctors/{id}/delete', [DoctorController::class, 'destroy'])->name('doctors.destroy');
 Route::get('/doctors/{id}/show', [DoctorController::class, 'show'])->name('doctors.show');
+
+// Department Routes
+Route::get('departments', [DepartmentController::class, 'index'])->name('departments.index');
+Route::post('departments', [DepartmentController::class, 'store'])->name('departments.store');
+Route::resource('departments', DepartmentController::class);
+Route::get('/departments/{id}/edit', [DepartmentController::class, 'edit'])->name('departments.edit');
+Route::get('/departments/{id}/update', [DepartmentController::class, 'edit'])->name('departments.update');
+Route::delete('/departments/{id}/delete', [DepartmentController::class, 'destroy'])->name('departments.destroy');
+Route::get('/departments/{id}/show', [DepartmentController::class, 'show'])->name('departments.show');
+
+
+Route::get('/department', [DoctorController::class, 'getDepartment']);
+
+
+
 
 // Dashboard Route
 Route::get('dashboard', function () {
