@@ -26,7 +26,7 @@ class DepartmentController extends Controller
                 })
                 ->make(true);
         }
-        return view('departments');
+        return view('bankend.departments');
     }
 
     

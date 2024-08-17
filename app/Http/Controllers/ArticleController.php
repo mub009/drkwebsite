@@ -40,7 +40,7 @@ class ArticleController extends Controller
                 })
                 ->make(true);
         }
-        return view('articles');
+        return view('bankend.articles');
     }
 
     

@@ -33,7 +33,7 @@ class DoctorController extends Controller
                 })
                 ->make(true);
         }
-        return view('doctors');
+        return view('bankend.doctors');
     }
     
     
