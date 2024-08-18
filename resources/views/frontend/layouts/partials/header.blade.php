@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="uploads/settings/2022/03/10/20220310174130725093682_settings.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="uploads/settings/2022/03/10/20220310174130725093682_settings.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="uploads/settings/2022/03/10/20220310174130725093682_settings.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/uploads/settings/2022/03/10/20220310174130725093682_settings.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('frontend/uploads/settings/2022/03/10/20220310174130725093682_settings.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/uploads/settings/2022/03/10/20220310174130725093682_settings.png')}}">
     <meta name="title" content=" في مجمعات الدكتور خالد الرحيمي الطبية" />
     <meta name="description" content="في مجمعات د. خالد الرحيمي الطبية، نؤمن أن الطبيب هو العنصر الأبرز في نجاح الخدمة الطبية، لذلك نفخر باستقطاب استشاريين وأخصائيين مؤهلين في كافة التخصصات الطبية" />
     <meta name="keywords" content="" />
     <link rel="canonical" href="https://www.dralruhaimi.com/" />
-    <link rel="stylesheet" href="frontend/css/build.css" rel="preload"/>
-    <link rel="preload" href="frontend/css/build.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="frontend/css/build.css"></noscript>
+    <link rel="stylesheet" href="{{ asset('frontend/frontend/css/build.css')}}" rel="preload"/>
+    <link rel="preload" href="{{ asset('frontend/frontend/css/build.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('frontend/frontend/css/build.css')}}"></noscript>
 
     <title>مرحبا بكم في مجمعات الدكتور خالد الرحيمي الطبية</title>
 <meta name="google-site-verification" content="8ckLqlAuob_Jy79p5FNtLc3s0y7IzYYgk2BHO4Ra3Ho" />
@@ -29,7 +28,7 @@
         <nav class="navbar navbar-expand-xl navbar-light d-flex flex-row w-100">
             <div class="brand-container">
                 <a class="navbar-brand" href="index.php">
-                    <img src="frontend/images/logo.png" alt="logo">
+                    <img src="{{ asset('frontend/frontend/images/logo.png')}}" alt="logo">
                 </a>
                 <div class="mobile-icons">
                     <button class="btn navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarElm" aria-controls="navbarElm"
@@ -56,14 +55,14 @@
                                <li class="list-inline-item">
                                             <a href="https://wa.me/+966920010436" target="_blank" title="Whasapp">
                                                 <div class="top-bar__icon">
-                                                    <img src="frontend/images/icons/social/whatsapp-svg.png" draggable="false" alt="Whasapp" class="socialmedia-icon"/>
+                                                    <img src="{{ asset('frontend/frontend/images/icons/social/whatsapp-svg.png')}}" draggable="false" alt="Whasapp" class="socialmedia-icon"/>
                                                 </div>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
                                             <a href="https://t.snapchat.com/8jM6vxbU" target="_blank" title="snapchat">
                                                 <div class="top-bar__icon">
-                                                    <img src="frontend/images/icons/phone-svg.png" draggable="false" alt="snapchat" class="socialmedia-icon" style="
+                                                    <img src="{{ asset('frontend/frontend/images/icons/phone-svg.png')}}" draggable="false" alt="snapchat" class="socialmedia-icon" style="
     width: 60%;
 "/>
                                                 </div>

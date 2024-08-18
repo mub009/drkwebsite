@@ -1,3 +1,6 @@
+@extends('frontend.layouts.FrontendLayout')
+@section('title', 'Dashborad')
+@section('content')
 <!-- BEGIN :: slider section -->
 <div class="slider">
     <div class="swiper mainSlider">
@@ -6,7 +9,7 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="page/website.webp" draggable="false" alt="رمز الثقة في الرعاية الطبية" loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website.webp')}}" draggable="false" alt="رمز الثقة في الرعاية الطبية" loading="eager">
                     </div>
                     <div class="slider__text main_slider_text">
                         <div class="container pull-center">
@@ -21,7 +24,7 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="page/website2.webp" draggable="false" alt="نوفر لكم أفضل خدمات الأسنان الجلدية و الطبية" loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website2.webp')}}" draggable="false" alt="نوفر لكم أفضل خدمات الأسنان الجلدية و الطبية" loading="eager">
                     </div>
                     <div class="slider__text">
                         <div class="container">
@@ -42,7 +45,7 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="page/website3.webp" draggable="false" alt="نخبة من افضل االستشارٌٌن واالخصائٌٌن فً المنطقة الشرقٌة." loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website3.webp')}}" draggable="false" alt="نخبة من افضل االستشارٌٌن واالخصائٌٌن فً المنطقة الشرقٌة." loading="eager">
                     </div>
                     <div class="slider__text">
                         <div class="container">
@@ -64,7 +67,7 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="page/website4.webp" draggable="false" alt="رعاٌة طبٌة بالجودة العالٌة تحت إشراف طاقم طبً متكامل" loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website4.webp')}}" draggable="false" alt="رعاٌة طبٌة بالجودة العالٌة تحت إشراف طاقم طبً متكامل" loading="eager">
                     </div>
                     <div class="slider__text">
                         <div class="container">
@@ -108,7 +111,7 @@
                     <div class="w-100 d-flex justify-content-between home-statistic-container">
                         <div class="statistic" data-aos="fade-up">
                             <div class="statistic__icon">
-                                <img src="frontend/images/icons/feature-1.svg" alt="نخبة النخبة" alt="doctors" draggable="false" loading="lazy">
+                                <img src="{{ asset('frontend/frontend/images/icons/feature-1.svg')}}" alt="نخبة النخبة" alt="doctors" draggable="false" loading="lazy">
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
@@ -122,7 +125,7 @@
 
                         <div class="statistic" data-aos="fade-up">
                             <div class="statistic__icon">
-                                <img src="frontend/images/icons/feature-2.svg" alt="أفضل الخدمات" alt="doctors" draggable="false" loading="lazy">
+                                <img src="{{ asset('frontend/frontend/images/icons/feature-2.svg')}}" alt="أفضل الخدمات" alt="doctors" draggable="false" loading="lazy">
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
@@ -136,7 +139,7 @@
 
                         <div class="statistic" data-aos="fade-up">
                             <div class="statistic__icon">
-                                <img src="frontend/images/icons/feature-3.svg" alt="walaa" alt="doctors" draggable="false" loading="lazy">
+                                <img src="{{ asset('frontend/frontend/images/icons/feature-3.svg')}}" alt="walaa" alt="doctors" draggable="false" loading="lazy">
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
@@ -150,7 +153,7 @@
 
                         <div class="statistic" data-aos="fade-up">
                             <div class="statistic__icon">
-                                <img src="frontend/images/icons/feature-4.svg" alt="مرافق متكاملة" alt="doctors" draggable="false" loading="lazy">
+                                <img src="{{ asset('frontend/frontend/images/icons/feature-3.svg')}}" alt="مرافق متكاملة" alt="doctors" draggable="false" loading="lazy">
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
@@ -172,7 +175,7 @@
 
         <section class="about d-pad brd-top-rad">
             <div class="container about__container home-about-section">
-                <img class="about__container_img" src="uploads/settings/2022/02/24/01.webp" alt="Dr Khalid Service" alt="about" draggable="false" loading="lazy">
+                <img class="about__container_img" src="{{ asset('frontend/frontend/uploads/settings/2022/02/24/01.webp')}}" alt="Dr Khalid Service" alt="about" draggable="false" loading="lazy">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6">
                         <div class="about__text">
@@ -188,7 +191,7 @@
                         <div class="w-100 d-flex justify-content-between home-statistic-container">
                             <div class="statistic" data-aos="fade-up">
                                 <div class="statistic__icon">
-                                    <img src="frontend/images/icons/feature-1.svg" alt="نخبة النخبة" alt="doctors" draggable="false" loading="lazy">
+                                    <img src="{{ asset('frontend/frontend/images/icons/feature-1.svg')}}" alt="نخبة النخبة" alt="doctors" draggable="false" loading="lazy">
                                 </div>
                                 <div class="statistic__text">
                                     <div class="color-text-secondary">
@@ -202,7 +205,7 @@
 
                             <div class="statistic" data-aos="fade-up">
                                 <div class="statistic__icon">
-                                    <img src="frontend/images/icons/feature-2.svg" alt="أفضل الخدمات" alt="doctors" draggable="false" loading="lazy">
+                                    <img src="{{ asset('frontend/frontend/images/icons/feature-2.svg')}}" alt="أفضل الخدمات" alt="doctors" draggable="false" loading="lazy">
                                 </div>
                                 <div class="statistic__text">
                                     <div class="color-text-secondary">
@@ -216,7 +219,7 @@
 
                             <div class="statistic" data-aos="fade-up">
                                 <div class="statistic__icon">
-                                    <img src="frontend/images/icons/feature-3.svg" alt="walaa" alt="doctors" draggable="false" loading="lazy">
+                                    <img src="{{ asset('frontend/frontend/images/icons/feature-3.svg')}}" alt="walaa" alt="doctors" draggable="false" loading="lazy">
                                 </div>
                                 <div class="statistic__text">
                                     <div class="color-text-secondary">
@@ -230,7 +233,7 @@
 
                             <div class="statistic" data-aos="fade-up">
                                 <div class="statistic__icon">
-                                    <img src="frontend/images/icons/feature-4.svg" alt="مرافق متكاملة" alt="doctors" draggable="false" loading="lazy">
+                                    <img src="{{ asset('frontend/frontend/images/icons/feature-4.svg')}}" alt="مرافق متكاملة" alt="doctors" draggable="false" loading="lazy">
                                 </div>
                                 <div class="statistic__text">
                                     <div class="color-text-secondary">
@@ -396,14 +399,14 @@
 
                         <div class="features-one__box" hidden="">
                             <div class="features-one__box__image">
-                                <img width="121" height="121" src="assets/images/cleenhearts-landing/feature-i-1-1.png">
+                                <img width="121" height="121" src="{{ asset('frontend/assets/images/cleenhearts-landing/feature-i-1-1.png')}}">
                             </div><!-- /.features-one__box__image -->
                             <h3 class="features-one__box__title">Customizer <br>
                                 Kirki Framework</h3><!-- /.features-one__box__title -->
                         </div><!-- /.features-one__box -->
                         <div class="features-one__box" hidden="">
                             <div class="features-one__box__image">
-                                <img width="121" height="121" src="assets/images/cleenhearts-landing/feature-i-1-2.png" alt="Elementor Page Builder">
+                                <img width="121" height="121" src="{{ asset('frontend/assets/images/cleenhearts-landing/feature-i-1-2.png')}}" alt="Elementor Page Builder">
                             </div><!-- /.features-one__box__image -->
                             <h3 class="features-one__box__title">Elementor <br>
                                 Page Builder</h3><!-- /.features-one__box__title -->
@@ -443,7 +446,7 @@
 
                         <div class="features-one__box" hidden="">
                             <div class="features-one__box__image">
-                                <img width="121" height="121" src="assets/images/cleenhearts-landing/feature-i-1-5.png" alt="One Click
+                                <img width="121" height="121" src="{{ asset('frontend/assets/images/cleenhearts-landing/feature-i-1-5.png')}}" alt="One Click
 								Demo Import">
                             </div><!-- /.features-one__box__image -->
                             <h3 class="features-one__box__title">One Click <br>
@@ -734,6 +737,78 @@
     </section>
     <!-- END :: services section -->
 
+    
+
+
+
+
+
+    <div class="container mt-50">
+        <div class="section-title align-items-stretch mb-0">
+            <h2 class="title" data-aos="fade-up">الخدمات</h2>
+            <div>
+                <ul class="nav nav-tabs" id="servicesTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="btn btn-link-secondary active" id="all_services" data-toggle="tab" href="#all_services" role="tab">كل الخدمات</a>
+                    </li>
+
+                    
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="services__tabs" data-aos="fade-up">
+            <div class="tab-content" id="servicesTabContent">
+                <div class="tab-pane fade show active" role="tabpanel">
+                    <div class="swiper servicesSlider">
+                        <div class="swiper-wrapper">
+                                   
+                            @foreach ($article as $item)     
+                            <div class="swiper-slide">
+                                        <a class="service" href="{{route('articleDetails', ['surl' => $item->slug])}}">
+                                            <div class="service__image">
+                                                <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" draggable="false" loading="lazy" />
+                                            </div>
+                                            <div class="service__title">
+                                                <div class="d-flex justify-content-between mt-3 color-text-secondary">
+                                                    <h3 class="h6">{{$item->title}}</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                            </div>
+                            @endforeach
+                                  
+
+
+
+                               
+                                
+                                                                                            </div>
+                        <div class="section-pagination">
+                            <div class="service-pagination"></div>
+                        </div>
+                        <div class="slider-controls">
+                            <div class="swiper-button-next service-next"></div>
+                            <div class="swiper-button-prev service-prev"></div>
+                        </div>
+                    </div>
+                </div>
+
+             
+                
+                                                        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
     <!-- BEGIN :: doctors section -->
     <!-- BEGIN :: doctors section -->
     <section class="doctors d-pad brd-top-rad">
@@ -745,77 +820,30 @@
                 </div>
                 <div class="section-title align-items-stretch mb-0">
                     <h2 class="title" data-aos="fade-up">الأطباء</h2>
-                    <!-- <div>
-                    <ul class="nav nav-tabs" id="doctorsTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="btn btn-link-secondary active"
-                               id="all-tab"
-                               data-toggle="tab"
-                               href="#all_doctors"
-                               role="tab"
-                              >عرض جميع أطباء</a>
-                        </li>
-
-                                                                                    <li class="nav-item" role="presentation">
-                                    <a class="btn btn-link-secondary"
-                                       id="dermadr"
-                                       data-toggle="tab"
-                                       href="#dermadr-tab"
-                                       role="tab">قسم الجلدية</a>
-                                </li>
-                                                            <li class="nav-item" role="presentation">
-                                    <a class="btn btn-link-secondary"
-                                       id="denaldr-tab"
-                                       data-toggle="tab"
-                                       href="#denaldr"
-                                       role="tab"> قسم الاسنان</a>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <a class="btn btn-link-secondary"
-                                       id="platicdr-tab"
-                                       data-toggle="tab"
-                                       href="#platicdr"
-                                       role="tab"> قسم جراحة التجميل</a>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <a class="btn btn-link-secondary"
-                                       id="ophthalmology-tab"
-                                       data-toggle="tab"
-                                       href="#ophthalmology"
-                                       role="tab">قسم العيون</a>
-                                </li>
-
-                               
-
-                                <li class="nav-item" role="presentation">
-                                    <a class="btn btn-link-secondary"
-                                       id="Obstetrics-tab"
-                                       data-toggle="tab"
-                                       href="#Obstetrics"
-                                       role="tab"> قسم النساء و الولادة</a>
-                                </li>
-
-
-                                
-                                                                        </ul>
-                </div> -->
+                    
                 </div>
                 <div class="services__tabs" data-aos="fade-up">
                     <div class="tab-content" id="doctorsTabContent">
-                        <div class="tab-pane fade show active" id="all_doctors" role="tabpanel" aria-labelledby="dental-tab">
+                        <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="dental-tab">
                             <div class="swiper doctorsSlider">
                                 <div class="swiper-wrapper">
-                                    <!-- Dermatologists -->
+                                    
+                                    @foreach ($doctors as $item)
+                                    <div class="swiper-slide">
+                                        <div class="doctor">
+                                        
+                                            <div class="doctor__image">
+                                                <img src="{{asset('images').'/'.$item->image}}" alt="دنيا _ اخصائية الجلدية و التجميل. الليزر " draggable="false" loading="lazy">
+                                            </div>
+                                            <div class="doctor__text">
+                                                <h3 class="h6">{{$item->department_name}}</h3>
+                                                <p>{{$item->name}}</p>
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
 
-                                    <?php
-                                    // require_once "dr/denaldrList.php";
-                                    require_once "dr/dermadrList.php";
-                                    require_once "dr/obstetrics_and_gynaecology_departmentdrList.php";
-                                    require_once "dr/opdrList.php";
-                                    require_once "dr/platicdrList.php";
-                                    ?>
 
                                 </div>
                                 <div class="section-pagination">
@@ -828,13 +856,7 @@
                             </div>
                         </div>
 
-                        <?php
-                        require_once "dr/dermadr.php";
-                        require_once "dr/denaldr.php";
-                        require_once "dr/obstetrics_and_gynaecology_departmentdr.php";
-                        require_once "dr/opdr.php";
-                        require_once "dr/platicdr.php";
-                        ?>
+                       
                     </div>
 
                 </div>
@@ -995,3 +1017,4 @@
             </div>
         </div>
     </section>
+@endsection

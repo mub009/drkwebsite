@@ -1,0 +1,7 @@
+<svg id="feature-2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <path id="Path_107" data-name="Path 107" d="M0,0H40V40H0Z" fill="none"/>
+  <path id="Path_108" data-name="Path 108" d="M11.667,5H8.333A3.333,3.333,0,0,0,5,8.333v20a3.333,3.333,0,0,0,3.333,3.333H25a3.333,3.333,0,0,0,3.333-3.333v-20A3.333,3.333,0,0,0,25,5H21.667" transform="translate(3.333 3.333)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <rect id="Rectangle_114" data-name="Rectangle 114" width="10" height="6.667" rx="2" transform="translate(15 5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <line id="Line_2" data-name="Line 2" x2="6.667" transform="translate(16.667 23.333)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <line id="Line_3" data-name="Line 3" y2="6.667" transform="translate(20 20)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</svg>
