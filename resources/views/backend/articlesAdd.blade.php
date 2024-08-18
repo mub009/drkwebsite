@@ -107,8 +107,19 @@ document.getElementById('content').value = snowEditor.root.innerHTML;
      contentType: false,
      success: function(response) {
          if (response.status) {
-             showAlert(response.message, 'success', 'alert-box');
-             sessionStorage.setItem('addMessage', 'Article created successfully!');
+             Swal.fire({
+              title: 'Good job!',
+              text: 'Article created successfully!',
+              icon: 'success',
+              customClass: {
+                confirmButton: 'btn btn-primary waves-effect waves-light'
+              },
+              buttonsStyling: false
+            }).then(() => {
+              setTimeout(() => {
+                window.location.href = "{{route('articles.index')}}"; // Replace with the URL of the page you want to redirect to
+              }, 0); // 2000 milliseconds = 2 seconds
+            });
             // location.reload(); 
          } else {
              console.log('Error saving article: ' + response.message);

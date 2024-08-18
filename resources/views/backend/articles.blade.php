@@ -55,8 +55,6 @@ https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@43.0.0/build/cked
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-
 
 <script>
     $(document).ready(function() {
@@ -90,7 +88,7 @@ $('#addnewArticle').on('click', function() {
 var table = $('#articles-table').DataTable({
  processing: true,
  serverSide: true,
- ajax: baseUrl + '/articles',
+ ajax: '{{route('articles.dataTablesForArticles')}}',
  columns: [
      { data: 'title', name: 'title' },
      {

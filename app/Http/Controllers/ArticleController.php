@@ -9,39 +9,41 @@ use Yajra\DataTables\DataTables;
 class ArticleController extends Controller
 {
     
-    public function index(Request $request)
+    public function index()
     {
-        if ($request->ajax()) {
-            $query = Article::query();
-
-            return DataTables::of($query)
-                ->addColumn('title', function ($row) {
-                    return $row->title;
-                })
-                ->addColumn('image', function ($row) {
-                    if ($row->image) {
-                        return $imageUrl = asset('images/' . $row->image); // Ensure this path is correct
-
-                    } else {
-                        return 'No Image';
-                    }
-                })
-                ->addColumn('content', function ($row) {
-                    return $row->content;
-                })
-                ->editColumn('created_at', function ($row) {
-                    return $row->created_at->format('Y-m-d H:i:s');
-                })
-                ->filterColumn('title', function($query, $keyword) {
-                    $query->where('title', 'like', "%{$keyword}%");
-                })
-                ->filterColumn('content', function($query, $keyword) {
-                    $query->where('content', 'like', "%{$keyword}%");
-                })
-                ->make(true);
-        }
         return view('backend.articles');
     }
+public function dataTablesForArticles(Request $request){
+    if ($request->ajax()) {
+        $query = Article::query();
+
+        return DataTables::of($query)
+            ->addColumn('title', function ($row) {
+                return $row->title;
+            })
+            ->addColumn('image', function ($row) {
+                if ($row->image) {
+                    return $imageUrl = asset('images/' . $row->image); // Ensure this path is correct
+
+                } else {
+                    return 'No Image';
+                }
+            })
+            ->addColumn('content', function ($row) {
+                return $row->content;
+            })
+            ->editColumn('created_at', function ($row) {
+                return $row->created_at->format('Y-m-d H:i:s');
+            })
+            ->filterColumn('title', function($query, $keyword) {
+                $query->where('title', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('content', function($query, $keyword) {
+                $query->where('content', 'like', "%{$keyword}%");
+            })
+            ->make(true);
+    }
+}
 public function addArticles()
     {
         return view('backend.articlesAdd');

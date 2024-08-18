@@ -12,12 +12,15 @@ class DoctorController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $query = Doctor::join('departments', 'doctors.designation', '=', 'departments.id')
+            $query = Doctor::join('departments', 'doctors.departmentId', '=', 'departments.id')
                 ->select('doctors.*', 'departments.department as department_name');
     
             return DataTables::of($query)
                 ->addColumn('name', function ($row) {
                     return $row->name;
+                })
+                ->addColumn('image', function ($row) {
+                    return $row->image; // Use department name here
                 })
                 ->addColumn('designation', function ($row) {
                     return $row->department_name; // Use department name here
@@ -33,7 +36,7 @@ class DoctorController extends Controller
                 })
                 ->make(true);
         }
-        return view('bankend.doctors');
+        return view('backend.doctors');
     }
     
     
@@ -41,11 +44,17 @@ class DoctorController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'designation' => 'required|string',
+            'departmentId' => 'required',
         ]);
-
-        Doctor::create($request->all());
-
+        $doctor = new Doctor;
+        if ($request->hasFile('image')) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $doctor->image = $imageName;
+        }
+        $doctor->name=$request->name;
+        $doctor->departmentId=$request->departmentId;
+        $doctor->save();
         return response()->json(['status' => true, 'message' => 'Doctor created successfully']);
     }
 
@@ -73,7 +82,7 @@ class DoctorController extends Controller
 
         $request->validate([
             'name' => 'required|string|max:255',
-            'designation' => 'required|string',
+            'departmentId' => 'required',
         ]);
 
         $doctor->update($request->all());

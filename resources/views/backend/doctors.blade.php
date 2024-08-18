@@ -33,9 +33,14 @@
                                                     <label for="name" class="form-label">Name</label>
                                                     <input type="text" class="form-control" id="name" name="name" value="Dr." required>
                                                 </div>
+
                                                 <div class="mb-3">
-    <label for="designation" class="form-label">Department</label>
-    <select class="form-control" id="designation" name="designation" required>
+                                                    <label for="image" class="form-label">Doctor Profile</label>
+                                                    <input type="file" class="form-control" id="image" name="image"  accept="image/*">
+                                                </div>
+                                                <div class="mb-3">
+    <label for="departmentId" class="form-label">Department</label>
+    <select class="form-control" id="departmentId" name="departmentId" required>
         <option value="">Select a Department</option>
        
        
@@ -57,6 +62,7 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
+                                        <th>Image</th>
                                         <th>Designation</th>
                                         <th>Created_at</th>
                                         <th>Actions</th>
@@ -100,6 +106,11 @@
     ajax: baseUrl + '/doctors',
     columns: [
         { data: 'name', name: 'name' },
+        { data: 'image', name: 'image',
+        render: function (data, type, row) {
+            console.log(row);
+                return `<img src="{{asset('images/').'/'}}`+row.image+`" alt="Doctor Image" style="width:50px;height:50px;object-fit:cover;"/>`;
+            }},
         { data: 'designation', name: 'designation' },
         { data: 'created_at', name: 'created_at' },
         {
@@ -186,11 +197,14 @@
     if (formMethod === 'PUT') {
         $(this).append('<input type="hidden" name="_method" value="PUT">');
     }
+    var formData = new FormData(this);
 
     $.ajax({
         url: formAction,
         method: formMethod,
-        data: $(this).serialize(),
+        data: formData,
+        processData: false,
+        contentType: false,
         success: function(response) {
             if (response.status) {
                 showAlert(response.message, 'success', 'alert-box');
@@ -244,7 +258,7 @@
         method: 'GET',
         success: function(response) {
             if (response.status) {
-                var dropdown = $('#designation');
+                var dropdown = $('#departmentId');
                 dropdown.empty();
                 dropdown.append('<option value="" selected disabled>Select Department</option>');
                 $.each(response.data, function(index, department) {

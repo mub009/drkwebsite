@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
     // Article Routes
     Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
     Route::post('articles/store', [ArticleController::class, 'store'])->name('articles.store');
+    Route::get('articles/dataTablesForArticles', [ArticleController::class, 'dataTablesForArticles'])->name('articles.dataTablesForArticles');
    // Route::resource('articles', ArticleController::class);
     Route::get('/articles/{id}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
     Route::get('/articles/addArticles', [ArticleController::class, 'addArticles'])->name('articles.add');
