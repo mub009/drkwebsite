@@ -1,4 +1,4 @@
-@extends('bankend.layouts.backendLayout')
+@extends('backend.layouts.backendLayout')
 @section('title', 'Departments')
 @section('content')          
                 <div class="container">

@@ -1,5 +1,5 @@
 <!-- resources/views/home.blade.php -->
-@extends('bankend.layouts.backendLayout')
+@extends('backend.layouts.backendLayout')
 
 @section('title', 'Dashborad')
 
@@ -14,53 +14,14 @@ https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@43.0.0/build/cked
             <h1 class="card-title">Articles</h1>
             <!-- Button to Open the Modal -->
             <div class="d-flex justify-content-end mb-3">
-                <button type="button" class="btn btn-primary" id="addnewArticle" data-bs-toggle="modal" data-bs-target="#addArticleModal">
+                <a href="{{route('articles.add')}}"><button type="button" class="btn btn-primary">
                     Add New Article
-                </button>
+                </button></a>
             </div>
             <div class="alert alert-dismissible fade show" role="alert" id="alert-box1" style="display: none;">
                                 <span id="alert-message"></span>
                             </div>
-            <!-- Modal for Adding New Article -->
-            <div class="modal fade" id="addArticleModal" tabindex="-1" aria-labelledby="addArticleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="addArticleModalLabel">Add New Article</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form id="addArticleForm" action="{{ route('articles.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <input type="hidden" name="_method" value="POST">
-                            <div class="alert alert-dismissible fade show" role="alert" id="alert-box" style="display: none;">
-                                <span id="alert-message"></span>
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">Title</label>
-                                    <input type="text" class="form-control" id="title" name="title" required>
-                                </div>
-                                <div class="mb-3" id="thumbnailImg">
-                                    <label for="image" class="form-label">Thumbnail Image</label>
-                                    <input type="file" class="form-control" id="image" name="image">
-                                </div>
-                                <div class="mb-3" id="imgdiv" style="display: none;">
-                                    <img id="articleImage" src="" alt="" width="100px" height="100px" >
-                                    
-                                </div>
-                                <div class="mb-3">
-                                    <label for="content" class="form-label">Content</label>
-                                    <textarea class="form-control" id="content" name="content" required></textarea>
-                                </div>
-                            </div>
-                            <div class="modal-footer" id="button">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" id="saveBtn" class="btn btn-primary">Save Article</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    
 
             <!-- Articles Table -->
             <table class="table table-bordered mt-4" id="articles-table">

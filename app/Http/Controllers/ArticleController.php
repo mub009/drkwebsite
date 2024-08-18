@@ -40,34 +40,33 @@ class ArticleController extends Controller
                 })
                 ->make(true);
         }
-        return view('bankend.articles');
+        return view('backend.articles');
     }
-
+public function addArticles()
+    {
+        return view('backend.articlesAdd');
+    }
     
-    public function store(Request $request)
+public function store(Request $request)
 {
     try {
         $request->validate([
             'title' => 'required|string|max:255',
-            'content' => 'required|string',
+            // 'content' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
-
         $article = new Article;
         $article->title = $request->title;
         $article->content = $request->content;
-
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('images'), $imageName);
             $article->image = $imageName;
         }
-
         $article->save();
-
         return response()->json(['status' => true, 'message' => 'Article created successfully.']);
     } catch (\Exception $e) {
-        return response()->json(['status' => false, 'message' => $e->getMessage()], 1000);
+        return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
     }
 }
 

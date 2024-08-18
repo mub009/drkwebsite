@@ -1,0 +1,124 @@
+<!-- resources/views/home.blade.php -->
+@extends('backend.layouts.backendLayout')
+
+@section('title', 'Dashborad')
+
+@section('content')
+
+<link rel="stylesheet" href="{{ asset('assets/vendor/libs/quill/katex.css')}}" />
+<link rel="stylesheet" href="{{ asset('assets/vendor/libs/quill/editor.css')}}" />
+
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="row">
+        
+        <!-- Snow Theme -->
+        <div class="col-12">
+          <div class="card mb-6">
+            <h5 class="card-header">Add Article</h5>
+            <div class="card-body">
+                <form id="addArticleForm"  method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="mb-3" id="thumbnailImg">
+                    <label for="image" class="form-label">Thumbnail Image</label>
+                    <input type="file" class="form-control" id="image" name="image"  accept="image/*">
+                </div>
+                <div class="mb-3" id="imgdiv" style="display: none;">
+                    <img id="articleImage" src="" alt="" width="100px" height="100px" >
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Article</label>
+                    <div id="snow-toolbar">
+               
+                <span class="ql-formats">
+                  <select class="ql-font"></select>
+                  <select class="ql-size"></select>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-bold"></button>
+                  <button class="ql-italic"></button>
+                  <button class="ql-underline"></button>
+                  <button class="ql-strike"></button>
+                </span>
+                <span class="ql-formats">
+                  <select class="ql-color"></select>
+                  <select class="ql-background"></select>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-script" value="sub"></button>
+                  <button class="ql-script" value="super"></button>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-header" value="1"></button>
+                  <button class="ql-header" value="2"></button>
+                  <button class="ql-blockquote"></button>
+                  <button class="ql-code-block"></button>
+                </span>
+              </div>
+              <div id="snow-editor">
+               </div>
+              </div>
+              <div class="row justify-content-end">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+              </div>
+              
+              <input type="hidden" name="content" id="content">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
+    <script src="{{ asset('assets/vendor/libs/quill/katex.js')}}"></script>
+    <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
+ 
+
+<script>
+$(document).ready(function () {
+const snowEditor = new Quill('#snow-editor', {
+    bounds: '#snow-editor',
+    modules: {
+      formula: true,
+      toolbar: '#snow-toolbar'
+    },
+    theme: 'snow'
+  });
+    // Submit form
+$('#addArticleForm').on('submit', function(e) {
+document.getElementById('content').value = snowEditor.root.innerHTML;
+ e.preventDefault();
+ var formData = new FormData(this);
+ $.ajax({
+     url: '{{ route('articles.store') }}',
+     type: 'POST',
+     data: formData,
+     processData: false,
+     contentType: false,
+     success: function(response) {
+         if (response.status) {
+             showAlert(response.message, 'success', 'alert-box');
+             sessionStorage.setItem('addMessage', 'Article created successfully!');
+            // location.reload(); 
+         } else {
+             console.log('Error saving article: ' + response.message);
+         }
+     },
+     error: function(xhr) {
+        console.log('Error saving article: ' + (xhr.responseJSON.message || 'Unknown error'));
+     }
+  });
+ });   
+});
+</script>
+@endsection

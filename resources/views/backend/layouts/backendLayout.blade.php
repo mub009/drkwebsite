@@ -5,7 +5,7 @@
   class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path="assets/"
+  data-assets-path="{{ asset('assets/').'/'}}"
   data-template="vertical-menu-template"
   data-style="light">
   <head>
@@ -63,6 +63,11 @@
 
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('assets/js/config.js')}}"></script>
+
+ 
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/sweetalert2/sweetalert2.css')}}" />
+    
+
   </head>
   <script>
     var baseUrl = "{{ url('/') }}";
@@ -75,13 +80,13 @@
 
         <!-- / Menu -->
  
-        @include('bankend.layouts.partials.sidebar')
+        @include('backend.layouts.partials.sidebar')
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
 
   
-    @include('bankend.layouts.partials.topbar')
+    @include('backend.layouts.partials.topbar')
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
@@ -169,5 +174,7 @@
 
     <!-- Page JS -->
     <script src="{{ asset('assets/js/dashboards-analytics.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
+    <script src="{{ asset('assets/js/extended-ui-sweetalert2.js')}}"></script>
   </body>
 </html>

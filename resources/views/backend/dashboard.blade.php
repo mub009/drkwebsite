@@ -1,5 +1,5 @@
 
-@extends('bankend.layouts.backendLayout')
+@extends('backend.layouts.backendLayout')
 
 @section('title', 'Dashborad')
 
