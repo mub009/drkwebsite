@@ -767,7 +767,7 @@
                                    
                             @foreach ($article as $item)     
                             <div class="swiper-slide">
-                                        <a class="service" href="{{route('articleDetails', ['surl' => $item->slug])}}">
+                                        <a class="service" href="{{route('articleDetails', ['surl' => '1'])}}">
                                             <div class="service__image">
                                                 <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" draggable="false" loading="lazy" />
                                             </div>

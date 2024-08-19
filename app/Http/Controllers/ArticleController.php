@@ -13,13 +13,16 @@ class ArticleController extends Controller
     {
         return view('backend.articles');
     }
-public function dataTablesForArticles(Request $request){
+    public function dataTablesForArticles(Request $request){
     if ($request->ajax()) {
         $query = Article::query();
 
         return DataTables::of($query)
-            ->addColumn('title', function ($row) {
-                return $row->title;
+            ->addColumn('title_en', function ($row) {
+                return $row->title_en;
+            })
+            ->addColumn('title_ar', function ($row) {
+                return $row->title_ar;
             })
             ->addColumn('image', function ($row) {
                 if ($row->image) {
@@ -29,17 +32,32 @@ public function dataTablesForArticles(Request $request){
                     return 'No Image';
                 }
             })
-            ->addColumn('content', function ($row) {
-                return $row->content;
+            ->addColumn('article_en', function ($row) {
+                return $row->article_en;
+            })
+            ->addColumn('article_ar', function ($row) {
+                return $row->article_ar;
+            })
+            ->addColumn('slug', function ($row) {
+                return $row->slug;
             })
             ->editColumn('created_at', function ($row) {
                 return $row->created_at->format('Y-m-d H:i:s');
             })
-            ->filterColumn('title', function($query, $keyword) {
-                $query->where('title', 'like', "%{$keyword}%");
+            ->filterColumn('title_en', function($query, $keyword) {
+                $query->where('title_en', 'like', "%{$keyword}%");
             })
-            ->filterColumn('content', function($query, $keyword) {
-                $query->where('content', 'like', "%{$keyword}%");
+            ->filterColumn('title_ar', function($query, $keyword) {
+                $query->where('title_ar', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('article_en', function($query, $keyword) {
+                $query->where('title_ar', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('article_ar', function($query, $keyword) {
+                $query->where('title_ar', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('slug', function($query, $keyword) {
+                $query->where('slug', 'like', "%{$keyword}%");
             })
             ->make(true);
     }
@@ -51,15 +69,22 @@ public function addArticles()
     
 public function store(Request $request)
 {
+   
     try {
         $request->validate([
-            'title' => 'required|string|max:255',
-            // 'content' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+            'title_en' => 'required|string|max:255',
+            'title_ar' => 'required|string|max:255',
+            // 'article_en' => 'required',
+            // 'article_ar' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|required',
+            'slug' => 'required',
         ]);
         $article = new Article;
-        $article->title = $request->title;
-        $article->content = $request->content;
+        $article->title_en = $request->title_en;
+        $article->title_ar = $request->title_ar;
+        $article->article_en = $request->content_en;
+        $article->article_ar = $request->content_ar;
+        $article->slug = $request->slug;
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('images'), $imageName);
@@ -68,6 +93,7 @@ public function store(Request $request)
         $article->save();
         return response()->json(['status' => true, 'message' => 'Article created successfully.']);
     } catch (\Exception $e) {
+        
         return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
     }
 }
@@ -78,17 +104,8 @@ public function store(Request $request)
     public function edit($id)
     {
         $article = Article::find($id);
-        if (!$article) {
-            return response()->json([
-                'status' => false,
-                'message' => 'Article not found',
-            ], 404);
-        }
-
-        return response()->json([
-            'status' => true,
-            'data' => $article,
-        ]);
+    
+        return view('backend.article-edit',compact('article'));
     }
 
    
@@ -98,13 +115,19 @@ public function store(Request $request)
         $article = Article::findOrFail($id);
 
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
+            'title_en' => 'required|string|max:255',
+            'title_ar' => 'required|string|max:255',
+            // 'article_en' => 'required',
+            // 'article_ar' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+            'slug' => 'required',
         ]);
 
-        $article->title = $request->title;
-        $article->content = $request->content;
+        $article->title_en = $request->title_en;
+        $article->title_ar = $request->title_ar;
+        $article->article_en = $request->content_en;
+        $article->article_ar = $request->content_ar;
+        $article->slug = $request->slug;
 
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
@@ -114,11 +137,20 @@ public function store(Request $request)
 
         $article->save();
 
-        return response()->json(['status' => true, 'message' => 'Article updated successfully.']);
+        if ($request->ajax()) {
+            return response()->json(['status' => true, 'message' => 'Article updated successfully.']);
+        } else {
+            return redirect()->route('articles.index')->with('success', 'Article updated successfully.');
+        }
     } catch (\Exception $e) {
-        return response()->json(['status' => false, 'message' => $e->getMessage()], 1000);
+        if ($request->ajax()) {
+            return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
+        } else {
+            return back()->with('error', $e->getMessage());
+        }
     }
 }
+
 
 
 
@@ -136,17 +168,7 @@ public function store(Request $request)
     {
         $article = Article::find($id);
     
-        if (!$article) {
-            return response()->json([
-                'status' => false,
-                'message' => 'Article not found',
-            ], 404);
-        }
-    
-        return response()->json([
-            'status' => true,
-            'data' => $article,
-        ]);
+        return view('backend.article-show',compact('article'));
     }
     
 }
