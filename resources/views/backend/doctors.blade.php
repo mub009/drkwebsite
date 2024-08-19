@@ -39,14 +39,11 @@
                                                     <input type="file" class="form-control" id="image" name="image"  accept="image/*">
                                                 </div>
                                                 <div class="mb-3">
-    <label for="departmentId" class="form-label">Department</label>
-    <select class="form-control" id="departmentId" name="departmentId" required>
-        <option value="">Select a Department</option>
-       
-       
-    </select>
-</div>
-
+                                                    <label for="departmentId" class="form-label">Department</label>
+                                                    <select class="form-control" id="departmentId" name="departmentId" required>
+                                                        <option value="">Select a Department</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                             <div class="modal-footer" id="button">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
