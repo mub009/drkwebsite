@@ -18,7 +18,7 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', function () {
-        return view('bankend/dashboard');
+        return view('backend/dashboard');
     })->name('dashboard');
     // Activity Log Routes 
     Route::get('/load-content/activities', [ActivityLogController::class, 'showLogs'])->name('activities');
