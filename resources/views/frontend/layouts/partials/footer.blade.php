@@ -294,7 +294,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="frontend/js/buildHome.js"></script>
+<script src="{{ asset('frontend/frontend/js/buildHome.js')}}"></script>
 <script type='text/javascript'>
     function validateSubContact(tel) {
         var xyz = document.getElementById('subscribeForm').value.trim();

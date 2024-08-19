@@ -6,6 +6,7 @@ use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\FrontEndController;
 use Illuminate\Support\Facades\Route;
 
 // Registration Routes
@@ -52,4 +53,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
+Route::get('/home', [FrontEndController::class, 'home'])->name('home');
+Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
 
