@@ -51,8 +51,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/departments/{id}/show', [DepartmentController::class, 'show'])->name('departments.show');
     Route::get('/department', [DoctorController::class, 'getDepartment']);
 });
-
-
 Route::get('/home', [FrontEndController::class, 'home'])->name('home');
 Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
 
