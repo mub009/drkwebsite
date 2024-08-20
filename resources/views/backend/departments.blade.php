@@ -25,6 +25,8 @@
                     <tr>
                         <th>Department (English)</th>
                         <th>Department (Arabic)</th>
+                        <th>Department Image</th>
+                        <th>Department Details</th>
                         <th>Created At</th>
                         <th>Actions</th>
                     </tr>
@@ -69,6 +71,16 @@ var table = $('#departments-table').DataTable({
     columns: [
         { data: 'department_en', name: 'department_en' },
         { data: 'department_ar', name: 'department_ar' },
+        {
+            data: 'image',
+            name: 'image',
+            orderable: false,
+            searchable: false,
+            render: function(data) {
+                return `<img src="${data}" style="width: 50px; height: auto;">`;
+            }
+        },
+        { data: 'department_details', name: 'department_details' },
         { data: 'created_at', name: 'created_at' },
         {
             data: null,

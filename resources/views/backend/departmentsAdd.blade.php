@@ -29,7 +29,15 @@
                     <label for="department_ar" class="form-label">Department(Arabic)</label>
                     <input type="text" class="form-control" id="department_ar" name="department_ar" required>
                 </div>
-          
+                <div class="mb-3" id="departmentImg">
+                    <label for="image" class="form-label">Department Image</label>
+                    <input type="file" class="form-control" id="image" name="image"  accept="image/*">
+                </div>
+                <div class="mb-3">
+                    <label for="department_details" class="form-label">Department Details</label>
+                    <textarea class="form-control" id="department_details" name="department_details" rows="4" required></textarea>
+                </div>
+
                 <div class="row justify-content-end">
                     <div class="col-sm-6">
                     <button type="submit" class="btn btn-primary">Save</button>

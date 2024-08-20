@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('department_en');
             $table->string('department_ar');
+            $table->string('image')->nullable();
+            $table->string('department_details');
             $table->timestamps();
         });
     }
