@@ -94,9 +94,9 @@ var table = $('#articles-table').DataTable({
             searchable: false,
             render: function(data, type, row) {
                 return `
-                    <button type="button" class="btn btn-info view-article" data-id="${row.id}">View</button>
-                    <button type="button" class="btn btn-warning edit-article" data-id="${row.id}">Edit</button>
-                    <button type="button" class="btn btn-danger delete-article" data-id="${row.id}">Delete</button>
+                    <br><button type="button" class="btn btn-info view-article" data-id="${row.id}"><i class="fa-solid fa-eye"></i></button><br>
+                    <br><button type="button" class="btn btn-warning edit-article" data-id="${row.id}"><i class="fa-solid fa-pen-to-square"></i></button><br>
+                    <br><button type="button" class="btn btn-danger delete-article" data-id="${row.id}"><i class="fa-solid fa-trash"></i></button><br>
                 `;
             }
         }
@@ -128,15 +128,27 @@ $('#articles-table').on('click', '.delete-article', function() {
             },
             success: function(response) {
                 if (response.status) {
-                    alert('Article deleted successfully!');
-                    table.ajax.reload();
-                } else {
-                    alert('Error deleting article: ' + response.message);
-                }
+             Swal.fire({
+              title: 'Good job!',
+              text: 'Article deleted successfully!',
+              icon: 'success',
+              customClass: {
+                confirmButton: 'btn btn-primary waves-effect waves-light'
+              },
+              buttonsStyling: false
+            }).then(() => {
+              setTimeout(() => {
+                window.location.href = "{{route('articles.index')}}"; // Replace with the URL of the page you want to redirect to
+              }, 0); // 2000 milliseconds = 2 seconds
+            });
+            // location.reload(); 
+         } else {
+             console.log('Error deleting article: ' + response.message);
+         }
             },
             error: function(xhr) {
-                alert('Error deleting article: ' + xhr.responseJSON.message);
-            }
+        console.log('Error deleting article: ' + (xhr.responseJSON.message || 'Unknown error'));
+     }
         });
     }
 });

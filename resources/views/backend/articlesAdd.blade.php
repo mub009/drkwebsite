@@ -107,6 +107,7 @@
               <div class="row justify-content-end">
                 <div class="col-sm-6">
                   <button type="submit" class="btn btn-primary">Save</button>
+                  <a href="{{ route('articles.index') }}" class="btn btn-secondary">Cancel</a>
                 </div>
               </div>
               

@@ -6,6 +6,7 @@ use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\FrontEndController;
 use Illuminate\Support\Facades\Route;
 
 // Registration Routes
@@ -37,7 +38,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('doctors', [DoctorController::class, 'store'])->name('doctors.store');
     Route::resource('doctors', DoctorController::class);
     Route::get('/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('doctors.edit');
-    Route::get('/doctors/{id}/update', [DoctorController::class, 'edit'])->name('doctors.update');
+    Route::get('/doctors/{id}/update', [DoctorController::class, 'update'])->name('doctors.update');
     Route::delete('/doctors/{id}/delete', [DoctorController::class, 'destroy'])->name('doctors.destroy');
     Route::get('/doctors/{id}/show', [DoctorController::class, 'show'])->name('doctors.show');
     // Department Routes
@@ -45,7 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('departments', [DepartmentController::class, 'store'])->name('departments.store');
     Route::resource('departments', DepartmentController::class);
     Route::get('/departments/{id}/edit', [DepartmentController::class, 'edit'])->name('departments.edit');
-    Route::get('/departments/{id}/update', [DepartmentController::class, 'edit'])->name('departments.update');
+    Route::get('/departments/{id}/update', [DepartmentController::class, 'update'])->name('departments.update');
     Route::delete('/departments/{id}/delete', [DepartmentController::class, 'destroy'])->name('departments.destroy');
     Route::get('/departments/{id}/show', [DepartmentController::class, 'show'])->name('departments.show');
     Route::get('/department', [DoctorController::class, 'getDepartment']);

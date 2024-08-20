@@ -104,6 +104,7 @@ public function store(Request $request)
     public function edit($id)
     {
         $article = Article::find($id);
+    
         return view('backend.article-edit',compact('article'));
     }
 
@@ -111,7 +112,10 @@ public function store(Request $request)
     public function update(Request $request, $id)
 {
     try {
+
+        
         $article = Article::findOrFail($id);
+
         $request->validate([
             'title_en' => 'required|string|max:255',
             'title_ar' => 'required|string|max:255',
@@ -123,8 +127,8 @@ public function store(Request $request)
 
         $article->title_en = $request->title_en;
         $article->title_ar = $request->title_ar;
-        $article->article_en = $request->content_en;
-        $article->article_ar = $request->content_ar;
+        $article->article_en = $request->article_en;
+        $article->article_ar = $request->article_ar;
         $article->slug = $request->slug;
 
         if ($request->hasFile('image')) {
@@ -134,6 +138,8 @@ public function store(Request $request)
         }
 
         $article->save();
+
+        
 
         if ($request->ajax()) {
             return response()->json(['status' => true, 'message' => 'Article updated successfully.']);

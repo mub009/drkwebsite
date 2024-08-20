@@ -50,32 +50,32 @@
       </li>
       <li class="menu-item active open">
         <a href="{{ route('dashboard') }}" class="menu-link">
-          <i class="menu-icon tf-icons ti ti-columns"></i>
+          <i class="menu-icon fa-solid fa-table-columns"></i>
           <div data-i18n="Dashboards">Dashboards</div>
         </a>
       </li>
       <li class="menu-item">
         <a href="{{ route('articles.index') }}" class="menu-link">
-          <i class="menu-icon tf-icons ti ti-book"></i>
+          <i class="menu-icon fa-solid fa-newspaper"></i>
           <div data-i18n="Articles">Articles</div>
         </a>
       </li>
       <li class="menu-item">
         <a href="{{ route('doctors.index') }}" class="menu-link">
-          <i class="menu-icon tf-icons ti ti-stethoscope"></i>
+          <i class="menu-icon fa-solid fa-stethoscope"></i>
           <div data-i18n="Doctors">Doctors</div>
         </a>
       </li>
       <li class="menu-item">
         <a href="{{ route('departments.index') }}" class="menu-link">
-        <i class="menu-icon fa-regular fa-building"></i>
+          <i class="menu-icon fa-regular fa-building"></i>
           <div data-i18n="Department">Department</div>
         </a>
       </li>
 
       <li class="menu-item">
         <a href="{{route('activities')}}" class="menu-link">
-          <i class="menu-icon tf-icons ti ti-layout-kanban"></i>
+          <i class="menu-icon fa-solid fa-chart-line"></i>
           <div data-i18n="Activity">Activity</div>
         </a>
       </li>
