@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Doctor extends Model
 {
     protected $fillable = [
-        'name', 'departmentId','image',
+        'name_en', 'name_ar','department_en','department_ar','image',
     ];
-    public function department()
-    {
-        return $this->belongsTo(Department::class, 'departmentId');
-    }
 }

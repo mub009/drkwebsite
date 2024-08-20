@@ -1,7 +1,7 @@
 <!-- resources/views/home.blade.php -->
 @extends('backend.layouts.backendLayout')
 
-@section('title', 'Dashborad')
+@section('title', 'AddArticle')
 
 @section('content')
 

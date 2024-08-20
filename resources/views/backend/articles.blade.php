@@ -1,6 +1,6 @@
 @extends('backend.layouts.backendLayout')
 
-@section('title', 'Dashboard')
+@section('title', 'Article')
 
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@43.0.0/build/ckeditor.min.js"></script>

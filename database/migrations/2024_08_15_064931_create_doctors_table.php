@@ -11,8 +11,11 @@ return new class extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('designation');
+            $table->string('name_en');
+            $table->string('name_ar');
+            $table->string('department_en');
+            $table->string('department_ar');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
         

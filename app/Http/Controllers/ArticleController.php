@@ -51,10 +51,10 @@ class ArticleController extends Controller
                 $query->where('title_ar', 'like', "%{$keyword}%");
             })
             ->filterColumn('article_en', function($query, $keyword) {
-                $query->where('title_ar', 'like', "%{$keyword}%");
+                $query->where('article_ar', 'like', "%{$keyword}%");
             })
             ->filterColumn('article_ar', function($query, $keyword) {
-                $query->where('title_ar', 'like', "%{$keyword}%");
+                $query->where('article_ar', 'like', "%{$keyword}%");
             })
             ->filterColumn('slug', function($query, $keyword) {
                 $query->where('slug', 'like', "%{$keyword}%");

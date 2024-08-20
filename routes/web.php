@@ -21,8 +21,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', function () {
         return view('backend/dashboard');
     })->name('dashboard');
+
+
     // Activity Log Routes 
     Route::get('/load-content/activities', [ActivityLogController::class, 'showLogs'])->name('activities');
+
+
     // Article Routes
     Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
     Route::post('articles/store', [ArticleController::class, 'store'])->name('articles.store');
@@ -33,14 +37,20 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/articles/{id}/update', [ArticleController::class, 'update'])->name('articles.update');
     Route::delete('/articles/{id}/delete', [ArticleController::class, 'destroy'])->name('articles.destroy');
     Route::get('/articles/{id}/show', [ArticleController::class, 'show'])->name('articles.show');
+
+
     // Doctor Routes
     Route::get('doctors', [DoctorController::class, 'index'])->name('doctors.index');
-    Route::post('doctors', [DoctorController::class, 'store'])->name('doctors.store');
-    Route::resource('doctors', DoctorController::class);
+    Route::post('doctors/store', [DoctorController::class, 'store'])->name('doctors.store');
+    Route::get('doctors/dataTablesForDoctors', [DoctorController::class, 'dataTablesForDoctors'])->name('doctors.dataTablesForDoctors');
+    // Route::resource('doctors', DoctorController::class);
     Route::get('/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('doctors.edit');
-    Route::get('/doctors/{id}/update', [DoctorController::class, 'update'])->name('doctors.update');
+    Route::get('/doctors/addArticles', [DoctorController::class, 'addDoctors'])->name('doctors.add');
+    Route::put('/doctors/{id}/update', [DoctorController::class, 'update'])->name('doctors.update');
     Route::delete('/doctors/{id}/delete', [DoctorController::class, 'destroy'])->name('doctors.destroy');
     Route::get('/doctors/{id}/show', [DoctorController::class, 'show'])->name('doctors.show');
+
+    
     // Department Routes
     Route::get('departments', [DepartmentController::class, 'index'])->name('departments.index');
     Route::post('departments', [DepartmentController::class, 'store'])->name('departments.store');
