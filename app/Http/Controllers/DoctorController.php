@@ -143,12 +143,6 @@ public function store(Request $request)
         }
     }
 }
-
-
-
-
-
-  
     public function destroy($id)
     {
         $doctor = Doctor::findOrFail($id);

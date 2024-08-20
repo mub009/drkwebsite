@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('doctors/dataTablesForDoctors', [DoctorController::class, 'dataTablesForDoctors'])->name('doctors.dataTablesForDoctors');
     // Route::resource('doctors', DoctorController::class);
     Route::get('/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('doctors.edit');
-    Route::get('/doctors/addArticles', [DoctorController::class, 'addDoctors'])->name('doctors.add');
+    Route::get('/doctors/addDoctors', [DoctorController::class, 'addDoctors'])->name('doctors.add');
     Route::put('/doctors/{id}/update', [DoctorController::class, 'update'])->name('doctors.update');
     Route::delete('/doctors/{id}/delete', [DoctorController::class, 'destroy'])->name('doctors.destroy');
     Route::get('/doctors/{id}/show', [DoctorController::class, 'show'])->name('doctors.show');
@@ -53,13 +53,15 @@ Route::middleware(['auth'])->group(function () {
     
     // Department Routes
     Route::get('departments', [DepartmentController::class, 'index'])->name('departments.index');
-    Route::post('departments', [DepartmentController::class, 'store'])->name('departments.store');
-    Route::resource('departments', DepartmentController::class);
+    Route::post('departments/store', [DepartmentController::class, 'store'])->name('departments.store');
+    Route::get('departments/dataTablesForDepartments', [DepartmentController::class, 'dataTablesForDepartments'])->name('departments.dataTablesForDepartments');
+    // Route::resource('departments', DepartmentController::class);
     Route::get('/departments/{id}/edit', [DepartmentController::class, 'edit'])->name('departments.edit');
-    Route::get('/departments/{id}/update', [DepartmentController::class, 'update'])->name('departments.update');
+    Route::get('/departments/addDepartments', [DepartmentController::class, 'addDepartments'])->name('departments.add');
+    Route::put('/departments/{id}/update', [DepartmentController::class, 'update'])->name('departments.update');
     Route::delete('/departments/{id}/delete', [DepartmentController::class, 'destroy'])->name('departments.destroy');
     Route::get('/departments/{id}/show', [DepartmentController::class, 'show'])->name('departments.show');
-    Route::get('/department', [DoctorController::class, 'getDepartment']);
+    // Route::get('/departments', [DepartmentController::class, 'getDepartment']);
 });
 Route::get('/home', [FrontEndController::class, 'home'])->name('home');
 Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
