@@ -36,14 +36,8 @@
                     <img id="doctorImage" src="" alt="" width="100px" height="100px" >
                 </div>
                 <div class="mb-3">
-                    <label for="department_en" class="form-label">Department(English)</label>
-                    <select class="form-control" id="department_en" name="department_en" required>
-                        <option value="">Select a Department</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="department_ar" class="form-label">Department(Arabic)</label>
-                    <select class="form-control" id="department_ar" name="department_ar" required>
+                    <label for="department" class="form-label">Department</label>
+                    <select class="form-control" id="department" name="department" required>
                         <option value="">Select a Department</option>
                     </select>
                 </div>
@@ -65,9 +59,9 @@
       </div>
     </div>
 
-    <!-- <script src="{{ asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
+    <script src="{{ asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
     <script src="{{ asset('assets/vendor/libs/quill/katex.js')}}"></script>
-    <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script> -->
+    <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
  
 
 <script>

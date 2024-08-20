@@ -32,11 +32,8 @@ class DoctorController extends Controller
                     return 'No Image';
                 }
             })
-            ->addColumn('department_en', function ($row) {
-                return $row->department_en;
-            })
-            ->addColumn('department_ar', function ($row) {
-                return $row->department_ar;
+            ->addColumn('department', function ($row) {
+                return $row->department;
             })
             ->editColumn('created_at', function ($row) {
                 return $row->created_at->format('Y-m-d H:i:s');
@@ -47,11 +44,8 @@ class DoctorController extends Controller
             ->filterColumn('name_ar', function($query, $keyword) {
                 $query->where('name_ar', 'like', "%{$keyword}%");
             })
-            ->filterColumn('department_en', function($query, $keyword) {
-                $query->where('dipartment_ar', 'like', "%{$keyword}%");
-            })
-            ->filterColumn('department_ar', function($query, $keyword) {
-                $query->where('department_ar', 'like', "%{$keyword}%");
+            ->filterColumn('department', function($query, $keyword) {
+                $query->where('dipartment', 'like', "%{$keyword}%");
             })
             ->make(true);
     }
@@ -68,15 +62,13 @@ public function store(Request $request)
         $request->validate([
             'name_en' => 'required|string|max:255',
             'name_ar' => 'required|string|max:255',
-            'department_en' => 'required|string|max:255',
-            'department_ar' => 'required|string|max:255',
+            'department' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|required',
         ]);
         $doctor = new Doctor;
         $doctor->name_en = $request->name_en;
         $doctor->name_ar = $request->name_ar;
-        $doctor->department_en = $request->department_en;
-        $doctor->department_ar = $request->department_ar;
+        $doctor->department = $request->department;
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('images'), $imageName);
@@ -111,15 +103,13 @@ public function store(Request $request)
         $request->validate([
             'name_en' => 'required|string|max:255',
             'name_ar' => 'required|string|max:255',
-            'department_en' => 'required|string|max:255',
-            'department_ar' => 'required|string|max:255',
+            'department' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|required',
         ]);
 
         $doctor->name_en = $request->name_en;
         $doctor->name_ar = $request->name_ar;
-        $doctor->department_en = $request->department_en;
-        $doctor->department_ar = $request->department_ar;
+        $doctor->department = $request->department;
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('images'), $imageName);

@@ -26,16 +26,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="department_en" class="form-label">Department (English)</label>
-                    <input type="text" class="form-control" id="department_en" name="department_en" value="{{ old('department_en', $doctor->department_en) }}" required>
+                    <label for="department" class="form-label">Department</label>
+                    <input type="text" class="form-control" id="department" name="department" value="{{ old('department', $doctor->department) }}" required>
                 </div>
-
-                <div class="mb-3">
-                    <label for="department_ar" class="form-label">Department (Arabic)</label>
-                    <input type="text" class="form-control" id="department_ar" name="department_ar" value="{{ old('department_ar', $doctor->department_ar) }}" required>
-                </div>
-
-
                 <!-- Hidden input fields for Quill editor content
                 <input type="hidden" id="content_en_data" name="doctor_en" value="{{ old('doctor_en', $doctor->doctor_en) }}">
                 <input type="hidden" id="content_ar_data" name="doctor_ar" value="{{ old('doctor_ar', $doctor->doctor_ar) }}"> -->
@@ -56,9 +49,9 @@
     </div>
 </div>
 
-<!-- <script src="{{ asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
+<script src="{{ asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
 <script src="{{ asset('assets/vendor/libs/quill/katex.js')}}"></script>
-<script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script> -->
+<script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
 
 <script>
 $(document).ready(function () {

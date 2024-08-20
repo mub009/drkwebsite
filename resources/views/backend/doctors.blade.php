@@ -26,8 +26,7 @@
                         <th>Name (English)</th>
                         <th>Name (Arabic)</th>
                         <th>Doctor Image</th>
-                        <th>Department (English)</th>
-                        <th>Department (Arabic)</th>
+                        <th>Department</th>
                         <th>Created At</th>
                         <th>Actions</th>
                     </tr>
@@ -82,8 +81,7 @@ var table = $('#doctors-table').DataTable({
                 return `<img src="${data}" style="width: 50px; height: auto;">`;
             }
         },
-        { data: 'department_en', name: 'department_en' },
-        { data: 'department_ar', name: 'department_ar' },
+        { data: 'department', name: 'department' },
         { data: 'created_at', name: 'created_at' },
         {
             data: null,
