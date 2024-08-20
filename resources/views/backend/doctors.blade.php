@@ -97,7 +97,7 @@ var table = $('#doctors-table').DataTable({
             }
         }
     ],
-    order: [[6, 'desc']]
+    order: [[1, 'desc']]
 });
 
     // View doctor

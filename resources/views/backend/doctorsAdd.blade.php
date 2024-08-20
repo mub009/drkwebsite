@@ -19,7 +19,7 @@
           <div class="card mb-6">
             <h5 class="card-header">Add Doctor</h5>
             <div class="card-body">
-                <form id="addDoctorForm"  method="POST" enctype="multipart/form-data">
+            <form id="addDoctorForm" action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name_en" class="form-label">Name(English)</label>
                     <input type="text" class="form-control" id="name_en" name="name_en" required>
@@ -39,6 +39,9 @@
                     <label for="department" class="form-label">Department</label>
                     <select class="form-control" id="department" name="department" required>
                         <option value="">Select a Department</option>
+                        @foreach($departments as $id=> $department_name)
+                        <option value="{{$id}}">{{$department_name}}</option>
+                        @endforeach
                     </select>
                 </div>
               
@@ -64,77 +67,40 @@
     <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
  
 
-<script>
+    <script>
 $(document).ready(function () {
-// const snowEditor = new Quill('#snow-editor', {
-//     bounds: '#snow-editor',
-//     modules: {
-//       formula: true,
-//       toolbar: '#snow-toolbar'
-//     },
-//     theme: 'snow'
-//   });
-//   const snowEditor1 = new Quill('#snow-editor1', {
-//     bounds: '#snow-editor1',
-//     modules: {
-//       formula: true,
-//       toolbar: '#snow-toolbar1'
-//     },
-//     theme: 'snow'
-//   });
-    // Submit form
 $('#addDoctorForm').on('submit', function(e) {
-//document.getElementById('content').value = snowEditor.root.innerHTML;
-//  e.preventDefault();
-//  let contentEn = snowEditor.root.innerHTML;
-//         let contentAr = snowEditor1.root.innerHTML;
+    e.preventDefault();  // Prevent default form submission
+    var formData = new FormData(this);
 
-//         // Add content to hidden input fields
-//         $('<input>').attr({
-//             type: 'hidden',
-//             name: 'content_en',
-//             value: contentEn
-//         }).appendTo('#addDoctorForm');
-
-//         $('<input>').attr({
-//             type: 'hidden',
-//             name: 'content_ar',
-//             value: contentAr
-//         }).appendTo('#addDoctorForm');
-
-//         // var formData = new FormData(this);
- var formData = new FormData(this);
- $.ajax({
-     url: "{{ route('doctors.store') }}",
-     type: 'POST',
-     data: formData,
-     processData: false,
-     contentType: false,
-     success: function(response) {
-         if (response.status) {
-             Swal.fire({
-              title: 'Good job!',
-              text: 'Doctor created successfully!',
-              icon: 'success',
-              customClass: {
-                confirmButton: 'btn btn-primary waves-effect waves-light'
-              },
-              buttonsStyling: false
-            }).then(() => {
-              setTimeout(() => {
-                window.location.href = "{{route('doctors.index')}}"; // Replace with the URL of the page you want to redirect to
-              }, 0); // 2000 milliseconds = 2 seconds
-            });
-            // location.reload(); 
-         } else {
-             console.log('Error saving doctor: ' + response.message);
-         }
-     },
-     error: function(xhr) {
-        console.log('Error saving doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
-     }
-  });
- });   
+    $.ajax({
+        url: "{{ route('doctors.store') }}",  // Ensure this is the correct URL
+        type: 'POST',  // Ensure the request method is POST
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+            if (response.status) {
+                Swal.fire({
+                    title: 'Good job!',
+                    text: 'Doctor created successfully!',
+                    icon: 'success',
+                    customClass: {
+                        confirmButton: 'btn btn-primary waves-effect waves-light'
+                    },
+                    buttonsStyling: false
+                }).then(() => {
+                    window.location.href = "{{route('doctors.index')}}";
+                });
+            } else {
+                console.log('Error saving doctor: ' + response.message);
+            }
+        },
+        error: function(xhr) {
+            console.log('Error saving doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
+        }
+    });
+});   
 });
 </script>
 @endsection

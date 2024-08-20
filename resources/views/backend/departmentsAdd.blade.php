@@ -62,23 +62,6 @@
 
 <script>
 $(document).ready(function () {
-// const snowEditor = new Quill('#snow-editor', {
-//     bounds: '#snow-editor',
-//     modules: {
-//       formula: true,
-//       toolbar: '#snow-toolbar'
-//     },
-//     theme: 'snow'
-//   });
-//   const snowEditor1 = new Quill('#snow-editor1', {
-//     bounds: '#snow-editor1',
-//     modules: {
-//       formula: true,
-//       toolbar: '#snow-toolbar1'
-//     },
-//     theme: 'snow'
-//   });
-    // Submit form
 $('#addDepartmentForm').on('submit', function(e) {
     e.preventDefault();  // Prevent default form submission
     var formData = new FormData(this);

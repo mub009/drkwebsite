@@ -27,7 +27,12 @@
 
                 <div class="mb-3">
                     <label for="department" class="form-label">Department</label>
-                    <input type="text" class="form-control" id="department" name="department" value="{{ old('department', $doctor->department) }}" required>
+                    <select class="form-control" id="department" name="department" required>
+                        <option value="">Select a Department</option>
+                        @foreach($departments as $id=> $department_name)
+                        <option value="{{$id}}"{{($doctor->department==$departments->id)?"selected":''}}>{{$department_name}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <!-- Hidden input fields for Quill editor content
                 <input type="hidden" id="content_en_data" name="doctor_en" value="{{ old('doctor_en', $doctor->doctor_en) }}">
