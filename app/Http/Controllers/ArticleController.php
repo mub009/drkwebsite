@@ -104,7 +104,6 @@ public function store(Request $request)
     public function edit($id)
     {
         $article = Article::find($id);
-    
         return view('backend.article-edit',compact('article'));
     }
 
@@ -113,7 +112,6 @@ public function store(Request $request)
 {
     try {
         $article = Article::findOrFail($id);
-
         $request->validate([
             'title_en' => 'required|string|max:255',
             'title_ar' => 'required|string|max:255',
