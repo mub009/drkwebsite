@@ -11,7 +11,7 @@
         <div class="card-body">
             <h1 class="card-title">Edit Article</h1>
 
-            <form action="{{ route('articles.update', $article->id) }}" method="POST" enctype="multipart/form-data">
+            <form id="article-form" action="{{ route('articles.update', $article->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -117,7 +117,6 @@
 
 <script>
 $(document).ready(function () {
-    
     const snowEditor = new Quill('#snow-editor', {
         bounds: '#snow-editor',
         modules: {
@@ -142,15 +141,13 @@ $(document).ready(function () {
     snowEditor.root.innerHTML = articleEnContent;
     snowEditor1.root.innerHTML = articleArContent;
 
-   
     $('#article-form').on('submit', function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
-        
+        // Update hidden fields with Quill editor content
         $('#content_en_data').val(snowEditor.root.innerHTML);
         $('#content_ar_data').val(snowEditor1.root.innerHTML);
 
-        
         let formData = new FormData(this);
 
         $.ajax({

@@ -117,7 +117,7 @@ public function store(Request $request)
         $request->validate([
             'title_en' => 'required|string|max:255',
             'title_ar' => 'required|string|max:255',
-            // 'article_en' => 'required',
+            // 'article_en' => 'required',  
             // 'article_ar' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
             'slug' => 'required',
@@ -150,6 +150,7 @@ public function store(Request $request)
         }
     }
 }
+
 
 
 

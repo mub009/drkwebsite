@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
    // Route::resource('articles', ArticleController::class);
     Route::get('/articles/{id}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
     Route::get('/articles/addArticles', [ArticleController::class, 'addArticles'])->name('articles.add');
-    Route::put('/articles/{id}/update', [ArticleController::class, 'edit'])->name('articles.update');
+    Route::put('/articles/{id}/update', [ArticleController::class, 'update'])->name('articles.update');
     Route::delete('/articles/{id}/delete', [ArticleController::class, 'destroy'])->name('articles.destroy');
     Route::get('/articles/{id}/show', [ArticleController::class, 'show'])->name('articles.show');
     // Doctor Routes

@@ -6,12 +6,12 @@
 <div id="content-area">
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title">English Title:</h2>
+            <h3 class="card-title">English Title:</h3>
             <div>{!!  $article->title_en !!}</div>
-            <h2 class="card-title">Arabic Title:</h2>
+            <h3 class="card-title">Arabic Title:</h3>
             <div>{!!  $article->title_ar !!}</div>
             <div>
-                <h2>Image</h2>
+                <h3>Image</h3>
             @if($article->image)
                 <img src="{{ asset('images/' . $article->image) }}" alt="Article Image" class="img-fluid mb-3" width="100px" height="100px">
             @endif
