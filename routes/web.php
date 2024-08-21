@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
     Route::post('articles/store', [ArticleController::class, 'store'])->name('articles.store');
     Route::get('articles/dataTablesForArticles', [ArticleController::class, 'dataTablesForArticles'])->name('articles.dataTablesForArticles');
-   // Route::resource('articles', ArticleController::class);
+    // Route::resource('articles', ArticleController::class);
     Route::get('/articles/{id}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
     Route::get('/articles/addArticles', [ArticleController::class, 'addArticles'])->name('articles.add');
     Route::put('/articles/{id}/update', [ArticleController::class, 'update'])->name('articles.update');
@@ -50,7 +50,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/doctors/{id}/delete', [DoctorController::class, 'destroy'])->name('doctors.destroy');
     Route::get('/doctors/{id}/show', [DoctorController::class, 'show'])->name('doctors.show');
 
-    
+
     // Department Routes
     Route::get('departments', [DepartmentController::class, 'index'])->name('departments.index');
     Route::post('departments/store', [DepartmentController::class, 'store'])->name('departments.store');
@@ -65,4 +65,3 @@ Route::middleware(['auth'])->group(function () {
 });
 Route::get('/home', [FrontEndController::class, 'home'])->name('home');
 Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
-

@@ -54,7 +54,7 @@
                     <label for="image" class="form-label">Thumbnail Image</label>
                     <input type="file" class="form-control" id="image" name="image">
                     @if($article->image)
-                        <img src="{{ asset('images/' . $article->image) }}" alt="Article Image" class="img-thumbnail mt-2" style="width: 100px;">
+                    <img src="{{ asset('images/' . $article->image) }}" alt="Article Image" class="img-thumbnail mt-2" style="width: 100px;">
                     @endif
                 </div>
 
@@ -70,71 +70,71 @@
 <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
 
 <script>
-$(document).ready(function () {
-    const snowEditor = new Quill('#snow-editor', {
-        bounds: '#snow-editor',
-        modules: {
-            formula: true,
-            toolbar: '#snow-toolbar'
-        },
-        theme: 'snow'
-    });
-
-    const snowEditor1 = new Quill('#snow-editor1', {
-        bounds: '#snow-editor1',
-        modules: {
-            formula: true,
-            toolbar: '#snow-toolbar1'
-        },
-        theme: 'snow'
-    });
-
-    const articleEnContent = $('#content_en_data').val();
-    const articleArContent = $('#content_ar_data').val();
-
-    snowEditor.root.innerHTML = articleEnContent;
-    snowEditor1.root.innerHTML = articleArContent;
-
-    $('#article-form').on('submit', function (e) {
-        e.preventDefault();
-        
-        // Update hidden fields with Quill editor content
-        $('#content_en_data').val(snowEditor.root.innerHTML);
-        $('#content_ar_data').val(snowEditor1.root.innerHTML);
-
-        let formData = new FormData(this);
-
-        $.ajax({
-            url: $(this).attr('action'),
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (response) {
-                if (response.status) {
-                    Swal.fire({
-                        title: 'Good job!',
-                        text: 'Article updated successfully!',
-                        icon: 'success',
-                        customClass: {
-                            confirmButton: 'btn btn-primary waves-effect waves-light'
-                        },
-                        buttonsStyling: false
-                    }).then(() => {
-              setTimeout(() => {
-                window.location.href = "{{route('articles.index')}}"; // Replace with the URL of the page you want to redirect to
-              }, 0); // 2000 milliseconds = 2 seconds
-            });
-            // location.reload(); 
-         } else {
-             console.log('Error updating article: ' + response.message);
-         }
+    $(document).ready(function() {
+        const snowEditor = new Quill('#snow-editor', {
+            bounds: '#snow-editor',
+            modules: {
+                formula: true,
+                toolbar: '#snow-toolbar'
             },
-            error: function(xhr) {
-        console.log('Error updating article: ' + (xhr.responseJSON.message || 'Unknown error'));
-     }
+            theme: 'snow'
+        });
+
+        const snowEditor1 = new Quill('#snow-editor1', {
+            bounds: '#snow-editor1',
+            modules: {
+                formula: true,
+                toolbar: '#snow-toolbar1'
+            },
+            theme: 'snow'
+        });
+
+        const articleEnContent = $('#content_en_data').val();
+        const articleArContent = $('#content_ar_data').val();
+
+        snowEditor.root.innerHTML = articleEnContent;
+        snowEditor1.root.innerHTML = articleArContent;
+
+        $('#article-form').on('submit', function(e) {
+            e.preventDefault();
+
+            // Update hidden fields with Quill editor content
+            $('#content_en_data').val(snowEditor.root.innerHTML);
+            $('#content_ar_data').val(snowEditor1.root.innerHTML);
+
+            let formData = new FormData(this);
+
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    if (response.status) {
+                        Swal.fire({
+                            title: 'Good job!',
+                            text: 'Article updated successfully!',
+                            icon: 'success',
+                            customClass: {
+                                confirmButton: 'btn btn-primary waves-effect waves-light'
+                            },
+                            buttonsStyling: false
+                        }).then(() => {
+                            setTimeout(() => {
+                                window.location.href = "{{route('articles.index')}}"; // Replace with the URL of the page you want to redirect to
+                            }, 0); // 2000 milliseconds = 2 seconds
+                        });
+                        // location.reload(); 
+                    } else {
+                        console.log('Error updating article: ' + response.message);
+                    }
+                },
+                error: function(xhr) {
+                    console.log('Error updating article: ' + (xhr.responseJSON.message || 'Unknown error'));
+                }
+            });
         });
     });
-});
 </script>
 @endsection

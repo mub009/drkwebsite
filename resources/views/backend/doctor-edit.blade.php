@@ -29,8 +29,10 @@
                     <label for="department" class="form-label">Department</label>
                     <select class="form-control" id="department" name="department" required>
                         <option value="">Select a Department</option>
-                        @foreach($departments as $id=> $department_name)
-                        <option value="{{$id}}"{{($doctor->department==$departments->id)?"selected":''}}>{{$department_name}}</option>
+                        @foreach($departments as $id => $department_name)
+                        <option value="{{ $id }}" {{ old('department', $doctor->department) == $id ? 'selected' : '' }}>
+                            {{ $department_name }}
+                        </option>
                         @endforeach
                     </select>
                 </div>
@@ -43,7 +45,7 @@
                     <label for="image" class="form-label">Doctor Image</label>
                     <input type="file" class="form-control" id="image" name="image">
                     @if($doctor->image)
-                        <img src="{{ asset('images/' . $doctor->image) }}" alt="Doctor Image" class="img-thumbnail mt-2" style="width: 100px;">
+                    <img src="{{ asset('images/' . $doctor->image) }}" alt="Doctor Image" class="img-thumbnail mt-2" style="width: 100px;">
                     @endif
                 </div>
 
@@ -59,71 +61,71 @@
 <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
 
 <script>
-$(document).ready(function () {
-    // const snowEditor = new Quill('#snow-editor', {
-    //     bounds: '#snow-editor',
-    //     modules: {
-    //         formula: true,
-    //         toolbar: '#snow-toolbar'
-    //     },
-    //     theme: 'snow'
-    // });
+    $(document).ready(function() {
+        // const snowEditor = new Quill('#snow-editor', {
+        //     bounds: '#snow-editor',
+        //     modules: {
+        //         formula: true,
+        //         toolbar: '#snow-toolbar'
+        //     },
+        //     theme: 'snow'
+        // });
 
-    // const snowEditor1 = new Quill('#snow-editor1', {
-    //     bounds: '#snow-editor1',
-    //     modules: {
-    //         formula: true,
-    //         toolbar: '#snow-toolbar1'
-    //     },
-    //     theme: 'snow'
-    // });
+        // const snowEditor1 = new Quill('#snow-editor1', {
+        //     bounds: '#snow-editor1',
+        //     modules: {
+        //         formula: true,
+        //         toolbar: '#snow-toolbar1'
+        //     },
+        //     theme: 'snow'
+        // });
 
-    // const doctorEnContent = $('#content_en_data').val();
-    // const doctorArContent = $('#content_ar_data').val();
+        // const doctorEnContent = $('#content_en_data').val();
+        // const doctorArContent = $('#content_ar_data').val();
 
-    // snowEditor.root.innerHTML = doctorEnContent;
-    // snowEditor1.root.innerHTML = doctorArContent;
+        // snowEditor.root.innerHTML = doctorEnContent;
+        // snowEditor1.root.innerHTML = doctorArContent;
 
-    $('#doctor-form').on('submit', function (e) {
-        e.preventDefault();
-        
-        // // Update hidden fields with Quill editor content
-        // $('#content_en_data').val(snowEditor.root.innerHTML);
-        // $('#content_ar_data').val(snowEditor1.root.innerHTML);
+        $('#doctor-form').on('submit', function(e) {
+            e.preventDefault();
 
-        let formData = new FormData(this);
+            // // Update hidden fields with Quill editor content
+            // $('#content_en_data').val(snowEditor.root.innerHTML);
+            // $('#content_ar_data').val(snowEditor1.root.innerHTML);
 
-        $.ajax({
-            url: $(this).attr('action'),
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (response) {
-                if (response.status) {
-                    Swal.fire({
-                        title: 'Good job!',
-                        text: 'Doctor updated successfully!',
-                        icon: 'success',
-                        customClass: {
-                            confirmButton: 'btn btn-primary waves-effect waves-light'
-                        },
-                        buttonsStyling: false
-                    }).then(() => {
-              setTimeout(() => {
-                window.location.href = "{{route('doctors.index')}}"; // Replace with the URL of the page you want to redirect to
-              }, 0); // 2000 milliseconds = 2 seconds
+            let formData = new FormData(this);
+
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    if (response.status) {
+                        Swal.fire({
+                            title: 'Good job!',
+                            text: 'Doctor updated successfully!',
+                            icon: 'success',
+                            customClass: {
+                                confirmButton: 'btn btn-primary waves-effect waves-light'
+                            },
+                            buttonsStyling: false
+                        }).then(() => {
+                            setTimeout(() => {
+                                window.location.href = "{{route('doctors.index')}}"; // Replace with the URL of the page you want to redirect to
+                            }, 0); // 2000 milliseconds = 2 seconds
+                        });
+                        // location.reload(); 
+                    } else {
+                        console.log('Error updating doctor: ' + response.message);
+                    }
+                },
+                error: function(xhr) {
+                    console.log('Error updating doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
+                }
             });
-            // location.reload(); 
-         } else {
-             console.log('Error updating doctor: ' + response.message);
-         }
-            },
-            error: function(xhr) {
-        console.log('Error updating doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
-     }
         });
     });
-});
 </script>
 @endsection
