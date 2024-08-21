@@ -21,13 +21,14 @@
                     <div class="card-body">
                         <form id="addDoctorForm" action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
-                                <label for="name_en" class="form-label">Name(English)</label>
-                                <input type="text" class="form-control" id="name_en" name="name_en" required>
+                                <label for="name_en" class="form-label">Name (English)</label>
+                                <input type="text" class="form-control" id="name_en" name="name_en" value="Dr." required>
                             </div>
                             <div class="mb-3">
-                                <label for="name_ar" class="form-label">Name(Arabic)</label>
-                                <input type="text" class="form-control" id="name_ar" name="name_ar" required>
+                                <label for="name_ar" class="form-label">Name (Arabic)</label>
+                                <input type="text" class="form-control" id="name_ar" name="name_ar" value="Dr." required>
                             </div>
+
                             <div class="mb-3" id="doctorImg">
                                 <label for="image" class="form-label">Doctor Image</label>
                                 <input type="file" class="form-control" id="image" name="image" accept="image/*">

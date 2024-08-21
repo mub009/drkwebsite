@@ -88,7 +88,7 @@
                 },
                 {
                     data: 'department',
-                    name: 'department_'
+                    name: 'department'
                 },
                 {
                     data: 'created_at',

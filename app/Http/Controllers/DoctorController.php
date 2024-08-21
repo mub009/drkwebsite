@@ -17,7 +17,9 @@ class DoctorController extends Controller
     public function dataTablesForDoctors(Request $request)
     {
         if ($request->ajax()) {
-            $query = Doctor::query();
+            $query = Doctor::query()
+                ->join('departments', 'doctors.department', '=', 'departments.id') // Join with departments table
+                ->select('doctors.*', 'departments.department_en as department_name'); // Select the department name
 
             return DataTables::of($query)
                 ->addColumn('name_en', function ($row) {
@@ -29,13 +31,12 @@ class DoctorController extends Controller
                 ->addColumn('image', function ($row) {
                     if ($row->image) {
                         return $imageUrl = asset('images/' . $row->image); // Ensure this path is correct
-
                     } else {
                         return 'No Image';
                     }
                 })
                 ->addColumn('department', function ($row) {
-                    return $row->department;
+                    return $row->department_name; // Use the department name from the join
                 })
                 ->editColumn('created_at', function ($row) {
                     return $row->created_at->format('Y-m-d H:i:s');
@@ -47,11 +48,12 @@ class DoctorController extends Controller
                     $query->where('name_ar', 'like', "%{$keyword}%");
                 })
                 ->filterColumn('department', function ($query, $keyword) {
-                    $query->where('dipartment', 'like', "%{$keyword}%");
+                    $query->where('departments.department_en', 'like', "%{$keyword}%");
                 })
                 ->make(true);
         }
     }
+
     public function addDoctors()
     {
         $departments = DB::table('departments')->pluck('department_en', 'id');
