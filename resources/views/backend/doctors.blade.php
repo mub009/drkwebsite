@@ -3,8 +3,6 @@
 @section('title', 'Doctor')
 
 @section('content')
-<!-- <script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@43.0.0/build/ckeditor.min.js"></script> -->
-
 <div id="content-area">
     <div class="card">
         <div class="card-body">
@@ -27,6 +25,7 @@
                         <th>Name (Arabic)</th>
                         <th>Doctor Image</th>
                         <th>Department</th>
+                        <th>Frontpage</th>
                         <th>Created At</th>
                         <th>Actions</th>
                     </tr>
@@ -64,18 +63,23 @@
         }
 
         // Initialize DataTable
-        // Initialize DataTable
         var table = $('#doctors-table').DataTable({
             processing: true,
             serverSide: true,
             ajax: "{{ route('doctors.dataTablesForDoctors') }}",
             columns: [{
                     data: 'name_en',
-                    name: 'name_en'
+                    name: 'name_en',
+                    render: function(data) {
+                        return data ? data.substring(0, 13) + '' : '';
+                    }
                 },
                 {
                     data: 'name_ar',
-                    name: 'name_ar'
+                    name: 'name_ar',
+                    render: function(data) {
+                        return data ? data.substring(0, 13) + '' : '';
+                    }
                 },
                 {
                     data: 'image',
@@ -89,6 +93,19 @@
                 {
                     data: 'department',
                     name: 'department'
+                },
+                {
+                    data: 'frontpage',
+                    name: 'frontpage',
+                    render: function(data, type, row) {
+                        var checked = data ? 'checked' : '';
+                        return `
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input toggle-frontpage" type="checkbox" style="width:60%" data-id="${row.id}" ${checked}>
+                        </div>`;
+                    },
+                    orderable: false,
+                    searchable: false
                 },
                 {
                     data: 'created_at',
@@ -111,6 +128,31 @@
             order: [
                 [1, 'desc']
             ]
+        });
+
+        // Toggle frontpage status
+        $('#doctors-table').on('change', '.toggle-frontpage', function() {
+            var doctorId = $(this).data('id');
+            var frontpageStatus = $(this).is(':checked') ? 1 : 0;
+
+            $.ajax({
+                url: "{{ url('doctors') }}/" + doctorId + "/toggle-frontpage",
+                type: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    frontpage: frontpageStatus
+                },
+                success: function(response) {
+                    if (response.status) {
+                        showAlert('Frontpage status updated successfully!', 'success', 'alert-box1');
+                    } else {
+                        showAlert('Failed to update frontpage status.', 'danger', 'alert-box1');
+                    }
+                },
+                error: function(xhr) {
+                    showAlert('Error updating frontpage status: ' + (xhr.responseJSON.message || 'Unknown error'), 'danger', 'alert-box1');
+                }
+            });
         });
 
         // View doctor
@@ -147,10 +189,9 @@
                                 buttonsStyling: false
                             }).then(() => {
                                 setTimeout(() => {
-                                    window.location.href = "{{route('doctors.index')}}"; // Replace with the URL of the page you want to redirect to
-                                }, 0); // 2000 milliseconds = 2 seconds
+                                    window.location.href = "{{route('doctors.index')}}";
+                                }, 0);
                             });
-                            // location.reload(); 
                         } else {
                             console.log('Error deleting doctor: ' + response.message);
                         }

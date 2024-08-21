@@ -70,11 +70,17 @@
             ajax: "{{ route('departments.dataTablesForDepartments') }}",
             columns: [{
                     data: 'department_en',
-                    name: 'department_en'
+                    name: 'department_en',
+                    render: function(data) {
+                        return data ? data.substring(0, 13) + '' : '';
+                    }
                 },
                 {
                     data: 'department_ar',
-                    name: 'department_ar'
+                    name: 'department_ar',
+                    render: function(data) {
+                        return data ? data.substring(0, 13) + '' : '';
+                    }
                 },
                 {
                     data: 'image',

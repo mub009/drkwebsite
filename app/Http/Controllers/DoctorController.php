@@ -138,6 +138,8 @@ class DoctorController extends Controller
             }
         }
     }
+
+
     public function destroy($id)
     {
         $doctor = Doctor::findOrFail($id);
@@ -152,5 +154,16 @@ class DoctorController extends Controller
         $doctor = Doctor::find($id);
 
         return view('backend.doctor-show', compact('doctor'));
+    }
+
+    public function toggleFrontpage(Request $request, $id)
+    {
+        $doctor = Doctor::findOrFail($id);
+        $doctor->frontpage = $request->input('frontpage');
+        if ($doctor->save()) {
+            return response()->json(['status' => true]);
+        } else {
+            return response()->json(['status' => false]);
+        }
     }
 }

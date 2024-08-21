@@ -12,5 +12,6 @@ class Doctor extends Model
         'name_ar',
         'department',
         'image',
+        'frontpage',
     ];
 }

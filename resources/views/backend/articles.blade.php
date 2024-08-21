@@ -72,8 +72,20 @@ var table = $('#articles-table').DataTable({
     serverSide: true,
     ajax: "{{ route('articles.dataTablesForArticles') }}",
     columns: [
-        { data: 'title_en', name: 'title_en' },
-        { data: 'title_ar', name: 'title_ar' },
+        {
+            data: 'title_en',
+            name: 'title_en',
+            render: function(data) {
+                return data ? data.substring(0, 13) + '' : '';
+            }
+        },
+        {
+            data: 'title_ar',
+            name: 'title_ar',
+            render: function(data) {
+                return data ? data.substring(0, 13) + '' : '';
+            }
+        },
         {
             data: 'image',
             name: 'image',
