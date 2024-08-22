@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Doctor extends Model
 {
     protected $fillable = [
-        'name_en', 'name_ar','department_en','department_ar','image',
+        'name_en',
+        'name_ar',
+        'department',
+        'image',
+        'frontpage',
     ];
 }

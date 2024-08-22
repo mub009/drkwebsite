@@ -736,7 +736,7 @@
     </section>
     <!-- END :: services section -->
 
-    
+
 
 
 
@@ -751,7 +751,7 @@
                         <a class="btn btn-link-secondary active" id="all_services" data-toggle="tab" href="#all_services" role="tab">كل الخدمات</a>
                     </li>
 
-                    
+
                 </ul>
             </div>
         </div>
@@ -763,28 +763,28 @@
                 <div class="tab-pane fade show active" role="tabpanel">
                     <div class="swiper servicesSlider">
                         <div class="swiper-wrapper">
-                                   
-                            @foreach ($article as $item)     
+
+                            @foreach ($article as $item)
                             <div class="swiper-slide">
-                                        <a class="service" href="{{route('articleDetails', ['surl' => '1'])}}">
-                                            <div class="service__image">
-                                                <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" draggable="false" loading="lazy" />
-                                            </div>
-                                            <div class="service__title">
-                                                <div class="d-flex justify-content-between mt-3 color-text-secondary">
-                                                    <h3 class="h6">{{$item->title}}</h3>
-                                                </div>
-                                            </div>
-                                        </a>
+                                <a class="service" href="{{route('articleDetails', ['surl' => '1'])}}">
+                                    <div class="service__image">
+                                        <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" draggable="false" loading="lazy" />
+                                    </div>
+                                    <div class="service__title">
+                                        <div class="d-flex justify-content-between mt-3 color-text-secondary">
+                                            <h3 class="h6">{{$item->title}}</h3>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             @endforeach
-                                  
 
 
 
-                               
-                                
-                                                                                            </div>
+
+
+
+                        </div>
                         <div class="section-pagination">
                             <div class="service-pagination"></div>
                         </div>
@@ -795,9 +795,9 @@
                     </div>
                 </div>
 
-             
-                
-                                                        </div>
+
+
+            </div>
         </div>
     </div>
 
@@ -819,25 +819,25 @@
                 </div>
                 <div class="section-title align-items-stretch mb-0">
                     <h2 class="title" data-aos="fade-up">الأطباء</h2>
-                    
+
                 </div>
                 <div class="services__tabs" data-aos="fade-up">
                     <div class="tab-content" id="doctorsTabContent">
-                        <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="dental-tab">
+                        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="dental-tab">
                             <div class="swiper doctorsSlider">
                                 <div class="swiper-wrapper">
-                                    
+
                                     @foreach ($doctors as $item)
                                     <div class="swiper-slide">
                                         <div class="doctor">
-                                        
+
                                             <div class="doctor__image">
                                                 <img src="{{asset('images').'/'.$item->image}}" alt="دنيا _ اخصائية الجلدية و التجميل. الليزر " draggable="false" loading="lazy">
                                             </div>
                                             <div class="doctor__text">
                                                 <h3 class="h6">{{$item->department_name}}</h3>
                                                 <p>{{$item->name}}</p>
-                                             
+
                                             </div>
                                         </div>
                                     </div>
@@ -855,7 +855,7 @@
                             </div>
                         </div>
 
-                       
+
                     </div>
 
                 </div>
@@ -867,7 +867,7 @@
     </section>
 
 
-  
+
 
     <div class="container mt-50 mb-50">
         <div class="section-title align-items-stretch mb-0">
@@ -903,8 +903,8 @@
     </div>
 
 
-      <!-- BEGIN :: insurance section -->
-      <section class="insurance d-pad pt-0">
+    <!-- BEGIN :: insurance section -->
+    <section class="insurance d-pad pt-0">
         <div class="container position-relative">
             <div class="overlay-background"></div>
             <div class="section-title mb-0">
@@ -961,8 +961,8 @@
 
 
 
-      <!-- BEGIN :: insurance section -->
-      <section class="insurance d-pad pt-0">
+    <!-- BEGIN :: insurance section -->
+    <section class="insurance d-pad pt-0">
         <div class="container position-relative">
             <div class="overlay-background"></div>
             <div class="section-title mb-0">
@@ -1016,4 +1016,4 @@
             </div>
         </div>
     </section>
-@endsection
+    @endsection

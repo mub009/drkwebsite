@@ -27,4 +27,3 @@ class CreateActivityLogsTable extends Migration
         Schema::dropIfExists('activity_logs');
     }
 }
-

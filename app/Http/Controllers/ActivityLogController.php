@@ -18,39 +18,39 @@ class ActivityLogController extends Controller
 
             $query = ActivityLog::query();
 
-        return DataTables::of($query)
-            ->addColumn('user_id', function ($row) {
-                return $row->id ? $row->user_id : 'System';
-            })
-            ->addColumn('action', function ($row) {
-                return $row->id ? $row->action : 'System';
-            })
-            ->addColumn('agent', function ($row) {
-                return $row->id ? $row->agent : 'System';
-            })
-            ->addColumn('ip_address', function ($row) {
-                return $row->id ? $row->ip_address : 'System';
-            })
-            ->editColumn('created_at', function ($row) {
-                return $row->created_at->format('Y-m-d H:i:s');
-            })
-            ->filterColumn('action', function($query, $keyword) {
-                $query->where('action', 'like', "%{$keyword}%");
-            })
-            ->filterColumn('user_id', function($query, $keyword) {
-                $query->where('user_id', 'like', "%{$keyword}%");
-            })
-            ->filterColumn('agent', function($query, $keyword) {
-                $query->where('agent', 'like', "%{$keyword}%");
-            })
-            ->filterColumn('ip_address', function($query, $keyword) {
-                $query->where('user_id', 'like', "%{$keyword}%");
-            })
-            ->make(true);
+            return DataTables::of($query)
+                ->addColumn('user_id', function ($row) {
+                    return $row->id ? $row->user_id : 'System';
+                })
+                ->addColumn('action', function ($row) {
+                    return $row->id ? $row->action : 'System';
+                })
+                ->addColumn('agent', function ($row) {
+                    return $row->id ? $row->agent : 'System';
+                })
+                ->addColumn('ip_address', function ($row) {
+                    return $row->id ? $row->ip_address : 'System';
+                })
+                ->editColumn('created_at', function ($row) {
+                    return $row->created_at->format('Y-m-d H:i:s');
+                })
+                ->filterColumn('action', function ($query, $keyword) {
+                    $query->where('action', 'like', "%{$keyword}%");
+                })
+                ->filterColumn('user_id', function ($query, $keyword) {
+                    $query->where('user_id', 'like', "%{$keyword}%");
+                })
+                ->filterColumn('agent', function ($query, $keyword) {
+                    $query->where('agent', 'like', "%{$keyword}%");
+                })
+                ->filterColumn('ip_address', function ($query, $keyword) {
+                    $query->where('user_id', 'like', "%{$keyword}%");
+                })
+                ->make(true);
         }
 
         // Return the logs view with the data
-        return view('partials.activity-logs');
+        return view('backend.activity-logs');
     }
 
     /**
