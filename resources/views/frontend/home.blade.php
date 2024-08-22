@@ -399,17 +399,16 @@
 
                         <div class="features-one__box" hidden="">
                             <div class="features-one__box__image">
-                                <img width="121" height="121" src="{{ asset('frontend/assets/images/cleenhearts-landing/feature-i-1-1.png')}}">
+                                <img  src="{{ asset('frontend/assets/images/cleenhearts-landing/feature-i-1-1.png')}}">
                             </div><!-- /.features-one__box__image -->
                             <h3 class="features-one__box__title">Customizer <br>
                                 Kirki Framework</h3><!-- /.features-one__box__title -->
                         </div><!-- /.features-one__box -->
-                        <div class="features-one__box" hidden="">
+                        <div class="features-one__box" data-modals="modals-1">
                             <div class="features-one__box__image">
-                                <img width="121" height="121" src="{{ asset('frontend/assets/images/cleenhearts-landing/feature-i-1-2.png')}}" alt="Elementor Page Builder">
+                                <img width="60" height="60" src="{{ asset('2.png')}}" alt="Elementor Page Builder">
                             </div><!-- /.features-one__box__image -->
-                            <h3 class="features-one__box__title">Elementor <br>
-                                Page Builder</h3><!-- /.features-one__box__title -->
+                            <h3 class="features-one__box__title">الجراحة العامة </h3><!-- /.features-one__box__title -->
                         </div><!-- /.features-one__box -->
 
                         <div class="features-one__box" data-modals="modals-1">
