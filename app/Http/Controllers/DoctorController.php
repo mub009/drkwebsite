@@ -6,6 +6,8 @@ use App\Models\Doctor;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\DoctorRequest;
+
 
 class DoctorController extends Controller
 {
@@ -60,15 +62,15 @@ class DoctorController extends Controller
         return view('backend.doctorsAdd', compact('departments'));
     }
 
-    public function store(Request $request)
+    public function store(DoctorRequest $request)
     {
 
         try {
             $request->validate([
                 'name_en' => 'required|string|max:255',
                 'name_ar' => 'required|string|max:255',
-                'department' => 'required|string|max:255',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|required',
+                'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'department' => 'required|string',
             ]);
             $doctor = new Doctor;
             $doctor->name_en = $request->name_en;
@@ -108,8 +110,8 @@ class DoctorController extends Controller
             $request->validate([
                 'name_en' => 'required|string|max:255',
                 'name_ar' => 'required|string|max:255',
-                'department' => 'required|string|max:255',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                // 'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'department' => 'required|string',
             ]);
 
             $doctor->name_en = $request->name_en;
@@ -129,6 +131,12 @@ class DoctorController extends Controller
                 return response()->json(['status' => true, 'message' => 'Doctor updated successfully.']);
             } else {
                 return redirect()->route('doctors.index')->with('success', 'Doctor updated successfully.');
+            }
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            if ($request->ajax()) {
+                return response()->json(['status' => false, 'message' => $e->validator->errors()->first()], 422);
+            } else {
+                return back()->with('error', $e->validator->errors()->first());
             }
         } catch (\Exception $e) {
             if ($request->ajax()) {

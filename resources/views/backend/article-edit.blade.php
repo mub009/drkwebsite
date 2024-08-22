@@ -17,28 +17,77 @@
 
                 <div class="mb-3">
                     <label for="title_en" class="form-label">Title (English)</label>
-                    <input type="text" class="form-control" id="title_en" name="title_en" value="{{ old('title_en', $article->title_en) }}" required>
+                    <input type="text" class="form-control" id="title_en" name="title_en" value="{{ old('title_en', $article->title_en) }}">
                 </div>
 
                 <div class="mb-3">
                     <label for="title_ar" class="form-label">Title (Arabic)</label>
-                    <input type="text" class="form-control" id="title_ar" name="title_ar" value="{{ old('title_ar', $article->title_ar) }}" required>
+                    <input type="text" class="form-control" id="title_ar" name="title_ar" value="{{ old('title_ar', $article->title_ar) }}">
                 </div>
 
                 <div class="mb-3">
-                    <label for="article_en" class="form-label">Article (English)</label>
+                    <label for="article_en" class="form-label">Article(English)</label>
                     <div id="snow-toolbar">
-                        <!-- Toolbar content -->
+                        <span class="ql-formats">
+                            <select class="ql-font"></select>
+                            <select class="ql-size"></select>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                            <button class="ql-strike"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <select class="ql-color"></select>
+                            <select class="ql-background"></select>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-script" value="sub"></button>
+                            <button class="ql-script" value="super"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-header" value="1"></button>
+                            <button class="ql-header" value="2"></button>
+                            <button class="ql-blockquote"></button>
+                            <button class="ql-code-block"></button>
+                        </span>
                     </div>
                     <div id="snow-editor"></div>
+                    <div id="content_en"></div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="article_ar" class="form-label">Article (Arabic)</label>
+                    <label for="article_ar" class="form-label">Article(Arabic)</label>
                     <div id="snow-toolbar1">
-                        <!-- Toolbar content -->
+
+                        <span class="ql-formats">
+                            <select class="ql-font"></select>
+                            <select class="ql-size"></select>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                            <button class="ql-strike"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <select class="ql-color"></select>
+                            <select class="ql-background"></select>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-script" value="sub"></button>
+                            <button class="ql-script" value="super"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-header" value="1"></button>
+                            <button class="ql-header" value="2"></button>
+                            <button class="ql-blockquote"></button>
+                            <button class="ql-code-block"></button>
+                        </span>
                     </div>
                     <div id="snow-editor1"></div>
+                    <div id="content_ar"></div>
                 </div>
 
                 <!-- Hidden input fields for Quill editor content -->
@@ -47,7 +96,7 @@
 
                 <div class="mb-3">
                     <label for="slug" class="form-label">Slug</label>
-                    <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug', $article->slug) }}" required>
+                    <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug', $article->slug) }}">
                 </div>
 
                 <div class="mb-3">
@@ -79,7 +128,6 @@
             },
             theme: 'snow'
         });
-
         const snowEditor1 = new Quill('#snow-editor1', {
             bounds: '#snow-editor1',
             modules: {
@@ -107,6 +155,7 @@
             $.ajax({
                 url: $(this).attr('action'),
                 method: 'POST',
+                type: 'POST',
                 data: formData,
                 processData: false,
                 contentType: false,
@@ -121,17 +170,24 @@
                             },
                             buttonsStyling: false
                         }).then(() => {
-                            setTimeout(() => {
-                                window.location.href = "{{route('articles.index')}}"; // Replace with the URL of the page you want to redirect to
-                            }, 0); // 2000 milliseconds = 2 seconds
+                            window.location.href = "{{route('articles.index')}}";
                         });
-                        // location.reload(); 
-                    } else {
-                        console.log('Error updating article: ' + response.message);
                     }
                 },
                 error: function(xhr) {
-                    console.log('Error updating article: ' + (xhr.responseJSON.message || 'Unknown error'));
+                    if (xhr.status === 422) {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: xhr.responseJSON.message,
+                            icon: 'error',
+                            customClass: {
+                                confirmButton: 'btn btn-primary waves-effect waves-light'
+                            },
+                            buttonsStyling: false
+                        });
+                    } else {
+                        console.log('Error updating article: ' + (xhr.responseJSON.message || 'Unknown error'));
+                    }
                 }
             });
         });

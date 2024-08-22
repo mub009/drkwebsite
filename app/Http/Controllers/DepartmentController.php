@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use App\Http\Requests\DepartmentRequest;
+
 
 class DepartmentController extends Controller
 {
@@ -56,7 +58,7 @@ class DepartmentController extends Controller
         return view('backend.departmentsAdd');
     }
 
-    public function store(Request $request)
+    public function store(DepartmentRequest $request)
     {
 
         try {
@@ -121,6 +123,12 @@ class DepartmentController extends Controller
                 return response()->json(['status' => true, 'message' => 'Department updated successfully.']);
             } else {
                 return redirect()->route('departments.index')->with('success', 'Department updated successfully.');
+            }
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            if ($request->ajax()) {
+                return response()->json(['status' => false, 'message' => $e->validator->errors()->first()], 422);
+            } else {
+                return back()->with('error', $e->validator->errors()->first());
             }
         } catch (\Exception $e) {
             if ($request->ajax()) {

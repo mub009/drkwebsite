@@ -17,17 +17,17 @@
 
                 <div class="mb-3">
                     <label for="name_en" class="form-label">Name (English)</label>
-                    <input type="text" class="form-control" id="name_en" name="name_en" value="{{ old('name_en', $doctor->name_en) }}" required>
+                    <input type="text" class="form-control" id="name_en" name="name_en" value="{{ old('name_en', $doctor->name_en) }}" >
                 </div>
 
                 <div class="mb-3">
                     <label for="name_ar" class="form-label">Name (Arabic)</label>
-                    <input type="text" class="form-control" id="name_ar" name="name_ar" value="{{ old('name_ar', $doctor->name_ar) }}" required>
+                    <input type="text" class="form-control" id="name_ar" name="name_ar" value="{{ old('name_ar', $doctor->name_ar) }}" >
                 </div>
 
                 <div class="mb-3">
                     <label for="department" class="form-label">Department</label>
-                    <select class="form-control" id="department" name="department" required>
+                    <select class="form-control" id="department" name="department" >
                         <option value="">Select a Department</option>
                         @foreach($departments as $id => $department_name)
                         <option value="{{ $id }}" {{ old('department', $doctor->department) == $id ? 'selected' : '' }}>
@@ -122,7 +122,19 @@
                     }
                 },
                 error: function(xhr) {
-                    console.log('Error updating doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
+                    if (xhr.status === 422) {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: xhr.responseJSON.message,
+                            icon: 'error',
+                            customClass: {
+                                confirmButton: 'btn btn-primary waves-effect waves-light'
+                            },
+                            buttonsStyling: false
+                        });
+                    } else {
+                        console.log('Error updating doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
+                    }
                 }
             });
         });

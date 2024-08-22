@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use App\Http\Requests\ArticleRequest;
+use App\Rules\NotEmptyHtml;
+
 
 class ArticleController extends Controller
 {
@@ -68,18 +71,20 @@ class ArticleController extends Controller
         return view('backend.articlesAdd');
     }
 
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-
         try {
             $request->validate([
                 'title_en' => 'required|string|max:255',
                 'title_ar' => 'required|string|max:255',
-                // 'article_en' => 'required',
-                // 'article_ar' => 'required',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|required',
-                'slug' => 'required',
+                'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'content_en' => ['required', new NotEmptyHtml],
+                'content_ar' => ['required', new NotEmptyHtml],
+                'slug' => 'required|string|unique:articles,slug|max:255',
+            ], [
+                'slug.unique' => 'The slug should be unique.',
             ]);
+
             $article = new Article;
             $article->title_en = $request->title_en;
             $article->title_ar = $request->title_ar;
@@ -92,12 +97,15 @@ class ArticleController extends Controller
                 $article->image = $imageName;
             }
             $article->save();
-            return response()->json(['status' => true, 'message' => 'Article created successfully.']);
-        } catch (\Exception $e) {
 
+            return response()->json(['status' => true, 'message' => 'Article created successfully.']);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return response()->json(['status' => false, 'message' => $e->validator->errors()->first()], 422);
+        } catch (\Exception $e) {
             return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
         }
     }
+
 
 
 
@@ -113,17 +121,17 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         try {
-
-
             $article = Article::findOrFail($id);
 
             $request->validate([
                 'title_en' => 'required|string|max:255',
                 'title_ar' => 'required|string|max:255',
-                // 'article_en' => 'required',  
-                // 'article_ar' => 'required',
+                // 'content_en' => 'required',
+                // 'content_ar' => 'required',
+                'slug' => 'required|string|max:255|unique:articles,slug,' . $id,
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
-                'slug' => 'required',
+            ], [
+                'slug.unique' => 'The slug should be unique.',
             ]);
 
             $article->title_en = $request->title_en;
@@ -140,12 +148,16 @@ class ArticleController extends Controller
 
             $article->save();
 
-
-
             if ($request->ajax()) {
                 return response()->json(['status' => true, 'message' => 'Article updated successfully.']);
             } else {
                 return redirect()->route('articles.index')->with('success', 'Article updated successfully.');
+            }
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            if ($request->ajax()) {
+                return response()->json(['status' => false, 'message' => $e->validator->errors()->first()], 422);
+            } else {
+                return back()->with('error', $e->validator->errors()->first());
             }
         } catch (\Exception $e) {
             if ($request->ajax()) {
@@ -156,7 +168,8 @@ class ArticleController extends Controller
         }
     }
 
-    
+
+
     public function destroy($id)
     {
         $article = Article::findOrFail($id);

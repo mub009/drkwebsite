@@ -22,11 +22,11 @@
                         <form id="addDoctorForm" action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="name_en" class="form-label">Name (English)</label>
-                                <input type="text" class="form-control" id="name_en" name="name_en" value="Dr. " required>
+                                <input type="text" class="form-control" id="name_en" name="name_en"  >
                             </div>
                             <div class="mb-3">
                                 <label for="name_ar" class="form-label">Name (Arabic)</label>
-                                <input type="text" class="form-control" id="name_ar" name="name_ar" value="Dr. " required>
+                                <input type="text" class="form-control" id="name_ar" name="name_ar" >
                             </div>
 
 
@@ -39,7 +39,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="department" class="form-label">Department</label>
-                                <select class="form-control" id="department" name="department" required>
+                                <select class="form-control" id="department" name="department" >
                                     <option value="">Select a Department</option>
                                     @foreach($departments as $id=> $department_en)
                                     <option value="{{$id}}">{{$department_en}}</option>
@@ -99,7 +99,26 @@
                         }
                     },
                     error: function(xhr) {
-                        console.log('Error saving doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
+                        if (xhr.status === 422) {
+                            // Clear previous errors
+                            $('.invalid-feedback').remove();
+
+                            let errors = xhr.responseJSON.errors;
+
+                            for (let field in errors) {
+                                let errorMessage = errors[field][0];
+                                let inputField = $('#' + field);
+
+                                // Create a div for error message
+                                let errorDiv = $('<div>').addClass('invalid-feedback').text(errorMessage);
+
+                                // Append error message below the input field
+                                inputField.after(errorDiv);
+                                inputField.addClass('is-invalid');
+                            }
+                        } else {
+                            console.log('Error saving doctor: ' + (xhr.responseJSON.message || 'Unknown error'));
+                        }
                     }
                 });
             });

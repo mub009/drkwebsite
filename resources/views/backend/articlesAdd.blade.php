@@ -22,11 +22,11 @@
             <form id="addArticleForm" method="POST" enctype="multipart/form-data">
               <div class="mb-3">
                 <label for="title_en" class="form-label">Title(English)</label>
-                <input type="text" class="form-control" id="title_en" name="title_en" required>
+                <input type="text" class="form-control" id="title_en" name="title_en">
               </div>
               <div class="mb-3">
                 <label for="title_ar" class="form-label">Title(Arabic)</label>
-                <input type="text" class="form-control" id="title_ar" name="title_ar" required>
+                <input type="text" class="form-control" id="title_ar" name="title_ar">
               </div>
               <div class="mb-3" id="thumbnailImg">
                 <label for="image" class="form-label">Thumbnail Image</label>
@@ -38,7 +38,6 @@
               <div class="mb-3">
                 <label for="article_en" class="form-label">Article(English)</label>
                 <div id="snow-toolbar">
-
                   <span class="ql-formats">
                     <select class="ql-font"></select>
                     <select class="ql-size"></select>
@@ -64,8 +63,8 @@
                     <button class="ql-code-block"></button>
                   </span>
                 </div>
-                <div id="snow-editor">
-                </div>
+                <div id="snow-editor"></div>
+                <div id="content_en"></div>
               </div>
               <div class="mb-3">
                 <label for="article_ar" class="form-label">Article(Arabic)</label>
@@ -96,12 +95,12 @@
                     <button class="ql-code-block"></button>
                   </span>
                 </div>
-                <div id="snow-editor1">
-                </div>
+                <div id="snow-editor1"></div>
+                <div id="content_ar"></div>
               </div>
               <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
-                <input type="text" class="form-control" id="slug" name="slug" required>
+                <input type="text" class="form-control" id="slug" name="slug">
               </div>
 
               <div class="row justify-content-end">
@@ -144,9 +143,9 @@
         },
         theme: 'snow'
       });
+
       // Submit form
       $('#addArticleForm').on('submit', function(e) {
-        //document.getElementById('content').value = snowEditor.root.innerHTML;
         e.preventDefault();
         let contentEn = snowEditor.root.innerHTML;
         let contentAr = snowEditor1.root.innerHTML;
@@ -183,17 +182,31 @@
                 },
                 buttonsStyling: false
               }).then(() => {
-                setTimeout(() => {
-                  window.location.href = "{{route('articles.index')}}"; // Replace with the URL of the page you want to redirect to
-                }, 0); // 2000 milliseconds = 2 seconds
+                window.location.href = "{{route('articles.index')}}";
               });
-              // location.reload(); 
-            } else {
-              console.log('Error saving article: ' + response.message);
             }
           },
           error: function(xhr) {
-            console.log('Error saving article: ' + (xhr.responseJSON.message || 'Unknown error'));
+            if (xhr.status === 422) {
+              // Clear previous errors
+              $('.invalid-feedback').remove();
+
+              let errors = xhr.responseJSON.errors;
+
+              for (let field in errors) {
+                let errorMessage = errors[field][0];
+                let inputField = $('#' + field);
+
+                // Create a div for error message
+                let errorDiv = $('<div>').addClass('invalid-feedback').text(errorMessage);
+
+                // Append error message below the input field
+                inputField.after(errorDiv);
+                inputField.addClass('is-invalid');
+              }
+            } else {
+              console.log('Error saving article: ' + (xhr.responseJSON.message || 'Unknown error'));
+            }
           }
         });
       });
