@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/Assets/logos/Logo2.png">
+  <title>DRK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <!-- <link rel="stylesheet" href="/Main/style.css" />
+  <link rel="stylesheet" href="/Main/stylesub.css" />
+  <script defer src="/Main/script.js"></script>
+  <script defer src="/Main/scriptsub.js"> </script> -->
+
+
+<link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/stylesub.css" />
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/scriptsub.js"> </script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <img src="/Assets/Icons/logo.png" alt="Hospital Logo" class="hospital-logo" />
+
+      <div id="overlay" class="overlayz"></div>
+
+      <nav class="main-nav2" id="mainNav2">
+        <button id="closeButton" class="close-buttonzz">×</button>
+        <div>
+          <div class="language-selector respo-lag" onclick="toggleLanguage()">
+            <div class="language-slider"></div>
+            <span class="language-option">EN</span>
+            <span class="language-option">AR</span>
+          </div>
+          
+          <a href="/offeren.html" class="nav-link2"><span class="spanz">01. </span>Offers</a>
+          <a href="/branches.html" class="nav-link2"><span class="spanz">02. </span>Branches</a>
+          <a href="/doctors.html" class="nav-link2"><span class="spanz">03. </span>Doctors</a>
+          <a href="/whowe.html" class="nav-link2"> <span class="spanz">04. </span> Who We Are</a>
+          <a href="/contact.html" class="nav-link2"><span class="spanz">05. </span>Contact Us</a>
+
+
+          <div class="footer-line2"></div>
+          <div class="footer-tail-end">
+            <div> © 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.</div>
+          </div>
+        </div>
+      </nav>
+
+
+      <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+
+        <a href="/offeren.html" class="nav-link">Offers</a>
+        <a href="/branches.html" class="nav-link">Branches</a>
+        <a href="/doctors.html" class="nav-link">Doctors</a>
+        <a href="/whowe.html" class="nav-link">Who We Are</a>
+        <a href="/contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-selector lnon" onclick="toggleLanguage()">
+          <div class="language-slider"></div>
+          <span class="language-option">EN</span>
+          <span class="language-option">AR</span>
+        </div>
+
+
+        <button class="book-now-button bnon" id="open-modal">
+          <span class="book">Book Now</span>
+          <img src="/Assets/Icons/Arrow2.png" alt="Arrow Icon" />
+        </button>
+        <div class="menu-button w-nav-button" id="menuButton">
+          <div class="menu-flex">
+            <div class="menu">
+              <div class="w-embed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal" id="modal-box">
+          <button class="close-btn" id="close-modal">&times;</button>
+          <h2 class="modal-title">Book Now</h2>
+          <p class="modal-subtitle">Enter your details below.</p>
+
+          <form id="booking-form" class="modern-form">
+            <div class="form-row">
+              <input type="text" class="form-input" placeholder="Enter your name" />
+              <input type="number" class="form-input" placeholder="Phone number" />
+              <!-- </div> -->
+
+              <!-- <div class="form-row"> -->
+              <div class="select-menu">
+                <div class="select-btn">
+                  <span class="sBtn-text">Select Branch</span>
+                  <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="options">
+                  <li class="option"><span class="option-text">Dr. Khaled Al Rahimi Medical Complex - Al Fursan
+                      Branch</span></li>
+                  <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex - Aziziyah
+                      Branch</span></li>
+                  <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex - Al-Ahsa
+                      Branch</span></li>
+                  <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex - Pepsi Street
+                      Branch</span></li>
+                  <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Hospital</span></li>
+                  <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex - Al-Ulya District
+                      Branch</span></li>
+                </ul>
+              </div>
+
+              <div class="select-menu">
+                <div class="select-btn">
+                  <span class="sBtn-text">Choose Service</span>
+                  <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="options">
+                  <li class="option"><span class="option-text">Ear, Nose and Throat</span></li>
+                  <li class="option"><span class="option-text">Ophthalmology</span></li>
+                  <li class="option"><span class="option-text">Dentistry</span></li>
+                  <li class="option"><span class="option-text">Women and Childbirth</span></li>
+                  <li class="option"><span class="option-text">Pediatrics</span></li>
+                  <li class="option"><span class="option-text">Dermatology</span></li>
+                  <li class="option"><span class="option-text">sleep disorders</span></li>
+                  <li class="option"><span class="option-text">Urology</span></li>
+                  <li class="option"><span class="option-text">Rheumatism</span></li>
+                  <li class="option"><span class="option-text">Esotericism</span></li>
+                  <li class="option"><span class="option-text">Intensive Care Unit (ICU)</span></li>
+                  <li class="option"><span class="option-text">Dental surgery and implants</span></li>
+                  <li class="option"><span class="option-text">Digestive System Surgery</span></li>
+                  <li class="option"><span class="option-text">Oral and maxillofacial surgery</span></li>
+                  <li class="option"><span class="option-text">Bariatric surgery</span></li>
+                  <li class="option"><span class="option-text">Reconstructive, plastic and burn surgery</span></li>
+                  <li class="option"><span class="option-text">Diabetic foot surgery</span></li>
+                  <li class="option"><span class="option-text">Rays</span></li>
+                  <li class="option"><span class="option-text">Anesthesia</span></li>
+                  <li class="option"><span class="option-text">Home care</span></li>
+                  <li class="option"><span class="option-text">Fat breaking and lymphatic massage</span></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <button class="book-now-button"
+              style="background: linear-gradient(180deg, #32031a -9.89%, #980a50 89.96%);">
+              <span class="book"> Submit </span>
+              <img src="/Assets/Icons/Arrow2.png" alt="Arrow Icon" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+  <section class="hero services-section " style="margin-top: 110px !important;">
+    <div class="hero-bg hero-bg-1"></div>
+    <div class="hero-bg hero-bg-2"></div>
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title anima" data-aos="fade-zoom-in">
+        An elite group of the most skilled consultants and specialists in the
+        Kingdom of Saudi Arabia.
+      </h1>
+
+      <div class="hero-actions ">
+        <div class="appointment-button-container">
+          <button class="appointment-button" id="open-modal">
+            <span class="appointment-text">Book an Appointment</span>
+            <div class="doctor-icon-container">
+              <img src="/Assets/Icons/Arrow.png" alt="" />
+            </div>
+          </button>
+        </div>
+
+        <div class="enroll-button-container">
+          <button class="doull-btn">
+            <div class="enroll-button">
+              <span class="enroll-text">Enroll Now</span>
+            </div>
+
+            <div>
+              <img src="/Assets/Icons/Arrow1.png" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="services-section services-section">
+    <div class="services-grid">
+      <div class="services-header fade-in">
+        <img src="/Assets/Icons/istock-doc.png" alt="Medical professional" class="services-image" />
+        <h2 class="services-title">What We Do For You</h2>
+        <div class="section-divider-vertical"></div>
+      </div>
+
+      <!-- Insurance -->
+      <article class="service-card fade-in">
+        <div class="service-logo-container">
+          <img src="/Assets/Icons/Mask.png" alt="Hospital logo" />
+        </div>
+        <div class="service-icon-container">
+          <img src="/Assets/Icons/Insurance.png" alt="Insurance Icon" />
+        </div>
+        <div class="service-info">
+          <h3 class="service-category">INSURANCES</h3>
+          <p class="service-description">Our Insurance Partners</p>
+          <div class="learn-more-link">
+            <div class="learn-more-arrow">
+              <img src="/Assets/Icons/arrow-down.png" alt="" />
+            </div>
+            <span class="learn-more-text">Learn More</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Doctors -->
+      <article class="service-card">
+        <div class="service-logo-container">
+          <img src="/Assets/Icons/Mask.png" alt="Hospital logo" />
+        </div>
+        <div class="service-icon-container">
+          <img src="/Assets/Icons/Doctors.png" alt="Doctors Icon" />
+        </div>
+        <div class="service-info">
+          <h3 class="service-category">DOCTORS</h3>
+          <p class="service-description">Our Doctors</p>
+          <div class="learn-more-link">
+            <div class="learn-more-arrow">
+              <img src="/Assets/Icons/arrow-down.png" alt="" />
+            </div>
+            <span class="learn-more-text">Learn More</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Specialities -->
+      <article class="service-card">
+        <div class="service-logo-container">
+          <img src="/Assets/Icons/Mask.png" alt="Hospital logo" />
+        </div>
+        <div class="service-icon-container">
+          <img src="/Assets/Icons/Specialities.png" alt="Specialities Icon" />
+        </div>
+        <div class="service-info">
+          <h3 class="service-category">MULTI SPECIALITIES</h3>
+          <p class="service-description">Our Specialities</p>
+          <div class="learn-more-link">
+            <div class="learn-more-arrow">
+              <img src="/Assets/Icons/arrow-down.png" alt="" />
+            </div>
+            <span class="learn-more-text">Learn More</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-divider"></div>
+  </section>
+
+
+
+  <div class="section anima" data-aos="fade-zoom-in">
+    <div class="section-container">
+      <!-- Left Section -->
+      <div class="left-section">
+        <div class="left-image">
+          <img src="/Assets/images/image6.jpg" alt="Doctor" />
+        </div>
+
+        <div class="badge-emergency">24/7 Emergency Support</div>
+
+        <div class="satisfied-patients">
+          <div class="avatars">
+            <img src="/Assets/images/p1.jpg" alt="Avatar 1" />
+            <img src="/Assets/images/p2.jpg" alt="Avatar 2" />
+            <img src="/Assets/images/p3.jpg" alt="Avatar 3" />
+            <img src="/Assets/images/p4.jpg" alt="Avatar 4" />
+          </div>
+          <div class="text">
+            <span class="count">150k+</span><br />
+            <span class="label">Satisfied Patients</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-content">
+        <h2 class="main-headline">
+          <span class="headline-part">Your Health Requirement Is Our First
+          </span>
+          <span class="headline-emphasis">Focus.</span>
+        </h2>
+        <div class="feature-columns">
+          <div class="column">
+            <div>
+              <h4>Integrated facilities</h4>
+              <p>
+                Medical devices manufactured globally from the largest and
+                most famous medical device factories in the world.
+              </p>
+            </div>
+            <div>
+              <h4>Elite of the elite</h4>
+              <p>
+                We are proud to have world-class doctors and nursing staff.
+              </p>
+            </div>
+          </div>
+
+          <div class="vertical-divider">
+            <img src="/Assets/images/Heart.png" alt="Heart" />
+          </div>
+
+          <div class="column">
+            <div>
+              <h4>Saudi Global</h4>
+              <p>
+                We provide our medical services according to the international
+                Saudi standard.
+              </p>
+            </div>
+            <div>
+              <h4>Best services</h4>
+              <p>
+                Providing distinguished healthcare to clients and the
+                community, in line with the best medical standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-gridz">
+      <div class="card light">
+        <div class="card-content">
+          <h3>Find Trusted Doctors Near You</h3>
+          <p>Easily Search And Book Appointments With Top Specialists.</p>
+        </div>
+        <img src="/Assets/images/i1.png" alt="Doctor" class="card-image" />
+        <div class="card-button light-btn">
+          <img src="/Assets/Icons/Arrow3.png" alt="" />
+        </div>
+      </div>
+
+      <div class="card dark">
+        <div class="card-content">
+          <h3>Confirmed Appointments</h3>
+          <p>Secure Your Consultation With Instant Confirmation.</p>
+        </div>
+        <img src="/Assets/images/i2.png" alt="Confirmed Appointments" class="card-image" />
+        <div class="card-button light-btn">
+          <img src="/Assets/Icons/Arrow4.png" alt="" />
+        </div>
+      </div>
+
+      <div class="card light">
+        <div class="card-content">
+          <h3>24/7 Medicine Delivery.</h3>
+          <p>Essential Medicines Delivered To Your Doorstep, Anytime.</p>
+        </div>
+        <img src="/Assets/images/i3.png" alt="Medicine Delivery" class="card-image" />
+        <div class="card-button light-btn">
+          <img src="/Assets/Icons/Arrow3.png" alt="" />
+        </div>
+      </div>
+
+      <div class="card dark">
+        <div class="card-content">
+          <h3>Instant Video Consultations.</h3>
+          <p>
+            Connect With A Doctor In Under 60 Seconds — Fast, Safe, And
+            Convenient.
+          </p>
+        </div>
+        <img src="/Assets/images/i4.png" alt="Video Consultation" class="card-image" />
+        <div class="card-button light-btn">
+          <img src="/Assets/Icons/Arrow4.png" alt="" />
+        </div>
+      </div>
+
+      <div class="card light">
+        <div class="card-content">
+          <h3>Home Sample Collection For Lab Tests.</h3>
+          <p>Simple, Hassle-Free Pickup Of Lab Samples At Your Home.</p>
+        </div>
+        <img src="/Assets/images/i5.png" alt="Lab Test" class="card-image" />
+        <div class="card-button light-btn">
+          <img src="/Assets/Icons/Arrow3.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="section sectionz sectionzz anima" data-aos="fade-zoom-in">
+    <div class="medical-facility-showcase showcasez">
+      <div class="showcase-container">
+        <div class="content-wrapper">
+          <main class="main-content main-contentz">
+            <div class="content-header">
+              <h1 class="brand-title">
+                <span class="brand-name">DRK</span>
+                <span class="brand-tagline">: A Legacy Of Care</span>
+              </h1>
+              <h2 class="main-headline">
+                <span class="headline-part">Experience</span>
+                <span class="headline-emphasis">World-Class Medical Facility</span>
+              </h2>
+              <p class="facility-description">
+                At Dr. Khaled Al-Ruhaimi Hospital, we believe that exceptional
+                care begins with exceptional people. That's why we invest in
+                the most advanced medical technologies and attract highly
+                qualified consultants and specialists across every medical
+                discipline. Our patient‑centered philosophy, combined with a
+                commitment to clinical excellence, ensures that each
+                individual receives world‑class healthcare with compassion and
+                precision.
+              </p>
+            </div>
+            <div class="features-grid">
+              <article class="feature-item">
+                <div class="feature-icon">
+                  <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                </div>
+                <h3 class="feature-title">
+                  Internationally Qualified Medical Professionals
+                </h3>
+              </article>
+              <article class="feature-item">
+                <div class="feature-icon">
+                  <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                </div>
+                <h3 class="feature-title">High Quality Medical Equipments</h3>
+              </article>
+              <article class="feature-item">
+                <div class="feature-icon">
+                  <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                </div>
+                <h3 class="feature-title">
+                  Quality Cost Effective Medical Care
+                </h3>
+              </article>
+              <article class="feature-item">
+                <div class="feature-icon">
+                  <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                </div>
+                <h3 class="feature-title">Accepting All Major Insurances</h3>
+              </article>
+            </div>
+          </main>
+          <aside class="hero-image-section">
+            <div class="hero-image-container">
+              <div class="hero-image" style="
+                    background-image: url('/Assets/Icons/Union.png');
+                    background-size: cover;
+                    background-position: center;
+                  " role="img" aria-label="Medical facility interior"></div>
+              <div class="experience-badge">
+                <div class="badge-content">
+                  <div class="badge-text">
+                    <span class="years-number">20+</span>
+                    <br />
+                    <span class="years-label">YEARS OF</span>
+                    <br />
+                    <span class="experience-label">EXPERIENCE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+      <section class="awards-section">
+        <div class="awards-container">
+          <div class="award-item">
+            <img src="/Assets/Icons/award.png" alt="Award Icon" class="award-image" />
+            <div class="award-text">
+              <h3>Radi’s references</h3>
+              <p>1,300,000 +</p>
+            </div>
+          </div>
+          <div class="award-item">
+            <img src="/Assets/Icons/award.png" alt="Award Icon" class="award-image" />
+            <div class="award-text">
+              <h3>Doctor at your service</h3>
+              <p>60 +</p>
+            </div>
+          </div>
+          <div class="award-item">
+            <img src="/Assets/Icons/award.png" alt="Award Icon" class="award-image" />
+            <div class="award-text">
+              <h3>
+                Branches in the Kingdom <br />
+                of Saudi Arabia
+              </h3>
+              <p>8</p>
+            </div>
+          </div>
+          <div class="award-item">
+            <img src="/Assets/Icons/award.png" alt="Award Icon" class="award-image" />
+            <div class="award-text">
+              <h3>Years of experience</h3>
+              <p>20 +</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section topz">
+    <div class="team-section">
+      <div class="team-container">
+        <div class="team-header anima" data-aos="fade-zoom-in">
+          <h2 class="section-title">Meet The Team</h2>
+          <div class="header-content" style="align-items: center; gap: 2px">
+            <h2 class="main-headline">
+              <span class="headline-part">Meet Our Experts @</span>
+              <span class="headline-emphasis">DRK</span>
+            </h2>
+            <div>
+              <div class="satisfied-patients" style="position: unset; box-shadow: unset">
+                <div class="avatars">
+                  <img src="/Assets/images/ds1.png" alt="Avatar 1" />
+                  <img src="/Assets/images/ds2.png" alt="Avatar 2" />
+                  <img src="/Assets/images/ds3.png" alt="Avatar 3" />
+                  <img src="/Assets/images/ds4.png" alt="Avatar 4" />
+                  <img src="/Assets/images/ds5.png" alt="Avatar 5" />
+                </div>
+                <div class="text">
+                  <span class="count">50+</span><br />
+                  <span class="label">Skilled Doctor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="team-description">
+            Our highly experienced team of consultants, specialists and
+            healthcare professionals focus on the root cause of disease to
+            improve the health and well-being of each and every patient. They
+            all have global recognition and accreditations. Our doctors are
+            experts in high-end technology. We provide premium medical care
+            and comfort with modern equipment since our facility is built with
+            the latest advanced technology
+          </p>
+        </div>
+
+        <main class="team-content">
+          <div class="doctors-grid anima" data-aos="fade-zoom-in">
+            <article class="doctor-card">
+              <div class="card-background"></div>
+              <div class="card-watermark">DRK</div>
+              <div>
+                <img src="/Assets/images/d1.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                <div class="doctor-info">
+                  <div class="doctor-details">
+                    <h3 class="doctor-name">Dr. Khaled Al-Rahimi</h3>
+                    <p class="doctor-specialty">
+                      Reconstructive, plastic and burn surgery
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="card-background"></div>
+              <div class="card-watermark">DRK</div>
+              <div>
+                <img src="/Assets/images/d12.png" alt="Dr. Fatima Al-Badr" class="doctor-image" />
+                <div class="doctor-info">
+                  <div class="doctor-details">
+                    <h3 class="doctor-name">Dr. Fatima Al-Badr</h3>
+                    <p class="doctor-specialty">Dermatology</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="card-background"></div>
+              <div class="card-watermark">DRK</div>
+              <div>
+                <img src="/Assets/images/d31.png" alt="Dr. Rosa Garcia" class="doctor-image" />
+                <div class="doctor-info">
+                  <div class="doctor-details">
+                    <h3 class="doctor-name">Dr. Rosa Garcia</h3>
+                    <p class="doctor-specialty">
+                      Oral and maxillofacial surgery
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="card-background"></div>
+              <div class="card-watermark">DRK</div>
+              <div>
+                <img src="/Assets/images/d41.png" alt="Dr. Othman Ali" class="doctor-image" />
+                <div class="doctor-info">
+                  <div class="doctor-details">
+                    <h3 class="doctor-name">Dr. Othman Ali</h3>
+                    <p class="doctor-specialty">
+                      Reconstructive, plastic and burn surgery
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+            <a href="/doctors.html" style="text-decoration: none;" >
+          <div  class="view-all-section">
+            <button  class="view-all-button" type="button">
+              <span  class="view-all-text">See Our All Doctors</span>
+            </button>
+            <div>
+              <img src="/Assets/Icons/arrow-up-linestr.png" alt="" />
+            </div>
+          </div>
+          </a>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sectionzz anima" data-aos="fade-zoom-in">
+    <div class="departments-section">
+      <div class="departments-container">
+        <div class="departments-content">
+          <div class="departments-header">
+            <h2 class="departments-label">Departments</h2>
+            <h2 class="main-headline">
+              <span class="headline-emphasis">Unique Multi-</span>
+              <span class="headline-part">Specialty Medical Departments</span>
+            </h2>
+            <!-- <h1 class="departments-title">Unique Multi-Specialty Medical Departments</h1> -->
+          </div>
+
+          <div class="departments-scroll-container">
+            <div class="departments-grid">
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s1.png')" role="img"
+                    aria-label="Emergency department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">24/7 Emergency</h3>
+                <p class="department-description">
+                  24/7 emergency response for urgent medical needs.
+                </p>
+              </article>
+
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s2.png')" role="img"
+                    aria-label="ENT department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Ear, Nose and Throat</h3>
+                <p class="department-description">
+                  Comprehensive care for ear, nose, throat, and related head
+                  and neck conditions.
+                </p>
+              </article>
+
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s3.png')" role="img"
+                    aria-label="Ophthalmology department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Ophthalmology</h3>
+                <p class="department-description">
+                  Eye exams, treatments, and surgeries for better vision.
+                </p>
+              </article>
+
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s4.png')" role="img"
+                    aria-label="Dentistry department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Dentistry</h3>
+                <p class="department-description">
+                  Full-service dental care in a comfortable setting.
+                </p>
+              </article>
+
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s5.png')" role="img"
+                    aria-label="Women and Childbirth department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Women and Childbirth</h3>
+                <p class="department-description">
+                  Complete women's health and maternity care.
+                </p>
+              </article>
+
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s6.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Pediatrics</h3>
+                <p class="department-description">
+                  Care for children’s health from birth to adolescence.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s7.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Dermatology</h3>
+                <p class="department-description">
+                  Advanced skincare solutions for medical and cosmetic needs.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s8.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">sleep disorders</h3>
+                <p class="department-description">
+                  Diagnosis and treatment for insomnia, apnea, and other sleep
+                  issues.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s9.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Urology</h3>
+                <p class="department-description">
+                  Expert care for urinary and male reproductive health.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s10.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Rheumatism</h3>
+                <p class="department-description">
+                  Treatment of joint pain and autoimmune disorders affecting
+                  bones and muscles.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s11.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Esotericism</h3>
+                <p class="department-description">
+                  Advanced diagnostic testing for rare and complex medical
+                  conditions.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s12.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Intensive Care Unit (ICU)</h3>
+                <p class="department-description">
+                  Specialized 24/7 care for critically ill or life-threatening
+                  conditions.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s13.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">General Surgery</h3>
+                <p class="department-description">
+                  Safe and effective surgical procedures for various
+                  conditions.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s14.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Dental surgery and implants</h3>
+                <p class="department-description">
+                  Surgical solutions and implants to restore teeth and oral
+                  health.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s15.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Digestive System Surgery</h3>
+                <p class="department-description">
+                  Surgical treatment for conditions affecting the stomach,
+                  intestines, liver, and related organs.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s16.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">
+                  Oral and maxillofacial surgery
+                </h3>
+                <p class="department-description">
+                  Surgical treatment for facial, jaw, and dental conditions.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s18.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Bariatric surgery</h3>
+                <p class="department-description">
+                  Weight-loss surgeries to treat obesity and improve overall
+                  health.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s19.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">
+                  Reconstructive, plastic and burn surgery
+                </h3>
+                <p class="department-description">
+                  Specialized surgical care for restoring form and function
+                  after injury, burns, or deformities.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s20.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Diabetic foot surgery</h3>
+                <p class="department-description">
+                  Specialized surgical care for foot complications caused by
+                  diabetes.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s21.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Rays</h3>
+                <p class="department-description">
+                  Accurate imaging services like X-rays for fast and clear
+                  diagnosis.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s22.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Laboratory</h3>
+                <p class="department-description">
+                  Accurate and fast testing to support precise diagnosis and
+                  treatment.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s23.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Anesthesia</h3>
+                <p class="department-description">
+                  Safe and controlled pain management during surgeries and
+                  procedures.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s24.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">Home care</h3>
+                <p class="department-description">
+                  Personalized medical support delivered in the comfort of
+                  your home.
+                </p>
+              </article>
+              <article class="department-card">
+                <div class="department-image-container">
+                  <div class="department-image" style="background-image: url('/Assets/images/s25.png')" role="img"
+                    aria-label="Pediatrics department"></div>
+                  <div class="department-icon">
+                    <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                  </div>
+                </div>
+                <h3 class="department-name">
+                  Fat breaking and lymphatic massage
+                </h3>
+                <p class="department-description">
+                  Non-invasive therapy to reduce fat and boost lymphatic
+                  drainage for better body contouring and detox.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="appointment-ctazz appointment-ctaim">
+          <div class="appointment-content">
+            <div class="appointment-textz">
+              <h2 class="appointment-title">Book An Appointment</h2>
+              <p class="appointment-description">
+                Book your appointment today and experience the highest quality
+                healthcare at Dr. Khaled Al-Ruhaimi Hospital. Our dedicated
+                team is ready to provide personalized care tailored to your
+                specific needs.
+              </p>
+            </div>
+            <div class="appointment-button-container">
+              <button class="appointment-button" id="open-modal">
+                <span class="appointment-text">Book an Appointment</span>
+                <div class="doctor-icon-container">
+                  <img src="/Assets/Icons/Arrow.png" alt="" />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section topz  anima" data-aos="fade-zoom-in">
+    <div class="partners-section">
+      <div class="partners-header">
+        <h2 class="main-headline">
+          <span class="headline-part">Our Insurance </span>
+          <span class="headline-emphasis">Companies &</span> <br>
+          <span class="headline-emphasis">Partners</span>
+        </h2>
+        <!-- <h2>Our Insurance Companies &<br />Partners</h2> -->
+        <p>
+          We collaborate with all major regional insurance providers and
+          trusted partners<br />
+          to ensure seamless coverage and support for your care.
+        </p>
+      </div>
+
+      <div class="partners-logos-grid">
+        <img src="/Assets/logos/l14.png" alt="Nextcare" />
+        <img src="/Assets/logos/l7.png" alt="STC" />
+        <img src="/Assets/logos/l9.png" alt="Walaa" />
+        <img src="/Assets/logos/l10.png" alt="Medgulf" />
+        <img src="/Assets/logos/l8.png" alt="MOH" />
+        <img src="/Assets/logos/l13.png" alt="Union" />
+        <img src="/Assets/logos/l11.png" alt="Allianz" />
+        <img src="/Assets/logos/l12.png" alt="SAICO" />
+        <img src="/Assets/logos/l6.png" alt="Qitaf" />
+        <img src="/Assets/logos/l5.png" alt="Cancer Foundation" />
+        <img src="/Assets/logos/l1.png" alt="IAU" />
+        <img src="/Assets/logos/l4.png" alt="Sadara" />
+
+        <div class="last-two-logos">
+          <img src="/Assets/logos/l2.png" alt="Alasala" />
+          <img src="/Assets/logos/l3.png" alt="Aramco" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sectionzz">
+    <div class="medical-facility-showcase">
+      <div class="showcase-container" style="align-items: flex-start">
+        <div class="blog-header  anima" data-aos="fade-zoom-in">
+          <h2 class="blog-category">Our Blogs</h2>
+          <h2 class="main-headline">
+            <span class="headline-part">Health</span>
+            <span class="headline-emphasis">Insights & Wellness</span>
+            <span class="headline-part">Tips</span>
+          </h2>
+          <p class="blog-description">
+            Stay informed with our latest blogs and articles-covering expert
+            advice,health <br />
+            tips, and the latest in medical care to help you make confident
+            decisions about <br />
+            your well-being.
+          </p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card  anima" data-aos="fade-zoom-in">
+            <img src="/Assets/images/a1.jpeg" alt="Understanding Appendicitis" class="blog-image" />
+            <div class="blog-content">
+              <div class="blog-card-header">
+                <h3 class="blog-card-title">
+                  Understanding Appendicitis: Causes, Symptoms & Treatments
+                </h3>
+                <time class="blog-date" datetime="2025-04-15">April 15, 2025</time>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-excerpt">
+                  An overview of appendicitis, how to spot the signs early,
+                  and when surgical intervention becomes necessary.
+                </p>
+                <a href="#" class="blog-link">
+                  <span class="link-text">View Details</span>
+                  <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card  anima" data-aos="fade-zoom-in">
+            <img src="/Assets/images/a2.png" alt="Types of Hernia" class="blog-image" />
+            <div class="blog-content">
+              <div class="blog-card-header">
+                <h3 class="blog-card-title">
+                  What Are the Three Types of Hernia?
+                </h3>
+                <time class="blog-date" datetime="2025-06-10">June 10, 2025</time>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-excerpt">
+                  A brief guide explaining inguinal, umbilical, and hiatal
+                  hernias—their symptoms, causes, and treatment options.
+                </p>
+                <a href="#" class="blog-link">
+                  <span class="link-text">View Details</span>
+                  <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card-reverse  anima" data-aos="fade-zoom-in">
+            <div class="blog-content">
+              <div class="blog-card-header">
+                <h3 class="blog-card-title">
+                  Gallbladder Stones: Key Facts You Should Know
+                </h3>
+                <time class="blog-date" datetime="2025-05-22">May 22, 2025</time>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-excerpt">
+                  Learn what gallstones are, common risk factors, warning
+                  signs, and effective strategies for prevention and care.
+                </p>
+                <a href="#" class="blog-link">
+                  <span class="link-text">View Details</span>
+                  <img src="/Assets/Icons/smallarrow.png " alt="" class="link-arrow" />
+                </a>
+              </div>
+            </div>
+            <img src="/Assets/images/a3.jpg" alt="Gallbladder Stones" class="blog-image" />
+          </article>
+
+          <article class="blog-card blog-card-reverse  anima" data-aos="fade-zoom-in">
+            <div class="blog-content">
+              <div class="blog-card-header">
+                <h3 class="blog-card-title">Your Health, Our Priority</h3>
+                <time class="blog-date" datetime="2025-03-18">18 March 2025</time>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-excerpt">
+                  Stay ahead with curated tips, medical updates, and wellness
+                  guidance designed to support your everyday well-being.
+                </p>
+                <a href="#" class="blog-link">
+                  <span class="link-text">View Details</span>
+                  <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                </a>
+              </div>
+            </div>
+            <img src="/Assets/images/a4.jpg" alt="Health Priority" class="blog-image" />
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sectionz sectionzz tonbotz " style="padding: 40px 0px;">
+    <div class="partners-section" style="text-align: start">
+      <div class="faq-container">
+        <div class="faq-header  anima" data-aos="fade-zoom-in">
+          <div class="header-content">
+            <p class="section-label">Our FAQS</p>
+
+            <h2 class="main-headline">
+              <span class="headline-part">Questions? We're Glad you</span>
+              <span class="headline-emphasis">asked</span>
+            </h2>
+
+            <p class="description">
+              Quick answer to questions you have. Can't find what you're
+              looking for?
+            </p>
+          </div>
+          <video class="header-video" src="/Assets/video/v1.mp4" autoplay muted loop playsinline></video>
+        </div>
+
+        <div class="faq-list  anima" data-aos="fade-zoom-in">
+          <article class="faq-item expanded" data-faq="1">
+            <div class="faq-question">
+              <h3 class="question-text">How can I book an appointment?</h3>
+              <button class="toggle-button" aria-expanded="true" aria-controls="answer-1">
+                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+              </button>
+            </div>
+            <div class="faq-answer" id="answer-1">
+              <p class="answer-text">
+                You can book online through our website, call our 24/7
+                helpline, or visit the hospital in person. Same‑day
+                appointments may be available depending on department and
+                availability.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq="2">
+            <div class="faq-question">
+              <h3 class="question-text">
+                What should I bring to my first visit?
+              </h3>
+              <button class="toggle-button" aria-expanded="false" aria-controls="answer-2">
+                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+              </button>
+            </div>
+            <div class="faq-answer" id="answer-2">
+              <p class="answer-text">
+                Please bring a valid ID, insurance card, list of current
+                medications, and any relevant medical records or test results
+                from previous visits.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq="3">
+            <div class="faq-question">
+              <h3 class="question-text">
+                Do you offer telemedicine or virtual consultations?
+              </h3>
+              <button class="toggle-button" aria-expanded="false" aria-controls="answer-3">
+                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+              </button>
+            </div>
+            <div class="faq-answer" id="answer-3">
+              <p class="answer-text">
+                Yes, we offer virtual consultations for many specialties.
+                Contact us to schedule a telemedicine appointment and receive
+                care from the comfort of your home.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq="4">
+            <div class="faq-question">
+              <h3 class="question-text">Is emergency care available?</h3>
+              <button class="toggle-button" aria-expanded="false" aria-controls="answer-4">
+                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+              </button>
+            </div>
+            <div class="faq-answer" id="answer-4">
+              <p class="answer-text">
+                Yes, our emergency department is open 24/7 with
+                board-certified emergency physicians and state-of-the-art
+                equipment to handle all types of medical emergencies.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq="5">
+            <div class="faq-question">
+              <h3 class="question-text">
+                How do I get the results of my lab tests or imaging studies?
+              </h3>
+              <button class="toggle-button" aria-expanded="false" aria-controls="answer-5">
+                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+              </button>
+            </div>
+            <div class="faq-answer" id="answer-5">
+              <p class="answer-text">
+                Test results are available through our patient portal within
+                24-48 hours. You'll receive an email notification when results
+                are ready, or you can call our results hotline.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sectionzz ">
+    <div class="medical-facility-showcase">
+      <div class="testimonials-container">
+        <div class="testimonials-header  anima" data-aos="fade-zoom-in">
+          <p class="section-label" style="margin-bottom: 25px">
+            Our Testimonials
+          </p>
+          <h2 class="main-headline">
+            <span class="headline-emphasis">Our Patients'</span>
+            <span class="headline-part">Stories of Care</span>
+          </h2>
+          <p class="section-description">
+            Our patients are at the heart of everything we do — hear their
+            stories of healing, hope, and compassionate care.
+          </p>
+        </div>
+
+        <div class="testimonials-grid  anima" data-aos="fade-zoom-in">
+          <article class="testimonial-card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-header-content">
+                  <div class="quote-icon">
+                    <img src="/Assets/Icons/xdot1.png" alt="Quote" class="quote-image" />
+                  </div>
+                  <div class="rating-container">
+                    <span class="rating-score">5.0</span>
+                    <img src="/Assets/Icons/star.png" alt="5 star rating" class="rating-stars" />
+                  </div>
+                </div>
+                <blockquote class="testimonial-text">
+                  "Exceptional care from start to finish! The ENT team was
+                  attentive, explained every step, and made me feel truly
+                  heard. Highly recommended!" 😊
+                </blockquote>
+              </div>
+              <div class="card-divider"></div>
+              <div class="customer-info">
+                <h3 class="customer-name">Mrs. Aisha Al-Farhan</h3>
+                <p class="customer-location">Riyadh, Saudi Arabia</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-header-content">
+                  <div class="quote-icon">
+                    <img src="/Assets/Icons/xdot1.png" alt="Quote" class="quote-image" />
+                  </div>
+                  <div class="rating-container">
+                    <span class="rating-score">5.0</span>
+                    <img src="/Assets/Icons/star.png" alt="5 star rating" class="rating-stars" />
+                  </div>
+                </div>
+                <blockquote class="testimonial-text">
+                  "Pediatrics team took wonderful care of our newborn. Gentle,
+                  reassuring, and truly soothing. Thank you for being so
+                  kind!" 👶✨
+                </blockquote>
+              </div>
+              <div class="card-divider"></div>
+              <div class="customer-info">
+                <h3 class="customer-name">Baby Liam & Parents</h3>
+                <p class="customer-location">Al-Khobar, KSA</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-header-content">
+                  <div class="quote-icon">
+                    <img src="/Assets/Icons/xdot1.png" alt="Quote" class="quote-image" />
+                  </div>
+                  <div class="rating-container">
+                    <span class="rating-score">5.0</span>
+                    <img src="/Assets/Icons/star.png" alt="5 star rating" class="rating-stars" />
+                  </div>
+                </div>
+                <blockquote class="testimonial-text">
+                  "In-home post-op care was outstanding. Nurses arrived on
+                  time, were professional and caring—it made recovery so much
+                  easier!"
+                </blockquote>
+              </div>
+              <div class="card-divider"></div>
+              <div class="customer-info">
+                <h3 class="customer-name">Ms. Noor Al-Hassan</h3>
+                <p class="customer-location">Khobar, KSA</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-header-content">
+                  <div class="quote-icon">
+                    <img src="/Assets/Icons/xdot1.png" alt="Quote" class="quote-image" />
+                  </div>
+                  <div class="rating-container">
+                    <span class="rating-score">5.0</span>
+                    <img src="/Assets/Icons/star.png" alt="5 star rating" class="rating-stars" />
+                  </div>
+                </div>
+                <blockquote class="testimonial-text">
+                  "Had maxillofacial surgery here—results exceeded
+                  expectations! Dr. Alruhaimi's expertise and the team's
+                  support gave me full confidence." 👍
+                </blockquote>
+              </div>
+              <div class="card-divider"></div>
+              <div class="customer-info">
+                <h3 class="customer-name">Mr. Fahad Al-Mutairi</h3>
+                <p class="customer-location">Dammam, KSA</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="hospital-footer">
+    <section class="about-section topz">
+      <div class="about-container  anima" data-aos="fade-zoom-in">
+        <h1 class="about-title">
+          About the
+          <span class="hospital-name">DRK</span>
+        </h1>
+        <p class="hospital-credentials">
+          CBAHI-accredited | 150K+ satisfied patients | 24/7 emergency care
+        </p>
+        <p class="hospital-description">
+          Dr. Khalid Al-Ruhaimi Hospital is committed to delivering
+          world-class healthcare with advanced technology, expert doctors, and
+          compassionate service.
+        </p>
+        <div class="appointment-button-container butz">
+          <button class="appointment-button" id="open-modal">
+            <span class="appointment-text">Book an Appointment</span>
+            <div class="doctor-icon-container">
+              <img src="/Assets/Icons/Arrow.png" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-footer">
+      <div class="footer-background-text" aria-hidden="true">DRK</div>
+
+      <div class="footer-content">
+        <div class="hospital-info">
+          <div class="logo-container">
+            <div class="logo-wrapper">
+              <img src="/Assets/Icons/drk.png" alt="Dr. Khalid Al-Ruhaimi Hospital Logo" class="hospital-logoz" />
+            </div>
+          </div>
+          <address class="hospital-address">
+            <p class="address-line">
+              Dr. Khalid Al-Ruhaimi Hospital Prince Mohammed Bin Fahd Street,
+              Al Khobar, Saudi Arabia
+            </p>
+            <p class="contact-phone">Phone: +966 13 895 5555</p>
+            <p class="contact-email">Email: info@dralruhaimi.com</p>
+          </address>
+        </div>
+
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <div class="nav-column">
+            <h2 class="nav-title">Quick access</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Home</a></li>
+              <li><a href="#" class="nav-linkz">About Us</a></li>
+              <li><a href="#" class="nav-linkz">Doctors</a></li>
+            </ul>
+          </div>
+          <div class="nav-column">
+            <h2 class="nav-title">Services</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Sections</a></li>
+              <li><a href="#" class="nav-linkz">Branches</a></li>
+              <li><a href="#" class="nav-linkz">Offers</a></li>
+            </ul>
+          </div>
+          <div class="nav-column">
+            <h2 class="nav-title">Contact Us</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Send a Massage</a></li>
+              <li><a href="#" class="nav-linkz">Book a Appointment</a></li>
+              <li><a href="#" class="nav-linkz">Schedule a call</a></li>
+            </ul>
+          </div>
+          <div class="nav-column">
+            <h2 class="nav-title">Legal</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Privacy Policy</a></li>
+              <li><a href="#" class="nav-linkz">Terms & Conditions</a></li>
+              <li><a href="#" class="nav-linkz">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-media" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Follow us on Instagram">
+            <img src="/Assets/Icons/instagram.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on Snapchat">
+            <img src="/Assets/Icons/snapchat.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on YouTube">
+            <img src="/Assets/Icons/youtube.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on TikTok">
+            <img src="/Assets/Icons/tiktok.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on Twitter">
+            <img src="/Assets/Icons/twitter.png" class="social-icon" alt="">
+          </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="copyright">
+          © 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.
+        </p>
+      </div>
+    </section>
+  </footer>
+
+
+
+
+</body>
+
+</html>

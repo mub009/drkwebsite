@@ -6,18 +6,12 @@ use App\Models\ActivityLog;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
-
 class ActivityLogController extends Controller
 {
     public function showLogs(Request $request)
     {
-        // Fetch the activity logs
-        // $logs = ActivityLog::orderBy('created_at', 'desc')->get();
-
         if ($request->ajax()) {
-
             $query = ActivityLog::query();
-
             return DataTables::of($query)
                 ->addColumn('user_id', function ($row) {
                     return $row->id ? $row->user_id : 'System';
@@ -48,64 +42,13 @@ class ActivityLogController extends Controller
                 })
                 ->make(true);
         }
-
-        // Return the logs view with the data
         return view('backend.activity-logs');
     }
-
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(ActivityLog $activityLog)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(ActivityLog $activityLog)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, ActivityLog $activityLog)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(ActivityLog $activityLog)
-    {
-        //
-    }
+    public function index() {}
+    public function create() {}
+    public function store(Request $request) {}
+    public function show(ActivityLog $activityLog) {}
+    public function edit(ActivityLog $activityLog) {}
+    public function update(Request $request, ActivityLog $activityLog) {}
+    public function destroy(ActivityLog $activityLog) {}
 }

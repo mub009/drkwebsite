@@ -1,0 +1,3122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/Assets/logos/Logo2.png">
+    <title>Medical & Cosmetic Services – Al Ruhaimi Hospital</title>
+    <meta name="description"
+        content="Discover advanced medical, surgical & cosmetic services at Al Ruhaimi Hospital. Choose your specialty and book your visit today." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/stylesub.css" />
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/scriptsub.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+<body>
+    <style>
+        .bg-layer {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .bg-layer.show {
+            opacity: 1;
+            z-index: 0;
+        }
+
+        .hero-actions {
+            width: unset !important;
+        }
+
+        .sub-maintez {
+            font-size: 25px;
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+
+        .hero-content {
+            gap: 20px !important;
+        }
+
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 50px 200px;
+            z-index: 1000;
+        }
+
+        .offer-image {
+            background-color: transparent;
+            /* transparent background */
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: transparent;
+            border-radius: 40px;
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .offer-image:hover {
+            transform: scale(1.05);
+        }
+
+        .of2 {
+            display: none;
+        }
+
+        @media (min-width: 890px) and (max-width: 1550px) {
+
+            .offer-grid {
+                display: grid;
+                padding: 50px 130px !important;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 500px) {
+            .section {
+                margin-top: 120px !important;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 700px) {
+
+
+            .offer-grid {
+                display: grid;
+                padding: 20px !important;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            }
+
+            .hero-title {
+                font-size: 12vw;
+                padding: unset;
+            }
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .topz {
+            margin-top: 80px !important;
+        }
+
+
+        @media (min-width: 300px) and (max-width: 1100px) {
+
+            .doctor-card,
+            .tab-container {
+                zoom: 70%;
+            }
+
+            .ent-header {
+                width: 100% !important;
+            }
+
+            .ent-card {
+                flex-direction: column;
+            }
+
+            .ent-card {
+                background: unset !important;
+                box-shadow: unset !important;
+                padding: unset !important;
+                ;
+            }
+
+            .ent-department {
+                padding: 40px 10px !important;
+            }
+
+            .ent-header p {
+                font-size: 16px !important;
+            }
+
+            .ent-header h2 {
+                font-size: 25px !important;
+            }
+
+            .ent-body h3 {
+                font-size: 20px !important;
+            }
+
+            .ent-services li {
+                font-size: 15px !important;
+            }
+
+            .hero-title {
+                font-size: 13vw !important;
+            }
+
+            .main-headline {
+                font-size: 25px !important;
+            }
+        }
+
+        .topz {
+            margin-top: 0px !important;
+        }
+
+        .department-gallery {
+            padding: 20px 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .gallery-img {
+            overflow: hidden;
+            border-radius: 20px;
+            height: 200px;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 20px;
+        }
+
+
+        .img3 {
+            grid-column: span 2;
+        }
+
+        .ent-department {
+            padding: 40px 40px;
+            border-radius: 16px;
+            background-color: #ffebf5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ent-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            align-items: start;
+            align-items: center;
+        }
+
+        .ent-header {
+            width: 60%;
+        }
+
+        .ent-header h2 {
+            font-size: 35px;
+            font-weight: 700;
+            color: #980a50;
+            margin-bottom: 15px;
+        }
+
+        .ent-header p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .ent-body h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #980a50;
+        }
+
+        .ent-services {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ent-services li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+        }
+
+        .ent-services li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #980a50;
+            font-size: 16px;
+        }
+
+        .tab-container {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        /* Optional: Style scrollbar for Chrome/Safari */
+        .tab-buttons::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .tab-buttons::-webkit-scrollbar-thumb {
+            background: #ffebf5;
+            border-radius: 4px;
+        }
+
+        .tab-buttons::-webkit-scrollbar-track {
+            background: #ffebf5;
+        }
+
+
+        .tab-buttons {
+            scrollbar-width: thin;
+            scrollbar-color: #980a50 #eee;
+        }
+
+
+
+        .tab-buttons button {
+            white-space: nowrap;
+            padding: 10px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            background-color: #f8f8f8;
+            color: #000000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .tab-buttons button.active,
+        .tab-buttons button:hover {
+            background-color: #980a50;
+            color: #fff;
+            border-color: #980a50;
+        }
+
+
+        .card-dr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px !important;
+        }
+
+        .tabs {
+            width: 100%;
+            margin: auto;
+
+        }
+
+
+
+        .tab-content {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+            height: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .tab-content.active {
+            opacity: 1;
+            transform: translateX(0);
+            height: auto;
+            pointer-events: auto;
+        }
+    </style>
+
+    <a href="https://wa.me/966138955555" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="/Assets/logos/WhatsApp.svg.webp" alt="WhatsApp Chat" width="48" height="48">
+    </a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <img src="/Assets/Icons/logo.png" alt="Hospital Logo" class="hospital-logo" />
+
+
+
+
+            <div id="overlay" class="overlayz"></div>
+
+            <nav class="main-nav2" id="mainNav2">
+                <button id="closeButton" class="close-buttonzz">×</button>
+                <div>
+                    <div class="language-selector respo-lag" onclick="toggleLanguage()">
+                        <div class="language-slider"></div>
+                        <span class="language-option">EN</span>
+                        <span class="language-option">AR</span>
+                    </div>
+                    <a href="/indexen.html" class="nav-link2"> <span class="spanz">01. </span> Home</a>
+                    <a href="/services.html" class="nav-link2"><span class="spanz">02. </span>Services</a>
+                    <a href="/blog.html" class="nav-link2"> <span class="spanz">03. </span> Blog</a>
+                    <a href="/about.html" class="nav-link2"> <span class="spanz">04. </span> About Us</a>
+                    <a href="/contact.html" class="nav-link2"><span class="spanz">05. </span>Contact Us</a>
+
+
+                    <div class="footer-line2"></div>
+                    <div class="footer-tail-end">
+                        <div> © 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.</div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+                <a href="/indexen.html" class="nav-link">Home</a>
+                <a href="/services.html" class="nav-link">Services</a>
+                <a href="/blog.html" class="nav-link">Blog</a>
+                <a href="/about.html" class="nav-link">About Us</a>
+                <a href="/contact.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="language-selector lnon" onclick="toggleLanguage()">
+                    <div class="language-slider"></div>
+                    <span class="language-option">EN</span>
+                    <span class="language-option">AR</span>
+                </div>
+
+
+                <a href="tel:0550655152">
+                    <button class="book-now-button bnon">
+                        <span class="book">Book Now</span>
+                        <img src="/Assets/Icons/Arrow2.png" alt="Arrow Icon" />
+                    </button>
+                </a>
+                <div class="menu-button w-nav-button" id="menuButton">
+                    <div class="menu-flex">
+                        <div class="menu">
+                            <div class="w-embed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </header>
+
+
+
+    <section class="section" style=" margin-top: 150px;">
+        <div class="team-section">
+            <div class="team-container">
+                <div class="team-header anima" data-aos="fade-zoom-in">
+                    <h1 class="hero-title" style="text-align: center;">
+                        <span class="headline-emphasis">Medical & Cosmetic Services – Al Ruhaimi Hospital</span>
+                    </h1>
+
+                    <p class="hed_des" style="margin-bottom: 20px;">
+                        Discover advanced medical, surgical & cosmetic services tailored to your needs. Choose your
+                        specialty and book your visit now.
+                    </p>
+                    <div class="header-content" style="align-items: center; gap: 2px;margin-top: 80px;">
+                        <h4 class="main-headline">
+                            <span class="headline-part">Meet Our Experts @</span>
+                            <span class="headline-emphasis">DRK</span>
+                        </h4>
+                        <div>
+                            <div class="satisfied-patients" style="position: unset; box-shadow: unset">
+                                <div class="avatars">
+                                    <img src="/Assets/images/ds1.png" alt="Avatar 1" />
+                                    <img src="/Assets/images/ds2.png" alt="Avatar 2" />
+                                    <img src="/Assets/images/ds3.png" alt="Avatar 3" />
+                                    <img src="/Assets/images/ds4.png" alt="Avatar 4" />
+                                    <img src="/Assets/images/ds5.png" alt="Avatar 5" />
+                                </div>
+                                <div class="text">
+                                    <span class="count">50+</span><br />
+                                    <span class="label">Skilled Doctor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="team-description">
+                        At Dr. Khalid Al-Ruhaimi Hospital, we are committed to providing a full range of medical,
+                        surgical, and cosmetic services, designed to deliver comprehensive care according to the highest
+                        standards of quality, safety, and privacy.
+                        Choose the specialty that suits your needs and explore our doctors’ expertise along with the
+                        latest advanced medical technologies.
+                    </p>
+
+                </div>
+
+
+
+
+                <div class="tabs">
+
+
+                    <div class="tab-container">
+                        <div class="tab-buttons">
+                            <button class="active" data-tab="all-doctors">All Doctors</button>
+                            <button data-tab="plastic-burn">Plastic & Reconstructive Surgery</button>
+                            <button data-tab="oral-maxillofacial">Oral and Maxillofacial Surgery</button>
+                            <button data-tab="dermatology">Dermatology & Aesthetic Procedures</button>
+                            <button data-tab="general-surgery">General Surgery</button>
+                            <button data-tab="women-childbirth">Obstetrics & Gynecology</button>
+                            <button data-tab="pediatrics">Pediatrics</button>
+                            <button data-tab="eyes">Ophthalmology</button>
+                            <button data-tab="digestive-surgery">Gastrointestinal Surgery</button>
+                            <button data-tab="sleep-disorders">Sleep Medicine</button>
+                            <button data-tab="rheumatism">Rheumatology & Joint Care</button>
+                            <button data-tab="dentistry">Dentistry & Maxillofacial Surgery</button>
+                            <button data-tab="urology">Urology</button>
+
+
+                            <button data-tab="ent">ENT (Ear, Nose & Throat)</button>
+                            <button data-tab="Rays">Radiology & Imaging</button>
+                            <button data-tab="bariatric-surgery">Bariatric Surgery</button>
+                            <button data-tab="esotericism">Esotericism</button>
+                            <button data-tab="icu">ICU</button>
+                            <button data-tab="dental-surgery">Dental Surgery</button>
+                            <button data-tab="anesthesia">Anesthesia</button>
+                            <button data-tab="home-care">Home Care</button>
+                            <button data-tab="emergency">24/7Emergency</button>
+                            <button data-tab="laboratory">Laboratory & Diagnostics</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Tab Content -->
+                    <div id="all-doctors" class="tab-content active">
+                        <div class="card-dr">
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d1.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Khalid Al-r Ruhaimi</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d2.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ahmed Al-Kafafi</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d3.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mohamed Suwar</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds3.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ahmed Al-Aslawi</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d5.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Yusra Buhaliqa</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d6.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Susan Al-Marzouq</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d7.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Musleh Al-Sharari</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d8.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mahmoud Faisal</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d9.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Dalia Shaheen</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d41.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Othman Ali</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Dermatology -->
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d11.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Shaima Abdel Majeed</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d12.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Fatima Al-Badr</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d13.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Dunya</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d14.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Nada Al-Zahrani</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d15.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Zahraa</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds2.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Jihan</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d17.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Iman Hamed</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Oral and maxillofacial surgery -->
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d18.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Muhammad Darwish</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d31.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Rosa Garcia</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d20.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Arej Al-Buainain</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d21.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Maha Al-Suhaimi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d22.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mahja</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d23.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Abeer Al-Mikhlafi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d24.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Nabil Al-Sadmi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d25.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Wafaa Al-Salihi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d26.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mohammed Al-Farhan</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds4.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ali Al-Bandar</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- urinary tract -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d28.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Adel Al-Dayel</h3>
+                                            <p class="doctor-specialty">
+                                                urinary tract
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- sleep disorders -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds5.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ahmed Al-Rahimi</h3>
+                                            <p class="doctor-specialty">
+                                                sleep disorders
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Digestive System Surgery -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d30.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">D. Yasser Abdel Hadi</h3>
+                                            <p class="doctor-specialty">
+                                                Digestive System Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- eyes -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d311.png" alt="Dr. Khaled Al-Rahimi"
+                                        class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Iman Jalal</h3>
+                                            <p class="doctor-specialty">
+                                                Eyes
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- pediatrics -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d32.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Sarah Youssef</h3>
+                                            <p class="doctor-specialty">
+                                                pediatrics
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Rheumatism -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d33.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Faiza Al-Jishi</h3>
+                                            <p class="doctor-specialty">
+                                                Rheumatism
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- dentistry -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d34.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Fouad Kashgari</h3>
+                                            <p class="doctor-specialty">
+                                                dentistry
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!-- Women and Childbirth -->
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d35.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mervat Ahmed</h3>
+                                            <p class="doctor-specialty">
+                                                Women and Childbirth
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d36.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Alia Al-Shammari</h3>
+                                            <p class="doctor-specialty">
+                                                Women and Childbirth
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- General Surgery -->
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d37.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Anwar</h3>
+                                            <p class="doctor-specialty">
+                                                General Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d38.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ibrahim Hazzazi</h3>
+                                            <p class="doctor-specialty">
+                                                General Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d39.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mukhtar</h3>
+                                            <p class="doctor-specialty">
+                                                General Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="sleep-disorders" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds5.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ahmed Al-Rahimi</h3>
+                                            <p class="doctor-specialty">
+                                                sleep disorders
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section id="sleep-disorders" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Sleep Disorders</h2>
+                                        <p>
+                                            <strong>Studies indicate that 6 out of 10 people suffer from sleep
+                                                disorders</strong>, which is why we have a specialized department under
+                                            the supervision of chest and sleep disorders consultant Dr. Ahmed Al-Rahimi.
+                                        </p>
+
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/s1.jpg" alt="Sleep monitoring">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/s2.jpg" alt="Sleep specialist">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/s3.jpg"
+                                                        alt="Consultation for sleep disorder">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Obstructive sleep apnea</li>
+                                            <li>Insomnia and narcolepsy</li>
+                                            <li>Circadian rhythm disorders</li>
+                                            <li>Sleep terror</li>
+                                            <li>Restless legs syndrome</li>
+                                            <li>Teeth grinding</li>
+                                            <li>Sleepwalking</li>
+                                            <li>Bedwetting</li>
+                                            <li>Nightmares and night terrors</li>
+                                            <li>REM sleep disorder</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div id="rheumatism" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d33.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Faiza Al-Jishi</h3>
+                                            <p class="doctor-specialty">
+                                                Rheumatism
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section id="rheumatism" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Rheumatism</h2>
+                                        <p>
+                                            <strong>The rheumatologists at Dr. Khaled Al Rahimi Hospital</strong> have
+                                            extensive experience in diagnosing and treating all connective
+                                            tissue-related health problems, enabling them to provide the best possible
+                                            healthcare to patients in a comfortable environment using the latest medical
+                                            technologies.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/r1.jpg" alt="Rheumatology Care 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/r2.jpg" alt="Rheumatology Care 2">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/r3.jpg" alt="Rheumatology Care 3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Some of the services provided by the Rheumatology Department</h3>
+                                        <ul class="ent-services">
+                                            <li>Rheumatoid arthritis treatment</li>
+                                            <li>Lupus erythematosus</li>
+                                            <li>Systemic sclerosis treatment</li>
+                                            <li>Treatment of polymyositis/dermatomyositis</li>
+                                            <li>Vasculitis treatment</li>
+                                            <li>Osteoarthritis treatment</li>
+                                            <li>Treatment of gout and pseudogout</li>
+                                            <li>Osteoporosis treatment</li>
+                                            <li>Treatment of other diseases affecting connective tissue</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="eyes" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d311.png" alt="Dr. Khaled Al-Rahimi"
+                                        class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Iman Jalal</h3>
+                                            <p class="doctor-specialty">
+                                                Eyes
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <section id="eye-care" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Eyes</h2>
+                                        <p>
+                                            Dr. Khaled Al Rahimi Hospital boasts extensive experience in eye care,
+                                            staffed by highly qualified ophthalmologists.
+                                            The center is designed to ensure patient comfort and enhance treatment
+                                            effectiveness.
+                                            The center offers comprehensive consultations and services to all patients.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/e1.jpg" alt="Eye Care Image 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/e2.jpg" alt="Eye Care Image 2">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/e3.jpg" alt="Eye Care Image 3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Comprehensive eye exams</li>
+                                            <li>Treatment for dry eye and eye infections</li>
+                                            <li>Cataract evaluation and surgery</li>
+                                            <li>Glaucoma screening and management</li>
+                                            <li>Vision correction consultations (LASIK, etc.)</li>
+                                            <li>Diabetic retinopathy management</li>
+                                            <li>Pediatric eye care</li>
+                                            <li>Retina and cornea services</li>
+                                            <li>Eye injury treatment and trauma care</li>
+                                            <li>Consultations for eye allergies and inflammation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="oral-maxillofacial" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d18.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Muhammad Darwish</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d31.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Rosa Garcia</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d20.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Arej Al-Buainain</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d21.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Maha Al-Suhaimi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d22.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mahja</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d23.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Abeer Al-Mikhlafi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d24.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Nabil Al-Sadmi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d25.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Wafaa Al-Salihi</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d26.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mohammed Al-Farhan</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds4.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ali Al-Bandar</h3>
+                                            <p class="doctor-specialty">
+                                                Oral and maxillofacial surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Oral and Maxillofacial Surgery</h2>
+                                        <p>
+                                            Oral and maxillofacial surgery is a branch of dentistry that focuses on the
+                                            diagnosis and treatment of diseases, deformities, and injuries affecting the
+                                            soft and hard tissues of the mouth, jaws, and maxillofacial structures and
+                                            fillings.
+                                            This specialty encompasses both functional and cosmetic aspects.
+                                            Maxillofacial surgery procedures range from simple to complex.
+                                        </p>
+
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/o1.jpg"
+                                                        alt="Maxillofacial Surgery Image 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/o2.jpg"
+                                                        alt="Maxillofacial Surgery Image 2">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/o3.jpg"
+                                                        alt="Maxillofacial Surgery Image 3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Clinic Services</h3>
+                                        <ul class="ent-services">
+                                            <li>Cosmetic silicone implants for the face and jaw corners</li>
+                                            <li>Maxillofacial deformities</li>
+                                            <li>Lip shortening</li>
+                                            <li>Gummy smile treatment</li>
+                                            <li>Prominent ear and bat ear correction</li>
+                                            <li>Eyelid and eyebrow plastic surgery</li>
+                                            <li>Treatment of sleep apnea due to jaw recession</li>
+                                            <li>Facial cosmetic surgeries</li>
+                                            <li>Jaw and chin surgeries</li>
+                                            <li>Cheek and neck liposuction</li>
+                                            <li>Diagnosis and treatment of facial pain</li>
+                                            <li>Partial and full facelift</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+
+                    <div id="women-childbirth" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d35.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mervat Ahmed</h3>
+                                            <p class="doctor-specialty">
+                                                Women and Childbirth
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d36.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Alia Al-Shammari</h3>
+                                            <p class="doctor-specialty">
+                                                Women and Childbirth
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Women and Childbirth</h2>
+                                        <p>
+                                            Dr. Khaled Al Rahimi Hospital has a dedicated department for women and
+                                            obstetrics, offering a comprehensive range of medical, surgical, and
+                                            cosmetic treatments.
+                                            The department is staffed by experienced doctors, uses the latest advanced
+                                            technologies, and is based on the latest scientific discoveries.
+                                        </p>
+
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/w1.jpg" alt="Obstetrics Image 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/w2.jpg" alt="Gynecology Image 2">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/w3.jpg" alt="Women's Health Image 3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Some of the Services Provided by the Obstetrics and Gynecology Department
+                                        </h3>
+                                        <ul class="ent-services">
+                                            <li>Pregnancy and childbirth follow-up</li>
+                                            <li>Providing obstetric services</li>
+                                            <li>Treatment of menstrual disorders</li>
+                                            <li>Conducting preventive gynecological examinations</li>
+                                            <li>Treatment of reproductive system problems</li>
+                                            <li>Family planning and contraception</li>
+                                            <li>Cosmetic surgeries for female areas</li>
+                                            <li>Treatment of fertility problems</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="pediatrics" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d32.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Sarah Youssef</h3>
+                                            <p class="doctor-specialty">
+                                                pediatrics
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Pediatrics</h2>
+                                        <p>
+                                            The Pediatrics Department at Dr. Khaled Al Rahimi Hospital provides
+                                            exceptional care based on a multidisciplinary approach, aiming to maintain
+                                            children's physical health throughout their lives.
+                                            The department's services include comprehensive newborn screening, growth
+                                            and development monitoring, routine preschool checkups, and regular
+                                            vaccinations for children according to the Saudi vaccination schedule.
+                                        </p>
+
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/p1.jpg" alt="Child healthcare 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/p2.jpg" alt="Pediatrics Image">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/p3.jpg" alt="Vaccination image">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Some of the Services Provided by the Children's Department</h3>
+                                        <ul class="ent-services">
+                                            <li>Treatment of respiratory diseases</li>
+                                            <li>Treatment of gastroenteritis</li>
+                                            <li>Treatment of constipation</li>
+                                            <li>Treatment of anemia and vitamin deficiency</li>
+                                            <li>Urinary tract infection treatment</li>
+                                            <li>Providing comprehensive examinations for the child</li>
+                                            <li>Measuring blood oxygen and heart rate</li>
+                                            <li>Monitor the growth of the newborn baby: weight, length, head
+                                                circumference</li>
+                                            <li>Treatment of asthma and lung diseases</li>
+                                            <li>Diagnosis, follow-up, and treatment of children with type 1 diabetes
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="digestive-surgery" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d30.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">D. Yasser Abdel Hadi</h3>
+                                            <p class="doctor-specialty">
+                                                Digestive System Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Digestive System Surgery</h2>
+                                        <p>
+                                            Dr. Khalid Al Rahimi Hospital offers a specialized department for
+                                            gastrointestinal surgery, providing a comprehensive range of professional
+                                            diagnostic and therapeutic services through a team of highly experienced
+                                            specialists.
+                                            The department aims to provide care for patients with disorders of the
+                                            gastrointestinal tract, pancreas, and liver, with a focus on providing
+                                            multidisciplinary solutions.
+                                        </p>
+
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/d1.jpg" alt="Gastrointestinal surgery">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/d2.jpg" alt="Digestive surgery tools">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/d3.jpg" alt="Patient consultation">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Surgical treatment of gastrointestinal tract disorders</li>
+                                            <li>Pancreatic and liver surgery</li>
+                                            <li>Endoscopic diagnostic procedures</li>
+                                            <li>Minimally invasive gastrointestinal surgeries</li>
+                                            <li>Multidisciplinary treatment planning</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="plastic-burn" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d1.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Khaled Al-Rahimi</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d2.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ahmed Al-Kafafi</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d3.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mohamed Suwar</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds3.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ahmed Al-Aslawi</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d5.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Yusra Buhaliqa</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d6.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Susan Al-Marzouq</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d7.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Musleh Al-Sharari</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d8.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mahmoud Faisal</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d9.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Dalia Shaheen</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d41.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Othman Ali</h3>
+                                            <p class="doctor-specialty">
+                                                Reconstructive, plastic and burn surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Reconstructive, Plastic and Burn Surgery</h2>
+                                        <p>
+                                            Dr. Khalid Al Rahimi Hospital boasts exceptional expertise in reconstructive
+                                            and cosmetic surgeries, keeping pace with the latest scientific techniques
+                                            in the field.
+                                            The plastic surgery clinic has a warm and friendly atmosphere, making it an
+                                            ideal environment to meet each patient’s individual needs.
+                                            Patients receive treatment from the best plastic surgeons, who utilize the
+                                            latest scientific advances in the field. At the center, we believe in
+                                            listening to your needs and offering our full expertise.
+                                            We provide comprehensive consultations about your treatment options and help
+                                            you make the most appropriate decision.
+                                            All of these services, and more, are provided in a secure and confidential
+                                            environment.
+                                        </p>
+
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/pl1.jpg"
+                                                        alt="Plastic surgery procedures">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/pl2.jpg"
+                                                        alt="Reconstructive consultation">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/pl3.jpg" alt="Burn treatment care">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <!-- Plastic Surgeries -->
+                                            <li>Cosmetic surgery after bariatric surgery</li>
+                                            <li>Body shaping (upper and lower body lifts, arm lifts, thigh lifts)</li>
+                                            <li>Breast surgery (reduction, augmentation or lift)</li>
+                                            <li>Tighten the abdominal area</li>
+                                            <li>Rhinoplasty</li>
+                                            <li>Facelift</li>
+                                            <li>Blepharoplasty</li>
+                                            <li>Otoplasty (correction of prominent ears)</li>
+                                            <li>Liposuction using Vaser technology for body shaping</li>
+                                            <li>Fat and stem cell injections to improve the appearance of the face,
+                                                breasts, or buttocks and restore youthfulness</li>
+                                            <li>Non-surgical interventions</li>
+
+                                            <!-- Reconstructive Surgeries -->
+                                            <li>Breast reconstruction using tissue taken from the patient or implants
+                                            </li>
+                                            <li>Microscopic reconstructive surgeries</li>
+                                            <li>Correction of congenital defects (such as cleft lip, vascular
+                                                malformations, birthmarks)</li>
+                                            <li>Dermatological surgery (birthmarks, pigmentation, skin tumors, scars,
+                                                and blemishes resulting from injuries)</li>
+                                            <li>Treatment of soft tissue swelling (such as lipoma, sebaceous cyst, and
+                                                synovial cyst)</li>
+
+                                            <!-- Burn Surgery -->
+                                            <li>Treatment of burns (up to 20% of the total body surface area)</li>
+                                            <li>Relieving skin contractures and fibrosis caused by burns</li>
+                                            <li>Removing burn scars using balloon technology</li>
+                                            <li>Non-surgical interventions to improve the quality of old scars</li>
+
+                                            <!-- Hand Surgery -->
+                                            <li>Fixation of hand bone fractures</li>
+                                            <li>Tendon injury surgeries, from simple to tendon transplantation</li>
+                                            <li>Treatment of peripheral nerve syndromes</li>
+                                            <li>Microsurgical reconstructive surgeries for peripheral vessels and nerves
+                                            </li>
+                                            <li>Treatment of birth defects</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="general-surgery" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d37.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Anwar</h3>
+                                            <p class="doctor-specialty">
+                                                General Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d38.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Ibrahim Hazzazi</h3>
+                                            <p class="doctor-specialty">
+                                                General Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d39.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Mukhtar</h3>
+                                            <p class="doctor-specialty">
+                                                General Surgery
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>General Surgery</h2>
+                                        <p>
+                                            The Department of Surgery offers a comprehensive range of surgical
+                                            procedures, utilizing the latest and most advanced techniques in specialized
+                                            and laparoscopic surgery. By combining high surgical skills with advanced
+                                            technology and prompt consultations, we strive to achieve the best treatment
+                                            outcomes for our patients.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/g1.jpg" alt="Surgical equipment">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/g2.jpg" alt="Operating room">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/g3.jpg" alt="Surgeon at work">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Some of the services provided by the General Surgery Department:</h3>
+                                        <ul class="ent-services">
+                                            <li>Appendectomy</li>
+                                            <li>Hernia repair</li>
+                                            <li>Gallbladder removal surgery</li>
+                                            <li>Partial colectomy</li>
+                                            <li>Intestinal and colon surgery</li>
+                                            <li>Thyroidectomy</li>
+                                            <li>Surgery for hemorrhoids, fissures, and fistulas</li>
+                                            <li>Breast surgery</li>
+                                        </ul>
+                                        <p><strong>Most abdominal surgeries are performed using advanced minimally
+                                                invasive (laparoscopic) techniques.</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="urology" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d28.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Adel Al-Dayel</h3>
+                                            <p class="doctor-specialty">
+                                                urinary tract
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Urinary Tract</h2>
+                                        <p>
+                                            Our medical team in the department understands the psychological challenges
+                                            that can prevent patients from expressing concerns about their health
+                                            conditions or seeking appropriate treatment. Therefore, the team has the
+                                            experience and skill to address these issues sensitively, which contributes
+                                            to patient reassurance and aids in early detection of diseases. The
+                                            department consists of a distinguished medical staff in urology
+                                            subspecialties and uses innovative treatment strategies to manage diseases.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/u1.jpg" alt="Urology consultation">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/u2.jpeg" alt="Medical equipment">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/u3.webp" alt="Urologist at work">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Treatment of premature ejaculation</li>
+                                            <li>Treatment of infertility</li>
+                                            <li>Treatment of prostate inflammation and congestion</li>
+                                            <li>Treatment of urinary tract infections</li>
+                                            <li>Treatment of urinary tract stones</li>
+                                            <li>Treatment of urinary tract tumors</li>
+                                            <li>Treatment of enlarged prostate</li>
+                                            <li>Treatment of urinary retention</li>
+                                            <li>Evaluation and treatment of sexual disorders</li>
+                                            <li>Evaluation and treatment of urethral stricture</li>
+                                            <li>Urethral grafting operations</li>
+                                            <li>Correction of penile curvature</li>
+                                            <li>Peyronie's disease treatment</li>
+                                            <li>Urodynamic tests</li>
+                                            <li>Treatment of nocturnal enuresis</li>
+                                            <li>Neurofeedback treatment for incontinence</li>
+                                            <li>Treating incontinence by stimulating the pelvic muscles</li>
+                                            <li>Endoscopic injection treatment for incontinence</li>
+                                            <li>Treatment of incontinence with suspension surgery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="dermatology" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d11.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Shaima Abdel Majeed</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d12.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Fatima Al-Badr</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d13.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Dunya</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d14.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Nada Al-Zahrani</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d15.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Zahraa</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/ds2.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Jihan</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d17.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Iman Hamed</h3>
+                                            <p class="doctor-specialty">
+                                                Dermatology
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Dermatology</h2>
+                                        <p>
+                                            This department boasts exceptional expertise in dermatology and the latest
+                                            scientific techniques, making it an ideal environment for safely meeting
+                                            patients' treatment needs.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/m1.jpg" alt="Skin consultation">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/m2.jpg" alt="Dermatology treatment">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/m3.jpg" alt="Skin clinic setting">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Clinic Services:</h3>
+                                        <ul class="ent-services">
+                                            <li>Treating burns and infections</li>
+                                            <li>Treatment of deformities</li>
+                                            <li>Eczema treatment</li>
+                                            <li>Psoriasis treatment</li>
+                                            <li>Treating scars and marks</li>
+                                            <li>Treating hereditary hair loss problems</li>
+                                            <li>Acne treatments</li>
+                                            <li>Treatment of skin infections</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="dentistry" class="tab-content">
+                        <div class="card-dr">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+                                <div>
+                                    <img src="/Assets/images/d34.png" alt="Dr. Khaled Al-Rahimi" class="doctor-image" />
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">Dr. Fouad Kashgari</h3>
+                                            <p class="doctor-specialty">
+                                                dentistry
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <section id="dentistry" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Dentistry</h2>
+                                        <p>
+                                            At our dental clinic, we focus on promoting preventative healthcare by
+                                            encouraging patients to have regular checkups and adhere to oral hygiene
+                                            practices, which contributes to the health of their teeth and gums. We also
+                                            pride ourselves on our expertise in cosmetic dentistry, striving to bring
+                                            smiles to our patients' faces and provide them with the highest level of
+                                            healthcare.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/a1.jpg" alt="Dental consultation">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/a2.jpg" alt="Dental treatment">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/a3.jpg" alt="Dentist at work">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Department Services:</h3>
+                                        <ul class="ent-services">
+                                            <li>Dental treatments</li>
+                                            <li>Nerve and root canal treatments</li>
+                                            <li>Dental repair and restoration</li>
+                                            <li>Tooth extraction</li>
+                                            <li>Orthodontics</li>
+                                            <li>Dental aesthetics</li>
+                                            <li>Gum treatments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="ent" class="tab-content">
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Ear, Nose and Throat</h2>
+                                        <p>
+                                            <strong>The Otorhinolaryngology Department</strong> provides exceptional
+                                            care to patients of all ages.
+                                            The department features modern equipment and is staffed by highly qualified
+                                            and professional physicians.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/ent1.jpg" alt="Body contouring">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/ent2.jpg" alt="Plastic surgeon">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/ent3.jpg" alt="Facial aesthetics">
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Treatment of nasal and sinus problems</li>
+                                            <li>Treatment of ear problems</li>
+                                            <li>Treatment of throat and vocal cord problems</li>
+                                            <li>Treatment of pharyngeal problems</li>
+                                            <li>Treatment of sleep problems and snoring</li>
+                                            <li>Treatment of dizziness and vertigo</li>
+                                            <li>Rhinoplasty</li>
+                                            <li>Treatment of allergic disorders</li>
+                                            <li>Hearing and balance tests</li>
+                                            <li>ENT endoscopy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </section>
+
+                    </div>
+
+                    <div id="Rays" class="tab-content">
+                        <section id="rays" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Rays</h2>
+                                        <p>
+                                            The Department of Medical Imaging and Radiology at Dr. Khalid Al Rahimi
+                                            Hospital is committed to serving patients with the latest technological
+                                            advancements and innovative treatment options. Under the hospital's
+                                            umbrella, we bring together a group of radiology specialists with extensive
+                                            experience in their field, in addition to the latest equipment in our
+                                            outpatient clinics. All of this is done with the goal of providing the best
+                                            possible experience and outcomes for our patients.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/x1.jpg" alt="Radiology equipment">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/x2.jpg" alt="Imaging suite">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/x3.jpg" alt="Radiologist at work">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>X‑ray & digital radiography (including fluoroscopy)</li>
+                                            <li>Ultrasound & colour Doppler (including fetal, vascular, small‑parts,
+                                                elastography)</li>
+                                            <li>Computed Tomography (CT scan), including angiography and CT‑guided
+                                                procedures</li>
+                                            <li>Magnetic Resonance Imaging (MRI), including advanced protocols and
+                                                functional imaging</li>
+                                            <li>Mammography, DEXA (bone densitometry), and PET‑CT</li>
+                                            <li>Interventional Radiology: image‑guided biopsies, drainages, TACE,
+                                                embolisation, angioplasty, stenting, thrombolysis</li>
+                                            <li>Pediatric, emergency, oncologic, cardiac & neuro imaging services</li>
+                                            <li>Picture Archiving and Communication System (PACS) & Radiology
+                                                Information System (RIS) support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="bariatric-surgery" class="tab-content">
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Bariatric Surgery</h2>
+                                        <p>
+                                            We are proud to be the ideal destination for bariatric surgeries, with the
+                                            most qualified and best consultants and specialists in bariatric surgery.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/b1.jpg"
+                                                        alt="Bariatric surgery consultation">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/b2.jpg" alt="Operating room">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/b3.jpg" alt="Post‑surgery follow‑up">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Some of the services provided by the Bariatric Surgery Department:</h3>
+                                        <ul class="ent-services">
+                                            <li>Laparoscopic gastric sleeve</li>
+                                            <li>Laparoscopic gastric bypass (RYGB)</li>
+                                            <li>Mini laparoscopic gastric bypass surgery</li>
+                                            <li>Gastric balloon therapy</li>
+                                            <li>Gastric band removal & sleeve revision surgery</li>
+                                            <li>Revision or repeat bariatric surgery</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="esotericism" class="tab-content">
+                        <section id="internal-medicine" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Esotericism</h2>
+                                        <p>
+                                            Dr. Khalid Al Rahimi Hospital ensures that its patients benefit fully from
+                                            their treatment journey, thanks to the hospital's internal medicine
+                                            physicians, who collaborate with each other to provide comprehensive
+                                            healthcare of the highest quality standards, thereby achieving patient
+                                            satisfaction.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/i1.jpg" alt="Doctor consultation">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/i2.jpg" alt="Internal medicine clinic">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/i3.jpg" alt="Multidisciplinary care">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Some of the services provided by the Internal Medicine Department:</h3>
+                                        <ul class="ent-services">
+                                            <li>Diagnosis & treatment of gastrointestinal diseases</li>
+                                            <li>Treatment of cardiovascular diseases</li>
+                                            <li>Diabetes follow‑up and treatment</li>
+                                            <li>Treatment of respiratory diseases</li>
+                                            <li>Diagnosis & treatment of blood disorders</li>
+                                            <li>Infectious disease management</li>
+                                            <li>Conducting preventive health examinations</li>
+                                            <li>Treatment of endocrine disorders</li>
+                                            <li>Treatment of nervous system diseases</li>
+                                            <li>Chronic disease management</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="icu" class="tab-content">
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Intensive Care Unit</h2>
+                                        <p>
+                                            Dr. Khaled Al Rahimi Hospital houses a state‑of‑the‑art intensive care unit
+                                            (ICU), designed to accommodate a variety of medical conditions. The unit is
+                                            located directly adjacent to other relevant departments. Intensivists
+                                            provide the best healthcare to patients using the latest technology,
+                                            including advanced systems to ensure a safe environment and close patient
+                                            monitoring.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/icu1.jpg" alt="ICU monitoring room">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/icu2.jpg" alt="Intensive care setup">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/icu3.jpg" alt="Critical care team">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Advanced continuous vital signs & organ-function monitoring</li>
+                                            <li>Mechanical ventilation (invasive & non‑invasive), sedation & pain
+                                                management</li>
+                                            <li>Hemodynamic & cardiovascular support (infusion pumps, pacing, ECMO
+                                                options)</li>
+                                            <li>Renal support: dialysis & continuous renal replacement therapy (CRRT)
+                                            </li>
+                                            <li>Enteral & parenteral nutrition management</li>
+                                            <li>Portable imaging & diagnostics: bedside ultrasound, X‑ray, CT, blood‐gas
+                                                & point‑of‑care labs</li>
+                                            <li>Procedures: intubation, central/arterial line insertion, thoracentesis,
+                                                bronchoscopy, peritoneal lavage</li>
+                                            <li>Management of sepsis, multi‑organ failure, severe trauma, respiratory
+                                                failure, neurological emergencies</li>
+                                            <li>Multidisciplinary care: intensivists, ICU nurses, pharmacists,
+                                                respiratory therapists, dietitians & rehab staff</li>
+                                            <li>Family support: regular updates, emotional counseling, including
+                                                psychological services</li>
+                                            <li>Strict infection control & quality-improvement protocols</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="dental-surgery" class="tab-content">
+                        <section class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Dental Surgery and Implants</h2>
+                                        <p>
+                                            Dental surgery, surgical tooth extraction, and dental implants using the
+                                            most advanced techniques, with a group of consultants specializing in dental
+                                            surgery and wisdom tooth extraction under general or local anesthesia.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/d1.jpg"
+                                                        alt="Dental surgery consultation">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/d2.jpg" alt="Implant placement">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/d3.jpg"
+                                                        alt="Dental implant immediate loading">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Clinic Services:</h3>
+                                        <ul class="ent-services">
+                                            <li>Dental implants (single, multiple, full‑mouth including All‑on‑4)</li>
+                                            <li>Surgical dental treatments</li>
+                                            <li>Wisdom tooth surgery (impacted extraction, under anesthesia)</li>
+                                            <li>Gum disease treatments & advanced periodontics</li>
+                                            <li>Sinus lift procedures</li>
+                                            <li>Bone grafting & ridge augmentation</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="anesthesia" class="tab-content">
+                        <section id="anesthesia" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Anesthesia</h2>
+                                        <p>
+                                            At Dr. Khaled Al Rahimi Hospital, we are fully committed to providing our
+                                            patients with the highest levels of anesthesia care. Our anesthesiology
+                                            consultants and specialists in the Department of Anesthesia provide
+                                            exceptional services for a variety of procedures requiring anesthesia. We
+                                            apply the highest standards of quality and safety, and follow a meticulous
+                                            plan for anesthesia and post-operative pain management, ensuring our
+                                            patients recover in a safe and healthy environment.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/an1.jpg" alt="Anesthesia monitoring">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/an2.jpg" alt="Anesthesiologist at work">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/an3.jpg"
+                                                        alt="Patient care under anesthesia">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Pre-operative anesthesia evaluation</li>
+                                            <li>General anesthesia administration</li>
+                                            <li>Regional and spinal anesthesia</li>
+                                            <li>Local anesthesia for minor procedures</li>
+                                            <li>Sedation for diagnostic and therapeutic interventions</li>
+                                            <li>Post-operative pain control and recovery care</li>
+                                            <li>Anesthesia for high-risk and emergency surgeries</li>
+                                            <li>Monitoring of vital signs during surgery</li>
+                                            <li>Patient safety and airway management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="home-care" class="tab-content">
+                        <section id="home-care" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Home Care</h2>
+                                        <p>
+                                            At the Home Healthcare Department at Dr. Khaled Al Rahimi Hospital, we are
+                                            pleased to offer the highest levels of healthcare services directly in your
+                                            home. Our specialized team provides a variety of services to meet your
+                                            healthcare needs, ensuring your comfort, preserving your privacy, and saving
+                                            you time.<br>
+                                            For reservations and inquiries with home care coordination:
+                                            <strong>0539188994</strong>
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/ho1.jpg" alt="Home care service 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/ho2.jpg" alt="Home care service 2">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/ho3.jpg" alt="Home care service 3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Personal care and hygiene assistance</li>
+                                            <li>Medication management and administration</li>
+                                            <li>Wound care and dressing changes</li>
+                                            <li>Physical therapy and rehabilitation</li>
+                                            <li>Chronic disease management</li>
+                                            <li>Post-surgical care and monitoring</li>
+                                            <li>Health education and counseling</li>
+                                            <li>24/7 emergency response support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="emergency" class="tab-content">
+                        <section id="emergency" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>24/7 Emergency</h2>
+                                        <p>
+                                            The Emergency Department features an experienced emergency medical team,
+                                            enabling it to respond immediately to any emergency at all times. It
+                                            contains the latest medical technologies designed to speed up response time
+                                            and provide the necessary care for patients of all ages.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/em1.jpg" alt="Emergency room">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/em2.jpg" alt="Emergency medical team">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/em3.jpg" alt="Emergency care">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Immediate emergency response</li>
+                                            <li>Advanced trauma care</li>
+                                            <li>Cardiac emergencies</li>
+                                            <li>Stroke management</li>
+                                            <li>24/7 ambulance services</li>
+                                            <li>Critical care stabilization</li>
+                                            <li>Advanced diagnostic imaging</li>
+                                            <li>Emergency surgery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                    <div id="laboratory" class="tab-content">
+                        <section id="laboratory" class="section topz">
+                            <div class="ent-department">
+                                <div class="ent-card">
+                                    <div class="ent-header">
+                                        <h2>Laboratory</h2>
+                                        <p>
+                                            At Dr. Khalid Al Rahimi Hospital, we provide all laboratory services,
+                                            ensuring timely delivery of important test results. The integration of
+                                            advanced technology with a team of experienced pathologists plays a vital
+                                            role in patient care. The laboratory accepts patients with appointments or
+                                            those who come in urgently, and a team of highly experienced technicians
+                                            performs blood tests, ensuring results are available within 24 hours.
+                                        </p>
+                                        <section class="department-gallery">
+                                            <div class="gallery-grid">
+                                                <div class="gallery-img img1">
+                                                    <img src="/Assets/sections/la1.jpg" alt="Laboratory image 1">
+                                                </div>
+                                                <div class="gallery-img img2">
+                                                    <img src="/Assets/sections/la2.jpg" alt="Laboratory image 2">
+                                                </div>
+                                                <div class="gallery-img img3">
+                                                    <img src="/Assets/sections/la3.jpg" alt="Laboratory image 3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="ent-body">
+                                        <h3>Services Offered</h3>
+                                        <ul class="ent-services">
+                                            <li>Blood tests and analysis</li>
+                                            <li>Urine tests</li>
+                                            <li>Microbiological cultures</li>
+                                            <li>Histopathology</li>
+                                            <li>Biochemical tests</li>
+                                            <li>Immunology and serology</li>
+                                            <li>Rapid diagnostic tests</li>
+                                            <li>Appointment and walk-in testing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Contact Us</h2>
+            <h3 class="cta-subtitle">
+                Don’t wait any longer, your health and beauty are in safe hands.
+            </h3>
+
+            <div class="cta-actions">
+                <a href="tel:+966138955555" class="cta-phone">
+                    <i class="fas fa-phone"></i> +966 13 895 5555
+                </a>
+
+                <a href="https://wa.me/966138955555" target="_blank" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Book Your Consultation Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="hospital-footer">
+        <section class="about-section">
+            <div class="about-container ">
+                <h1 class="about-title">
+                    About the
+                    <span class="hospital-name">DRK</span>
+                </h1>
+                <p class="hospital-credentials">
+                    CBAHI-accredited | 150K+ satisfied patients | 24/7 emergency care
+                </p>
+                <p class="hospital-description">
+                    Dr. Khalid Al-Ruhaimi Hospital is committed to delivering
+                    world-class healthcare with advanced technology, expert doctors, and
+                    compassionate service.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="main-footer">
+            <div class="footer-background-text" aria-hidden="true">DRK</div>
+
+            <div class="footer-content">
+                <div class="hospital-info">
+                    <div class="logo-container">
+                        <div class="logo-wrapper">
+                            <img src="/Assets/Icons/drk.png" alt="Dr. Khalid Al-Ruhaimi Hospital Logo"
+                                class="hospital-logoz" />
+                        </div>
+                    </div>
+                    <address class="hospital-address">
+                        <p class="address-line">
+                            Dr. Khalid Al-Ruhaimi Hospital Prince Mohammed Bin Fahd Street,
+                            Al Khobar, Saudi Arabia
+                        </p>
+                        <p class="contact-phone">Phone: +966 13 895 5555</p>
+                        <p class="contact-email">Email: info@dralruhaimi.com</p>
+                    </address>
+                </div>
+
+                <nav class="footer-navigation" aria-label="Footer navigation">
+                    <div class="nav-column">
+                        <h2 class="nav-title">Quick access</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">Home</a></li>
+                            <li><a href="#" class="nav-linkz">About Us</a></li>
+                            <li><a href="#" class="nav-linkz">Doctors</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">Services</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">Sections</a></li>
+                            <li><a href="#" class="nav-linkz">Branches</a></li>
+                            <li><a href="#" class="nav-linkz">Offers</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">Contact Us</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">Send a Massage</a></li>
+                            <li><a href="#" class="nav-linkz">Book a Appointment</a></li>
+                            <li><a href="#" class="nav-linkz">Schedule a call</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">Legal</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-linkz">Terms & Conditions</a></li>
+                            <li><a href="#" class="nav-linkz">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-media" aria-label="Social media links">
+                    <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                        <img src="/Assets/Icons/instagram.png" class="social-icon" alt="">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Snapchat">
+                        <img src="/Assets/Icons/snapchat.png" class="social-icon" alt="">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on YouTube">
+                        <img src="/Assets/Icons/youtube.png" class="social-icon" alt="">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on TikTok">
+                        <img src="/Assets/Icons/tiktok.png" class="social-icon" alt="">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                        <img src="/Assets/Icons/twitter.png" class="social-icon" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <p class="copyright">
+                    © 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.
+                </p>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>

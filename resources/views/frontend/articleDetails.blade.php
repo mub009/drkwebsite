@@ -3,6 +3,7 @@
 @section('content')
 <!-- BEGIN :: slider section -->
 
+
 <!-- BEGIN :: page header section -->
 <div class="slider">
     <div class="swiper mm">
@@ -44,9 +45,9 @@
 <div class="page-content services main-services-page d-pad pb-0">
     <div class="container">
         <div class="about__text mb-5">
-            <h2 class="title about__title mb-5" data-aos="fade-up" data-aos-delay="100">{{$article->title}}</h2>
+            <h2 class="title about__title mb-5" data-aos="fade-up" data-aos-delay="100">{{$article->title_ar}}</h2>
             <div class=" mb-0 color-text-secondary about__" data-aos="fade-up" data-aos-delay="200">
-                {!! $article->content !!}
+                {!! $article->article_ar !!}
             </div>
         </div>
     </div>
@@ -60,7 +61,7 @@
             <div class="d-flex book-now__wrapper">
                 <div class="col-lg-6 d-flex align-items-center">
                     <h2 class="h3" data-aos="fade-up">
-                        إحجز موعدك الآن <br> وإستمتع بتجربه علاج فريده من نوعها </h2>
+                        إحجز موعدك الآن <br> واستمتع بتجربة علاج فريدة من نوعها </h2>
                 </div>
                 <div class="col-lg-6 d-flex align-items-center justify-content-lg-end justify-content-center">
                     <a href="" class="btn btn-white" data-aos="fade-up">

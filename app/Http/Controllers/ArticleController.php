@@ -6,21 +6,18 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\ArticleRequest;
-use App\Rules\NotEmptyHtml;
+use App\Http\Requests\ArticleUpdateRequest;
 
 
 class ArticleController extends Controller
 {
-
     public function index()
     {
         return view('backend.articles');
     }
-    public function dataTablesForArticles(Request $request)
+    public function dataTablesForArticles()
     {
-        if ($request->ajax()) {
             $query = Article::query();
-
             return DataTables::of($query)
                 ->addColumn('title_en', function ($row) {
                     return $row->title_en;
@@ -30,8 +27,7 @@ class ArticleController extends Controller
                 })
                 ->addColumn('image', function ($row) {
                     if ($row->image) {
-                        return $imageUrl = asset('images/' . $row->image); // Ensure this path is correct
-
+                        return $imageUrl = asset('images/' . $row->image);
                     } else {
                         return 'No Image';
                     }
@@ -64,27 +60,14 @@ class ArticleController extends Controller
                     $query->where('slug', 'like', "%{$keyword}%");
                 })
                 ->make(true);
-        }
     }
     public function addArticles()
     {
         return view('backend.articlesAdd');
     }
-
     public function store(ArticleRequest $request)
     {
         try {
-            $request->validate([
-                'title_en' => 'required|string|max:255',
-                'title_ar' => 'required|string|max:255',
-                'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-                'content_en' => ['required', new NotEmptyHtml],
-                'content_ar' => ['required', new NotEmptyHtml],
-                'slug' => 'required|string|unique:articles,slug|max:255',
-            ], [
-                'slug.unique' => 'The slug should be unique.',
-            ]);
-
             $article = new Article;
             $article->title_en = $request->title_en;
             $article->title_ar = $request->title_ar;
@@ -97,7 +80,6 @@ class ArticleController extends Controller
                 $article->image = $imageName;
             }
             $article->save();
-
             return response()->json(['status' => true, 'message' => 'Article created successfully.']);
         } catch (\Illuminate\Validation\ValidationException $e) {
             return response()->json(['status' => false, 'message' => $e->validator->errors()->first()], 422);
@@ -105,49 +87,26 @@ class ArticleController extends Controller
             return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
         }
     }
-
-
-
-
-
     public function edit($id)
     {
         $article = Article::find($id);
-
-        return view('backend.article-edit', compact('article'));
+        return view('backend.article-edit', compact('article', 'id'));
     }
-
-
-    public function update(Request $request, $id)
+    public function update(ArticleUpdateRequest $request, Article $article)
     {
         try {
-            $article = Article::findOrFail($id);
-
-            $request->validate([
-                'title_en' => 'required|string|max:255',
-                'title_ar' => 'required|string|max:255',
-                // 'content_en' => 'required',
-                // 'content_ar' => 'required',
-                'slug' => 'required|string|max:255|unique:articles,slug,' . $id,
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
-            ], [
-                'slug.unique' => 'The slug should be unique.',
-            ]);
-
+            $article = Article::findOrFail($request->id);
             $article->title_en = $request->title_en;
             $article->title_ar = $request->title_ar;
             $article->article_en = $request->article_en;
             $article->article_ar = $request->article_ar;
             $article->slug = $request->slug;
-
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images'), $imageName);
                 $article->image = $imageName;
             }
-
             $article->save();
-
             if ($request->ajax()) {
                 return response()->json(['status' => true, 'message' => 'Article updated successfully.']);
             } else {
@@ -168,21 +127,15 @@ class ArticleController extends Controller
         }
     }
 
-
-
     public function destroy($id)
     {
         $article = Article::findOrFail($id);
         $article->delete();
-
-        return response()->json(['status' => true, 'message' => 'Article deleted successfully'],);
+        return response()->json(['status' => true, 'message' => 'Article deleted successfully'],'');
     }
-
-
     public function show(Request $request, $id)
     {
         $article = Article::find($id);
-
         return view('backend.article-show', compact('article'));
     }
 }

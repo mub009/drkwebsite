@@ -9,7 +9,7 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="{{ asset('frontend/page/website.webp')}}" draggable="false" alt="رمز الثقة في الرعاية الطبية" loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/frontend/images/model0123.jpg')}}" draggable="false" alt="رمز الثقة في الرعاية الطبية" loading="eager">
                     </div>
                     <div class="slider__text main_slider_text">
                         <div class="container pull-center">
@@ -24,13 +24,13 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="{{ asset('01.webp')}}" draggable="false" alt="نوفر لكم أفضل خدمات الأسنان الجلدية و الطبية" loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website2.webp')}}" draggable="false" alt="نوفر لكم أفضل الخدمات العلاجية" loading="eager">
                     </div>
                     <div class="slider__text">
                         <div class="container">
-                            <h1 class="color font-weight-bold bannerImage" data-aos="fade-up"> إنتشار واسع فً المنطقة الشرقٌة</h1>
+                            <h1 class="color font-weight-bold bannerImage" data-aos="fade-up"> إنتشار واسع</h1>
                             <p class="lead font-weight-bold bannerImage" data-aos="fade-up" data-aos-delay="100">
-                                نسعد بالوصول إلٌكم من خالل 6 فروع بالدمام والخبر واألحساء، نقدم من خاللها رعاٌة طبٌة متكاملة
+                                نسعد بالوصول لكم من خلال 8 فروع بالمنطقة الشرقية والرياض، نقدم من خلالها رعاية طبية متكاملة
                             </p>
                             <center>
                                 <div class="slider__actions" data-aos="fade-up" data-aos-delay="200">
@@ -45,13 +45,13 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="{{ asset('frontend/page/website3.webp')}}" draggable="false" alt="نخبة من افضل االستشارٌٌن واالخصائٌٌن فً المنطقة الشرقٌة." loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website3.webp')}}" draggable="false" alt="نخبة من أفضل الاستشاريين والأخصائيين في المنطقة الشرقية." loading="eager">
                     </div>
                     <div class="slider__text">
                         <div class="container">
-                            <h1 class="color font-weight-bold bannerImage" data-aos="fade-up">نخبة من افضل االستشارٌٌن واالخصائٌٌن فً المنطقة الشرقٌة.</h1>
+                            <h1 class="color font-weight-bold bannerImage" data-aos="fade-up">نخبة من أفضل الاستشاريين والأخصائيين في المنطقة الشرقية.</h1>
                             <p class="lead font-weight-bold bannerImage" data-aos="fade-up" data-aos-delay="100">
-                                ٌقدمون الخدمات فً كافة التخصصات الطبٌة بإستخدام افضل االجهزة والتقنٌات الحدٌثة لضمان أفضل النتائج.
+                                يقدمون خدماتهم في كافة التخصصات الطبية باستخدام أفضل الأجهزة والتقنيات الحديثة لضمان أفضل النتائج.
                             </p>
                             <center>
                                 <div class="slider__actions" data-aos="fade-up" data-aos-delay="200">
@@ -67,13 +67,13 @@
             <div class="swiper-slide">
                 <div class="slider__slide">
                     <div class="slider__image">
-                        <img class="bannerImageSize" src="{{ asset('frontend/page/website4.webp')}}" draggable="false" alt="رعاٌة طبٌة بالجودة العالٌة تحت إشراف طاقم طبً متكامل" loading="eager">
+                        <img class="bannerImageSize" src="{{ asset('frontend/page/website4.webp')}}" draggable="false" alt="رعاية طبية بالجودة العالية تحت إشراف طاقم طبي متكامل في كل التخصصات" loading="eager">
                     </div>
                     <div class="slider__text">
                         <div class="container">
-                            <h1 class="color font-weight-bold bannerImage" data-aos="fade-up">رعاٌة طبٌة بالجودة العالٌة تحت إشراف طاقم طبً متكامل</h1>
+                            <h1 class="color font-weight-bold bannerImage" data-aos="fade-up">رعاية طبية بالجودة العالية تحت إشراف طاقم طبي متكامل في كل التخصصات</h1>
                             <p class="lead font-weight-bold bannerImage" data-aos="fade-up" data-aos-delay="100">
-                                نفخر بحصولنا على اعتماد المركز السعودي إلعتماد المنشآت الصحٌة )CBAHI)
+                                نفخر بحصولنا على اعتماد المركز السعودي لإعتماد المنشآت الصحية )CBAHI)
                             </p>
 
 
@@ -103,11 +103,11 @@
 
 
     <!-- BEGIN :: services section -->
-    <section class="services d-pad brd-top-rad mt-50">
-        <div class="container book-now d-pad">
+    <section class="services">
+        <div class="container">
             <div class="container">
 
-                <div class="col-12 statistics d-pad px-0">
+                <div class="col-12 statistics">
                     <div class="w-100 d-flex justify-content-between home-statistic-container">
                         <div class="statistic" data-aos="fade-up">
                             <div class="statistic__icon">
@@ -129,9 +129,9 @@
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
-                                    <strong>فروع بالمنطقة الشرقٌة</strong>
+                                    <strong>فروع بالمملكة العربية السعودية</strong>
                                     <p class="mb-0 mt-2">
-                                        6
+                                        8
                                     </p>
                                 </div>
                             </div>
@@ -143,9 +143,9 @@
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
-                                    <strong>طبٌب بفروعنا</strong>
+                                    <strong>طبيب في خدمتك</strong>
                                     <p class="mb-0 mt-3">
-                                        + 150
+                                        + 60
                                     </p>
                                 </div>
                             </div>
@@ -157,9 +157,9 @@
                             </div>
                             <div class="statistic__text">
                                 <div class="color-text-secondary">
-                                    <strong>مرٌض</strong>
+                                    <strong>مراجع راضي</strong>
                                     <p class="mb-0 mt-2">
-                                        + 20000000
+                                        + 1300000
                                     </p>
                                 </div>
                             </div>
@@ -181,10 +181,10 @@
                         <div class="about__text">
                             <h2 class="title about__title mb-5" data-aos="fade-up" data-aos-delay="100">نخبة من أمهر الاستشاريين والأخصائيين على مستوى المملكة العربية السعودية</h2>
                             <p class=" mb-5 color-text-secondary about__" data-aos="fade-up" data-aos-delay="200">
-                                في مجمعات د. خالد الرحيمي الطبية، نؤمن أن الطبيب هو العنصر الأبرز في نجاح الخدمة الطبية، لذلك نفخر باستقطاب استشاريين وأخصائيين مؤهلين في كافة التخصصات الطبية
+                                في مستشفى د. خالد الرحيمي، نؤمن أن الطبيب هو العنصر الأبرز في نجاح الخدمة الطبية، لذلك نفخر باستقطاب استشاريين وأخصائيين مؤهلين في كافة التخصصات الطبية
                             </p>
-                            <a href="abouts.php" class="btn btn-link" data-aos="fade-up" data-aos-delay="300">
-                                المزيد عن مجمعاتنا.. </a>
+                            <a href="{{route('about')}}" class="btn btn-link" data-aos="fade-up" data-aos-delay="300">
+                                للمزيد.. </a>
                         </div>
                     </div>
                     <div class="col-12 statistics d-pad px-0">
@@ -211,7 +211,7 @@
                                     <div class="color-text-secondary">
                                         <strong>أفضل الخدمات</strong>
                                         <p class="mb-0 mt-2">
-                                            تقديم رعاية صحية متميزة للعملاء والمجتمع تواكب أفضل المعايير الطبية.
+                                            تقديم رعاية صحية متميزة للعملاء والمجتمع تواكب أفضل المعايير الطبية
                                         </p>
                                     </div>
                                 </div>
@@ -225,7 +225,7 @@
                                     <div class="color-text-secondary">
                                         <strong>سعودية عالمية</strong>
                                         <p class="mb-0 mt-3">
-                                            نقدم خدماتنا الطبية بمعيار سعودي عالمي
+                                            نقدم خدماتنا الطبية بالمعيار السعودي العالمي
                                         </p>
                                     </div>
                                 </div>
@@ -252,134 +252,130 @@
 
         <div class="container mt-50">
             <div class="section-title align-items-stretch mb-0">
-                <h2 class="title" data-aos="fade-up">والنصائح االسئلة اه</h2>
+                <h2 class="title" data-aos="fade-up">أقسام طبية متفردة</h2>
 
             </div>
-            <style>
-                .features-one__box {
-                    width: 140px;
-                    height: 140px;
-                    background-color: var(--cleenhearts-white, #fff);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+          <style>
+        .features-one__box {
+            width: 140px;
+            height: 140px;
+            background-color: var(--cleenhearts-white, #fff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin: 0 0 46px;
+            border-radius: 12px;
+            flex-direction: column;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.7s ease;
+        }
 
-                .features-one__box {
-                    text-align: center;
-                    position: relative;
-                    margin: 0 0 46px;
-                    border-radius: 12px;
-                    flex-direction: column;
-                    gap: 10px;
-                }
+        .features-one__box:hover {
+            transform: translate3D(0, -1px, 0) scale(1.1);
+            background: transparent linear-gradient(261deg, #8e264b 0%, #f7f7f7 100%);
+            border-radius: 8px;
+        }
 
-                .features-one__grid {
-                    display: grid;
-                    grid-template-columns: repeat(6, 1fr);
-                    /* display: flex;
-    flex-direction: row;
-    gap: 12px; */
-                }
+        .features-one_box_image img {
+            width: 60px;
+            height: 60px;
+        }
 
-                /* .features-one__box__image img{
-    max-height: 121px;
-    display: inline-block;
-    transition: all 500ms linear;
-    transition-delay: 0s;
-    transition-delay: 0s;
-    transform: scale(1);
-    vertical-align: middle;
+        .features-one_box_title {
+            font-size: 15px;
+            color: var(--cleenhearts-base, #351C42);
+            font-weight: 700;
+            margin: 0;
+        }
+        .features-one__grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 995px) {
+            .features-one__grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .features-one__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .features-one__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .modals {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modals-contents {
+            background: transparent linear-gradient(261deg, #8e264b 0%, #f7f7f7 100%);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+             width: 80%; /* Width relative to screen size */
+    height: 60%; /* Height relative to screen size */
+    max-width: 500px; /* Maximum width to prevent it from growing too large */
+    max-height: 400px; /* Maximum height */
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+                /* Centering the modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+.doctors-more {
     display: flex;
-  justify-content: center;
-  align-items: center; 
-} */
-                .features-one__box__title {
-                    max-width: 131px;
-                    font-size: 15px;
-                    color: var(--cleenhearts-base, #351C42);
-                    font-family: "DM Sans", sans-serif;
-                    font-weight: 700;
-                    margin: 18px 0 0;
-                    margin: 0px;
-                }
-
-                .sub_icon {
-                    border-radius: 100%;
-                    border: 6px solid white;
-                    width: var(--spc-8x);
-                    height: var(--spc-8x);
-                    background-color: #fff;
-                    box-shadow: 0 3px 22px #87878724;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: transparent linear-gradient(229deg, #f9e4ac 0%, #C5983C 100%) 0% 0% no-repeat padding-box;
-                }
-
-                .title {
-                    margin-bottom: var(--spc-5x);
-                }
-
-                .features-one__box:hover {
-                    transform: translate3D(0, -1px, 0) scale(1.1);
-                    transition: all .7s ease;
-                    cursor: pointer;
-                    background: transparent linear-gradient(229deg, #f9e4ac 0%, #C5983C 100%) 0% 0% no-repeat padding-box;
-                    border-radius: 8px;
-                }
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
 
 
-                /* CSS for modals */
-                .modals {
-                    display: none;
-                    position: fixed;
-                    z-index: 1;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    overflow: auto;
-                    background-color: rgba(0, 0, 0, 0.4);
-                }
-
-                .modals-contents {
-                    background: transparent linear-gradient(229deg, #f9e4ac 0%, #C5983C 100%) 0% 0% no-repeat padding-box;
-                    margin: 15% auto;
-                    padding: 20px;
-                    border: 1px solid #888;
-                    width: 30%;
-                    height: 20%;
-                    display: flex;
-                    flex-direction: column;
-                    border-radius: 12px;
-                }
-
-                .banner-h1 {
-                    margin-bottom: 25px;
-                }
-
-                .doctors-more {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 12px;
-                }
-
-                .close {
-                    color: #aaa;
-                    float: right;
-                    font-size: 28px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-
-                .close:hover,
-                .close:focus {
-                    color: black;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
+@media only screen and (max-width: 995px) {
+    .doctors-more {
+        flex-direction: column; 
+        align-items: center;
+        gap: 12px;
+    }
+}
+    </style>
             </style>
 
 
@@ -397,25 +393,31 @@
 
 
 
-                     
-@foreach($department as $row)
-                        <div class="features-one__box" data-modals="modals-2">
-                            <div class="features-one__box__image">
-                                <img width="60" height="60" src="{{asset('images').'/'.$row->image}}" alt="{{$row->department_ar}}">
-                            </div><!-- /.features-one__box__image -->
-                            <h3 class="features-one__box__title">{{$row->department_ar}}</h3><!-- /.features-one__box__title -->
-                        </div><!-- /.features-one__box -->
-
-                        <!-- Modal 2 -->
-                        <div id="modals-2" class="modals">
-                            <div class="modals-contents">
-                                <span class="close" data-modals="modals-2">&times;</span>
-                                <p>{{$row->department_details}}</p>
+                        @php
+                        $countPOPUpModel=0;
+                        @endphp
+                        @foreach($department as $row)
+                         @php
+                         $countPOPUpModel++;
+                        @endphp
+                            <div class="features-one__box" data-modals="modals-{{$countPOPUpModel}}">
+                                <div class="features-one_box_image">
+                                    <img width="60" height="60" src="{{asset('images').'/'.$row->image}}" alt="{{$row->department_ar}}">
+                                </div>
+                                <h3 class="features-one_box_title">{{$row->department_ar}}</h3>
                             </div>
-                        </div>
-@endforeach
+            
+                            <div id="modals-{{$countPOPUpModel}}" class="modals">
+                                <div class="modals-contents">
+                                    <span class="close" data-modals="modals-{{$countPOPUpModel}}">×</span>
+                                    <p style="
+    color: #ffffff;
+">{{$row->department_details}}</p>
+                                </div>
+                            </div>
+                        @endforeach
 
-                       
+
 
 
 
@@ -435,11 +437,11 @@
 
     <div class="container mt-50">
         <div class="section-title align-items-stretch mb-0">
-            <h2 class="title" data-aos="fade-up">الخدمات</h2>
+            <h2 class="title" data-aos="fade-up">مقالات طبية</h2>
             <div>
                 <ul class="nav nav-tabs" id="servicesTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="btn btn-link-secondary active" id="all_services" data-toggle="tab" href="#all_services" role="tab">كل الخدمات</a>
+                        <a class="btn btn-link-secondary active" id="all_services" data-toggle="tab" href="#all_services" role="tab">يكتبها لكم أطبائنا</a>
                     </li>
 
 
@@ -457,7 +459,7 @@
 
                             @foreach ($article as $item)
                             <div class="swiper-slide">
-                                <a class="service" href="{{route('articleDetails', ['surl' => '1'])}}">
+                                <a class="service" href="{{route('articleDetails', ['surl' => $item->slug])}}">
                                     <div class="service__image">
                                         <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" draggable="false" loading="lazy" />
                                     </div>
@@ -517,9 +519,7 @@
                         <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="dental-tab">
                             <div class="swiper doctorsSlider">
                                 <div class="swiper-wrapper">
-
                                     @foreach ($doctors as $item)
-                                   
                                     <div class="swiper-slide">
                                         <div class="doctor">
 
@@ -554,7 +554,7 @@
 
 
             </div>
-            <button type="submit" class="btn btn-primary"><a href="offer.php">أكثر</a> </button>
+            <button type="submit" class="btn btn-primary"><a href="{{route('doctors')}}">المزيد من الأطباء</a> </button>
         </div>
     </section>
 
@@ -563,82 +563,44 @@
 
     <div class="container mt-50 mb-50">
         <div class="section-title align-items-stretch mb-0">
-            <h2 class="title" data-aos="fade-up">الشكاوى وتقييم الزيارة</h2>
+            <h2 class="title" data-aos="fade-up">طلب تواصل</h2>
             <!-- <h1></h1> -->
         </div>
         <form action="submit_complaint.php" method="post">
             <div class="form-group">
-                <label for="name">اسم:</label>
-                <input type="text" id="name" placeholder="اسم" name="name" class="form-control" required>
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" placeholder="اسمك" name="name" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="number">رقم:</label>
-                <input type="text" id="number" name="number" placeholder="رقم" class="form-control" required>
+                <label for="number">رقم الجوال:</label>
+                <input type="text" id="number" name="number" placeholder="رقمك" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="branch">فرع:</label>
-                <input type="text" id="branch" name="branch" placeholder="فرع" class="form-control">
+                <label for="message">الموضوع:</label>
+                <textarea id="message" name="message" placeholder="اكتب لنا" class="form-control" rows="5" required></textarea>
             </div>
-            <div class="form-group">
-                <label for="message">رسالة:</label>
-                <textarea id="message" name="message" placeholder="رسالة" class="form-control" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary"> يُقدِّم</button>
+            <button type="submit" class="btn btn-primary"> تم</button>
         </form>
 
-
-        <div class="banner text-center">
-            <h1 class="banner-h1">Installment Service</h1>
-            <!-- <p>Take advantage of our installment service to make your purchases more manageable.</p> -->
-            <button type="submit" class="btn btn-primary"> كتامدخ طسق</button>
-        </div>
-    </div>
-
+<!-- END :: footer section -->
+</div>
 
     <!-- BEGIN :: insurance section -->
     <section class="insurance d-pad pt-0">
         <div class="container position-relative">
             <div class="overlay-background"></div>
             <div class="section-title mb-0">
-                <h2 class="title" data-aos="fade-up">شركات التؤمٌن</h2>
+                <h2 class="title" data-aos="fade-up">شركات التأمين</h2>
             </div>
             <div class="swiper insuranceSlider" data-aos="fade-up">
                 <div class="swiper-wrapper">
+                @foreach ($insurance as $item)
                     <div class="swiper-slide">
                         <div class="company">
-                            <img src="web/assets/images/partners/1.webp" width="112px" height="22px" draggable="false" alt="nextcare" loading="lazy">
+                            <img src="{{asset('images').'/'.$item->image}}" draggable="false" alt="{{$item->insurance_ar}}" loading="lazy">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/2.webp" width="112px" height="17px" draggable="false" alt="allianz partners" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/3.webp" width="112px" height="31px" draggable="false" alt="gulf union al ahlia cooperative insurance" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/4.webp" width="112px" height="27px" draggable="false" alt="alsagr insurance" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/5.webp" width="" height="" draggable="false" alt="saico" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/6.webp" width="" height="" draggable="false" alt="medgulf" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/7.webp" width="" height="" draggable="false" alt="walaa" loading="lazy">
-                        </div>
-                    </div>
+                @endforeach
                 </div>
                 <div class="section-pagination">
                     <div class="insurance-pagination"></div>
@@ -662,41 +624,14 @@
             </div>
             <div class="swiper insuranceSlider" data-aos="fade-up">
                 <div class="swiper-wrapper">
+                   @foreach ($partner as $item)
                     <div class="swiper-slide">
                         <div class="company">
-                            <img src="web/assets/images/partners/1.webp" width="112px" height="22px" draggable="false" alt="nextcare" loading="lazy">
+                            <img src="{{asset('images').'/'.$item->image}}"  draggable="false" alt="nextcare" loading="lazy">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/2.webp" width="112px" height="17px" draggable="false" alt="allianz partners" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/3.webp" width="112px" height="31px" draggable="false" alt="gulf union al ahlia cooperative insurance" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/4.webp" width="112px" height="27px" draggable="false" alt="alsagr insurance" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/5.webp" width="" height="" draggable="false" alt="saico" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/6.webp" width="" height="" draggable="false" alt="medgulf" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="company">
-                            <img src="web/assets/images/partners/7.webp" width="" height="" draggable="false" alt="walaa" loading="lazy">
-                        </div>
-                    </div>
+                   @endforeach
+
                 </div>
                 <div class="section-pagination">
                     <div class="insurance-pagination"></div>

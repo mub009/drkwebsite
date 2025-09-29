@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/Assets/logos/Logo2.png">
+    <title>د.خ.ر (DRK)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/stylesub.css" />
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/scriptsub.js"> </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+ 
+
+    </head>
+
+<style>
+    
+    body{
+    font-family: 'Tajawal', sans-serif;
+    }
+    @media (min-width: 300px) and (max-width: 750px) {
+        .appointment-cta {
+            width: unset;
+            padding: 15px;
+            left: unset;
+            top: unset;
+            height: auto;
+            margin: 0px 15px;
+            bottom: -170px;
+        }
+
+        .departments-container {
+            width: 100%;
+            max-width: 1666px;
+            height: 800px;
+            position: relative;
+        }
+    }
+
+    .hospital-logoz {
+        width: 100%;
+        height: auto;
+        margin-right: unset !important;
+        margin-left: 40px;
+    }
+
+    .close-buttonzzl {
+        position: absolute;
+        top: 20px;
+        right: unset !important;
+        left: 20px !important;
+        background: none;
+        border: none;
+        font-size: 41px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .nav-link2:hover {
+        color: #980a50;
+        border-right: 5px solid #980a50 !important;
+        border-left: unset;
+    }
+
+    .dropdown-contentz a:hover {
+        border-right: 5px solid #980a50;
+        border-left: unset;
+    }
+</style>
+
+<body>
+
+
+
+   <header class="site-header">
+        <div class="header-container">
+            <img src="/Assets/Icons/logo.png" alt="شعار المستشفى" class="hospital-logo" />
+
+            <div id="overlay" class="overlayz"></div>
+
+            <nav class="main-nav2" id="mainNav2" dir="rtl">
+                <button id="closeButton" class="close-buttonzz close-buttonzzl">×</button>
+                <div>
+                    <div class="language-selector respo-lag" onclick="toggleLanguage()">
+                        <div class="language-slider"></div>
+                        <span class="language-option">EN</span>
+                        <span class="language-option">AR</span>
+                    </div>
+<a href="/offerar.html" class="nav-link2"><span class="spanz">01.</span> العروض</a>
+<a href="/branchesar.html" class="nav-link2"><span class="spanz">02. </span> الفروع</a>
+<a href="/doctorsar.html" class="nav-link2"><span class="spanz">03.</span> الأطباء</a>
+<a href="/whowear.html" class="nav-link2"><span class="spanz">04. </span> من نحن</a>
+<a href="/contactar.html" class="nav-link2"><span class="spanz">05. </span> تواصل معنا</a>
+
+<div class="footer-line2"></div>
+<div class="footer-tail-end">
+    <div>© ٢٠٢٥ مستشفى الدكتور خالد الرحيمي. جميع الحقوق محفوظة.</div>
+</div>
+</div>
+</nav>
+
+<nav class="main-navigation" role="navigation" aria-label="Main navigation" dir="rtl">
+    <a href="/offerar.html" class="nav-link">العروض</a>
+    <a href="/branchesar.html" class="nav-link">الفروع</a>
+    <a href="/doctorsar.html" class="nav-link">الأطباء</a>
+    <a href="/whowear.html" class="nav-link">من نحن</a>
+    <a href="/contactar.html" class="nav-link">تواصل معنا</a>
+</nav>
+
+
+            <div class="header-actions">
+                <div class="language-selector lnon" onclick="toggleLanguage()">
+                    <div class="language-slider"></div>
+                    <span class="language-option">EN</span>
+                    <span class="language-option">AR</span>
+                </div>
+
+
+                <button class="book-now-button bnon" id="open-modal">
+                    <span class="book">احجز الآن</span>
+                    <img src="/Assets/Icons/Arrow2.png" alt="أيقونة السهم" />
+                </button>
+
+                <div class="menu-button w-nav-button" id="menuButton" style="margin-left: 12px;">
+                    <div class="menu-flex">
+                        <div class="menu">
+                            <div class="w-embed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container" dir="rtl">
+            <div class="modal-background">
+                <div class="modal" id="modal-box">
+                    <button class="close-btn" id="close-modal">&times;</button>
+                    <h2 class="modal-title">احجز الآن</h2>
+                    <p class="modal-subtitle">أدخل بياناتك أدناه.</p>
+
+                    <form id="booking-form" class="modern-form">
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="أدخل اسمك" />
+                            <input type="number" class="form-input" placeholder="رقم الهاتف" />
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">اختر الفرع</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            الفرسان</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            العزيزية</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            الأحساء</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع شارع
+                                            البيبسي</span></li>
+                                    <li class="option"><span class="option-text">مستشفى د. خالد الرحيمى</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            العليا</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">اختر الخدمة</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option"><span class="option-text">الأنف والأذن والحنجرة</span></li>
+                                    <li class="option"><span class="option-text">طب العيون</span></li>
+                                    <li class="option"><span class="option-text">طب الأسنان</span></li>
+                                    <li class="option"><span class="option-text">النساء والولادة</span></li>
+                                    <li class="option"><span class="option-text">طب الأطفال</span></li>
+                                    <li class="option"><span class="option-text">الأمراض الجلدية</span></li>
+                                    <li class="option"><span class="option-text">اضطرابات النوم</span></li>
+                                    <li class="option"><span class="option-text">جراحة المسالك البولية</span></li>
+                                    <li class="option"><span class="option-text">الروماتيزم</span></li>
+                                    <li class="option"><span class="option-text">الطب الباطني</span></li>
+                                    <li class="option"><span class="option-text">العناية المركزة</span></li>
+                                    <li class="option"><span class="option-text">جراحة الأسنان وزراعة الأسنان</span>
+                                    </li>
+                                    <li class="option"><span class="option-text">جراحة الجهاز الهضمي</span></li>
+                                    <li class="option"><span class="option-text">جراحة الفم والوجه والفكين</span></li>
+                                    <li class="option"><span class="option-text">جراحة السمنة</span></li>
+                                    <li class="option"><span class="option-text">جراحة التجميل والحروق والترميم</span>
+                                    </li>
+                                    <li class="option"><span class="option-text">جراحة القدم السكري</span></li>
+                                    <li class="option"><span class="option-text">الأشعة</span></li>
+                                    <li class="option"><span class="option-text">التخدير</span></li>
+                                    <li class="option"><span class="option-text">الرعاية المنزلية</span></li>
+                                    <li class="option"><span class="option-text">تكسير الدهون والتدليك اللمفاوي</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="book-now-button"
+                            style="background: linear-gradient(180deg, #32031a -9.89%, #980a50 89.96%);">
+                            <span class="book">إرسال</span>
+                            <img src="/Assets/Icons/Arrow2.png" alt="أيقونة السهم" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="hero services-section fade-in" style="margin-top: 110px !important;">
+        <div class="hero-bg hero-bg-1"></div>
+        <div class="hero-bg hero-bg-2"></div>
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                نخبة من أمهر الاستشاريين والأخصائيين في المملكة العربية السعودية.
+            </h1>
+
+            <div class="hero-actions">
+                <div class="appointment-button-container">
+                    <button class="appointment-buttonz" id="open-modal">
+                        <span class="appointment-textb">احجز موعدًا</span>
+                        <div class="doctor-icon-container">
+                            <img src="/Assets/Icons/Arrow.png" alt="" />
+                        </div>
+                    </button>
+                </div>
+
+                <div class="enroll-button-container">
+                    <button class="doull-btn">
+                        <div class="enroll-button">
+                            <span class="appointment-textb">سجل الآن</span>
+                        </div>
+                        <div>
+                            <img src="/Assets/Icons/Arrow1.png" alt="" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section fade-in  anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+        <div class="services-grid">
+            <div class="services-header fade-in">
+                <img src="/Assets/Icons/istock-doc.png" alt="طبيب" class="services-image" />
+                <h2 class="services-title">ماذا نقدم لك</h2>
+                <div class="section-divider-vertical"></div>
+            </div>
+
+            <!-- التأمين -->
+            <article class="service-card fade-in">
+                <div class="service-logo-container">
+                    <img src="/Assets/Icons/Mask.png" alt="شعار المستشفى" />
+                </div>
+                <div class="service-icon-container">
+                    <img src="/Assets/Icons/Insurance.png" alt="أيقونة التأمين" />
+                </div>
+                <div class="service-info">
+                    <h3 class="service-category">شركات التأمين</h3>
+                    <p class="service-description">شركاؤنا في التأمين</p>
+                    <div class="learn-more-link">
+                        <div class="learn-more-arrow">
+                            <img src="/Assets/Icons/arrow-down.png" alt="" />
+                        </div>
+                        <span class="learn-more-text">اعرف المزيد</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- الأطباء -->
+            <article class="service-card">
+                <div class="service-logo-container">
+                    <img src="/Assets/Icons/Mask.png" alt="شعار المستشفى" />
+                </div>
+                <div class="service-icon-container">
+                    <img src="/Assets/Icons/Doctors.png" alt="أيقونة الأطباء" />
+                </div>
+                <div class="service-info">
+                    <h3 class="service-category">الأطباء</h3>
+                    <p class="service-description">فريق الأطباء لدينا</p>
+                    <div class="learn-more-link">
+                        <div class="learn-more-arrow">
+                            <img src="/Assets/Icons/arrow-down.png" alt="" />
+                        </div>
+                        <span class="learn-more-text">اعرف المزيد</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- التخصصات -->
+            <article class="service-card">
+                <div class="service-logo-container">
+                    <img src="/Assets/Icons/Mask.png" alt="شعار المستشفى" />
+                </div>
+                <div class="service-icon-container">
+                    <img src="/Assets/Icons/Specialities.png" alt="أيقونة التخصصات" />
+                </div>
+                <div class="service-info">
+                    <h3 class="service-category">تخصصات متعددة</h3>
+                    <p class="service-description">تخصصاتنا الطبية</p>
+                    <div class="learn-more-link">
+                        <div class="learn-more-arrow">
+                            <img src="/Assets/Icons/arrow-down.png" alt="" />
+                        </div>
+                        <span class="learn-more-text">اعرف المزيد</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-divider"></div>
+    </section>
+
+    <div class="section  anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+        <div class="section-container">
+            <!-- القسم الأيسر -->
+            <div class="left-section">
+                <div class="left-image">
+                    <img src="/Assets/images/image6.jpg" alt="طبيب" />
+                </div>
+
+                <div class="badge-emergency" style="left: 90px !important;">دعم طارئ على مدار الساعة</div>
+
+                <div class="satisfied-patients">
+                    <div class="avatarsz">
+                        <img src="/Assets/images/p1.jpg" alt="مريض 1" />
+                        <img src="/Assets/images/p2.jpg" alt="مريض 2" />
+                        <img src="/Assets/images/p3.jpg" alt="مريض 3" />
+                        <img src="/Assets/images/p4.jpg" alt="مريض 4" />
+                    </div>
+                    <div class="text">
+                        <span class="count">+150 ألف</span><br />
+                        <span class="label">مرضى راضون</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- القسم الأيمن -->
+            <div class="right-content">
+                <h2 class="main-headline">
+                    <span class="headline-part">صحتك أولويتنا</span>
+                    <span class="headline-emphasis">القصوى.</span>
+                </h2>
+                <div class="feature-columns">
+                    <div class="column">
+                        <div>
+                            <h4>مرافق متكاملة</h4>
+                            <p>
+                                أجهزة طبية مستوردة من أكبر وأشهر مصانع الأجهزة الطبية في العالم.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>نخبة النخبة</h4>
+                            <p>
+                                نفتخر بوجود نخبة من الأطباء والممرضين على مستوى عالمي.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="vertical-divider">
+                        <img src="/Assets/images/Heart.png" alt="قلب" />
+                    </div>
+
+                    <div class="column">
+                        <div>
+                            <h4>معايير سعودية عالمية</h4>
+                            <p>
+                                نقدم خدماتنا الطبية وفقًا للمعايير السعودية العالمية.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>أفضل الخدمات</h4>
+                            <p>
+                                تقديم رعاية صحية متميزة للعملاء والمجتمع، وفقًا لأعلى المعايير الطبية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-gridz">
+            <div class="card light">
+                <div class="card-content">
+                    <h3>ابحث عن أطباء موثوقين بالقرب منك</h3>
+                    <p>ابحث واحجز موعدًا بسهولة مع أفضل المتخصصين.</p>
+                </div>
+                <img src="/Assets/images/i1.png" alt="طبيب" class="card-image" />
+                <div class="card-button light-btn">
+                    <img src="/Assets/Icons/Arrow3.png" alt="" />
+                </div>
+            </div>
+
+            <div class="card dark">
+                <div class="card-content">
+                    <h3>مواعيد مؤكدة</h3>
+                    <p>احصل على استشارتك الطبية بتأكيد فوري.</p>
+                </div>
+                <img src="/Assets/images/i2.png" alt="مواعيد مؤكدة" class="card-image" />
+                <div class="card-button light-btn">
+                    <img src="/Assets/Icons/Arrow4.png" alt="" />
+                </div>
+            </div>
+
+            <div class="card light">
+                <div class="card-content">
+                    <h3>توصيل الأدوية على مدار الساعة</h3>
+                    <p>نوصل الأدوية الأساسية إلى باب منزلك في أي وقت.</p>
+                </div>
+                <img src="/Assets/images/i3.png" alt="توصيل الأدوية" class="card-image" />
+                <div class="card-button light-btn">
+                    <img src="/Assets/Icons/Arrow3.png" alt="" />
+                </div>
+            </div>
+
+            <div class="card dark">
+                <div class="card-content">
+                    <h3>استشارات فورية عبر الفيديو</h3>
+                    <p>تواصل مع طبيب خلال أقل من 60 ثانية — بسرعة وأمان وراحة.</p>
+                </div>
+                <img src="/Assets/images/i4.png" alt="استشارة فيديو" class="card-image" />
+                <div class="card-button light-btn">
+                    <img src="/Assets/Icons/Arrow4.png" alt="" />
+                </div>
+            </div>
+
+            <div class="card light">
+                <div class="card-content">
+                    <h3>جمع عينات المختبر من المنزل</h3>
+                    <p>نجمع العينات من منزلك بسهولة وبدون عناء.</p>
+                </div>
+                <img src="/Assets/images/i5.png" alt="تحليل مختبر" class="card-image" />
+                <div class="card-button light-btn">
+                    <img src="/Assets/Icons/Arrow3.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section sectionz sectionzz  anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+        <div class="medical-facility-showcase showcasez">
+            <div class="showcase-container">
+                <div class="content-wrapper">
+                    <main class="main-content main-contentz">
+                        <div class="content-header">
+                            <h1 class="brand-title">
+                                <span class="brand-name">د.خ.ر</span>
+                                <span class="brand-tagline">: إرث من الرعاية</span>
+                            </h1>
+                            <h2 class="main-headline">
+                                <span class="headline-part">اكتشف</span>
+                                <span class="headline-emphasis">مرفقًا طبيًا عالمي المستوى</span>
+                            </h2>
+                            <p class="facility-description">
+                                في مستشفى الدكتور خالد الرحيمي، نؤمن بأن الرعاية المتميزة تبدأ بأشخاص متميزين. لذلك
+                                نستثمر في أحدث التقنيات الطبية ونستقطب نخبة من الاستشاريين والمتخصصين المؤهلين في جميع
+                                التخصصات الطبية. إن فلسفتنا المرتكزة على المريض، جنبًا إلى جنب مع التزامنا بالتميز
+                                الإكلينيكي، تضمن لكل فرد رعاية صحية عالمية المستوى بإنسانية ودقة.
+                            </p>
+                        </div>
+
+                        <div class="features-grid">
+                            <article class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                                </div>
+                                <h3 class="feature-title">أطباء مؤهلون عالميًا</h3>
+                            </article>
+                            <article class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                                </div>
+                                <h3 class="feature-title">معدات طبية عالية الجودة</h3>
+                            </article>
+                            <article class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                                </div>
+                                <h3 class="feature-title">رعاية طبية بجودة وفعالية تكلفة</h3>
+                            </article>
+                            <article class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="/Assets/Icons/arrow-up-line.png" alt="" />
+                                </div>
+                                <h3 class="feature-title">نقبل جميع شركات التأمين الكبرى</h3>
+                            </article>
+                        </div>
+                    </main>
+
+                    <aside class="hero-image-section">
+                        <div class="hero-image-container">
+                            <div class="hero-image" style="
+                  background-image: url('/Assets/Icons/Union.png');
+                  background-size: cover;
+                  background-position: center;
+                " role="img" aria-label="المنشأة الطبية من الداخل"></div>
+                            <div class="experience-badge" style="right: unset;">
+                                <div class="badge-content">
+                                    <div class="badge-text">
+                                        <span class="years-number">+20</span>
+                                        <br />
+                                        <span class="years-label">سنة من</span>
+                                        <br />
+                                        <span class="experience-label">الخبرة</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <section class="awards-section">
+                <div class="awards-container">
+                    <div class="award-item">
+                        <img src="/Assets/Icons/award.png" alt="أيقونة جائزة" class="award-image" />
+                        <div class="award-text">
+                            <h3>عدد المراجعين</h3>
+                            <p>+1,300,000</p>
+                        </div>
+                    </div>
+
+                    <div class="award-item">
+                        <img src="/Assets/Icons/award.png" alt="أيقونة جائزة" class="award-image" />
+                        <div class="award-text">
+                            <h3>طبيب في خدمتك</h3>
+                            <p>+60</p>
+                        </div>
+                    </div>
+
+                    <div class="award-item">
+                        <img src="/Assets/Icons/award.png" alt="أيقونة جائزة" class="award-image" />
+                        <div class="award-text">
+                            <h3>
+                                فروعنا في<br />
+                                المملكة العربية السعودية
+                            </h3>
+                            <p>8</p>
+                        </div>
+                    </div>
+
+                    <div class="award-item">
+                        <img src="/Assets/Icons/award.png" alt="أيقونة جائزة" class="award-image" />
+                        <div class="award-text">
+                            <h3>سنوات من الخبرة</h3>
+                            <p>+20</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="section topz  anima" data-aos="fade-zoom-in">
+        <div class="team-section">
+            <div class="team-container">
+                <div class="team-header">
+                    <h2 class="section-title">تعرف على الفريق</h2>
+                    <div class="header-content" style="align-items: center; gap: 2px">
+                        <h2 class="main-headline">
+                            <span class="headline-part">تعرف على خبرائنا في</span>
+                            <span class="headline-emphasis">د.خ.ر</span>
+                        </h2>
+                        <div>
+                            <div class="satisfied-patients" style="position: unset; box-shadow: unset">
+                                <div class="avatarsz">
+                                    <img src="/Assets/images/ds1.png" alt="الصورة 1" />
+                                    <img src="/Assets/images/ds2.png" alt="الصورة 2" />
+                                    <img src="/Assets/images/ds3.png" alt="الصورة 3" />
+                                    <img src="/Assets/images/ds4.png" alt="الصورة 4" />
+                                    <img src="/Assets/images/ds5.png" alt="الصورة 5" />
+                                </div>
+                                <div class="text">
+                                    <span class="count">+50</span><br />
+                                    <span class="label">طبيب ماهر</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="team-description">
+                        يضم فريقنا نخبة من الاستشاريين والمتخصصين والمهنيين الصحيين ذوي الخبرة العالية، الذين يركزون على
+                        جذور المرض لتحسين صحة ورفاهية كل مريض. يتمتع أطباؤنا باعتراف واعتماد عالمي، ويتميزون بخبرة في
+                        استخدام أحدث التقنيات. نحن نقدم رعاية طبية متميزة ومريحة باستخدام أحدث المعدات الطبية، في منشأة
+                        مجهزة بتكنولوجيا متقدمة.
+                    </p>
+                </div>
+
+                <main class="team-content">
+                    <div class="doctors-grid">
+                        <article class="doctor-card">
+                            <div class="card-background"></div>
+                            <div class="card-watermark">د.خ.ر</div>
+                            <div>
+                                <img src="/Assets/images/d1.png" alt="د. خالد الرحيمي" class="doctor-image" />
+                                <div class="doctor-info">
+                                    <div class="doctor-details">
+                                        <h3 class="doctor-name">د. خالد الرحيمي</h3>
+                                        <p class="doctor-specialty">جراحة التجميل والترميم والحروق</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="doctor-card">
+                            <div class="card-background"></div>
+                            <div class="card-watermark">د.خ.ر</div>
+                            <div>
+                                <img src="/Assets/images/d12.png" alt="د. فاطمة البدري" class="doctor-image" />
+                                <div class="doctor-info">
+                                    <div class="doctor-details">
+                                        <h3 class="doctor-name">د. فاطمة البدري</h3>
+                                        <p class="doctor-specialty">الأمراض الجلدية</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="doctor-card">
+                            <div class="card-background"></div>
+                            <div class="card-watermark">د.خ.ر</div>
+                            <div>
+                                <img src="/Assets/images/d31.png" alt="د. روزا غارسيا" class="doctor-image" />
+                                <div class="doctor-info">
+                                    <div class="doctor-details">
+                                        <h3 class="doctor-name">د. روزا غارسيا</h3>
+                                        <p class="doctor-specialty">جراحة الفم والفكين</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="doctor-card">
+                            <div class="card-background"></div>
+                            <div class="card-watermark">د.خ.ر</div>
+                            <div>
+                                <img src="/Assets/images/d41.png" alt="د. عثمان علي" class="doctor-image" />
+                                <div class="doctor-info">
+                                    <div class="doctor-details">
+                                        <h3 class="doctor-name">د. عثمان علي</h3>
+                                        <p class="doctor-specialty">جراحة التجميل والترميم والحروق</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+<a href="/doctorsar.html" style="text-decoration: none;" >
+                    <div class="view-all-section">
+                        <button class="view-all-button" type="button">
+                            <span class="view-all-text">عرض جميع الأطباء</span>
+                        </button>
+                        <div>
+                            <img src="/Assets/Icons/arrow-up-linestr.png" alt="سهم" />
+                        </div>
+                    </div>
+                    </a>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sectionzz  anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+        <div class="departments-section">
+            <div class="departments-container">
+                <div class="departments-content">
+                    <div class="departments-header" style="left: 0 !important; right: 60px !important;">
+                        <h2 class="departments-label">الأقسام</h2>
+                        <h2 class="main-headline">
+                            <span class="headline-emphasis">أقسام طبية متعددة</span>
+                            <span class="headline-part">فريدة من نوعها</span>
+                        </h2>
+                    </div>
+
+                    <div class="departments-scroll-container">
+                        <div class="departments-grid">
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s1.png')"
+                                        role="img" aria-label="قسم الطوارئ"></div>
+                                    <div class="department-icon">
+                                        <img src="/Assets/Icons/Mainarrow.png" alt="" />
+                                    </div>
+                                </div>
+                                <h3 class="department-name">الطوارئ 24/7</h3>
+                                <p class="department-description">استجابة طارئة على مدار اليوم للحالات الصحية العاجلة.
+                                </p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s2.png')"
+                                        role="img" aria-label="قسم الأنف والأذن والحنجرة"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الأنف والأذن والحنجرة</h3>
+                                <p class="department-description">رعاية شاملة لحالات الأنف، الأذن، الحنجرة، والرأس
+                                    والرقبة.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s3.png')"
+                                        role="img" aria-label="قسم العيون"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">طب العيون</h3>
+                                <p class="department-description">فحوصات العين، العلاج، والجراحة لتحسين الرؤية.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s4.png')"
+                                        role="img" aria-label="قسم طب الأسنان"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">طب الأسنان</h3>
+                                <p class="department-description">رعاية أسنان شاملة في بيئة مريحة.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s5.png')"
+                                        role="img" aria-label="قسم النساء والولادة"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">النساء والولادة</h3>
+                                <p class="department-description">رعاية كاملة لصحة المرأة والحمل.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s6.png')"
+                                        role="img" aria-label="قسم طب الأطفال"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">طب الأطفال</h3>
+                                <p class="department-description">رعاية صحة الأطفال من الولادة حتى سن المراهقة.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s7.png')"
+                                        role="img" aria-label="قسم الأمراض الجلدية"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الأمراض الجلدية</h3>
+                                <p class="department-description">حلول متقدمة للعناية بالبشرة والحاجات الطبية
+                                    والتجميلية.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s8.png')"
+                                        role="img" aria-label="قسم اضطرابات النوم"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">اضطرابات النوم</h3>
+                                <p class="department-description">تشخيص وعلاج الأرق، انقطاع التنفس أثناء النوم وغيرها.
+                                </p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image" style="background-image: url('/Assets/images/s9.png')"
+                                        role="img" aria-label="قسم أمراض المسالك البولية"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">المسالك البولية</h3>
+                                <p class="department-description">رعاية طبية متخصصة لصحة الجهاز البولي والتناسلي الذكري.
+                                </p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s10.png')" role="img"
+                                        aria-label="قسم الروماتيزم"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الروماتيزم</h3>
+                                <p class="department-description">علاج آلام المفاصل واضطرابات المناعة الذاتية.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s11.png')" role="img"
+                                        aria-label="قسم التشخيص المتقدم"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">التشخيص المتقدم</h3>
+                                <p class="department-description">فحوصات دقيقة لحالات طبية نادرة ومعقدة.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s12.png')" role="img"
+                                        aria-label="وحدة العناية المركزة"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">وحدة العناية المركزة</h3>
+                                <p class="department-description">رعاية متخصصة على مدار الساعة للحالات الحرجة.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s13.png')" role="img"
+                                        aria-label="قسم الجراحة العامة"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الجراحة العامة</h3>
+                                <p class="department-description">إجراءات جراحية آمنة وفعالة لمختلف الحالات.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s14.png')" role="img"
+                                        aria-label="قسم زراعة الأسنان"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">جراحة وزراعة الأسنان</h3>
+                                <p class="department-description">حلول جراحية وزرع لاستعادة صحة الأسنان والفم.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s15.png')" role="img"
+                                        aria-label="قسم جراحة الجهاز الهضمي"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">جراحة الجهاز الهضمي</h3>
+                                <p class="department-description">علاج جراحي لأمراض المعدة والأمعاء والكبد.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s16.png')" role="img"
+                                        aria-label="قسم جراحة الفم والفكين"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">جراحة الفم والفكين</h3>
+                                <p class="department-description">علاج جراحي لحالات الوجه والفك والأسنان.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s18.png')" role="img"
+                                        aria-label="قسم جراحة السمنة"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">جراحة السمنة</h3>
+                                <p class="department-description">جراحات لإنقاص الوزن لعلاج السمنة وتحسين الصحة.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s19.png')" role="img"
+                                        aria-label="قسم جراحة التجميل والترميم"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الجراحة التجميلية والترميمية والحروق</h3>
+                                <p class="department-description">رعاية جراحية متخصصة لإعادة الشكل والوظيفة بعد الإصابة
+                                    أو الحروق أو التشوهات.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s20.png')" role="img"
+                                        aria-label="قسم جراحة القدم السكرية"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">جراحة القدم السكرية</h3>
+                                <p class="department-description">رعاية جراحية لمضاعفات القدم بسبب السكري.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s21.png')" role="img"
+                                        aria-label="قسم الأشعة"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الأشعة</h3>
+                                <p class="department-description">خدمات تصوير دقيقة مثل الأشعة السينية لتشخيص سريع
+                                    وواضح.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s22.png')" role="img"
+                                        aria-label="قسم المختبر"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">المختبر</h3>
+                                <p class="department-description">فحوصات دقيقة وسريعة لدعم التشخيص الدقيق والعلاج.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s23.png')" role="img"
+                                        aria-label="قسم التخدير"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">التخدير</h3>
+                                <p class="department-description">إدارة أمنة ومضبوطة للألم خلال العمليات والإجراءات.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s24.png')" role="img"
+                                        aria-label="قسم الرعاية المنزلية"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">الرعاية المنزلية</h3>
+                                <p class="department-description">دعم طبي مخصص في راحة منزلك.</p>
+                            </article>
+
+                            <article class="department-card">
+                                <div class="department-image-container">
+                                    <div class="department-image"
+                                        style="background-image: url('/Assets/images/s25.png')" role="img"
+                                        aria-label="قسم التدليك اللمفاوي"></div>
+                                    <div class="department-icon"><img src="/Assets/Icons/Mainarrow.png" alt="" /></div>
+                                </div>
+                                <h3 class="department-name">تدليك للحد من الدهون وتنشيط اللمف</h3>
+                                <p class="department-description">علاج غير جراحي لتقليل الدهون وتعزيز تصريف الجهاز
+                                    اللمفاوي.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="appointment-cta">
+                        <div class="appointment-content">
+                            <div class="appointment-textz">
+                                <h2 class="appointment-title">احجز موعدًا</h2>
+                                <p class="appointment-description">احجز موعدك اليوم واستمتع بأعلى جودة رعاية طبية في
+                                    مستشفى الدكتور خالد الرحيمي. فريقنا المخصص جاهز لتقديم رعاية شخصية تلائم احتياجاتك
+                                    الخاصة.</p>
+                            </div>
+                            <div class="appointment-button-container">
+                                <button class="appointment-buttonz" id="open-modal">
+                                    <span class="appointment-textb">احجز موعدًا</span>
+                                    <div class="doctor-icon-container"><img src="/Assets/Icons/Arrow.png" alt="" />
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section topz  anima" data-aos="fade-zoom-in" dir="rtl">
+        <div class="partners-section">
+            <div class="partners-header">
+                <!-- <h2>شركات التأمين<br />وشركاؤنا</h2> -->
+                <h2 class="main-headline">
+                    <span class="headline-part">التأمين لدينا </span>
+                    <span class="headline-emphasis">شركات &</span> <br>
+                    <span class="headline-emphasis">الشركاء</span>
+                </h2>
+                <p>
+                    نتعاون مع جميع مزودي التأمين الرائدين في المنطقة<br />
+                    وشركاء موثوقين لضمان تغطية سلسة ودعم مستمر لرعايتكم.
+                </p>
+            </div>
+
+            <div class="partners-logos-grid">
+                <img src="/Assets/logos/l14.png" alt="نكست كير" />
+                <img src="/Assets/logos/l7.png" alt="الاتصالات السعودية" />
+                <img src="/Assets/logos/l9.png" alt="ولاء" />
+                <img src="/Assets/logos/l10.png" alt="ميدغلف" />
+                <img src="/Assets/logos/l8.png" alt="وزارة الصحة" />
+                <img src="/Assets/logos/l13.png" alt="الاتحاد" />
+                <img src="/Assets/logos/l11.png" alt="أليانز" />
+                <img src="/Assets/logos/l12.png" alt="سايكو" />
+                <img src="/Assets/logos/l6.png" alt="قطاف" />
+                <img src="/Assets/logos/l5.png" alt="مؤسسة السرطان" />
+                <img src="/Assets/logos/l1.png" alt="جامعة الإمام عبدالرحمن" />
+                <img src="/Assets/logos/l4.png" alt="صدارة" />
+
+                <div class="last-two-logos">
+                    <img src="/Assets/logos/l2.png" alt="الأصالة" />
+                    <img src="/Assets/logos/l3.png" alt="أرامكو" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sectionzz" dir="rtl">
+        <div class="medical-facility-showcase">
+            <div class="showcase-container" style="align-items: flex-start">
+                <div class="blog-header  anima" data-aos="fade-zoom-in">
+                    <h2 class="blog-category">مدونتنا</h2>
+                    <h2 class="main-headline">
+                        <span class="headline-part">نصائح</span>
+                        <span class="headline-emphasis">الصحة والعافية</span>
+                        <span class="headline-part">الطبية</span>
+                    </h2>
+                    <p class="blog-description">
+                        تابع أحدث مقالاتنا التي تقدم نصائح الخبراء، ومعلومات صحية مفيدة،<br />
+                        وآخر التطورات في الرعاية الطبية لمساعدتك في اتخاذ قرارات واثقة بشأن صحتك.
+                    </p>
+                </div>
+
+                <div class="blog-grid  anima" data-aos="fade-zoom-in">
+                    <article class="blog-card">
+                        <img src="/Assets/images/a1.jpeg" alt="التهاب الزائدة الدودية" class="blog-image" />
+                        <div class="blog-content">
+                            <div class="blog-card-header">
+                                <h3 class="blog-card-title">
+                                    فهم التهاب الزائدة الدودية: الأسباب والأعراض والعلاج
+                                </h3>
+                                <time class="blog-date" datetime="2025-04-15">15 أبريل 2025</time>
+                            </div>
+                            <div class="blog-card-body">
+                                <p class="blog-excerpt">
+                                    نظرة شاملة على التهاب الزائدة الدودية، وكيفية التعرف على الأعراض مبكرًا، ومتى يحتاج
+                                    إلى تدخل جراحي.
+                                </p>
+                                <a href="#" class="blog-link">
+                                    <span class="link-text">عرض التفاصيل</span>
+                                    <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="/Assets/images/a2.png" alt="أنواع الفتاق" class="blog-image" />
+                        <div class="blog-content">
+                            <div class="blog-card-header">
+                                <h3 class="blog-card-title">
+                                    ما هي الأنواع الثلاثة للفتاق؟
+                                </h3>
+                                <time class="blog-date" datetime="2025-06-10">10 يونيو 2025</time>
+                            </div>
+                            <div class="blog-card-body">
+                                <p class="blog-excerpt">
+                                    دليل موجز يشرح الفتاق الإربي، والسري، والحجابي — أعراضها وأسبابها وخيارات العلاج.
+                                </p>
+                                <a href="#" class="blog-link">
+                                    <span class="link-text">عرض التفاصيل</span>
+                                    <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card blog-card-reverse">
+                        <div class="blog-content">
+                            <div class="blog-card-header">
+                                <h3 class="blog-card-title">
+                                    حصى المرارة: معلومات أساسية يجب معرفتها
+                                </h3>
+                                <time class="blog-date" datetime="2025-05-22">22 مايو 2025</time>
+                            </div>
+                            <div class="blog-card-body">
+                                <p class="blog-excerpt">
+                                    تعرّف على ماهية حصى المرارة، وعوامل الخطر الشائعة، وأهم العلامات، وكيفية الوقاية
+                                    والعلاج.
+                                </p>
+                                <a href="#" class="blog-link">
+                                    <span class="link-text">عرض التفاصيل</span>
+                                    <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                                </a>
+                            </div>
+                        </div>
+                        <img src="/Assets/images/a3.jpg" alt="حصى المرارة" class="blog-image" />
+                    </article>
+
+                    <article class="blog-card blog-card-reverse">
+                        <div class="blog-content">
+                            <div class="blog-card-header">
+                                <h3 class="blog-card-title">صحتك أولويتنا</h3>
+                                <time class="blog-date" datetime="2025-03-18">18 مارس 2025</time>
+                            </div>
+                            <div class="blog-card-body">
+                                <p class="blog-excerpt">
+                                    احصل على نصائح مدروسة، وتحديثات طبية، وإرشادات صحية مصممة لدعم رفاهيتك اليومية.
+                                </p>
+                                <a href="#" class="blog-link">
+                                    <span class="link-text">عرض التفاصيل</span>
+                                    <img src="/Assets/Icons/smallarrow.png" alt="" class="link-arrow" />
+                                </a>
+                            </div>
+                        </div>
+                        <img src="/Assets/images/a4.jpg" alt="صحتك أولويتنا" class="blog-image" />
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sectionz tonbotz anima" data-aos="fade-zoom-in" dir="rtl" style="padding: 40px 0px;">
+        <div class="partners-section" style="text-align: right">
+            <div class="faq-container">
+                <div class="faq-header">
+                    <div class="header-content">
+                        <p class="section-label">الأسئلة الشائعة</p>
+
+                        <h2 class="main-headline">
+                            <span class="headline-part">هل لديك أسئلة؟ يسعدنا</span>
+                            <span class="headline-emphasis">الإجابة</span>
+                        </h2>
+
+                        <p class="description">
+                            إجابات سريعة على الأسئلة الشائعة. لم تجد ما تبحث عنه؟
+                        </p>
+                    </div>
+                    <video class="header-video" src="/Assets/video/v1.mp4" autoplay muted loop playsinline></video>
+                </div>
+
+                <div class="faq-list">
+                    <article class="faq-item expanded" data-faq="1">
+                        <div class="faq-question">
+                            <h3 class="question-text">كيف يمكنني حجز موعد؟</h3>
+                            <button class="toggle-button" aria-expanded="true" aria-controls="answer-1">
+                                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="faq-answer" id="answer-1">
+                            <p class="answer-text">
+                                يمكنك الحجز عبر موقعنا الإلكتروني، أو الاتصال بخط المساعدة المتاح على مدار الساعة، أو
+                                زيارة المستشفى شخصيًا. قد تتوفر مواعيد في نفس اليوم حسب القسم والتوفر.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-faq="2">
+                        <div class="faq-question">
+                            <h3 class="question-text">ما الذي يجب أن أحضره في زيارتي الأولى؟</h3>
+                            <button class="toggle-button" aria-expanded="false" aria-controls="answer-2">
+                                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="faq-answer" id="answer-2">
+                            <p class="answer-text">
+                                يُرجى إحضار بطاقة هوية سارية، بطاقة التأمين، قائمة بالأدوية التي تستخدمها، وأي سجلات
+                                طبية أو نتائج تحاليل من زيارات سابقة.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-faq="3">
+                        <div class="faq-question">
+                            <h3 class="question-text">هل تقدمون خدمات الاستشارة عن بُعد؟</h3>
+                            <button class="toggle-button" aria-expanded="false" aria-controls="answer-3">
+                                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="faq-answer" id="answer-3">
+                            <p class="answer-text">
+                                نعم، نقدم استشارات افتراضية للعديد من التخصصات. تواصل معنا لحجز موعد عن بُعد واستلام
+                                الرعاية من منزلك.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-faq="4">
+                        <div class="faq-question">
+                            <h3 class="question-text">هل يتوفر قسم طوارئ؟</h3>
+                            <button class="toggle-button" aria-expanded="false" aria-controls="answer-4">
+                                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="faq-answer" id="answer-4">
+                            <p class="answer-text">
+                                نعم، قسم الطوارئ لدينا يعمل على مدار الساعة ويضم أطباء طوارئ معتمدين وأحدث الأجهزة لعلاج
+                                جميع الحالات الطارئة.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-faq="5">
+                        <div class="faq-question">
+                            <h3 class="question-text">كيف يمكنني الحصول على نتائج التحاليل أو الأشعة؟</h3>
+                            <button class="toggle-button" aria-expanded="false" aria-controls="answer-5">
+                                <img class="close-icon" src="/Assets/Icons/Vector1.png" alt="" />
+                                <img class="plus-icon" src="/Assets/Icons/Vector.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="faq-answer" id="answer-5">
+                            <p class="answer-text">
+                                تتوفر نتائج الفحوصات عبر بوابة المرضى خلال 24-48 ساعة. سيتم إرسال إشعار بالبريد
+                                الإلكتروني عند توفر النتائج، أو يمكنك الاتصال بخط النتائج لدينا.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section sectionzz " dir="rtl">
+        <div class="medical-facility-showcase">
+            <div class="testimonials-container">
+                <div class="testimonials-header anima" data-aos="fade-zoom-in">
+                    <p class="section-label" style="margin-bottom: 25px">
+                        آراء مرضانا
+                    </p>
+                    <h2 class="main-headline">
+                        <span class="headline-emphasis">قصص رعاية</span>
+                        <span class="headline-part">مرضانا</span>
+                    </h2>
+                    <p class="section-description">
+                        مرضانا هم محور كل ما نقوم به — تعرف على قصصهم المُلهمة في الشفاء، والأمل، والرعاية الرحيمة.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid anima" data-aos="fade-zoom-in">
+                    <article class="testimonial-card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-header-content">
+                                    <div class="quote-icon">
+                                        <img src="/Assets/Icons/xdot1.png" alt="اقتباس" class="quote-image" />
+                                    </div>
+                                    <div class="rating-container">
+                                        <span class="rating-score">5.0</span>
+                                        <img src="/Assets/Icons/star.png" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    </div>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "رعاية مميزة من البداية للنهاية! فريق الأنف والأذن والحنجرة كان متعاونًا للغاية وشرح
+                                    كل شيء بكل وضوح. أوصي بشدة!" 😊
+                                </blockquote>
+                            </div>
+                            <div class="card-divider"></div>
+                            <div class="customer-info">
+                                <h3 class="customer-name">السيدة عائشة الفرحان</h3>
+                                <p class="customer-location">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-header-content">
+                                    <div class="quote-icon">
+                                        <img src="/Assets/Icons/xdot1.png" alt="اقتباس" class="quote-image" />
+                                    </div>
+                                    <div class="rating-container">
+                                        <span class="rating-score">5.0</span>
+                                        <img src="/Assets/Icons/star.png" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    </div>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "فريق الأطفال اعتنى بطفلنا بكل لطف واهتمام. كانوا مطمئنين للغاية وتعاملهم كان
+                                    رائعًا. شكرًا لكم!" 👶✨
+                                </blockquote>
+                            </div>
+                            <div class="card-divider"></div>
+                            <div class="customer-info">
+                                <h3 class="customer-name">الرضيع ليام ووالديه</h3>
+                                <p class="customer-location">الخبر، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-header-content">
+                                    <div class="quote-icon">
+                                        <img src="/Assets/Icons/xdot1.png" alt="اقتباس" class="quote-image" />
+                                    </div>
+                                    <div class="rating-container">
+                                        <span class="rating-score">5.0</span>
+                                        <img src="/Assets/Icons/star.png" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    </div>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "الرعاية بعد العملية في المنزل كانت ممتازة. الممرضات كنّ محترفات ويعاملن بلطف، مما
+                                    سهّل عليّ فترة التعافي كثيرًا."
+                                </blockquote>
+                            </div>
+                            <div class="card-divider"></div>
+                            <div class="customer-info">
+                                <h3 class="customer-name">الآنسة نور الحسن</h3>
+                                <p class="customer-location">الخبر، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-header-content">
+                                    <div class="quote-icon">
+                                        <img src="/Assets/Icons/xdot1.png" alt="اقتباس" class="quote-image" />
+                                    </div>
+                                    <div class="rating-container">
+                                        <span class="rating-score">5.0</span>
+                                        <img src="/Assets/Icons/star.png" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    </div>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "أجريت جراحة في الوجه والفكين هنا — وكانت النتيجة أفضل من المتوقع! خبرة الدكتور
+                                    الرحيمي وفريقه أعطتني ثقة كاملة." 👍
+                                </blockquote>
+                            </div>
+                            <div class="card-divider"></div>
+                            <div class="customer-info">
+                                <h3 class="customer-name">السيد فهد المطيري</h3>
+                                <p class="customer-location">الدمام، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="hospital-footer topz">
+        <section class="about-section">
+            <div class="about-container anima" data-aos="fade-zoom-in">
+                <h1 class="about-title">
+                    عن
+                    <span class="hospital-name">DRK</span>
+                </h1>
+                <p class="hospital-credentials">
+                    معتمد من CBAHI | أكثر من 150 ألف مريض راضٍ | طوارئ 24/7
+                </p>
+                <p class="hospital-description">
+                    يلتزم مستشفى الدكتور خالد الرحيمي بتقديم رعاية صحية عالمية المستوى
+                    باستخدام أحدث التقنيات وأمهر الأطباء والخدمات الرحيمة.
+                </p>
+                <div class="appointment-button-container butz">
+                    <button class="appointment-buttonz" id="open-modal">
+                        <span class="appointment-textb">احجز موعدًا</span>
+                        <div class="doctor-icon-container">
+                            <img src="/Assets/Icons/Arrow.png" alt="" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-footer">
+            <div class="footer-background-text" aria-hidden="true">DRK</div>
+
+            <div class="footer-content">
+                <div class="hospital-info">
+                    <div class="logo-container">
+                        <div class="logo-wrapper">
+                            <img src="/Assets/Icons/drk.png" alt="شعار مستشفى الدكتور خالد الرحيمي"
+                                class="hospital-logoz" />
+                        </div>
+                    </div>
+                    <address class="hospital-address">
+                        <p class="address-line">
+                            مستشفى الدكتور خالد الرحيمي، شارع الأمير محمد بن فهد، الخبر،
+                            المملكة العربية السعودية
+                        </p>
+                        <p class="contact-phone">الهاتف: +966 13 895 5555</p>
+                        <p class="contact-email">البريد الإلكتروني: info@dralruhaimi.com</p>
+                    </address>
+                </div>
+
+                <nav class="footer-navigation" aria-label="روابط الفوتر">
+                    <div class="nav-column">
+                        <h2 class="nav-title">روابط سريعة</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">الرئيسية</a></li>
+                            <li><a href="#" class="nav-linkz">من نحن</a></li>
+                            <li><a href="#" class="nav-linkz">الأطباء</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">الخدمات</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">الأقسام</a></li>
+                            <li><a href="#" class="nav-linkz">الفروع</a></li>
+                            <li><a href="#" class="nav-linkz">العروض</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">تواصل معنا</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">إرسال رسالة</a></li>
+                            <li><a href="#" class="nav-linkz">حجز موعد</a></li>
+                            <li><a href="#" class="nav-linkz">جدولة اتصال</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">قانوني</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">سياسة الخصوصية</a></li>
+                            <li><a href="#" class="nav-linkz">الشروط والأحكام</a></li>
+                            <li><a href="#" class="nav-linkz">سياسة ملفات تعريف الارتباط</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-media" aria-label="روابط التواصل الاجتماعي">
+                    <a href="#" class="social-link" aria-label="انستجرام">
+                        <img src="/Assets/Icons/instagram.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="سناب شات">
+                        <img src="/Assets/Icons/snapchat.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="يوتيوب">
+                        <img src="/Assets/Icons/youtube.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="تيك توك">
+                        <img src="/Assets/Icons/tiktok.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="تويتر">
+                        <img src="/Assets/Icons/twitter.png" class="social-icon" alt="" />
+                    </a>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <p class="copyright">
+                    © 2025 مستشفى الدكتور خالد الرحيمي. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

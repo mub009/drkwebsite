@@ -6,20 +6,17 @@ use App\Models\Department;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\DepartmentRequest;
-
+use App\Http\Requests\DepartmentUpdateRequest;
 
 class DepartmentController extends Controller
 {
-
     public function index()
     {
         return view('backend.departments');
     }
-    public function dataTablesForDepartments(Request $request)
+    public function dataTablesForDepartments()
     {
-        if ($request->ajax()) {
             $query = Department::query();
-
             return DataTables::of($query)
                 ->addColumn('department_en', function ($row) {
                     return $row->department_en;
@@ -38,6 +35,12 @@ class DepartmentController extends Controller
                 ->addColumn('department_details', function ($row) {
                     return $row->department_details;
                 })
+                ->addColumn('slug', function ($row) {
+                    return $row->slug;
+                })
+                ->addColumn('sort', function ($row) {
+                    return $row->sort;
+                })
                 ->editColumn('created_at', function ($row) {
                     return $row->created_at->format('Y-m-d H:i:s');
                 })
@@ -50,28 +53,29 @@ class DepartmentController extends Controller
                 ->filterColumn('department_details', function ($query, $keyword) {
                     $query->where('department_details', 'like', "%{$keyword}%");
                 })
+                ->filterColumn('slug', function ($query, $keyword) {
+                    $query->where('slug', 'like', "%{$keyword}%");
+                })
+                ->orderColumn('sort', function ($query) {
+                    $query->orderBy('sort', 'asc');
+                })
                 ->make(true);
-        }
     }
     public function addDepartments()
     {
         return view('backend.departmentsAdd');
     }
-
     public function store(DepartmentRequest $request)
     {
-
         try {
-            $request->validate([
-                'department_en' => 'required|string|max:255',
-                'department_ar' => 'required|string|max:255',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|required',
-                'department_details' => 'required|string',
-            ]);
+            $totalDepartments = Department::count();
             $department = new Department;
             $department->department_en = $request->department_en;
             $department->department_ar = $request->department_ar;
             $department->department_details = $request->department_details;
+            $department->content_ar = $request->content_ar;
+            $department->slug = $request->slug;
+            $department->sort = $totalDepartments + 1;
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images'), $imageName);
@@ -80,45 +84,63 @@ class DepartmentController extends Controller
             $department->save();
             return response()->json(['status' => true, 'message' => 'Department created successfully.']);
         } catch (\Exception $e) {
-
             return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
         }
     }
-
-
-
-
+    public function departmentDecrement(Request $request)
+    {
+        $department = Department::find($request->departmentId);
+        
+        $sort =($department->sort!="")?--$department->sort:0;
+        if ($sort >= 1) {
+            $departmentDownData = Department::where('sort', $sort)->first();
+            if ($departmentDownData) {
+                $newSort = ($departmentDownData->sort == 0 || $departmentDownData->sort == null) ? 0 : $departmentDownData->sort;
+                $departmentDownData->sort = $newSort + 1;
+                $departmentDownData->save();
+            }
+            $department->sort = $sort;
+            $department->save();
+        }
+        return response()->json(['status' => true, 'message' => 'Department sorted successfully.']);
+    }
+    public function departmentIncrement(Request $request)
+    {
+        $department = Department::find($request->departmentId);
+        $sort = ++$department->sort;
+        $departmentCount = Department::count('id');
+        if ($sort <= $departmentCount) {
+            $departmentUpData = Department::where('sort', $sort)->first();
+            if ($departmentUpData) {
+                $newSort = ($departmentUpData->sort == 0 || $departmentUpData->sort == null) ? 0 : $departmentUpData->sort;
+                $departmentUpData->sort = $newSort - 1;
+                $departmentUpData->save();
+            }
+            $department->sort = $sort;
+            $department->save();
+        }
+        return response()->json(['status' => true, 'message' => 'Department sorted successfully.']);
+    }
     public function edit($id)
     {
         $department = Department::find($id);
-
-        return view('backend.department-edit', compact('department'));
+        return view('backend.department-edit', compact('department', 'id'));
     }
-
-
-    public function update(Request $request, $id)
+    public function update(DepartmentUpdateRequest $request)
     {
         try {
-
-
-            $department = Department::findOrFail($id);
-
-            $request->validate([
-                'department_en' => 'required|string|max:255',
-                'department_ar' => 'required|string|max:255',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
-                'department_details' => 'required|string',
-            ]);
+            $department = Department::findOrFail($request->id);
             $department->department_en = $request->department_en;
             $department->department_ar = $request->department_ar;
             $department->department_details = $request->department_details;
+            $department->content_ar = $request->content_ar;
+            $department->slug = $request->slug;
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images'), $imageName);
                 $department->image = $imageName;
             }
             $department->save();
-
             if ($request->ajax()) {
                 return response()->json(['status' => true, 'message' => 'Department updated successfully.']);
             } else {
@@ -142,15 +164,11 @@ class DepartmentController extends Controller
     {
         $department = Department::findOrFail($id);
         $department->delete();
-
-        return response()->json(['status' => true, 'message' => 'Department deleted successfully'],);
+        return response()->json(['status' => true, 'message' => 'Department deleted successfully'],'');
     }
-
-
     public function show(Request $request, $id)
     {
         $department = Department::find($id);
-
         return view('backend.department-show', compact('department'));
     }
 }

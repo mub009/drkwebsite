@@ -1,15 +1,10 @@
 @extends('backend.layouts.backendLayout')
-
 @section('title', 'Department')
-
 @section('content')
-<!-- <script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@43.0.0/build/ckeditor.min.js"></script> -->
-
 <div id="content-area">
     <div class="card">
         <div class="card-body">
             <h1 class="card-title">Department</h1>
-            <!-- Button to Open the Modal -->
             <div class="d-flex justify-content-end mb-3">
                 <a href="{{route('departments.add')}}"><button type="button" class="btn btn-primary">
                         Add New Department
@@ -18,33 +13,83 @@
             <div class="alert alert-dismissible fade show" role="alert" id="alert-box1" style="display: none;">
                 <span id="alert-message"></span>
             </div>
-
-            <!-- Departments Table -->
-            <table class="table table-bordered mt-4" id="departments-table">
-                <thead>
-                    <tr>
-                        <th>Department (English)</th>
-                        <th>Department (Arabic)</th>
-                        <th>Department Image</th>
-                        <th>Department Details</th>
-                        <th>Created At</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered mt-4" id="departments-table">
+                    <thead>
+                        <tr>
+                            <th>Department (English)</th>
+                            <th>Department (Arabic)</th>
+                            <th>Department Image</th>
+                            <th>Department Details</th>
+                            <th>Slug</th>
+                            <th>Sort</th>
+                            <th>Created At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-
 <script>
+    function decrement(id) {
+        $(document).ready(function() {
+            $.ajax({
+                type: "post",
+                url: "{{route('departments.decrement')}}",
+                data: {
+                    departmentId: id,
+                    _token: '{{ csrf_token() }}'
+                },
+                dataType: "json",
+                success: function(response) {
+                    if (response.status) {
+                        console.log(response.message);
+                     
+                         var table = $('#departments-table').DataTable();
+                         table.ajax.reload();
+                    } else {
+                        console.error('Error decrementing department:', response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX error:', error);
+                }
+            });
+        });
+    }
+
+    function increment(id) {
+        $(document).ready(function() {
+            $.ajax({
+                type: "post",
+                url: "{{route('departments.increment')}}",
+                data: {
+                    departmentId: id,
+                    _token: '{{ csrf_token() }}'
+                },
+                dataType: "json",
+                success: function(response) {
+                    if (response.status) {
+                         var table = $('#departments-table').DataTable();
+                         table.ajax.reload();
+                    } else {
+                        console.error('Error incrementing department:', response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX error:', error);
+                }
+            });
+        });
+    }
     $(document).ready(function() {
-        // Function to show alert messages
         function showAlert(message, type, alertBoxId) {
             $('#' + alertBoxId + ' #alert-message').text(message);
             $('#' + alertBoxId).removeClass('alert-success alert-danger').addClass(`alert-${type}`).show();
@@ -52,18 +97,14 @@
                 $('#' + alertBoxId).fadeOut();
             }, 1000);
         }
-
         if (sessionStorage.getItem('addMessage')) {
             showAlert(sessionStorage.getItem('addMessage'), 'success', 'alert-box1');
             sessionStorage.removeItem('addMessage');
         }
-
         if (sessionStorage.getItem('editMessage')) {
             showAlert(sessionStorage.getItem('editMessage'), 'success', 'alert-box1');
             sessionStorage.removeItem('editMessage');
         }
-
-        // Initialize DataTable
         var table = $('#departments-table').DataTable({
             processing: true,
             serverSide: true,
@@ -99,6 +140,23 @@
                     }
                 },
                 {
+                    data: 'slug',
+                    name: 'slug'
+                },
+                {
+                    data: null,
+                    name: 'sort',
+                    orderable: true,
+                    searchable: false,
+                    render: function(data, type, row) {
+                        return `
+                    <button type="button" class="btn btn-info" onClick="increment(${row.id});" data-id="${row.id}"><i class="fa-solid fa-arrow-down"></i></button>
+                    ${row.sort}
+                    <button type="button" class="btn btn-info" onClick="decrement(${row.id});" data-id="${row.id}"><i class="fa-solid fa-arrow-up"></i></button>
+                `;
+                    }
+                },
+                {
                     data: 'created_at',
                     name: 'created_at'
                 },
@@ -117,23 +175,17 @@
                 }
             ],
             order: [
-                [1, 'desc']
+                [5, 'desc']
             ]
         });
-
-        // View Department
         $('#departments-table').on('click', '.view-department', function() {
             var departmentId = $(this).data('id');
             window.location.href = "{{ url('departments') }}/" + departmentId + "/show";
         });
-
-        // Edit Department
         $('#departments-table').on('click', '.edit-department', function() {
             var departmentId = $(this).data('id');
             window.location.href = "{{ url('departments') }}/" + departmentId + "/edit";
         });
-
-        // Delete Department
         $('#departments-table').on('click', '.delete-department', function() {
             var departmentId = $(this).data('id');
             if (confirm('Are you sure you want to delete this department?')) {
@@ -154,11 +206,9 @@
                                 },
                                 buttonsStyling: false
                             }).then(() => {
-                                setTimeout(() => {
-                                    window.location.href = "{{route('departments.index')}}"; // Replace with the URL of the page you want to redirect to
-                                }, 0); // 2000 milliseconds = 2 seconds
+                                 var table = $('#departments-table').DataTable();
+                                 table.ajax.reload();
                             });
-                            // location.reload(); 
                         } else {
                             console.log('Error deleting department: ' + response.message);
                         }

@@ -39,9 +39,6 @@
   <div class="menu-inner-shadow"></div>
 
   <ul class="menu-inner py-1">
-    <!-- Dashboards -->
-
-
     <!-- Apps & Pages -->
     <li class="menu-header small">
       <span class="menu-header-text" data-i18n="Apps & Pages">Menus</span>
@@ -58,19 +55,50 @@
         <div data-i18n="Articles">Articles</div>
       </a>
     </li>
+   
     <li class="menu-item">
       <a href="{{ route('doctors.index') }}" class="menu-link">
         <i class="menu-icon fa-solid fa-stethoscope"></i>
         <div data-i18n="Doctors">Doctors</div>
       </a>
     </li>
+   
     <li class="menu-item">
       <a href="{{ route('departments.index') }}" class="menu-link">
         <i class="menu-icon fa-regular fa-building"></i>
         <div data-i18n="Department">Department</div>
       </a>
     </li>
-
+    <li class="menu-item">
+      <a href="{{ route('branchs.index') }}" class="menu-link">
+        <i class="menu-icon fa-solid fa-network-wired"></i>
+        <div data-i18n="Branch">Branch</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="{{ route('offers.index') }}" class="menu-link">
+        <i class="menu-icon fa-solid fa-tags"></i>
+        <div data-i18n="Offer">Offer</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="{{ route('socialmedias.index') }}" class="menu-link">
+        <i class="menu-icon fa-solid fa-hashtag"></i>
+        <div data-i18n="Socialmedia">Social Media</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="{{ route('partners.index') }}" class="menu-link">
+        <i class="menu-icon fa-solid fa-handshake"></i>
+        <div data-i18n="Partner">Partner</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="{{ route('insurances.index') }}" class="menu-link">
+        <i class="menu-icon fa-solid fa-hand-holding-medical"></i>
+        <div data-i18n="Insurance">Insurance</div>
+      </a>
+    </li>
     <li class="menu-item">
       <a href="{{route('activities')}}" class="menu-link">
         <i class="menu-icon fa-solid fa-chart-line"></i>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/Assets/logos/Logo2.png">
+  <title>DRK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/stylesub.css" />
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/scriptsub.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+<body>
+  <style>
+    .bg-layer {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .bg-layer.show {
+      opacity: 1;
+      z-index: 0;
+    }
+
+    .hero-actions {
+      width: unset !important;
+    }
+
+    .sub-maintez {
+      font-size: 25px;
+      color: #ffffff;
+      margin-bottom: 50px;
+    }
+
+    .hero-content {
+      gap: 20px !important;
+    }
+
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      padding: 50px 200px;
+      z-index: 1000;
+    }
+
+    .offer-image {
+      background-color: transparent;
+      /* transparent background */
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .offer-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: transparent;
+      border-radius: 40px;
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .offer-image:hover {
+      transform: scale(1.05);
+    }
+
+    .of2 {
+      display: none;
+    }
+
+    @media (min-width: 890px) and (max-width: 1550px) {
+
+      .offer-grid {
+        display: grid;
+        padding: 50px 130px !important;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+      }
+    }
+
+    @media (min-width: 300px) and (max-width: 700px) {
+
+
+      .offer-grid {
+        display: grid;
+        padding: 20px !important;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+      }
+
+      .hero-title {
+        font-size: 12vw;
+        padding: unset;
+      }
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .topz {
+      margin-top: 80px !important;
+    }
+  </style>
+
+
+
+<header class="site-header">
+        <div class="header-container">
+            <img src="/Assets/Icons/logo.png" alt="Hospital Logo" class="hospital-logo" />
+
+
+
+
+            <div id="overlay" class="overlayz"></div>
+
+            <nav class="main-nav2" id="mainNav2">
+                <button id="closeButton" class="close-buttonzz">×</button>
+                <div>
+                    <div class="language-selector respo-lag" onclick="toggleLanguage()">
+                        <div class="language-slider"></div>
+                        <span class="language-option">EN</span>
+                        <span class="language-option">AR</span>
+                    </div>
+                    <a href="/index.html" class="nav-link2"> <span class="spanz">01. </span> Home</a>
+                    <a href="/offeren.html" class="nav-link2"><span class="spanz">02. </span>Offers</a>
+                    <a href="/branches.html" class="nav-link2"><span class="spanz">03. </span>Branches</a>
+                    <a href="/doctors.html" class="nav-link2"><span class="spanz">04. </span>Doctors</a>
+                    <a href="/whowe.html" class="nav-link2"> <span class="spanz">05. </span> Who We Are</a>
+                    <a href="/contact.html" class="nav-link2"><span class="spanz">06. </span>Contact Us</a>
+
+
+                    <div class="footer-line2"></div>
+                    <div class="footer-tail-end">
+                        <div> © 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.</div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="/offeren.html" class="nav-link">Offers</a>
+                <a href="/branches.html" class="nav-link">Branches</a>
+                <a href="/doctors.html" class="nav-link">Doctors</a>
+                <a href="/whowe.html" class="nav-link">Who We Are</a>
+                <a href="/contact.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="language-selector lnon" onclick="toggleLanguage()">
+                    <div class="language-slider"></div>
+                    <span class="language-option">EN</span>
+                    <span class="language-option">AR</span>
+                </div>
+
+
+                <button class="book-now-button bnon" id="open-modal">
+                    <span class="book">Book Now</span>
+                    <img src="/Assets/Icons/Arrow2.png" alt="Arrow Icon" />
+                </button>
+                <div class="menu-button w-nav-button" id="menuButton">
+                    <div class="menu-flex">
+                        <div class="menu">
+                            <div class="w-embed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container">
+            <div class="modal-background">
+                <div class="modal" id="modal-box">
+                    <button class="close-btn" id="close-modal">&times;</button>
+                    <h2 class="modal-title">Book Now</h2>
+                    <p class="modal-subtitle">Enter your details below.</p>
+
+                    <form id="booking-form" class="modern-form">
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="Enter your name" />
+                            <input type="number" class="form-input" placeholder="Phone number" />
+                            <!-- </div> -->
+
+                            <!-- <div class="form-row"> -->
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">Select Branch</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option"><span class="option-text">Dr. Khaled Al Rahimi Medical Complex -
+                                            Al Fursan
+                                            Branch</span></li>
+                                    <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex -
+                                            Aziziyah
+                                            Branch</span></li>
+                                    <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex -
+                                            Al-Ahsa
+                                            Branch</span></li>
+                                    <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex -
+                                            Pepsi Street
+                                            Branch</span></li>
+                                    <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Hospital</span>
+                                    </li>
+                                    <li class="option"><span class="option-text">Dr. Khaled Al-Rahimi Medical Complex -
+                                            Al-Ulya District
+                                            Branch</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">Choose Service</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option"><span class="option-text">Ear, Nose and Throat</span></li>
+                                    <li class="option"><span class="option-text">Ophthalmology</span></li>
+                                    <li class="option"><span class="option-text">Dentistry</span></li>
+                                    <li class="option"><span class="option-text">Women and Childbirth</span></li>
+                                    <li class="option"><span class="option-text">Pediatrics</span></li>
+                                    <li class="option"><span class="option-text">Dermatology</span></li>
+                                    <li class="option"><span class="option-text">sleep disorders</span></li>
+                                    <li class="option"><span class="option-text">Urology</span></li>
+                                    <li class="option"><span class="option-text">Rheumatism</span></li>
+                                    <li class="option"><span class="option-text">Esotericism</span></li>
+                                    <li class="option"><span class="option-text">Intensive Care Unit (ICU)</span></li>
+                                    <li class="option"><span class="option-text">Dental surgery and implants</span></li>
+                                    <li class="option"><span class="option-text">Digestive System Surgery</span></li>
+                                    <li class="option"><span class="option-text">Oral and maxillofacial surgery</span>
+                                    </li>
+                                    <li class="option"><span class="option-text">Bariatric surgery</span></li>
+                                    <li class="option"><span class="option-text">Reconstructive, plastic and burn
+                                            surgery</span></li>
+                                    <li class="option"><span class="option-text">Diabetic foot surgery</span></li>
+                                    <li class="option"><span class="option-text">Rays</span></li>
+                                    <li class="option"><span class="option-text">Anesthesia</span></li>
+                                    <li class="option"><span class="option-text">Home care</span></li>
+                                    <li class="option"><span class="option-text">Fat breaking and lymphatic
+                                            massage</span></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="book-now-button"
+                            style="background: linear-gradient(180deg, #32031a -9.89%, #980a50 89.96%);">
+                            <span class="book"> Submit </span>
+                            <img src="/Assets/Icons/Arrow2.png" alt="Arrow Icon" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+  <section class="hero services-section " style="margin-top: 110px !important;">
+
+    <div class="hero-bg-3 bg-layer"></div>
+    <div class="hero-bg-4 bg-layer"></div>
+
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title ">
+        Exclusive Medical Offers at <br> Dr. Al-Ruhaimi Hospital
+      </h1>
+      <h3 class="sub-maintez">Take advantage of our special limited-time health packages designed to keep you and your
+        loved ones in the best shape — all at affordable prices!</h3>
+      <div class="hero-actions ">
+        <div class="appointment-button-container">
+          <button class="appointment-button" id="open-modal">
+            <span class="appointment-text">Book an Appointment</span>
+            <div class="doctor-icon-container">
+              <img src="/Assets/Icons/Arrow.png" alt="" />
+            </div>
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <div class="offer-grid of1">
+    <div class="offer-image"><img src="/Assets/images/Offen1 (1).png" alt="Offer 1"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1 (2).png" alt="Offer 2"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1 (3).png" alt="Offer 3"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1 (4).png" alt="Offer 4"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1 (5).png" alt="Offer 5"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1 (6).png" alt="Offer 6"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1 (7).png" alt="Offer 7"></div>
+    <div class="offer-image"><img src="/Assets/images/Offen1(8).png" alt="Offer 8"></div>
+  </div>
+
+
+
+  <footer class="hospital-footer">
+    <section class="about-section topz">
+      <div class="about-container ">
+        <h1 class="about-title">
+          About the
+          <span class="hospital-name">DRK</span>
+        </h1>
+        <p class="hospital-credentials">
+          CBAHI-accredited | 150K+ satisfied patients | 24/7 emergency care
+        </p>
+        <p class="hospital-description">
+          Dr. Khalid Al-Ruhaimi Hospital is committed to delivering
+          world-class healthcare with advanced technology, expert doctors, and
+          compassionate service.
+        </p>
+        <div class="appointment-button-container butz">
+          <button class="appointment-button" id="open-modal">
+            <span class="appointment-text">Book an Appointment</span>
+            <div class="doctor-icon-container">
+              <img src="/Assets/Icons/Arrow.png" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-footer">
+      <div class="footer-background-text" aria-hidden="true">DRK</div>
+
+      <div class="footer-content">
+        <div class="hospital-info">
+          <div class="logo-container">
+            <div class="logo-wrapper">
+              <img src="/Assets/Icons/drk.png" alt="Dr. Khalid Al-Ruhaimi Hospital Logo" class="hospital-logoz" />
+            </div>
+          </div>
+          <address class="hospital-address">
+            <p class="address-line">
+              Dr. Khalid Al-Ruhaimi Hospital Prince Mohammed Bin Fahd Street,
+              Al Khobar, Saudi Arabia
+            </p>
+            <p class="contact-phone">Phone: +966 13 895 5555</p>
+            <p class="contact-email">Email: info@dralruhaimi.com</p>
+          </address>
+        </div>
+
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <div class="nav-column">
+            <h2 class="nav-title">Quick access</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Home</a></li>
+              <li><a href="#" class="nav-linkz">About Us</a></li>
+              <li><a href="#" class="nav-linkz">Doctors</a></li>
+            </ul>
+          </div>
+          <div class="nav-column">
+            <h2 class="nav-title">Services</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Sections</a></li>
+              <li><a href="#" class="nav-linkz">Branches</a></li>
+              <li><a href="#" class="nav-linkz">Offers</a></li>
+            </ul>
+          </div>
+          <div class="nav-column">
+            <h2 class="nav-title">Contact Us</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Send a Massage</a></li>
+              <li><a href="#" class="nav-linkz">Book a Appointment</a></li>
+              <li><a href="#" class="nav-linkz">Schedule a call</a></li>
+            </ul>
+          </div>
+          <div class="nav-column">
+            <h2 class="nav-title">Legal</h2>
+            <ul class="nav-list">
+              <li><a href="#" class="nav-linkz">Privacy Policy</a></li>
+              <li><a href="#" class="nav-linkz">Terms & Conditions</a></li>
+              <li><a href="#" class="nav-linkz">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-media" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Follow us on Instagram">
+            <img src="/Assets/Icons/instagram.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on Snapchat">
+            <img src="/Assets/Icons/snapchat.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on YouTube">
+            <img src="/Assets/Icons/youtube.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on TikTok">
+            <img src="/Assets/Icons/tiktok.png" class="social-icon" alt="">
+          </a>
+          <a href="#" class="social-link" aria-label="Follow us on Twitter">
+            <img src="/Assets/Icons/twitter.png" class="social-icon" alt="">
+          </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="copyright">
+          © 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.
+        </p>
+      </div>
+    </section>
+  </footer>
+
+
+ <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images2 = [
+                "/Assets/images/D111.jpg",
+                "/Assets/images/D1 (2).jpg",
+                "/Assets/images/D1(11).jpg",
+                "/Assets/images/D1 (3).jpg",
+                "/Assets/images/D1(12).png",
+            ];
+
+            const bg3 = document.querySelector(".hero-bg-3");
+            const bg4 = document.querySelector(".hero-bg-4");
+
+            if (!bg3 || !bg4) {
+                console.error("One or both background elements not found!");
+                return;
+            }
+
+            let currentIndex2 = 0;
+            let isBg3Active = true;
+
+            bg3.style.backgroundImage = `url('${images2[0]}')`;
+            bg3.classList.add("show");
+
+            function changeBackground2() {
+                const nextIndex = (currentIndex2 + 1) % images2.length;
+                const nextImage = `url('${images2[nextIndex]}')`;
+
+                if (isBg3Active) {
+                    bg4.style.backgroundImage = nextImage;
+                    bg4.classList.add("show");
+                    bg3.classList.remove("show");
+                } else {
+                    bg3.style.backgroundImage = nextImage;
+                    bg3.classList.add("show");
+                    bg4.classList.remove("show");
+                }
+
+                isBg3Active = !isBg3Active;
+                currentIndex2 = nextIndex;
+            }
+
+            setInterval(changeBackground2, 3000);
+        });
+
+
+
+        /* responsive nav  */
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menuButton');
+            const mainNav = document.getElementById('mainNav2');
+            const closeButton = document.getElementById('closeButton');
+            const overlay = document.getElementById('overlay');
+
+            function openMenu() {
+                mainNav.classList.add('open');
+                overlay.classList.add('active');
+            }
+
+            function closeMenu() {
+                mainNav.classList.remove('open');
+                overlay.classList.remove('active');
+            }
+
+            menuButton.addEventListener('click', openMenu);
+            closeButton.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+        });
+
+        /* responsive nav  */
+
+        document.querySelector('.dropdown-togglez').addEventListener('click', function (e) {
+            e.preventDefault();
+            const dropdown = this.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+
+
+
+
+
+
+
+
+       function toggleLanguage() {
+      const slider = document.querySelector(".language-slider");
+
+      // Get current path and filename
+      const currentPath = window.location.pathname;
+
+      // Define mapping between English and Arabic files
+      const languageMap = {
+        "/index.html": "/indexar.html",
+        "/doctors.html": "/doctorsar.html",
+        "/offeren.html": "/offerar.html",
+        "/whowe.html": "/whowear.html",
+        "/contact.html": "/contactar.html",
+        "/branches.html": "/branchesar.html",
+
+        "/indexar.html": "/index.html",
+        "/doctorsar.html": "/doctors.html",
+        "/offerar.html": "/offeren.html",
+        "/whowear.html": "/whowe.html",
+        "/contactar.html": "/contact.html",
+        "/branchesar.html": "/branches.html"
+      };
+
+      // Determine target page from map
+      const targetPage = languageMap[currentPath];
+
+      if (!targetPage) {
+        console.warn("No language mapping found for:", currentPath);
+        return;
+      }
+
+      // Animate slider
+      const isCurrentlyEnglish = currentPath.includes("/En/");
+      slider.style.transform = isCurrentlyEnglish ? "translateX(50px)" : "translateX(0)";
+
+      // Delay redirect to match animation
+      setTimeout(() => {
+        window.location.href = targetPage;
+      }, 400);
+    }
+
+    </script>
+    <script>
+        // input are dropdown
+
+
+        const optionMenus = document.querySelectorAll(".select-menu");
+
+        optionMenus.forEach(optionMenu => {
+            const selectBtn = optionMenu.querySelector(".select-btn");
+            const options = optionMenu.querySelectorAll(".option");
+            const sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+            selectBtn.addEventListener("click", () => {
+                optionMenu.classList.toggle("active");
+            });
+
+            options.forEach(option => {
+                option.addEventListener("click", () => {
+                    let selectedOption = option.querySelector(".option-text").innerText;
+                    sBtn_text.innerText = selectedOption;
+                    optionMenu.classList.remove("active");
+                });
+            });
+        });
+
+
+        //   modal animation
+
+        const openBtns = document.querySelectorAll('#open-modal'); // Use class instead of ID for multiple
+        const modal = document.getElementById('modal-container');
+        const closeBtn = document.getElementById('close-modal');
+        const modalBox = document.getElementById('modal-box');
+        const form = document.getElementById('booking-form');
+
+        // Open modal on any booking button
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('out');
+                modal.classList.add('one');
+                document.body.classList.add('modal-active');
+            });
+        });
+
+        // Close modal when clicking outside modal box
+        modal.addEventListener('click', (e) => {
+            if (!modalBox.contains(e.target)) {
+                closeModal();
+            }
+        });
+
+        // Close button
+        closeBtn.addEventListener('click', () => {
+            closeModal();
+        });
+
+        // Form submit
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Form submitted!");
+            closeModal();
+            form.reset();
+        });
+
+        // Close modal logic
+        function closeModal() {
+            modal.classList.add('out');
+            document.body.classList.remove('modal-active');
+            setTimeout(() => {
+                modal.classList.remove('one');
+                modal.classList.remove('out');
+            }, 1000);
+        }
+    </script>
+
+
+  
+
+
+
+
+</body>
+
+</html>

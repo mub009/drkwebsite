@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/Assets/logos/Logo2.png">
+    <title>د.خ.ر (DRK)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/stylesub.css" />
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/scriptsub.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .close-buttonzzl {
+            position: absolute;
+            top: 20px;
+            right: unset !important;
+            left: 20px !important;
+            background: none;
+            border: none;
+            font-size: 41px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .bg-layer {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .bg-layer.show {
+            opacity: 1;
+            z-index: 0;
+        }
+
+        .hero-actions {
+            width: unset !important;
+        }
+
+        .sub-maintez {
+            font-size: 25px;
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+
+        .hero-content {
+            gap: 20px !important;
+        }
+
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 50px 200px;
+            z-index: 1000;
+        }
+
+        .offer-image {
+            background-color: transparent;
+            /* transparent background */
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: transparent;
+            border-radius: 40px;
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .offer-image:hover {
+            transform: scale(1.05);
+        }
+
+        .of2 {
+            display: none;
+        }
+
+        @media (min-width: 890px) and (max-width: 1550px) {
+
+            .offer-grid {
+                display: grid;
+                padding: 50px 130px !important;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 700px) {
+
+
+            .offer-grid {
+                display: grid;
+                padding: 20px !important;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            }
+
+            .hero-title {
+                font-size: 12vw;
+                padding: unset;
+            }
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .topz {
+            margin-top: 80px !important;
+        }
+    </style>
+
+
+
+   <header class="site-header">
+        <div class="header-container">
+            <img src="/Assets/Icons/logo.png" alt="شعار المستشفى" class="hospital-logo" />
+
+            <div id="overlay" class="overlayz"></div>
+
+            <nav class="main-nav2" id="mainNav2" dir="rtl">
+                <button id="closeButton" class="close-buttonzz close-buttonzzl">×</button>
+                <div>
+                    <div class="language-selector respo-lag" onclick="toggleLanguage()">
+                        <div class="language-slider"></div>
+                        <span class="language-option">EN</span>
+                        <span class="language-option">AR</span>
+                    </div>
+
+                    <a href="/indexar.html" class="nav-link2"> <span class="spanz">01. </span> الرئيسية</a>
+                    <a href="/offerar.html" class="nav-link2"><span class="spanz">02.</span> العروض</a>
+                    <a href="/branchesar.html" class="nav-link2"><span class="spanz">03. </span> الفروع</a>
+                    <a href="/doctorsar.html" class="nav-link2"><span class="spanz">04.</span> الأطباء</a>
+                    <a href="/whowear.html" class="nav-link2"><span class="spanz">05. </span> من نحن</a>
+                    <a href="/contactar.html" class="nav-link2"><span class="spanz">06. </span> تواصل معنا</a>
+
+                    <div class="footer-line2"></div>
+                    <div class="footer-tail-end">
+                        <div>© ٢٠٢٥ مستشفى الدكتور خالد الرحيمي. جميع الحقوق محفوظة.</div>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="main-navigation" role="navigation" aria-label="Main navigation" dir="rtl">
+                <a href="/indexar.html" class="nav-link">الرئيسية</a>
+                <a href="/offerar.html" class="nav-link">العروض</a>
+                <a href="/branchesar.html" class="nav-link">الفروع</a>
+                <a href="/doctorsar.html" class="nav-link">الأطباء</a>
+                <a href="/whowear.html" class="nav-link">من نحن</a>
+                <a href="/contactar.html" class="nav-link">تواصل معنا</a>
+            </nav>
+
+
+            <div class="header-actions">
+                <div class="language-selector lnon" onclick="toggleLanguage()">
+                    <div class="language-slider"></div>
+                    <span class="language-option">EN</span>
+                    <span class="language-option">AR</span>
+                </div>
+
+
+                <button class="book-now-button bnon" id="open-modal">
+                    <span class="book">احجز الآن</span>
+                    <img src="/Assets/Icons/Arrow2.png" alt="أيقونة السهم" />
+                </button>
+
+                <div class="menu-button w-nav-button" id="menuButton" style="margin-left: 12px;">
+                    <div class="menu-flex">
+                        <div class="menu">
+                            <div class="w-embed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container" dir="rtl">
+            <div class="modal-background">
+                <div class="modal" id="modal-box">
+                    <button class="close-btn" id="close-modal">&times;</button>
+                    <h2 class="modal-title">احجز الآن</h2>
+                    <p class="modal-subtitle">أدخل بياناتك أدناه.</p>
+
+                    <form id="booking-form" class="modern-form">
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="أدخل اسمك" />
+                            <input type="number" class="form-input" placeholder="رقم الهاتف" />
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">اختر الفرع</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            الفرسان</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            العزيزية</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            الأحساء</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع شارع
+                                            البيبسي</span></li>
+                                    <li class="option"><span class="option-text">مستشفى د. خالد الرحيمى</span></li>
+                                    <li class="option"><span class="option-text">مجمع د. خالد الرحيمى الطبي - فرع
+                                            العليا</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">اختر الخدمة</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option"><span class="option-text">الأنف والأذن والحنجرة</span></li>
+                                    <li class="option"><span class="option-text">طب العيون</span></li>
+                                    <li class="option"><span class="option-text">طب الأسنان</span></li>
+                                    <li class="option"><span class="option-text">النساء والولادة</span></li>
+                                    <li class="option"><span class="option-text">طب الأطفال</span></li>
+                                    <li class="option"><span class="option-text">الأمراض الجلدية</span></li>
+                                    <li class="option"><span class="option-text">اضطرابات النوم</span></li>
+                                    <li class="option"><span class="option-text">جراحة المسالك البولية</span></li>
+                                    <li class="option"><span class="option-text">الروماتيزم</span></li>
+                                    <li class="option"><span class="option-text">الطب الباطني</span></li>
+                                    <li class="option"><span class="option-text">العناية المركزة</span></li>
+                                    <li class="option"><span class="option-text">جراحة الأسنان وزراعة الأسنان</span>
+                                    </li>
+                                    <li class="option"><span class="option-text">جراحة الجهاز الهضمي</span></li>
+                                    <li class="option"><span class="option-text">جراحة الفم والوجه والفكين</span></li>
+                                    <li class="option"><span class="option-text">جراحة السمنة</span></li>
+                                    <li class="option"><span class="option-text">جراحة التجميل والحروق والترميم</span>
+                                    </li>
+                                    <li class="option"><span class="option-text">جراحة القدم السكري</span></li>
+                                    <li class="option"><span class="option-text">الأشعة</span></li>
+                                    <li class="option"><span class="option-text">التخدير</span></li>
+                                    <li class="option"><span class="option-text">الرعاية المنزلية</span></li>
+                                    <li class="option"><span class="option-text">تكسير الدهون والتدليك اللمفاوي</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="book-now-button"
+                            style="background: linear-gradient(180deg, #32031a -9.89%, #980a50 89.96%);">
+                            <span class="book">إرسال</span>
+                            <img src="/Assets/Icons/Arrow2.png" alt="أيقونة السهم" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="hero services-section " style="margin-top: 110px !important;">
+
+        <div class="hero-bg-3 bg-layer"></div>
+        <div class="hero-bg-4 bg-layer"></div>
+
+
+        <div class="overlay"></div>
+
+        <div class="hero-content" dir="rtl">
+            <h1 class="hero-title">
+                عروض طبية حصرية في <br> مستشفى الدكتور الروحيمي
+            </h1>
+            <h3 class="sub-maintez">
+                استفد من باقاتنا الصحية المميزة لفترة محدودة، المصممة للحفاظ على صحتك وصحة أحبائك — بأسعار مناسبة
+                للجميع!
+            </h3>
+            <div class="hero-actions">
+                <div class="appointment-button-container">
+                    <button class="appointment-buttonz" id="open-modal">
+                        <span class="appointment-textb">احجز موعداً الآن</span>
+                        <div class="doctor-icon-container">
+                            <img src="/Assets/Icons/Arrow.png" alt="" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="offer-grid of1">
+        <div class="offer-image"><img src="/Assets/images/Off1 (1).png" alt="Offer 1"></div>
+        <div class="offer-image"><img src="/Assets/images/off1 (2).png" alt="Offer 2"></div>
+        <div class="offer-image"><img src="/Assets/images/off1 (3).png" alt="Offer 3"></div>
+        <div class="offer-image"><img src="/Assets/images/off1 (4).png" alt="Offer 4"></div>
+        <div class="offer-image"><img src="/Assets/images/off1 (5).png" alt="Offer 5"></div>
+        <div class="offer-image"><img src="/Assets/images/off1 (6).png" alt="Offer 6"></div>
+        <div class="offer-image"><img src="/Assets/images/off1 (7).png" alt="Offer 7"></div>
+        <div class="offer-image"><img src="/Assets/images/Off1(8).png" alt="Offer 8"></div>
+    </div>
+
+
+
+
+
+    <footer class="hospital-footer topz">
+        <section class="about-section">
+            <div class="about-container">
+                <h1 class="about-title">
+                    عن
+                    <span class="hospital-name">DRK</span>
+                </h1>
+                <p class="hospital-credentials">
+                    معتمد من CBAHI | أكثر من 150 ألف مريض راضٍ | طوارئ 24/7
+                </p>
+                <p class="hospital-description">
+                    يلتزم مستشفى الدكتور خالد الرحيمي بتقديم رعاية صحية عالمية المستوى
+                    باستخدام أحدث التقنيات وأمهر الأطباء والخدمات الرحيمة.
+                </p>
+                <div class="appointment-button-container butz">
+                    <button class="appointment-buttonz" id="open-modal">
+                        <span class="appointment-textb">احجز موعدًا</span>
+                        <div class="doctor-icon-container">
+                            <img src="/Assets/Icons/Arrow.png" alt="" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-footer">
+            <div class="footer-background-text" aria-hidden="true">DRK</div>
+
+            <div class="footer-content">
+                <div class="hospital-info">
+                    <div class="logo-container">
+                        <div class="logo-wrapper">
+                            <img src="/Assets/Icons/drk.png" alt="شعار مستشفى الدكتور خالد الرحيمي"
+                                class="hospital-logoz" />
+                        </div>
+                    </div>
+                    <address class="hospital-address">
+                        <p class="address-line">
+                            مستشفى الدكتور خالد الرحيمي، شارع الأمير محمد بن فهد، الخبر،
+                            المملكة العربية السعودية
+                        </p>
+                        <p class="contact-phone">الهاتف: +966 13 895 5555</p>
+                        <p class="contact-email">البريد الإلكتروني: info@dralruhaimi.com</p>
+                    </address>
+                </div>
+
+                <nav class="footer-navigation" aria-label="روابط الفوتر">
+                    <div class="nav-column">
+                        <h2 class="nav-title">روابط سريعة</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">الرئيسية</a></li>
+                            <li><a href="#" class="nav-linkz">من نحن</a></li>
+                            <li><a href="#" class="nav-linkz">الأطباء</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">الخدمات</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">الأقسام</a></li>
+                            <li><a href="#" class="nav-linkz">الفروع</a></li>
+                            <li><a href="#" class="nav-linkz">العروض</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">تواصل معنا</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">إرسال رسالة</a></li>
+                            <li><a href="#" class="nav-linkz">حجز موعد</a></li>
+                            <li><a href="#" class="nav-linkz">جدولة اتصال</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-column">
+                        <h2 class="nav-title">قانوني</h2>
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-linkz">سياسة الخصوصية</a></li>
+                            <li><a href="#" class="nav-linkz">الشروط والأحكام</a></li>
+                            <li><a href="#" class="nav-linkz">سياسة ملفات تعريف الارتباط</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-media" aria-label="روابط التواصل الاجتماعي">
+                    <a href="#" class="social-link" aria-label="انستجرام">
+                        <img src="/Assets/Icons/instagram.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="سناب شات">
+                        <img src="/Assets/Icons/snapchat.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="يوتيوب">
+                        <img src="/Assets/Icons/youtube.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="تيك توك">
+                        <img src="/Assets/Icons/tiktok.png" class="social-icon" alt="" />
+                    </a>
+                    <a href="#" class="social-link" aria-label="تويتر">
+                        <img src="/Assets/Icons/twitter.png" class="social-icon" alt="" />
+                    </a>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <p class="copyright">
+                    © 2025 مستشفى الدكتور خالد الرحيمي. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </section>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images2 = [
+                "/Assets/images/D111.jpg",
+                "/Assets/images/D1 (2).jpg",
+                "/Assets/images/D1(11).jpg",
+                "/Assets/images/D1 (3).jpg",
+                "/Assets/images/D1(12).png",
+            ];
+
+            const bg3 = document.querySelector(".hero-bg-3");
+            const bg4 = document.querySelector(".hero-bg-4");
+
+            if (!bg3 || !bg4) {
+                console.error("One or both background elements not found!");
+                return;
+            }
+
+            let currentIndex2 = 0;
+            let isBg3Active = true;
+
+            bg3.style.backgroundImage = `url('${images2[0]}')`;
+            bg3.classList.add("show");
+
+            function changeBackground2() {
+                const nextIndex = (currentIndex2 + 1) % images2.length;
+                const nextImage = `url('${images2[nextIndex]}')`;
+
+                if (isBg3Active) {
+                    bg4.style.backgroundImage = nextImage;
+                    bg4.classList.add("show");
+                    bg3.classList.remove("show");
+                } else {
+                    bg3.style.backgroundImage = nextImage;
+                    bg3.classList.add("show");
+                    bg4.classList.remove("show");
+                }
+
+                isBg3Active = !isBg3Active;
+                currentIndex2 = nextIndex;
+            }
+
+            setInterval(changeBackground2, 3000);
+        });
+
+
+
+
+        /* responsive nav  */
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menuButton');
+            const mainNav = document.getElementById('mainNav2');
+            const closeButton = document.getElementById('closeButton');
+            const overlay = document.getElementById('overlay');
+
+            function openMenu() {
+                mainNav.classList.add('open');
+                overlay.classList.add('active');
+            }
+
+            function closeMenu() {
+                mainNav.classList.remove('open');
+                overlay.classList.remove('active');
+            }
+
+            menuButton.addEventListener('click', openMenu);
+            closeButton.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+        });
+
+        /* responsive nav  */
+
+        document.querySelector('.dropdown-togglez').addEventListener('click', function (e) {
+            e.preventDefault();
+            const dropdown = this.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+
+
+
+
+      function toggleLanguage() {
+      const slider = document.querySelector(".language-slider");
+
+      // Get current path and filename
+      const currentPath = window.location.pathname;
+
+      // Define mapping between English and Arabic files
+      const languageMap = {
+        "/index.html": "/indexar.html",
+        "/doctors.html": "/doctorsar.html",
+        "/offeren.html": "/offerar.html",
+        "/whowe.html": "/whowear.html",
+        "/contact.html": "/contactar.html",
+        "/branches.html": "/branchesar.html",
+
+        "/indexar.html": "/index.html",
+        "/doctorsar.html": "/doctors.html",
+        "/offerar.html": "/offeren.html",
+        "/whowear.html": "/whowe.html",
+        "/contactar.html": "/contact.html",
+        "/branchesar.html": "/branches.html"
+      };
+
+      // Determine target page from map
+      const targetPage = languageMap[currentPath];
+
+      if (!targetPage) {
+        console.warn("No language mapping found for:", currentPath);
+        return;
+      }
+
+      // Animate slider
+      const isCurrentlyEnglish = currentPath.includes("/En/");
+      slider.style.transform = isCurrentlyEnglish ? "translateX(50px)" : "translateX(0)";
+
+      // Delay redirect to match animation
+      setTimeout(() => {
+        window.location.href = targetPage;
+      }, 400);
+    }
+
+
+
+    </script>
+
+
+    <script>
+        // input are dropdown
+
+
+        const optionMenus = document.querySelectorAll(".select-menu");
+
+        optionMenus.forEach(optionMenu => {
+            const selectBtn = optionMenu.querySelector(".select-btn");
+            const options = optionMenu.querySelectorAll(".option");
+            const sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+            selectBtn.addEventListener("click", () => {
+                optionMenu.classList.toggle("active");
+            });
+
+            options.forEach(option => {
+                option.addEventListener("click", () => {
+                    let selectedOption = option.querySelector(".option-text").innerText;
+                    sBtn_text.innerText = selectedOption;
+                    optionMenu.classList.remove("active");
+                });
+            });
+        });
+
+
+        //   modal animation
+
+        const openBtns = document.querySelectorAll('#open-modal'); // Use class instead of ID for multiple
+        const modal = document.getElementById('modal-container');
+        const closeBtn = document.getElementById('close-modal');
+        const modalBox = document.getElementById('modal-box');
+        const form = document.getElementById('booking-form');
+
+        // Open modal on any booking button
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('out');
+                modal.classList.add('one');
+                document.body.classList.add('modal-active');
+            });
+        });
+
+        // Close modal when clicking outside modal box
+        modal.addEventListener('click', (e) => {
+            if (!modalBox.contains(e.target)) {
+                closeModal();
+            }
+        });
+
+        // Close button
+        closeBtn.addEventListener('click', () => {
+            closeModal();
+        });
+
+        // Form submit
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Form submitted!");
+            closeModal();
+            form.reset();
+        });
+
+        // Close modal logic
+        function closeModal() {
+            modal.classList.add('out');
+            document.body.classList.remove('modal-active');
+            setTimeout(() => {
+                modal.classList.remove('one');
+                modal.classList.remove('out');
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>
