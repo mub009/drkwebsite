@@ -101,13 +101,13 @@
     </li>
     <li class="menu-item">
       <a href="{{route('admin.sitemap')}}" class="menu-link">
-        <i class="menu-icon fa-solid fa-chart-line"></i>
+        <i class="menu-icon fa-solid fa-sitemap"></i>
         <div data-i18n="SiteMap">SiteMap</div>
       </a>
     </li>
     <li class="menu-item">
       <a href="{{route('admin.robot')}}" class="menu-link">
-        <i class="menu-icon fa-solid fa-chart-line"></i>
+        <i class="menu-icon fa-solid fa-robot"></i>
         <div data-i18n="Robot">Robot</div>
       </a>
     </li>

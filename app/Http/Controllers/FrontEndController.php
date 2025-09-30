@@ -31,9 +31,17 @@ class FrontEndController extends Controller
     }
     public function articleDetails($slug = null)
     {
-        $data = array();
-        $data['article'] = Article::where('slug', $slug)->firstOrFail();
-        return view('frontend.articleDetails', $data);
+        $article = Article::where('slug', $slug)->firstOrFail();
+
+        $articles = Article::where('id', '!=', $article->id)
+            ->latest()
+            ->take(3)
+            ->get();
+
+        return view('frontend_v2.blog_details', [
+            'article' => $article,
+            'articles' => $articles
+        ]);
     }
     public function about()
     {
@@ -42,12 +50,12 @@ class FrontEndController extends Controller
     public function offer()
     {
         $data['offer'] = Offer::whereNotNull('image')->orderBy('sort', 'asc')->get();
-        return view('frontend.offer',$data);
+        return view('frontend.offer', $data);
     }
-     public function contact_us()
+    public function contact_us()
     {
         $data['branch'] = Branch::orderBy('sort', 'asc')->get();
-        return view('frontend_v2.contactar',$data);
+        return view('frontend_v2.contactar', $data);
     }
     public function doctors()
     {
@@ -57,12 +65,12 @@ class FrontEndController extends Controller
             ->orderBy('sort', 'asc')
             ->get();
         $data['department'] = Department::whereNotNull('department_ar')->get();
-        return view('frontend.doctor',$data);
+        return view('frontend.doctor', $data);
     }
-    public function branch_location($branchId=null)
+    public function branch_location($branchId = null)
     {
         $data['branchDetails'] = Branch::find($branchId);
-        return view('frontend.branch_location',$data);
+        return view('frontend.branch_location', $data);
     }
     public function departmentDetails($slug = null)
     {
@@ -70,9 +78,9 @@ class FrontEndController extends Controller
         $data['details'] = Department::where('slug', $slug)->firstOrFail();
         return view('frontend.departmentDetails', $data);
     }
-     public function privacy_policy()
+    public function privacy_policy()
     {
-        
+
         return view('frontend_v2.privacyar');
     }
 
