@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Assets/logos/Logo2.png">
+    <link rel="icon" href="{{ asset('frontend_v2/assets/logos/Logo2.png') }}">
     <title>مستشفى د. خالد الرحيّمي – رعاية متقدمة</title>
-    <meta name="description"
-        content="احصل على أفضل رعاية طبية وجراحية وتجميلية مع نخبة من الأطباء الموثوقين وأحدث التقنيات في مستشفى د. خالد الرحيّمي. احجز موعدك اليوم." />
+    <meta name="description" content="احصل على أفضل رعاية طبية وجراحية وتجميلية مع نخبة من الأطباء الموثوقين وأحدث التقنيات في مستشفى د. خالد الرحيّمي. احجز موعدك اليوم." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,8 +22,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
