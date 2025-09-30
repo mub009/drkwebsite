@@ -31,6 +31,7 @@ Route::middleware(['auth'])->group(function () {
     })->name('dashboard');
 
     Route::get('/admin/sitemap', [SEOController::class, 'sitemap'])->name('admin.sitemap');
+    Route::post('/sitemap/store', [SEOController::class, 'storeSitemap'])->name('sitemap.store');
     Route::get('/admin/robot', [SEOController::class, 'robot'])->name('admin.robot');
 
     // Activity Log Routes 

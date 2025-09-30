@@ -10,11 +10,11 @@
                 <div class="card mb-6">
                     <h5 class="card-header">SiteMap</h5>
                     <div class="card-body">
-                        <form id="addDepartmentForm" class="is-invalid" novalidate action="{{ route('departments.store') }}" method="POST" enctype="multipart/form-data">
+                        <form id="addDepartmentForm" class="is-invalid" novalidate action="{{ route('sitemap.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="department_details" class="form-label">SiteMap.xml</label>
-                                <textarea class="form-control" id="department_details" name="department_details" rows="4"></textarea>
+                                <label for="sitemap_xml" class="form-label">SiteMap.xml</label>
+                                <textarea class="form-control" id="sitemap_xml" name="sitemap_xml" rows="4"></textarea>
                             </div>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="d-flex justify-content-end">
