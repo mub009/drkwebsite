@@ -25,7 +25,21 @@ class SEOController extends Controller
             $settings->content = $request->sitemap_xml;
 
             $settings->save();
-            return response()->json(['status' => true, 'message' => 'SiteMap created successfully.'])->redirect(route('admin.sitemap'));
+            return response()->json(['status' => true, 'message' => 'SiteMap created successfully.']);
+        } catch (\Exception $e) {
+            return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
+        }
+    }
+
+    public function storeRobot(Request $request)
+    {
+        try {
+            $settings = new TableSetting();
+            $settings->type = 'robot';
+            $settings->content = $request->robot_txt;
+
+            $settings->save();
+            return response()->json(['status' => true, 'message' => 'Robot created successfully.']);
         } catch (\Exception $e) {
             return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
         }

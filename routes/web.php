@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Response;
 
 // Registration Routes
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
+// Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+// Route::post('/register', [RegisterController::class, 'register']);
 // Login Routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login.form');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
@@ -33,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/sitemap', [SEOController::class, 'sitemap'])->name('admin.sitemap');
     Route::post('/sitemap/store', [SEOController::class, 'storeSitemap'])->name('sitemap.store');
     Route::get('/admin/robot', [SEOController::class, 'robot'])->name('admin.robot');
+    Route::post('/robot/store', [SEOController::class, 'storeRobot'])->name('robot.store');
 
     // Activity Log Routes 
     Route::get('/load-content/activities', [ActivityLogController::class, 'showLogs'])->name('activities');
