@@ -12,7 +12,10 @@ use App\Http\Controllers\OfferController;
 use App\Http\Controllers\SocialmediaController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\InsuranceController;
+use App\Http\Controllers\SEOController;
+use App\Models\TableSetting;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Response;
 
 // Registration Routes
 // Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
@@ -27,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
         return view('backend/dashboard');
     })->name('dashboard');
 
+    Route::get('/admin/sitemap', [SEOController::class, 'sitemap'])->name('admin.sitemap');
+    Route::get('/admin/robot', [SEOController::class, 'robot'])->name('admin.robot');
 
     // Activity Log Routes 
     Route::get('/load-content/activities', [ActivityLogController::class, 'showLogs'])->name('activities');
@@ -161,3 +166,18 @@ Route::get('/departmentDetails/{surl}', [FrontEndController::class, 'departmentD
 Route::get('/privacy_policy', [FrontEndController::class, 'privacy_policy'])->name('privacy_policy');
 Route::get('/services', [FrontEndController::class, 'services'])->name('services');
 
+
+Route::get('/sitemap.xml', function () {
+    $sitemapLinks = TableSetting::where('type', 'sitemap')->get()->first();
+
+
+    return Response::make($sitemapLinks->content, 200, ['Content-Type' => 'application/xml']);
+});
+
+
+Route::get('/robot.txt', function () {
+    $robotsTxt = TableSetting::where('type', 'robot')->get()->first();
+
+
+    return Response::make($robotsTxt->content, 200, ['Content-Type' => 'text/plain']);
+});

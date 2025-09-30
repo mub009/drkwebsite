@@ -100,6 +100,18 @@
       </a>
     </li>
     <li class="menu-item">
+      <a href="{{route('admin.sitemap')}}" class="menu-link">
+        <i class="menu-icon fa-solid fa-chart-line"></i>
+        <div data-i18n="SiteMap">SiteMap</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="{{route('admin.robot')}}" class="menu-link">
+        <i class="menu-icon fa-solid fa-chart-line"></i>
+        <div data-i18n="Robot">Robot</div>
+      </a>
+    </li>
+    <li class="menu-item">
       <a href="{{route('activities')}}" class="menu-link">
         <i class="menu-icon fa-solid fa-chart-line"></i>
         <div data-i18n="Activity">Activity</div>
