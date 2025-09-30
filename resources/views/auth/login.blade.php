@@ -111,7 +111,7 @@
                 $('#error-messages').html(errorHtml);
             } else {
                 $.ajax({
-                    url: "https://dralruhaimi.com/login",
+                    url: "{{ route('login') }}",
                     method: 'POST',
                     data: {
                         email: email,
