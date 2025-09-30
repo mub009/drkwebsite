@@ -25,7 +25,7 @@ class SEOController extends Controller
             $settings->content = $request->sitemap_xml;
 
             $settings->save();
-            return response()->json(['status' => true, 'message' => 'SiteMap created successfully.']);
+            return response()->json(['status' => true, 'message' => 'SiteMap created successfully.'])->redirect(route('admin.sitemap'));
         } catch (\Exception $e) {
             return response()->json(['status' => false, 'message' => $e->getMessage()], 400);
         }

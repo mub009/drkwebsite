@@ -32,8 +32,8 @@
     <script src="{{ asset('assets/vendor/libs/quill/katex.js')}}"></script>
     <script src="{{ asset('assets/vendor/libs/quill/quill.js')}}"></script>
     <script>
-        var departmentIndexUrl = "{{ route('departments.index') }}";
-        var departmentStoreUrl = "{{ route('departments.store') }}";
+        var sitemapIndexUrl = "{{ route('admin.sitemap') }}";
+        var sitemapStoreUrl = "{{ route('sitemap.store') }}";
     </script>
      <script src="{{ asset('assets/js/department-form-validation.js') }}"></script>
     @endsection
