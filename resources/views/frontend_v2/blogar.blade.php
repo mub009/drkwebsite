@@ -1,6 +1,22 @@
 @extends('frontend_v2.layouts.FrontendLayout')
 @section('content')
 <style>
+    body {
+        font-family: 'Tajawal', sans-serif;
+    }
+
+    .close-buttonzzl {
+        position: absolute;
+        top: 20px;
+        right: unset !important;
+        left: 20px !important;
+        background: none;
+        border: none;
+        font-size: 41px;
+        cursor: pointer;
+        color: #000;
+    }
+
     .bg-layer {
         position: absolute;
         inset: 0;
@@ -379,33 +395,34 @@
     }
 </style>
 
-<section class="section " style="margin-top: 150px;margin-bottom: 0px;">
+<section class="section" style="margin-top: 150px; margin-bottom: 0px;" dir="rtl">
     <div class="team-section">
         <div class="team-container">
-            <div class="team-header ">
+            <div class="team-header">
 
                 <h1 class="hero-title" style="text-align: center;">
-                    <span class="headline-emphasis">Health & Beauty Blog – Dr. Khaled Al Ruhaimi</span>
+                    <span class="headline-emphasis">مدونة الصحة والجمال – د. خالد الرحيمي</span>
                 </h1>
 
                 <p class="hed_des">
-                    Explore expert tips on health, beauty & wellness. Stay updated with trusted insights. Read our
-                    blog and learn more today.
+                    اكتشف نصائح الخبراء حول الصحة والجمال والعافية. ابقَ على اطلاع بآخر المستجدات الموثوقة. اقرأ
+                    مدونتنا وتعرّف على المزيد اليوم.
                 </p>
+
+
             </div>
-
-
         </div>
     </div>
 </section>
 
-<section class="section sectionzz">
-    <div class="medical-facility-showcase" style="background-color: #fff;padding-top: 10px;">
+
+<section class="section sectionzz" dir="rtl">
+    <div class="medical-facility-showcase" style="background-color: #fff;">
         <div class="showcase-container" style="align-items: flex-start">
 
             <div class="blog-grid">
                 @foreach ($articles as $item)
-                <article class="blog-card ">
+                <article class="blog-card">
                     <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" class="blog-image" />
                     <div class="blog-content">
                         <div class="blog-card-header">
@@ -431,15 +448,13 @@
             </div>
         </div>
     </div>
-
 </section>
 
-
-<section class="cta-section">
+<section class="cta-section" dir="rtl">
     <div class="cta-container">
-        <h2 class="cta-title">Contact Us</h2>
+        <h2 class="cta-title">اتصل بنا</h2>
         <h3 class="cta-subtitle">
-            Have a question about one of these articles or want to know which service is right for you?.
+            هل لديك سؤال حول أحد هذه المقالات أو تريد معرفة أي خدمة تناسبك؟
         </h3>
 
         <div class="cta-actions">
@@ -448,7 +463,7 @@
             </a>
 
             <a href="https://wa.me/966138955555" target="_blank" class="cta-whatsapp">
-                <i class="fab fa-whatsapp"></i> Book Your Consultation Now
+                <i class="fab fa-whatsapp"></i> احجز استشارتك الآن
             </a>
         </div>
     </div>

@@ -27,7 +27,7 @@ class FrontEndController extends Controller
     {
         $data = array();
         $data['articles'] = Article::latest()->take(5)->get();
-        return view('frontend_v2.blog', $data);
+        return view('frontend_v2.blogar', $data);
     }
     public function articleDetails($slug = null)
     {
@@ -37,7 +37,7 @@ class FrontEndController extends Controller
     }
     public function about()
     {
-        return view('frontend_v2.about');
+        return view('frontend_v2.aboutar');
     }
     public function offer()
     {
@@ -47,7 +47,7 @@ class FrontEndController extends Controller
      public function contact_us()
     {
         $data['branch'] = Branch::orderBy('sort', 'asc')->get();
-        return view('frontend_v2.contact',$data);
+        return view('frontend_v2.contactar',$data);
     }
     public function doctors()
     {
@@ -73,11 +73,17 @@ class FrontEndController extends Controller
      public function privacy_policy()
     {
         
-        return view('frontend_v2.privacy');
+        return view('frontend_v2.privacyar');
     }
 
     public function services()
     {
-        return view('frontend_v2.services');
+        $data = array();
+        $data['doctors'] = Doctor::join('departments', 'doctors.department', '=', 'departments.id')
+            ->select('doctors.*', 'departments.department_ar as department_name', 'departments.id as dept_id')
+            ->orderBy('sort', 'asc')
+            ->get();
+        $data['department'] = Department::whereNotNull('department_ar')->orderBy('sort', 'asc')->get();
+        return view('frontend_v2.services', $data);
     }
 }

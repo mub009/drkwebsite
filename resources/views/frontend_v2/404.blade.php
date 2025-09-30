@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Assets/logos/Logo2.png">
+    <link rel="icon" href="{{ asset('frontend_v2/assets/logos/Logo2.png') }}">
     <title>404</title>
     <meta name="description" content="Oops! Page Not Found" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -193,7 +193,7 @@
 
     <header class="site-header">
         <div class="header-container">
-            <img src="/Assets/Icons/logo.png" alt="Hospital Logo" class="hospital-logo" />
+            <img src="{{ asset('frontend_v2/assets/Icons/logo.png') }}" alt="Hospital Logo" class="hospital-logo" />
 
 
 
@@ -242,7 +242,7 @@
                 <a href="tel:0550655152">
                     <button class="book-now-button bnon">
                         <span class="book">Book Now</span>
-                        <img src="/Assets/Icons/Arrow2.png" alt="Arrow Icon" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/Arrow2.png') }}" alt="Arrow Icon" />
                     </button>
                 </a>
                 <div class="menu-button w-nav-button" id="menuButton">
@@ -290,7 +290,7 @@
                 <div class="hospital-info">
                     <div class="logo-container">
                         <div class="logo-wrapper">
-                            <img src="/Assets/Icons/drk.png" alt="Dr. Khalid Al-Ruhaimi Hospital Logo"
+                            <img src="{{ asset('frontend_v2/assets/Icons/drk.png') }}" alt="Dr. Khalid Al-Ruhaimi Hospital Logo"
                                 class="hospital-logoz" />
                         </div>
                     </div>
@@ -342,19 +342,19 @@
             <div class="footer-bottom">
                 <div class="social-media" aria-label="Social media links">
                     <a href="#" class="social-link" aria-label="Follow us on Instagram">
-                        <img src="/Assets/Icons/instagram.png" class="social-icon" alt="" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/instagram.png') }}" class="social-icon" alt="" />
                     </a>
                     <a href="#" class="social-link" aria-label="Follow us on Snapchat">
-                        <img src="/Assets/Icons/snapchat.png" class="social-icon" alt="" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/snapchat.png') }}" class="social-icon" alt="" />
                     </a>
                     <a href="#" class="social-link" aria-label="Follow us on YouTube">
-                        <img src="/Assets/Icons/youtube.png" class="social-icon" alt="" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/youtube.png') }}" class="social-icon" alt="" />
                     </a>
                     <a href="#" class="social-link" aria-label="Follow us on TikTok">
-                        <img src="/Assets/Icons/tiktok.png" class="social-icon" alt="" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/tiktok.png') }}" class="social-icon" alt="" />
                     </a>
                     <a href="#" class="social-link" aria-label="Follow us on Twitter">
-                        <img src="/Assets/Icons/twitter.png" class="social-icon" alt="" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/twitter.png') }}" class="social-icon" alt="" />
                     </a>
                 </div>
 

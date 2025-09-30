@@ -2,28 +2,6 @@
 @section('content')
 
 <style>
-    body {
-        font-family: 'Tajawal', sans-serif;
-    }
-
-    @media (min-width: 300px) and (max-width: 500px) {
-        .sectionii {
-            margin-top: 120px !important;
-        }
-    }
-
-    .close-buttonzzl {
-        position: absolute;
-        top: 20px;
-        right: unset !important;
-        left: 20px !important;
-        background: none;
-        border: none;
-        font-size: 41px;
-        cursor: pointer;
-        color: #000;
-    }
-
     .bg-layer {
         position: absolute;
         inset: 0;
@@ -93,6 +71,12 @@
             display: grid;
             padding: 50px 130px !important;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 500px) {
+        .section {
+            margin-top: 120px !important;
         }
     }
 
@@ -295,6 +279,7 @@
         padding: 30px;
     }
 
+    /* Optional: Style scrollbar for Chrome/Safari */
     .tab-buttons::-webkit-scrollbar {
         height: 8px;
     }
@@ -308,10 +293,13 @@
         background: #ffebf5;
     }
 
+
     .tab-buttons {
         scrollbar-width: thin;
         scrollbar-color: #980a50 #eee;
     }
+
+
 
     .tab-buttons button {
         white-space: nowrap;
@@ -334,6 +322,7 @@
         border-color: #980a50;
     }
 
+
     .card-dr {
         display: flex;
         flex-wrap: wrap;
@@ -347,6 +336,8 @@
         margin: auto;
 
     }
+
+
 
     .tab-content {
         opacity: 0;
@@ -365,83 +356,93 @@
     }
 </style>
 
-<section class="section sectionii" style=" margin-top: 150px;">
+
+
+<section class="section" style=" margin-top: 150px;">
     <div class="team-section">
         <div class="team-container">
-            <div class="team-header anima" data-aos="fade-zoom-in" dir="rtl">
+            <div class="team-header anima" data-aos="fade-zoom-in">
                 <h1 class="hero-title" style="text-align: center;">
-                    <span class="headline-emphasis">الخدمات الطبية والتجميلية – مستشفى الرحيـمي</span>
+                    <span class="headline-emphasis">Medical & Cosmetic Services – Al Ruhaimi Hospital</span>
                 </h1>
 
                 <p class="hed_des" style="margin-bottom: 20px;">
-                    اكتشف أحدث الخدمات الطبية والجراحية والتجميلية المصممة خصيصاً لتلبية احتياجاتك. اختر التخصص
-                    واحجز موعدك الآن.
+                    Discover advanced medical, surgical & cosmetic services tailored to your needs. Choose your
+                    specialty and book your visit now.
                 </p>
-
-
                 <div class="header-content" style="align-items: center; gap: 2px;margin-top: 80px;">
-                    <h2 class="main-headline">
-                        <span class="headline-part">تعرف على خبرائنا في</span>
+                    <h4 class="main-headline">
+                        <span class="headline-part">Meet Our Experts @</span>
                         <span class="headline-emphasis">DRK</span>
-                    </h2>
+                    </h4>
                     <div>
                         <div class="satisfied-patients" style="position: unset; box-shadow: unset">
                             <div class="avatarsz">
-                                <img src="{{ asset('/frontend_v2/assets/images/ds1.png') }}" alt="الصورة 1" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds2.png') }}" alt="الصورة 2" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds3.png') }}" alt="الصورة 3" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds4.png') }}" alt="الصورة 4" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds5.png') }}" alt="الصورة 5" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds1.png') }}" alt="Avatar 1" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds2.png') }}" alt="Avatar 2" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds3.png') }}" alt="Avatar 3" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds4.png') }}" alt="Avatar 4" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds5.png') }}" alt="Avatar 5" />
                             </div>
                             <div class="text">
-                                <span class="count">+50</span><br />
-                                <span class="label">طبيب ماهر</span>
+                                <span class="count">50+</span><br />
+                                <span class="label">Skilled Doctor</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="team-description" dir="rtl">
-                    في مستشفى د. خالد الروهيمي، نحن ملتزمون بتقديم مجموعة كاملة من الخدمات الطبية والجراحية
-                    والتجميلية، مصممة لتوفير رعاية شاملة وفق أعلى معايير الجودة والسلامة والخصوصية.
-                    اختر التخصص الذي يناسب احتياجاتك واستكشف خبرة أطبائنا جنبًا إلى جنب مع أحدث التقنيات الطبية
-                    المتقدمة.
+
+                <p class="team-description">
+                    At Dr. Khalid Al-Ruhaimi Hospital, we are committed to providing a full range of medical,
+                    surgical, and cosmetic services, designed to deliver comprehensive care according to the highest
+                    standards of quality, safety, and privacy.
+                    Choose the specialty that suits your needs and explore our doctors’ expertise along with the
+                    latest advanced medical technologies.
                 </p>
 
             </div>
+
+
+
+
             <div class="tabs">
-                <!-- Tab Buttons -->
+
 
                 <div class="tab-container">
                     <div class="tab-buttons">
-                        <button class="active" data-tab="all-doctors">جميع الأطباء</button>
+                        <button class="active" data-tab="all-doctors">All Doctors</button>
                         @foreach ($department as $dept)
                         <button data-tab="tab-{{ $dept->id }}">
-                            {{ $dept->department_ar }}
+                            {{ $dept->department_en }}
                         </button>
                         @endforeach
-
                     </div>
                 </div>
+
+
+
+
 
                 <!-- Tab Content -->
                 <div id="all-doctors" class="tab-content active">
                     <div class="card-dr">
 
                         @foreach ($doctors as $doctor)
-                        <article class="doctor-card" dir="rtl">
+                        <article class="doctor-card">
                             <div class="card-background"></div>
                             <div class="card-watermark">DRK</div>
                             <div>
                                 <img src="{{asset('images').'/'.$doctor->image}}" alt="{{ $doctor->name_ar }}" class="doctor-image" />
                                 <div class="doctor-info">
                                     <div class="doctor-details">
-                                        <h3 class="doctor-name">{{ $doctor->name_ar }}</h3>
+                                        <h3 class="doctor-name">{{ $doctor->name_en }}</h3>
                                         <p class="doctor-specialty">{{ $doctor->department_name }}</p>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         @endforeach
+
                     </div>
                 </div>
 
@@ -456,7 +457,7 @@
                                 <img src="{{ asset('images').'/'.$doctor->image }}" alt="{{ $doctor->name_ar }}" class="doctor-image" />
                                 <div class="doctor-info">
                                     <div class="doctor-details">
-                                        <h3 class="doctor-name">{{ $doctor->name_ar }}</h3>
+                                        <h3 class="doctor-name">{{ $doctor->name_en }}</h3>
                                         <p class="doctor-specialty">
                                             {{ $doctor->department_name }}
                                         </p>
@@ -474,7 +475,7 @@
                         <div class="ent-department">
                             <div class="ent-card">
                                 <div class="ent-header">
-                                    <h2>{{ $dept->name_ar }}</h2>
+                                    <h2>{{ $dept->department_en }}</h2>
                                     <p>
                                         {{!! $dept->department_details !!}}
                                     </p>
@@ -502,15 +503,18 @@
                 </div>
                 @endforeach
             </div>
+
         </div>
+
+    </div>
     </div>
 </section>
 
-<section class="cta-section" dir="rtl">
+<section class="cta-section">
     <div class="cta-container">
-        <h2 class="cta-title">اتصل بنا</h2>
+        <h2 class="cta-title">Contact Us</h2>
         <h3 class="cta-subtitle">
-            لا تنتظر أكثر، صحتك وجمالك في أيدٍ أمينة.
+            Don’t wait any longer, your health and beauty are in safe hands.
         </h3>
 
         <div class="cta-actions">
@@ -519,7 +523,7 @@
             </a>
 
             <a href="https://wa.me/966138955555" target="_blank" class="cta-whatsapp">
-                <i class="fab fa-whatsapp"></i> احجز استشارتك الآن
+                <i class="fab fa-whatsapp"></i> Book Your Consultation Now
             </a>
         </div>
     </div>

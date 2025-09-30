@@ -402,7 +402,7 @@
                     </article>
                     @endforeach
                 </div>
-                <a href="/doctorsar.html" style="text-decoration: none;">
+                <a href="{{ route('services') }}" style="text-decoration: none;">
                     <div class="view-all-section">
                         <button class="view-all-button" type="button">
                             <span class="view-all-text">عرض جميع الأطباء</span>
@@ -429,7 +429,7 @@
                     </h2>
 
                 </div>
-                <a href="doctorsar.html">
+                <a href="{{ route('services') }}">
                     <div class="departments-scroll-container">
                         <div class="departments-grid">
                             @foreach($department as $row)
@@ -545,7 +545,7 @@
 
                 @foreach ($article as $item)
                 <article class="blog-card">
-                    <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" class="blog-image" />
+                    <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title_ar}}" class="blog-image" />
                     <div class="blog-content">
                         <div class="blog-card-header">
                             <h3 class="blog-card-title">

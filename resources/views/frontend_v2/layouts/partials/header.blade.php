@@ -102,7 +102,9 @@
 
     <header class="site-header">
         <div class="header-container">
-            <img src="{{ asset('frontend_v2/assets/Icons/logo.png') }}" alt="شعار المستشفى" class="hospital-logo" />
+            <a href="{{ Route('home') }}">
+                <img src="{{ asset('frontend_v2/assets/Icons/logo.png') }}" alt="شعار المستشفى" class="hospital-logo" />
+            </a>
             <div id="overlay" class="overlayz"></div>
             <nav class="main-nav2" id="mainNav2" dir="rtl">
                 <button id="closeButton" class="close-buttonzz close-buttonzzl">×</button>
