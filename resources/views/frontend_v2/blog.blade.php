@@ -372,10 +372,63 @@
         gap: 10px;
     }
 
-
-
     .btn:hover {
         opacity: 0.9;
+    }
+
+    .blog-card.single-blog {
+        width: 50%;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 50px 25px;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 10px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .pagination a {
+        padding: 10px 18px;
+        border-radius: 50px;
+        /* pill shape */
+        /* background: #f5f8fa; */
+        color: #2d2d2d;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .pagination a:hover {
+        background: #980a50;
+        /* hospital brand blue */
+        color: #fff;
+        border-color: #980a50;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
+    }
+
+    .pagination .active {
+        background: #980a50;
+        color: #fff;
+        font-weight: 600;
+        border-color: #980a50;
+        box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
+    }
+
+    .pagination .prev,
+    .pagination .next {
+        font-size: 14px;
+        padding: 10px 16px;
     }
 </style>
 
@@ -405,7 +458,7 @@
 
             <div class="blog-grid">
                 @foreach ($articles as $item)
-                <article class="blog-card ">
+                <article class="blog-card {{ count($articles) === 1 ? 'single-blog' : '' }}">
                     <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" class="blog-image" />
                     <div class="blog-content">
                         <div class="blog-card-header">
@@ -422,13 +475,37 @@
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
                                 <span class="link-text">View Details</span>
-                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="" class="link-arrow" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="Arrow Right Icon" class="link-arrow" />
                             </a>
                         </div>
                     </div>
                 </article>
                 @endforeach
             </div>
+        </div>
+        <div class="pagination">
+            {{-- Previous Button --}}
+            @if ($articles->onFirstPage())
+            <span class="prev disabled">«</span>
+            @else
+            <a href="{{ $articles->previousPageUrl() }}" class="prev">«</a>
+            @endif
+
+            {{-- Page Numbers --}}
+            @for ($i = 1; $i <= $articles->lastPage(); $i++)
+                @if ($i == $articles->currentPage())
+                <a href="{{ $articles->url($i) }}" class="active">{{ $i }}</a>
+                @else
+                <a href="{{ $articles->url($i) }}">{{ $i }}</a>
+                @endif
+                @endfor
+
+                {{-- Next Button --}}
+                @if ($articles->hasMorePages())
+                <a href="{{ $articles->nextPageUrl() }}" class="next">»</a>
+                @else
+                <span class="next disabled">»</span>
+                @endif
         </div>
     </div>
 

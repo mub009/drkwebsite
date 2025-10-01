@@ -19,14 +19,14 @@ class FrontEndController extends Controller
             ->where('doctors.frontpage', '=', 1)
             ->orderBy('sort', 'asc')
             ->get();
-        $data['article'] = Article::latest()->take(5)->get();
+        $data['article'] = Article::latest()->paginate(4);
         $data['department'] = Department::whereNotNull('department_ar')->orderBy('sort', 'asc')->get();
         return view('frontend_v2.index', $data);
     }
     public function blog()
     {
         $data = array();
-        $data['articles'] = Article::latest()->take(5)->get();
+        $data['articles'] = Article::latest()->paginate(4);
         return view('frontend_v2.blogar', $data);
     }
     public function articleDetails($slug = null)

@@ -81,7 +81,7 @@
           <div class="features-grid">
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 السلامة الطبية أولاً: نلتزم بالمعايير الدولية لضمان سلامة كل مريض.
@@ -89,7 +89,7 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 الجمال الطبيعي: نركز على تحقيق نتائج طبيعية ومتوازنة.
@@ -97,7 +97,7 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 الخبرة والاحترافية: يجمع فريقنا الطبي بين سنوات المعرفة والخبرة العملية.
@@ -105,7 +105,7 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 الخصوصية والراحة: نوفر بيئة آمنة وسرية تحترم خصوصية عملائنا.
@@ -174,7 +174,7 @@
           <div class="features-grid">
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 الجراحة التجميلية: تجميل الأنف، شد الوجه، ونحت الجسم.
@@ -182,7 +182,7 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 الحقن التجميلية: البوتوكس، الفيلرز، وعلاجات PRP.
@@ -190,7 +190,7 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
               </div>
               <h3 class="feature-title">
                 العناية بالبشرة والشعر: علاجات الليزر، جلسات التفتيح والتنظيف، وحلول متقدمة لعلاج تساقط الشعر.

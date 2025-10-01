@@ -1,5 +1,65 @@
 @extends('frontend_v2.layouts.FrontendLayout')
 @section('content')
+
+<style>
+    .blog-card.single-blog {
+        width: 50%;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 50px 25px;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 10px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .pagination a {
+        padding: 10px 18px;
+        border-radius: 50px;
+        /* pill shape */
+        /* background: #f5f8fa; */
+        color: #2d2d2d;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .pagination a:hover {
+        background: #980a50;
+        /* hospital brand blue */
+        color: #fff;
+        border-color: #980a50;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
+    }
+
+    .pagination .active {
+        background: #980a50;
+        color: #fff;
+        font-weight: 600;
+        border-color: #980a50;
+        box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
+    }
+
+    .pagination .prev,
+    .pagination .next {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+</style>
+
+
+
 <section class="hero services-section " style="margin-top: 80px !important;">
     <div class="hero-bg hero-bg-1"></div>
     <div class="hero-bg hero-bg-2"></div>
@@ -186,7 +246,7 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii1.png') }}" alt="طبيب" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="سهم صغير" />
             </div>
         </div>
 
@@ -197,7 +257,7 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii2.png') }}" alt="مواعيد مؤكدة" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="سهم صغير" />
             </div>
         </div>
 
@@ -208,7 +268,7 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii3.jpg') }}" alt="توصيل الأدوية" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="سهم صغير" />
             </div>
         </div>
 
@@ -219,7 +279,7 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii4.png') }}" alt="استشارة فيديو" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="سهم صغير" />
             </div>
         </div>
 
@@ -230,7 +290,7 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" alt="فحص مخبري" class="card-image" />
             <div class="card-button light-btn">
-                <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="" />
+                <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="سهم صغير" />
             </div>
         </div>
     </div>
@@ -261,7 +321,7 @@
                     <div class="features-grid">
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
                             </div>
                             <h3 class="feature-title">
                                 أطباء واستشاريون معتمدون دولياً
@@ -269,13 +329,13 @@
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
                             </div>
                             <h3 class="feature-title">أحدث التقنيات والمعدات الطبية</h3>
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
                             </div>
                             <h3 class="feature-title">
                                 رعاية عالية الجودة وفعّالة من حيث التكلفة
@@ -283,7 +343,7 @@
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
                             </div>
                             <h3 class="feature-title">قبول جميع شركات التأمين الكبرى</h3>
                         </article>
@@ -438,7 +498,7 @@
                                     <img class="department-image"
                                         src="{{ asset('images').'/'.$row->image}}" alt="{{$row->department_ar}}"></img>
                                     <div class="department-icon">
-                                        <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="" />
+                                        <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="سهم صغير" />
                                     </div>
                                 </div>
                                 <h3 class="department-name">{{$row->department_ar}}</h3>
@@ -464,7 +524,7 @@
                             <a href="tel:0550655152">
                                 <button class="appointment-buttonz">
                                     <span class="appointment-textb">احجز موعدًا</span>
-                                    <div class="doctor-icon-container"><img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="" />
+                                    <div class="doctor-icon-container"><img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="سهم صغير" />
                                     </div>
                                 </button>
                             </a>
@@ -522,7 +582,7 @@
     </div>
 </section>
 
-<section class="section sectionzz" dir="rtl">
+<section id="blog" class="section sectionzz" dir="rtl">
     <div class="medical-facility-showcase">
         <div class="showcase-container" style="align-items: flex-start">
             <div class="blog-header  anima" data-aos="fade-zoom-in">
@@ -540,10 +600,11 @@
 
             </div>
 
-            <div class="blog-grid  anima" data-aos="fade-zoom-in">
 
+
+            <div class="blog-grid  anima" data-aos="fade-zoom-in">
                 @foreach ($article as $item)
-                <article class="blog-card">
+                <article class="blog-card  {{ count($article) === 1 ? 'single-blog' : '' }}">
                     <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title_ar}}" class="blog-image" />
                     <div class="blog-content">
                         <div class="blog-card-header">
@@ -560,13 +621,39 @@
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
                                 <span class="link-text">عرض التفاصيل</span>
-                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="" class="link-arrow" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="سهم صغير" class="link-arrow" />
                             </a>
                         </div>
                     </div>
                 </article>
                 @endforeach
             </div>
+
+
+        </div>
+        <div class="pagination">
+            {{-- Previous Button --}}
+            @if ($article->onFirstPage())
+            <span class="prev disabled">«</span>
+            @else
+            <a href="{{ $article->previousPageUrl() }}#blog" class="prev">«</a>
+            @endif
+
+            {{-- Page Numbers --}}
+            @for ($i = 1; $i <= $article->lastPage(); $i++)
+                @if ($i == $article->currentPage())
+                <a href="{{ $article->url($i) }}#blog" class="active">{{ $i }}</a>
+                @else
+                <a href="{{ $article->url($i) }}#blog">{{ $i }}</a>
+                @endif
+                @endfor
+
+                {{-- Next Button --}}
+                @if ($article->hasMorePages())
+                <a href="{{ $article->nextPageUrl() }}#blog" class="next">»</a>
+                @else
+                <span class="next disabled">»</span>
+                @endif
         </div>
     </div>
 </section>
@@ -601,8 +688,8 @@
                     <div class="faq-question">
                         <h3 class="question-text">كيف يمكنني حجز موعد؟</h3>
                         <button class="toggle-button" aria-expanded="true" aria-controls="answer-1">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-1">
@@ -618,8 +705,8 @@
                     <div class="faq-question">
                         <h3 class="question-text">ماذا يجب أن أحضر في زيارتي الأولى؟</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-2">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-2">
@@ -633,8 +720,8 @@
                     <div class="faq-question">
                         <h3 class="question-text">هل تقدمون الاستشارات الطبية عن بعد أو الافتراضية؟</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-3">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-3">
@@ -649,8 +736,8 @@
                     <div class="faq-question">
                         <h3 class="question-text">هل تتوفر خدمات الطوارئ؟</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-4">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-4">
@@ -664,8 +751,8 @@
                     <div class="faq-question">
                         <h3 class="question-text">كيف يمكنني الوصول إلى نتائج المختبر أو الأشعة؟</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-5">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-5">

@@ -18,7 +18,7 @@
           <button class="appointment-button">
             <span class="appointment-text">Contact US</span>
             <div class="doctor-icon-container">
-              <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="" />
+              <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="Arrow" />
             </div>
           </button>
         </a>
@@ -50,7 +50,7 @@
         <p class="service-description">Our Insurance Partners</p>
         <div class="learn-more-link">
           <div class="learn-more-arrow">
-            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="" />
+            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="Arrow Down" />
           </div>
           <span class="learn-more-text">Learn More</span>
         </div>
@@ -70,7 +70,7 @@
         <p class="service-description">Our Distinguished Physicians</p>
         <div class="learn-more-link">
           <div class="learn-more-arrow">
-            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="" />
+            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="Arrow Down" />
           </div>
           <span class="learn-more-text">Learn More</span>
         </div>
@@ -90,7 +90,7 @@
         <p class="service-description">Multidisciplinary Services</p>
         <div class="learn-more-link">
           <div class="learn-more-arrow">
-            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="" />
+            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="Arrow Down" />
           </div>
           <span class="learn-more-text">Learn More</span>
         </div>
@@ -182,7 +182,7 @@
       </div>
       <img src="{{ asset('frontend_v2/assets/images/ii1.png') }}" alt="Doctor" class="card-image" />
       <div class="card-button light-btn">
-        <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="" />
+        <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="Arrow" />
       </div>
     </div>
 
@@ -193,7 +193,7 @@
       </div>
       <img src="{{ asset('frontend_v2/assets/images/ii2.png') }}" alt="Confirmed Appointments" class="card-image" />
       <div class="card-button light-btn">
-        <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="" />
+        <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="Arrow" />
       </div>
     </div>
 
@@ -204,7 +204,7 @@
       </div>
       <img src="{{ asset('frontend_v2/assets/images/ii3.jpg') }}" alt="Medicine Delivery" class="card-image" />
       <div class="card-button light-btn">
-        <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="" />
+        <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="Arrow" />
       </div>
     </div>
 
@@ -215,7 +215,7 @@
       </div>
       <img src="{{ asset('frontend_v2/assets/images/ii4.png') }}" alt="Video Consultation" class="card-image" />
       <div class="card-button light-btn">
-        <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="" />
+        <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="Arrow" />
       </div>
     </div>
 
@@ -226,7 +226,7 @@
       </div>
       <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" alt="Lab Test" class="card-image" />
       <div class="card-button light-btn">
-        <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="" />
+        <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="Arrow" />
       </div>
     </div>
   </div>
@@ -255,7 +255,7 @@
           <div class="features-grid">
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
               </div>
               <h3 class="feature-title">
                 Internationally certified doctors and consultants
@@ -263,13 +263,13 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
               </div>
               <h3 class="feature-title">Advanced medical technologies and equipment</h3>
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
               </div>
               <h3 class="feature-title">
                 High-quality, cost-effective care
@@ -277,7 +277,7 @@
             </article>
             <article class="feature-item">
               <div class="feature-icon">
-                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
               </div>
               <h3 class="feature-title">Acceptance of all major insurance providers</h3>
             </article>
@@ -401,7 +401,7 @@
               <span class="view-all-text">See Our All Doctors</span>
             </button>
             <div>
-              <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-linestr.png') }}" alt="" />
+              <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-linestr.png') }}" alt="Arrow Up Icon" />
             </div>
           </div>
         </a>
@@ -430,7 +430,7 @@
                 <div class="department-image-container">
                   <div class="department-image" style="style="background-image: url('{{ asset("images/".$row->image) }}')"></div>
                   <div class="department-icon">
-                    <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="" />
+                    <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="Mainarrow" />
                   </div>
                 </div>
                 <h3 class="department-name">{{$row->department_en}}</h3>
@@ -459,7 +459,7 @@
               <button class="appointment-button">
                 <span class="appointment-text">Contact US</span>
                 <div class="doctor-icon-container">
-                  <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="Arrow" />
                 </div>
               </button>
             </a>
@@ -589,8 +589,8 @@
           <div class="faq-question">
             <h3 class="question-text">How can I book an appointment?</h3>
             <button class="toggle-button" aria-expanded="true" aria-controls="answer-1">
-              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="Vector 1" />
+              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="Vector 2" />
             </button>
           </div>
           <div class="faq-answer" id="answer-1">
@@ -607,8 +607,8 @@
               What should I bring to my first visit?
             </h3>
             <button class="toggle-button" aria-expanded="false" aria-controls="answer-2">
-              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="vector 1" />
+              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="vector 2" />
             </button>
           </div>
           <div class="faq-answer" id="answer-2">
@@ -624,8 +624,8 @@
               Do you offer telemedicine or virtual consultations?
             </h3>
             <button class="toggle-button" aria-expanded="false" aria-controls="answer-3">
-              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="vector 1" />
+              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="vector 2" />
             </button>
           </div>
           <div class="faq-answer" id="answer-3">
@@ -639,8 +639,8 @@
           <div class="faq-question">
             <h3 class="question-text">Is emergency care available?</h3>
             <button class="toggle-button" aria-expanded="false" aria-controls="answer-4">
-              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="vector 1" />
+              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="vector 2" />
             </button>
           </div>
           <div class="faq-answer" id="answer-4">
@@ -657,8 +657,8 @@
               How can I access my lab or imaging results?
             </h3>
             <button class="toggle-button" aria-expanded="false" aria-controls="answer-5">
-              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="" />
-              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="" />
+              <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="vector 1" />
+              <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="vector 2" />
             </button>
           </div>
           <div class="faq-answer" id="answer-5">

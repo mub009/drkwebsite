@@ -74,20 +74,20 @@
 
         <div class="footer-bottom">
             <div class="social-media" aria-label="روابط التواصل الاجتماعي">
-                <a href="#" class="social-link" aria-label="انستجرام">
-                    <img src="{{ asset('frontend_v2/assets/Icons/instagram.png') }}" class="social-icon" alt="" />
+                <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="__blank" class="social-link" aria-label="انستجرام">
+                    <img src="{{ asset('frontend_v2/assets/Icons/instagram.png') }}" class="social-icon" alt="Social Icon" />
                 </a>
-                <a href="#" class="social-link" aria-label="سناب شات">
-                    <img src="{{ asset('frontend_v2/assets/Icons/snapchat.png') }}" class="social-icon" alt="" />
+                <a href="https://www.snapchat.com/@drkalruhaimi?locale=ar" target="__blank" class="social-link" aria-label="سناب شات">
+                    <img src="{{ asset('frontend_v2/assets/Icons/snapchat.png') }}" class="social-icon" alt="Social Icon" />
                 </a>
-                <a href="#" class="social-link" aria-label="يوتيوب">
-                    <img src="{{ asset('frontend_v2/assets/Icons/youtube.png') }}" class="social-icon" alt="" />
+                <a href="https://www.youtube.com/channel/UCnBY2OI12i89tYyJcSA8Oog" target="__blank" class="social-link" aria-label="يوتيوب">
+                    <img src="{{ asset('frontend_v2/assets/Icons/youtube.png') }}" class="social-icon" alt="Social Icon" />
                 </a>
-                <a href="#" class="social-link" aria-label="تيك توك">
-                    <img src="{{ asset('frontend_v2/assets/Icons/tiktok.png') }}" class="social-icon" alt="" />
+                <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="__blank" class="social-link" aria-label="تيك توك">
+                    <img src="{{ asset('frontend_v2/assets/Icons/tiktok.png') }}" class="social-icon" alt="Social Icon" />
                 </a>
-                <a href="#" class="social-link" aria-label="تويتر">
-                    <img src="{{ asset('frontend_v2/assets/Icons/twitter.png') }}" class="social-icon" alt="" />
+                <a href="https://x.com/drkalruhaimi?lang=ar" target="__blank" class="social-link" aria-label="تويتر">
+                    <img src="{{ asset('frontend_v2/assets/Icons/twitter.png') }}" class="social-icon" alt="Social Icon" />
                 </a>
             </div>
 

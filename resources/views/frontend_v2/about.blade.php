@@ -71,7 +71,7 @@
             <div class="features-grid">
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">
                   Medical Safety First: We adhere to international standards to ensure the safety of every patient.
@@ -79,13 +79,13 @@
               </article>
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">Natural Beauty: Our focus is on achieving natural, balanced results.</h3>
               </article>
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">
                   Expertise & Professionalism: Our medical team combines years of knowledge with hands-on experience.
@@ -93,7 +93,7 @@
               </article>
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">Privacy & Comfort: We provide a secure, discreet environment that respects our
                   clients’ confidentiality.</h3>
@@ -167,7 +167,7 @@
             <div class="features-grid">
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">
                   Cosmetic Surgery: Rhinoplasty, facelifts, and body contouring.
@@ -175,13 +175,13 @@
               </article>
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">Aesthetic Injections: Botox, fillers, and PRP.</h3>
               </article>
               <article class="feature-item">
                 <div class="feature-icon">
-                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="" />
+                  <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="Arrow Up Icon" />
                 </div>
                 <h3 class="feature-title">
                   Skin & Hair Care: Laser treatments, brightening and cleansing sessions, and advanced hair loss
