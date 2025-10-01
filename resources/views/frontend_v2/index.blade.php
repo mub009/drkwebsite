@@ -435,9 +435,8 @@
                             @foreach($department as $row)
                             <article class="department-card">
                                 <div class="department-image-container">
-                                    <div class="department-image"
-                                        style="background-image: url('{{ asset("images/".$row->image) }}')"
-                                        aria-label="قسم الطوارئ"></div>
+                                    <img class="department-image"
+                                        src="{{ asset('images').'/'.$row->image}}" alt="{{$row->department_ar}}"></img>
                                     <div class="department-icon">
                                         <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="" />
                                     </div>
@@ -806,6 +805,6 @@
 
 @endsection
 
-@section('scripts')
-<script src="{{ asset('frontend_v2/js/homeScript.js') }}"></script>
-@endsection
+@push('scripts')
+<script src="{{ asset('frontend_v2/js/homeScript.js') }}" defer></script>
+@endpush

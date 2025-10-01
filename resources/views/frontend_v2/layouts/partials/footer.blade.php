@@ -109,6 +109,7 @@
         }, 5000);
     });
 </script> -->
+@stack('scripts')
 
 </body>
 

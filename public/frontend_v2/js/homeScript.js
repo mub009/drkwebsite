@@ -1,9 +1,9 @@
 const images = [
-    "/Assets/images/image1.png",
-    "/Assets/images/image2.png",
-    "/Assets/images/image3.jpeg",
-    "/Assets/images/image4.jpg",
-    "/Assets/images/image5.webp",
+    "/frontend_v2/assets/images/image1.png",
+    "/frontend_v2/assets/images/image2.png",
+    "/frontend_v2/assets/images/image3.jpeg",
+    "/frontend_v2/assets/images/image4.jpg",
+    "/frontend_v2/assets/images/image5.webp",
 ];
 
 const bg1 = document.querySelector(".hero-bg-1");
