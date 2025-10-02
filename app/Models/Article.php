@@ -15,6 +15,9 @@ class Article extends Model
         'image',
         'article_en',
         'article_ar',
+        'meta_description',
+        'meta_title',
+        'keyword',
         'slug',
     ];
 }

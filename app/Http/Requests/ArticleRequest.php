@@ -23,6 +23,9 @@ class ArticleRequest extends FormRequest
         return [
             'title_en' => 'required|string|max:255',
             'title_ar' => 'required|string|max:255',
+            'meta_description' => 'required|string|max:255',
+            'meta_title' => 'required|string|max:255',
+            'keyword' => 'required|string|max:255',
             'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'content_en' => ['required', new NotEmptyHtml],
             'content_ar' => ['required', new NotEmptyHtml],
