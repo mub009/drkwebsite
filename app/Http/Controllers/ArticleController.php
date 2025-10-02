@@ -38,6 +38,13 @@ class ArticleController extends Controller
                 ->addColumn('article_ar', function ($row) {
                     return $row->article_ar;
                 })
+                ->addColumn('meta_description', function ($row) {
+                    return $row->meta_description;
+                })->addColumn('meta_title', function ($row) {
+                    return $row->meta_title;
+                })->addColumn('keyword', function ($row) {
+                    return $row->keyword;
+                })
                 ->addColumn('slug', function ($row) {
                     return $row->slug;
                 })
@@ -56,6 +63,13 @@ class ArticleController extends Controller
                 ->filterColumn('article_ar', function ($query, $keyword) {
                     $query->where('article_ar', 'like', "%{$keyword}%");
                 })
+                ->filterColumn('meta_description', function ($query, $keyword) {
+                    $query->where('meta_description', 'like', "%{$keyword}%");
+                })->filterColumn('meta_title', function ($query, $keyword) {
+                    $query->where('meta_title', 'like', "%{$keyword}%");
+                })->filterColumn('keyword', function ($query, $keyword) {
+                    $query->where('keyword', 'like', "%{$keyword}%");
+                })
                 ->filterColumn('slug', function ($query, $keyword) {
                     $query->where('slug', 'like', "%{$keyword}%");
                 })
@@ -71,6 +85,9 @@ class ArticleController extends Controller
             $article = new Article;
             $article->title_en = $request->title_en;
             $article->title_ar = $request->title_ar;
+            $article->meta_description = $request->meta_description;
+            $article->meta_title = $request->meta_title;
+            $article->keyword = $request->keyword;
             $article->article_en = $request->content_en;
             $article->article_ar = $request->content_ar;
             $article->slug = $request->slug;
@@ -98,6 +115,9 @@ class ArticleController extends Controller
             $article = Article::findOrFail($request->id);
             $article->title_en = $request->title_en;
             $article->title_ar = $request->title_ar;
+            $article->meta_description = $request->meta_description;
+            $article->meta_title = $request->meta_title;
+            $article->keyword = $request->keyword;
             $article->article_en = $request->article_en;
             $article->article_ar = $request->article_ar;
             $article->slug = $request->slug;

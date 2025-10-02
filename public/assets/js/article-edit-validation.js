@@ -27,6 +27,9 @@ $(document).ready(function () {
         let titleEn = $('#title_en').val().trim();
         let titleAr = $('#title_ar').val().trim();
         let slug = $('#slug').val().trim();
+        let metaDescription = $('#meta_description').val().trim();
+        let metaTitle = $('#meta_title').val().trim();
+        let keyword = $('#keyword').val().trim();
         let image = $('#image').val();
         let contentEn = snowEditor.root.innerHTML.trim();
         let contentAr = snowEditor1.root.innerHTML.trim();
@@ -37,9 +40,13 @@ $(document).ready(function () {
 
         if (!titleEn) errors.title_en = 'Title (English) is required.';
         if (!titleAr) errors.title_ar = 'Title (Arabic) is required.';
+        if (!metaDescription) errors.meta_description = 'Meta Description is required.';
+        if (!metaTitle) errors.meta_title = 'Meta Title is required.';
+        if (!keyword) errors.keyword = 'Keyword is required.';
         if (!contentEn || contentEn === '<p><br></p>') errors.article_en = 'Article (English) content is required.';
         if (!contentAr || contentAr === '<p><br></p>') errors.article_ar = 'Article (Arabic) content is required.';
         if (!slug) errors.slug = 'Slug is required.';
+        if (!image) errors.image = 'Thumbnail image is required.';
         if (!isValidImage) errors.image = 'Image format must be JPEG, PNG, JPG, GIF, or SVG.';
 
         if (Object.keys(errors).length > 0) {
@@ -75,6 +82,9 @@ $(document).ready(function () {
         let formData = new FormData(this);
         formData.append('title_en', titleEn);
         formData.append('title_ar', titleAr);
+        formData.append('meta_description', metaDescription);
+        formData.append('meta_title', metaTitle);
+        formData.append('keyword', keyword);
         formData.append('slug', slug);
         formData.append('article_en', contentEn);
         formData.append('article_ar', contentAr);

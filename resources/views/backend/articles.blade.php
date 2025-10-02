@@ -24,6 +24,9 @@
                             <th>Thumbnail Image</th>
                             <th>Article (English)</th>
                             <th>Article (Arabic)</th>
+                            <th>Meta Description</th>
+                            <th>Meta Title</th>
+                            <th>Keyword</th>
                             <th>Slug</th>
                             <th>Created At</th>
                             <th>Actions</th>
@@ -93,6 +96,25 @@
                 {
                     data: 'article_ar',
                     name: 'article_ar',
+                    render: function(data) {
+                        return data ? data.substring(0, 20) + '' : '';
+                    }
+                },
+                {
+                    data: 'meta_description',
+                    name: 'meta_description',
+                    render: function(data) {
+                        return data ? data.substring(0, 20) + '' : '';
+                    }
+                },{
+                    data: 'meta_title',
+                    name: 'meta_title',
+                    render: function(data) {
+                        return data ? data.substring(0, 20) + '' : '';
+                    }
+                },{
+                    data: 'keyword',
+                    name: 'keyword',
                     render: function(data) {
                         return data ? data.substring(0, 20) + '' : '';
                     }

@@ -25,6 +25,9 @@ $(document).ready(function () {
 
         let titleEn = $('#title_en').val().trim();
         let titleAr = $('#title_ar').val().trim();
+        let metaDescription = $('#meta_description').val().trim();
+        let metaTitle = $('#meta_title').val().trim();
+        let keyword = $('#keyword').val().trim();
         let image = $('#image').val();
         let contentEn = snowEditor.root.innerHTML.trim();
         let contentAr = snowEditor1.root.innerHTML.trim();
@@ -39,6 +42,9 @@ $(document).ready(function () {
 
         if (!titleEn) errors.title_en = 'Title (English) is required.';
         if (!titleAr) errors.title_ar = 'Title (Arabic) is required.';
+        if (!metaDescription) errors.meta_description = 'Meta Description is required.';
+        if (!metaTitle) errors.meta_title = 'Meta Title is required.';
+        if (!keyword) errors.keyword = 'Keyword is required.';
         if (!contentEn || contentEn === '<p><br></p>') errors.content_en = 'Article (English) content is required.';
         if (!contentAr || contentAr === '<p><br></p>') errors.content_ar = 'Article (Arabic) content is required.';
         if (!slug) errors.slug = 'Slug is required.';

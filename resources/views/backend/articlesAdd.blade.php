@@ -90,6 +90,18 @@
                 <div id="content_ar"></div>
               </div>
               <div class="mb-3">
+                <label for="meta_title" class="form-label">Meta Title</label>
+                <input type="text" class="form-control" id="meta_title" name="meta_title">
+              </div>
+              <div class="mb-3">
+                <label for="meta_description" class="form-label">Meta Description</label>
+                <input type="text" class="form-control" id="meta_description" name="meta_description">
+              </div>
+              <div class="mb-3">
+                <label for="keyword" class="form-label">Keyword</label>
+                <input type="text" class="form-control" id="keyword" name="keyword">
+              </div>
+              <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
                 <input type="text" class="form-control" id="slug" name="slug">
               </div>
