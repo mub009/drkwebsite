@@ -2,15 +2,14 @@
     <section class="about-section">
         <div class="about-container">
             <h1 class="about-title">
-                عن
+                {{ __('footer.about_title') }}
                 <span class="hospital-name">DRK</span>
             </h1>
             <p class="hospital-credentials">
-                معتمد من CBAHI | أكثر من 150 ألف مريض راضٍ | طوارئ 24/7
+                {{ __('footer.hospital_credentials') }}
             </p>
             <p class="hospital-description">
-                يلتزم مستشفى الدكتور خالد الرحيمي بتقديم رعاية صحية عالمية المستوى
-                باستخدام أحدث التقنيات وأمهر الأطباء والخدمات الرحيمة.
+                {{ __('footer.hospital_description') }}
             </p>
 
         </div>
@@ -23,50 +22,49 @@
             <div class="hospital-info">
                 <div class="logo-container">
                     <div class="logo-wrapper">
-                        <img src="{{ asset('frontend_v2/assets/Icons/drk.png') }}" alt="شعار مستشفى الدكتور خالد الرحيمي" class="hospital-logoz" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/drk.png') }}" alt="{{ __('imagealt.footer_logo') }}" class="hospital-logoz" />
                     </div>
                 </div>
                 <address class="hospital-address">
                     <p class="address-line">
-                        مستشفى الدكتور خالد الرحيمي، شارع الأمير محمد بن فهد، الخبر،
-                        المملكة العربية السعودية
+                        {{ __('footer.address_line') }}
                     </p>
-                    <p class="contact-phone">الهاتف: +966 13 895 5555</p>
-                    <p class="contact-email">البريد الإلكتروني: info@dralruhaimi.com</p>
+                    <p class="contact-phone">{{ __('footer.contact_phone') }}</p>
+                    <p class="contact-email">{{ __('footer.contact_email') }}</p>
                 </address>
             </div>
 
-            <nav class="footer-navigation" aria-label="روابط الفوتر">
+            <nav class="footer-navigation" aria-label="{{ __('footer.navigation') }}">
                 <div class="nav-column">
-                    <h2 class="nav-title">روابط سريعة</h2>
+                    <h2 class="nav-title">{{ __('footer.nav_title_quick') }}</h2>
                     <ul class="nav-list">
-                        <li><a href="#" class="nav-linkz">الرئيسية</a></li>
-                        <li><a href="#" class="nav-linkz">من نحن</a></li>
-                        <li><a href="#" class="nav-linkz">الأطباء</a></li>
+                        <li><a href="{{ route('home') }}" class="nav-linkz">{{ __('footer.foot_nav_home') }}</a></li>
+                        <li><a href="{{ route('about') }}" class="nav-linkz">{{ __('footer.foot_nav_about') }}</a></li>
+                        <li><a href="{{ route('services') }}" class="nav-linkz">{{ __('footer.foot_nav_doctors') }}</a></li>
                     </ul>
                 </div>
                 <div class="nav-column">
-                    <h2 class="nav-title">الخدمات</h2>
+                    <h2 class="nav-title">{{ __('footer.nav_title_services') }}</h2>
                     <ul class="nav-list">
-                        <li><a href="#" class="nav-linkz">الأقسام</a></li>
-                        <li><a href="#" class="nav-linkz">الفروع</a></li>
-                        <li><a href="#" class="nav-linkz">العروض</a></li>
+                        <li><a href="#" class="nav-linkz">{{ __('footer.foot_nav_sections') }}</a></li>
+                        <li><a href="#" class="nav-linkz">{{ __('footer.foot_nav_branches') }}</a></li>
+                        <li><a href="#" class="nav-linkz">{{ __('footer.foot_nav_offers') }}</a></li>
                     </ul>
                 </div>
                 <div class="nav-column">
-                    <h2 class="nav-title">تواصل معنا</h2>
+                    <h2 class="nav-title">{{ __('footer.nav_title_contact') }}</h2>
                     <ul class="nav-list">
-                        <li><a href="#" class="nav-linkz">إرسال رسالة</a></li>
-                        <li><a href="#" class="nav-linkz">حجز موعد</a></li>
-                        <li><a href="#" class="nav-linkz">جدولة اتصال</a></li>
+                        <li><a href="#" class="nav-linkz">{{ __('footer.foot_nav_send_message') }}</a></li>
+                        <li><a href="#" class="nav-linkz">{{ __('footer.foot_nav_book_appointment') }}</a></li>
+                        <li><a href="#" class="nav-linkz">{{ __('footer.foot_nav_schedule_call') }}</a></li>
                     </ul>
                 </div>
                 <div class="nav-column">
-                    <h2 class="nav-title">قانوني</h2>
+                    <h2 class="nav-title">{{ __('footer.nav_title_legal') }}</h2>
                     <ul class="nav-list">
-                        <li><a href="#" class="nav-linkz">سياسة الخصوصية</a></li>
-                        <li><a href="#" class="nav-linkz">الشروط والأحكام</a></li>
-                        <li><a href="#" class="nav-linkz">سياسة ملفات تعريف الارتباط</a></li>
+                        <li><a href="{{ route('privacy_policy') }}" class="nav-linkz">{{ __('footer.foot_nav_privacy_policy') }}</a></li>
+                        <li><a href="{{ route('privacy_policy') }}" class="nav-linkz">{{ __('footer.foot_nav_terms_conditions') }}</a></li>
+                        <li><a href="{{ route('privacy_policy') }}" class="nav-linkz">{{ __('footer.foot_nav_cookies_policy') }}</a></li>
                     </ul>
                 </div>
             </nav>
@@ -74,27 +72,27 @@
 
         <div class="footer-bottom">
             <div class="social-media" aria-label="روابط التواصل الاجتماعي">
-                <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="__blank" class="social-link" aria-label="انستجرام">
-                    <img src="{{ asset('frontend_v2/assets/Icons/instagram.png') }}" class="social-icon" alt="Social Icon" />
+                <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="__blank" class="social-link" aria-label="{{ __('footer.social_instagram') }}">
+                    <img src="{{ asset('frontend_v2/assets/Icons/instagram.png') }}" class="social-icon" alt="{{ __('imagealt.social_instagram') }}" />
                 </a>
-                <a href="https://www.snapchat.com/@drkalruhaimi?locale=ar" target="__blank" class="social-link" aria-label="سناب شات">
-                    <img src="{{ asset('frontend_v2/assets/Icons/snapchat.png') }}" class="social-icon" alt="Social Icon" />
+                <a href="https://www.snapchat.com/@drkalruhaimi?locale=ar" target="__blank" class="social-link" aria-label="{{ __('footer.social_snapchat') }}">
+                    <img src="{{ asset('frontend_v2/assets/Icons/snapchat.png') }}" class="social-icon" alt="{{ __('imagealt.social_snapchat') }}" />
                 </a>
-                <a href="https://www.youtube.com/channel/UCnBY2OI12i89tYyJcSA8Oog" target="__blank" class="social-link" aria-label="يوتيوب">
-                    <img src="{{ asset('frontend_v2/assets/Icons/youtube.png') }}" class="social-icon" alt="Social Icon" />
+                <a href="https://www.youtube.com/channel/UCnBY2OI12i89tYyJcSA8Oog" target="__blank" class="social-link" aria-label="{{ __('footer.social_youtube') }}">
+                    <img src="{{ asset('frontend_v2/assets/Icons/youtube.png') }}" class="social-icon" alt="{{ __('imagealt.social_youtube') }}" />
                 </a>
-                <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="__blank" class="social-link" aria-label="تيك توك">
-                    <img src="{{ asset('frontend_v2/assets/Icons/tiktok.png') }}" class="social-icon" alt="Social Icon" />
+                <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="__blank" class="social-link" aria-label="{{ __('footer.social_tiktok') }}">
+                    <img src="{{ asset('frontend_v2/assets/Icons/tiktok.png') }}" class="social-icon" alt="{{ __('imagealt.social_tiktok') }}" />
                 </a>
-                <a href="https://x.com/drkalruhaimi?lang=ar" target="__blank" class="social-link" aria-label="تويتر">
-                    <img src="{{ asset('frontend_v2/assets/Icons/twitter.png') }}" class="social-icon" alt="Social Icon" />
+                <a href="https://x.com/drkalruhaimi?lang=ar" target="__blank" class="social-link" aria-label="{{ __('footer.social_twitter') }}">
+                    <img src="{{ asset('frontend_v2/assets/Icons/twitter.png') }}" class="social-icon" alt="{{ __('imagealt.social_twitter') }}" />
                 </a>
             </div>
 
             <div class="footer-divider"></div>
 
             <p class="copyright">
-                © 2025 مستشفى الدكتور خالد الرحيمي. جميع الحقوق محفوظة.
+                {{ __('footer.copyright') }}
             </p>
         </div>
     </section>

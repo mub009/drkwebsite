@@ -12,6 +12,7 @@ use App\Http\Controllers\OfferController;
 use App\Http\Controllers\SocialmediaController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\InsuranceController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\SEOController;
 use App\Models\TableSetting;
 use Illuminate\Support\Facades\Route;
@@ -155,19 +156,25 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/insurances/{id}/show', [InsuranceController::class, 'show'])->name('insurances.show');
     // Route::get('/insurances', [InsuranceController::class, 'getInsurance']);
 });
-Route::get('/', [FrontEndController::class, 'home']);
-Route::get('/home', [FrontEndController::class, 'home'])->name('home');
-Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
-Route::get('/about', [FrontEndController::class, 'about'])->name('about');
-Route::get('/blog', [FrontEndController::class, 'blog'])->name('blog');
-Route::get('/main_offers', [FrontEndController::class, 'offer'])->name('offer');
-Route::get('/contact_us', [FrontEndController::class, 'contact_us'])->name('contact_us');
-Route::get('/doctors', [FrontEndController::class, 'doctors'])->name('doctors');
-Route::get('/branch_location/{clinicId}', [FrontEndController::class, 'branch_location'])->name('branch_location');
-Route::get('/departmentDetails/{surl}', [FrontEndController::class, 'departmentDetails'])->name('departmentDetails');
-Route::get('/privacy_policy', [FrontEndController::class, 'privacy_policy'])->name('privacy_policy');
-Route::get('/services', [FrontEndController::class, 'services'])->name('services');
 
+
+Route::middleware(['setLocale'])->group(function () {
+
+    Route::get('/', [FrontEndController::class, 'home']);
+    Route::get('/home', [FrontEndController::class, 'home'])->name('home');
+    Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
+    Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+    Route::get('/blog', [FrontEndController::class, 'blog'])->name('blog');
+    Route::get('/main_offers', [FrontEndController::class, 'offer'])->name('offer');
+    Route::get('/contact_us', [FrontEndController::class, 'contact_us'])->name('contact_us');
+    Route::get('/doctors', [FrontEndController::class, 'doctors'])->name('doctors');
+    Route::get('/branch_location/{clinicId}', [FrontEndController::class, 'branch_location'])->name('branch_location');
+    Route::get('/departmentDetails/{surl}', [FrontEndController::class, 'departmentDetails'])->name('departmentDetails');
+    Route::get('/privacy_policy', [FrontEndController::class, 'privacy_policy'])->name('privacy_policy');
+    Route::get('/services', [FrontEndController::class, 'services'])->name('services');
+
+    Route::post('/change-language', [LanguageController::class, 'changeLanguage'])->name('change.language');
+});
 
 Route::get('/sitemap.xml', function () {
     $sitemapLinks = TableSetting::where('type', 'sitemap')->get()->first();

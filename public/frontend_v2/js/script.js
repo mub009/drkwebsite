@@ -1,43 +1,89 @@
 function toggleLanguage() {
-    const slider = document.querySelector(".language-slider");
+    const sliders = document.querySelectorAll(".language-slider");
+    const allLanguageOptions = document.querySelectorAll(".language-option");
 
-    // Get current path and filename
-    const currentPath = window.location.pathname;
+    const currentLocale = document.documentElement.getAttribute("lang") || "ar";
+    const newLocale = currentLocale === "ar" ? "en" : "ar";
+    const currentDir = document.documentElement.getAttribute("dir") || "rtl";
 
-    // Define mapping between English and Arabic files
-    const languageMap = {
-        "/index.html": "/indexen.html",
-        "/services.html": "/servicesar.html",
-        "/about.html": "/aboutar.html",
-        "/contact.html": "/contactar.html",
-        "/blog.html": "/blogar.html",
 
-        "/indexen.html": "/index.html",
-        "/servicesar.html": "/services.html",
-        "/aboutar.html": "/about.html",
-        "/contactar.html": "/contact.html",
-        "/blogar.html": "/blog.html",
-    };
+    sliders.forEach((slider) => {
+        if (currentDir === "ltr") {
+            slider.style.transform =
+                newLocale === "en" ? "translateX(0)" : "translateX(50px)";
+        } else {
+            slider.style.transform =
+                newLocale === "en" ? "translateX(50px)" : "translateX(0)";
+        }
+        slider.style.transition = "transform 0.3s ease";
+    });
 
-    // Determine target page from map
-    const targetPage = languageMap[currentPath];
+    allLanguageOptions.forEach((el) => {
+        const optionLang = el.textContent.trim().toLowerCase();
+        el.style.color = optionLang === newLocale ? "#000" : "#fff";
+    });
 
-    if (!targetPage) {
-        console.warn("No language mapping found for:", currentPath);
+    const csrfToken = document.querySelector('meta[name="csrf-token"]');
+    if (!csrfToken) {
+        alert("Security token missing. Please refresh the page.");
         return;
     }
 
-    // Animate slider
-    const isCurrentlyEnglish = currentPath.includes("/En/");
-    slider.style.transform = isCurrentlyEnglish
-        ? "translateX(50px)"
-        : "translateX(0)";
-
-    // Delay redirect to match animation
-    setTimeout(() => {
-        window.location.href = targetPage;
-    }, 400);
+    fetch("/change-language", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": csrfToken.getAttribute("content"),
+            Accept: "application/json",
+        },
+        body: JSON.stringify({ locale: newLocale }),
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            if (data.status === "success") {
+                setTimeout(() => {
+                    window.location.reload();
+                }, 350);
+            } else {
+                alert(
+                    "Failed to change language: " +
+                        (data.message || "Unknown error")
+                );
+            }
+        })
+        .catch((error) => {
+            alert(
+                "Failed to change language. Please check console for details."
+            );
+        });
 }
+
+// Initialize on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const sliders = document.querySelectorAll(".language-slider");
+    const allLanguageOptions = document.querySelectorAll(".language-option");
+    const currentLocale = document.documentElement.getAttribute("lang") || "ar";
+    const currentDir = document.documentElement.getAttribute("dir") || "rtl";
+    sliders.forEach((slider) => {
+        if (currentDir === "ltr") {
+            slider.style.transform = 
+                currentLocale === "en" ? "translateX(0)" : "translateX(50px)";
+        } else {
+            slider.style.transform =
+                currentLocale === "en" ? "translateX(50px)" : "translateX(0)";
+        }
+        slider.style.transition = "transform 0.3s ease";
+    });
+    allLanguageOptions.forEach((el) => {
+        const optionLang = el.textContent.trim().toLowerCase();
+        el.style.color = optionLang === currentLocale ? "#000" : "#fff";
+    });
+});
 
 // script.js
 const faders = document.querySelectorAll(".fade-in");

@@ -1,0 +1,31 @@
+<?php
+
+return [
+
+    'logo' => 'Hospital Logo',
+    'main_navigation' => 'Main Navigation',
+    'arrow' => 'Share',
+    'arrow_up' => 'Arrow Up Icon',
+    'award' => 'Award Icon',
+    'photo' => 'Photo',
+    'quote' => 'Quote',
+    'star' => 'Star',
+    'add' => 'Add Icon',
+    'close' => 'Close Icon',
+    'doctor' => 'Doctor',
+    'avatar' => 'Avatar',
+    'specialities' => 'Specialities Icon',
+    'insurance' => 'Insurance Icon',
+    'heart' => 'Heart',
+    'confirmed_appointment' => 'Confirmed Appointment',
+    'medication_delivery' => 'Medication Delivery',
+    'video_consultation' => 'Video Consultation',
+    'lab_test' => 'Lab Test',
+    'medical_facility' => 'Inside Medical Facility',
+    'social_instagram' => 'Instagram Logo',
+    'social_snapchat' => 'Snapchat Logo',
+    'social_youtube' => 'YouTube Logo',
+    'social_tiktok' => 'TikTok Logo',
+    'social_twitter' => 'Twitter Logo',
+    'footer_logo' => 'Dr. Khaled Al Rahimi Hospital logo',
+];

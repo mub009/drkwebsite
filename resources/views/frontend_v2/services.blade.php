@@ -2,9 +2,7 @@
 @section('content')
 
 <style>
-    body {
-        font-family: 'Tajawal', sans-serif;
-    }
+
 
     @media (min-width: 300px) and (max-width: 500px) {
         .sectionii {
@@ -368,43 +366,39 @@
 <section class="section sectionii" style=" margin-top: 150px;">
     <div class="team-section">
         <div class="team-container">
-            <div class="team-header anima" data-aos="fade-zoom-in" dir="rtl">
+            <div class="team-header anima" data-aos="fade-zoom-in" >
                 <h1 class="hero-title" style="text-align: center;">
-                    <span class="headline-emphasis">الخدمات الطبية والتجميلية – مستشفى الرحيـمي</span>
+                    <span class="headline-emphasis">{{ __('services.heading') }}</span>
                 </h1>
 
                 <p class="hed_des" style="margin-bottom: 20px;">
-                    اكتشف أحدث الخدمات الطبية والجراحية والتجميلية المصممة خصيصاً لتلبية احتياجاتك. اختر التخصص
-                    واحجز موعدك الآن.
+                    {{ __('services.subheading') }}
                 </p>
 
 
                 <div class="header-content" style="align-items: center; gap: 2px;margin-top: 80px;">
                     <h2 class="main-headline">
-                        <span class="headline-part">تعرف على خبرائنا في</span>
+                        <span class="headline-part">{{ __('services.headline_part') }}</span>
                         <span class="headline-emphasis">DRK</span>
                     </h2>
                     <div>
                         <div class="satisfied-patients" style="position: unset; box-shadow: unset">
                             <div class="avatarsz">
-                                <img src="{{ asset('/frontend_v2/assets/images/ds1.png') }}" alt="الصورة 1" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds2.png') }}" alt="الصورة 2" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds3.png') }}" alt="الصورة 3" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds4.png') }}" alt="الصورة 4" />
-                                <img src="{{ asset('/frontend_v2/assets/images/ds5.png') }}" alt="الصورة 5" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds1.png') }}" alt= "{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds2.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds3.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds4.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds5.png') }}" alt="{{ __('imagealt.photo') }}" />
                             </div>
                             <div class="text">
                                 <span class="count">+50</span><br />
-                                <span class="label">طبيب ماهر</span>
+                                <span class="label">{{ __('services.label') }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="team-description" dir="rtl">
-                    في مستشفى د. خالد الروهيمي، نحن ملتزمون بتقديم مجموعة كاملة من الخدمات الطبية والجراحية
-                    والتجميلية، مصممة لتوفير رعاية شاملة وفق أعلى معايير الجودة والسلامة والخصوصية.
-                    اختر التخصص الذي يناسب احتياجاتك واستكشف خبرة أطبائنا جنبًا إلى جنب مع أحدث التقنيات الطبية
-                    المتقدمة.
+                <p class="team-description" >
+                    {{ __('services.team_desc') }}
                 </p>
 
             </div>
@@ -413,10 +407,10 @@
 
                 <div class="tab-container">
                     <div class="tab-buttons">
-                        <button class="active" data-tab="all-doctors">جميع الأطباء</button>
+                        <button class="active" data-tab="all-doctors">{{ __('services.all_doctors') }}</button>
                         @foreach ($department as $dept)
                         <button data-tab="tab-{{ $dept->id }}">
-                            {{ $dept->department_ar }}
+                           {{ app()->getLocale() === 'ar' ? $dept->department_ar : $dept->department_en }}
                         </button>
                         @endforeach
 
@@ -428,15 +422,16 @@
                     <div class="card-dr">
 
                         @foreach ($doctors as $doctor)
-                        <article class="doctor-card" dir="rtl">
+                        <article class="doctor-card" >
                             <div class="card-background"></div>
                             <div class="card-watermark">DRK</div>
                             <div>
-                                <img src="{{asset('images').'/'.$doctor->image}}" alt="{{ $doctor->name_ar }}" class="doctor-image" />
+                                <img src="{{asset('images').'/'.$doctor->image}}" alt="{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}" class="doctor-image" />
                                 <div class="doctor-info">
                                     <div class="doctor-details">
-                                        <h3 class="doctor-name">{{ $doctor->name_ar }}</h3>
-                                        <p class="doctor-specialty">{{ $doctor->department_name }}</p>
+                                        <h3 class="doctor-name">{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}</h3>
+                                        <p class="doctor-specialty">{{ app()->getLocale() === 'ar' ? $doctor->department_ar : $doctor->department_en }}
+                                </p>
                                     </div>
                                 </div>
                             </div>
@@ -453,12 +448,12 @@
                             <div class="card-background"></div>
                             <div class="card-watermark">DRK</div>
                             <div>
-                                <img src="{{ asset('images').'/'.$doctor->image }}" alt="{{ $doctor->name_ar }}" class="doctor-image" />
+                                <img src="{{ asset('images').'/'.$doctor->image }}" alt="{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}" class="doctor-image" />
                                 <div class="doctor-info">
                                     <div class="doctor-details">
-                                        <h3 class="doctor-name">{{ $doctor->name_ar }}</h3>
+                                        <h3 class="doctor-name">{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}</h3>
                                         <p class="doctor-specialty">
-                                            {{ $doctor->department_name }}
+                                            {{ app()->getLocale() === 'ar' ? $doctor->department_ar : $doctor->department_en }}
                                         </p>
                                     </div>
                                 </div>
@@ -467,30 +462,30 @@
                         @endforeach
 
                         @if ($doctors->where('dept_id', $dept->id)->count() == 0)
-                        <p class="text-center">لا يوجد أطباء في هذا القسم حالياً</p>
+                        <p class="text-center">{{ __('services.no_doctors') }}</p>
                         @endif
                     </div>
                     <section id="section-{{ $dept->id }}" class="section topz">
                         <div class="ent-department">
                             <div class="ent-card">
                                 <div class="ent-header">
-                                    <h2>{{ $dept->name_ar }}</h2>
+                                    <h2>{{ app()->getLocale() === 'ar' ? $dept->department_ar : $dept->department_en }}</h2>
                                     <p>
-                                        {{!! $dept->department_details !!}}
+                                        {!! $dept->department_details !!}
                                     </p>
 
                                     <section class="department-gallery">
                                         <div class="gallery-grid">
                                             <div class="gallery-img img1">
                                                 <img src="{{ asset('images').'/'.$dept->image }}"
-                                                    alt="{{ $dept->department_ar }}">
+                                                    alt="{{ app()->getLocale() === 'ar' ? $dept->department_ar : $dept->department_en }}">
                                             </div>
                                         </div>
                                     </section>
                                 </div>
 
                                 <div class="ent-body">
-                                    <h3>الخدمات المقدمة</h3>
+                                    <h3>{{ __('services.services_offered') }}</h3>
                                     <ul class="ent-services">
                                         <p>{!! $dept->content_ar !!}</p>
 
@@ -506,20 +501,20 @@
     </div>
 </section>
 
-<section class="cta-section" dir="rtl">
+<section class="cta-section" >
     <div class="cta-container">
-        <h2 class="cta-title">اتصل بنا</h2>
+        <h2 class="cta-title">{{ __('services.cta_title') }}</h2>
         <h3 class="cta-subtitle">
-            لا تنتظر أكثر، صحتك وجمالك في أيدٍ أمينة.
+            {{ __('services.cta_subtitle') }}
         </h3>
 
         <div class="cta-actions">
             <a href="tel:+966138955555" class="cta-phone">
-                <i class="fas fa-phone"></i> +966 13 895 5555
+                <i class="fas fa-phone"></i> {{ __('services.number') }}
             </a>
 
             <a href="https://wa.me/966138955555" target="_blank" class="cta-whatsapp">
-                <i class="fab fa-whatsapp"></i> احجز استشارتك الآن
+                <i class="fab fa-whatsapp"></i> {{ __('services.book_btn') }}
             </a>
         </div>
     </div>

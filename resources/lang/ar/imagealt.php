@@ -1,0 +1,32 @@
+<?php
+
+return [
+
+    'logo' => 'شعار المستشفى',
+    'main_navigation' => 'التنقل الرئيسي',
+    'arrow' => 'سهم',
+    'arrow_up' => 'رمز السهم لأعلى',
+    'award' => 'أيقونة جائزة',
+    'photo' => 'الصورة',
+    'quote' => 'يقتبس',
+    'star' => 'نجم',
+    'add' => 'رمز إضافة',
+    'close' => 'رمز إغلاق',
+    'doctor' => 'طبيب',
+    'avatar' => 'مريض',
+    'doctor_icon' => 'أيقونة الأطباء',
+    'specialities' => 'أيقونة التخصصات',
+    'insurance' => 'أيقونة التأمين',
+    'heart' => 'قلب',
+    'confirmed_appointment' => 'موعد مؤكد',
+    'medication_delivery' => 'توصيل الأدوية',
+    'video_consultation' => 'استشارة فيديو',
+    'lab_test' => 'فحص مخبري',
+    'medical_facility' => 'داخل المنشأة الطبية',
+    'social_instagram' => 'شعار إنستغرام',
+    'social_snapchat' => 'شعار سناب شات',
+    'social_youtube' => 'شعار يوتيوب',
+    'social_tiktok' => 'شعار تيك توك',
+    'social_twitter' => 'شعار تويتر',
+    'footer_logo' => 'شعار مستشفى الدكتور خالد الرحيمي',
+];

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="{{ asset('frontend_v2/assets/logos/Logo2.png') }}">
-    <title>مستشفى د. خالد الرحيّمي – رعاية متقدمة</title>
-    <meta name="description" content="احصل على أفضل رعاية طبية وجراحية وتجميلية مع نخبة من الأطباء الموثوقين وأحدث التقنيات في مستشفى د. خالد الرحيّمي. احجز موعدك اليوم." />
-
+    <title>{{ __('header.title') }}</title>
+    <meta name="description" content="{{ __('header.description') }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,15 +20,14 @@
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-        }
+        
 
         /* .loader:before {
             content: "مستشفى الدكتور خالد الرحيمي...";
@@ -100,43 +99,43 @@
     <header class="site-header">
         <div class="header-container">
             <a href="{{ Route('home') }}">
-                <img src="{{ asset('frontend_v2/assets/Icons/logo.png') }}" alt="شعار المستشفى" class="hospital-logo" />
+                <img src="{{ asset('frontend_v2/assets/Icons/logo.png') }}" alt="{{ __('imagealt.logo') }}" class="hospital-logo" />
             </a>
             <div id="overlay" class="overlayz"></div>
-            <nav class="main-nav2" id="mainNav2" dir="rtl">
+            <nav class="main-nav2" id="mainNav2">
                 <button id="closeButton" class="close-buttonzz close-buttonzzl">×</button>
                 <div>
                     <div class="language-selector respo-lag" onclick="toggleLanguage()">
                         <div class="language-slider"></div>
-                        <span class="language-option">EN</span>
-                        <span class="language-option">AR</span>
+                        <span class="language-option" data-language="en">EN</span>
+                        <span class="language-option" data-language="ar">AR</span>
                     </div>
-                    <a href="{{ route('services') }}" class="nav-link2"><span class="spanz">٠١. </span>الخدمات</a>
-                    <a href="{{ route('blog') }}" class="nav-link2"><span class="spanz">٠٢. </span>المدونة</a>
-                    <a href="{{ route('about') }}" class="nav-link2"><span class="spanz">٠٣. </span>معلومات عنا</a>
-                    <a href="{{ route('contact_us') }}" class="nav-link2"><span class="spanz">٠٤. </span>اتصل بنا</a>
+                    <a href="{{ route('services') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no1') }} </span>{{ __('header.nav_services') }}</a>
+                    <a href="{{ route('blog') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no2') }} </span>{{ __('header.nav_blog') }}</a>
+                    <a href="{{ route('about') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no3') }} </span>{{ __('header.nav_about') }}</a>
+                    <a href="{{ route('contact_us') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no4') }} </span>{{ __('header.nav_contact') }}</a>
                     <div class="footer-line2"></div>
                     <div class="footer-tail-end">
-                        <div>© ٢٠٢٥ مستشفى الدكتور خالد الرحيمي. جميع الحقوق محفوظة.</div>
+                        <div>{{ __('header.footer_tail') }}</div>
                     </div>
                 </div>
             </nav>
-            <nav class="main-navigation" role="navigation" aria-label="التنقل الرئيسي" dir="rtl">
-                <a href="{{ route('services') }}" class="nav-link">الخدمات</a>
-                <a href="{{ route('blog') }}" class="nav-link">المدونة</a>
-                <a href="{{ route('about') }}" class="nav-link">معلومات عنا</a>
-                <a href="{{ route('contact_us') }}" class="nav-link">اتصل بنا</a>
+            <nav class="main-navigation" role="navigation" aria-label="{{ __('header.main_navigation') }}">
+                <a href="{{ route('services') }}" class="nav-link">{{ __('header.nav_services') }}</a>
+                <a href="{{ route('blog') }}" class="nav-link">{{ __('header.nav_blog') }}</a>
+                <a href="{{ route('about') }}" class="nav-link">{{ __('header.nav_about') }}</a>
+                <a href="{{ route('contact_us') }}" class="nav-link">{{ __('header.nav_contact') }}</a>
             </nav>
             <div class="header-actions">
                 <div class="language-selector lnon" onclick="toggleLanguage()">
                     <div class="language-slider"></div>
-                    <span class="language-option">EN</span>
-                    <span class="language-option">AR</span>
+                    <span class="language-option" data-language="en">EN</span>
+                    <span class="language-option" data-language="ar">AR</span>
                 </div>
                 <a href="tel:0550655152">
-                    <button class="book-now-button bnon" dir="rtl">
-                        <span class="book">احجز الآن</span>
-                        <img src="{{ asset('frontend_v2/assets/Icons/Arrow2.png') }}" alt="سهم" />
+                    <button class="book-now-button bnon">
+                        <span class="book">{{ __('header.book_now') }}</span>
+                        <img src="{{ asset('frontend_v2/assets/Icons/Arrow2.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </button>
                 </a>
                 <div class="menu-button w-nav-button" id="menuButton" style="margin-left: 12px;">

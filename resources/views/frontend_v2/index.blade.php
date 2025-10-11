@@ -67,21 +67,21 @@
 
     <div class="hero-content">
         <h1 class="hero-title anima" data-aos="fade-zoom-in">
-            مستشفى د. خالد الرحيّمي – رعاية متقدمة
+            {{ __('home.hero_title') }}
         </h1>
 
         <h5 class="hed_maindes">
-            احصل على أفضل رعاية طبية وجراحية وتجميلية مع نخبة من الأطباء الموثوقين وأحدث التقنيات. احجز موعدك اليوم.
+            {{ __('home.hero_subtitle') }}
         </h5>
 
 
         <div class="hero-actions">
             <div class="appointment-button-container">
                 <a href="tel:0550655152">
-                    <button class="appointment-button" dir="rtl">
-                        <span class="appointment-text">اتصل بنا</span>
+                    <button class="appointment-button">
+                        <span class="appointment-text">{{ __('home.appointment') }}</span>
                         <div class="doctor-icon-container">
-                            <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="سهم" />
+                            <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="{{ __('imagealt.arrow') }}" />
                         </div>
                     </button>
                 </a>
@@ -92,30 +92,30 @@
     </div>
 </section>
 
-<section class="services-section services-section" dir="rtl">
+<section class="services-section services-section">
     <div class="services-grid">
         <div class="services-header fade-in">
-            <img src="{{ asset('frontend_v2/assets/Icons/istock-doc.png') }}" alt="طبيب" class="services-image" />
-            <h2 class="services-title">ماذا نقدم لك</h2>
+            <img src="{{ asset('frontend_v2/assets/Icons/istock-doc.png') }}" alt="{{ __('imagealt.doctor') }}" class="services-image" />
+            <h2 class="services-title">{{ __('home.service_title') }}</h2>
             <div class="section-divider-vertical"></div>
         </div>
 
         <!-- Insurance -->
         <article class="service-card fade-in">
             <div class="service-logo-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" alt="شعار المستشفى" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" alt="{{ __('imagealt.logo') }}" />
             </div>
             <div class="service-icon-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Insurance.png') }}" alt="أيقونة التأمين" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Insurance.png') }}" alt="{{ __('imagealt.insurance') }}" />
             </div>
             <div class="service-info">
-                <h3 class="service-category">شركات التأمين</h3>
-                <p class="service-description">شركاؤنا في التأمين</p>
+                <h3 class="service-category">{{ __('home.insurance') }}</h3>
+                <p class="service-description">{{ __('home.insurance_desc') }}</p>
                 <div class="learn-more-link">
                     <div class="learn-more-arrow">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="سهم" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </div>
-                    <span class="learn-more-text">اعرف المزيد</span>
+                    <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                 </div>
             </div>
         </article>
@@ -123,19 +123,19 @@
         <!-- Doctors -->
         <article class="service-card">
             <div class="service-logo-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" alt="شعار المستشفى" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" alt="{{ __('imagealt.logo') }}" />
             </div>
             <div class="service-icon-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Doctors.png') }}" alt="أيقونة الأطباء" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Doctors.png') }}" alt="{{ __('imagealt.doctor_icon') }}" />
             </div>
             <div class="service-info">
-                <h3 class="service-category">أطباؤنا</h3>
-                <p class="service-description">أطباؤنا المتميزون</p>
+                <h3 class="service-category">{{ __('home.our_doctors') }}</h3>
+                <p class="service-description">{{ __('home.our_doctors_desc') }}</p>
                 <div class="learn-more-link">
                     <div class="learn-more-arrow">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="سهم" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </div>
-                    <span class="learn-more-text">اعرف المزيد</span>
+                    <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                 </div>
             </div>
         </article>
@@ -143,19 +143,19 @@
         <!-- Specialities -->
         <article class="service-card">
             <div class="service-logo-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" alt="شعار المستشفى" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" alt="{{ __('imagealt.logo') }}" />
             </div>
             <div class="service-icon-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Specialities.png') }}" alt="أيقونة التخصصات" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Specialities.png') }}" alt="{{ __('imagealt.specialities') }}" />
             </div>
             <div class="service-info">
-                <h3 class="service-category">تخصصاتنا</h3>
-                <p class="service-description">خدمات متعددة التخصصات</p>
+                <h3 class="service-category">{{ __('home.our_specialities') }}</h3>
+                <p class="service-description">{{ __('home.our_specialities_desc') }}</p>
                 <div class="learn-more-link">
                     <div class="learn-more-arrow">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="سهم" />
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </div>
-                    <span class="learn-more-text">اعرف المزيد</span>
+                    <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                 </div>
             </div>
         </article>
@@ -165,71 +165,67 @@
 </section>
 
 
-<div class="section  anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+<div class="section  anima" data-aos="fade-zoom-in">
     <div class="section-container">
-        <!-- القسم الأيسر -->
+        <!-- Left Section -->
         <div class="left-section">
             <div class="left-image">
-                <img src="{{ asset('frontend_v2/assets/images/image6.jpg') }}" alt="طبيب" />
+                <img src="{{ asset('frontend_v2/assets/images/image6.jpg') }}" alt="{{ __('imagealt.doctor') }}" />
             </div>
 
-            <div class="badge-emergency" style="left: 90px !important;">دعم طارئ على مدار الساعة</div>
+            <div class="badge-emergency" style="left: 90px !important;">{{ __('home.emergency') }}</div>
 
             <div class="satisfied-patients">
-                <div class="avatarsz">
-                    <img src="{{ asset('frontend_v2/assets/images/p1.jpg') }}" alt="مريض 1" />
-                    <img src="{{ asset('frontend_v2/assets/images/p2.jpg') }}" alt="مريض 2" />
-                    <img src="{{ asset('frontend_v2/assets/images/p3.jpg') }}" alt="مريض 3" />
-                    <img src="{{ asset('frontend_v2/assets/images/p4.jpg') }}" alt="مريض 4" />
+                <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
+                    <img src="{{ asset('frontend_v2/assets/images/p1.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p2.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p3.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p4.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
                 </div>
                 <div class="text">
-                    <span class="count">+150 ألف</span><br />
-                    <span class="label">مرضى راضون</span>
+                    <span class="count">{{ __('home.count') }}</span><br />
+                    <span class="label">{{ __('home.label') }}</span>
                 </div>
             </div>
         </div>
 
-        <!-- القسم الأيمن -->
-        <div class="right-content" dir="rtl">
+        <!-- Right Section -->
+        <div class="right-content">
             <h2 class="main-headline">
-                <span class="headline-part">صحتك هي أولويتنا، ورعايتك</span>
-                <span class="headline-emphasis">مسؤوليتنا.</span>
+                <span class="headline-part">{{ __('home.emergency_right') }}</span>
+                <span class="headline-emphasis">{{ __('home.emergency_right_emp') }}</span>
             </h2>
             <div class="feature-columns">
                 <div class="column">
                     <div>
-                        <h4>مرافق شاملة</h4>
+                        <h4>{{ __('home.feature1') }}</h4>
                         <p>
-                            مرافقنا مجهزة بأحدث الأجهزة الطبية المستوردة من الشركات العالمية الرائدة،
-                            مما يضمن تشخيصًا دقيقًا وراحة في كل مرحلة من مراحل علاجك.
+                            {{ __('home.feature1_desc') }}
                         </p>
                     </div>
                     <div>
-                        <h4>خبراء نخبة</h4>
+                        <h4>{{ __('home.feature2') }}</h4>
                         <p>
-                            يضم فريقنا نخبة من الأطباء والاستشاريين وهيئة التمريض ذوي الخبرة الدولية
-                            والمعايير المهنية العالية.
+                            {{ __('home.feature2_desc') }}
                         </p>
                     </div>
                 </div>
 
                 <div class="vertical-divider">
-                    <img src="{{ asset('frontend_v2/assets/images/Heart.png') }}" alt="قلب" />
+                    <img src="{{ asset('frontend_v2/assets/images/Heart.png') }}" alt="{{ __('imagealt.heart') }}" />
                 </div>
 
                 <div class="column">
                     <div>
-                        <h4>معايير سعودية بتميز عالمي</h4>
+                        <h4>{{ __('home.feature3') }}</h4>
                         <p>
-                            نحن ملتزمون بتقديم خدمات رعاية صحية وفق أعلى المواصفات الدولية
-                            مع الالتزام بالمعايير السعودية الموثوقة.
+                            {{ __('home.feature3_desc') }}
                         </p>
                     </div>
                     <div>
-                        <h4>رعاية تتجاوز التوقعات</h4>
+                        <h4>{{ __('home.feature4') }}</h4>
                         <p>
-                            نهتم بكل تفاصيل رحلتك العلاجية من الاستشارة إلى المتابعة—
-                            لنقدم لك تجربة طبية مميزة تعكس أفضل الممارسات العالمية.
+                            {{ __('home.feature4_desc') }}
                         </p>
                     </div>
                 </div>
@@ -238,59 +234,59 @@
 
     </div>
 
-    <div class="services-gridz" dir="rtl">
+    <div class="services-gridz">
         <div class="card light">
             <div class="card-content">
-                <h3>ابحث بسهولة عن الأطباء الموثوقين</h3>
-                <p>احجز موعدًا مع أفضل الأخصائيين في خطوات بسيطة وسهلة.</p>
+                <h3>{{ __('home.card1') }}</h3>
+                <p>{{ __('home.card1_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii1.png') }}" alt="طبيب" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii1.png') }}" alt="{{ __('imagealt.doctor') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="سهم صغير" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" />
             </div>
         </div>
 
         <div class="card dark">
             <div class="card-content">
-                <h3>مواعيد مؤكدة بدون تأخير</h3>
-                <p>استشارتك مضمونة مع الحجز الفوري والتأكيد السريع.</p>
+                <h3>{{ __('home.card2') }}</h3>
+                <p>{{ __('home.card2_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii2.png') }}" alt="مواعيد مؤكدة" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii2.png') }}" alt="{{ __('imagealt.confirmed_appointment') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="سهم صغير" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="{{ __('imagealt.arrow') }}" />
             </div>
         </div>
 
         <div class="card light">
             <div class="card-content">
-                <h3>توصيل الأدوية على مدار الساعة</h3>
-                <p>احصل على أدويتك الأساسية إلى باب منزلك في أي وقت بأمان وراحة.</p>
+                <h3>{{ __('home.card3') }}</h3>
+                <p>{{ __('home.card3_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii3.jpg') }}" alt="توصيل الأدوية" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii3.jpg') }}" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="سهم صغير" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" />
             </div>
         </div>
 
         <div class="card dark">
             <div class="card-content">
-                <h3>استشارات فيديو فورية</h3>
-                <p>تواصل مع طبيبك في أقل من دقيقة – آمن وسريع ومريح.</p>
+                <h3>{{ __('home.card4') }}</h3>
+                <p>{{ __('home.card4_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii4.png') }}" alt="استشارة فيديو" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii4.png') }}" alt="{{ __('imagealt.video_consultation') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="سهم صغير" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="{{ __('imagealt.arrow') }}" />
             </div>
         </div>
 
         <div class="card light">
             <div class="card-content">
-                <h3>جمع العينات من المنزل</h3>
-                <p>قم بإجراء فحوصاتك المخبرية بسهولة وراحة من منزلك.</p>
+                <h3>{{ __('home.card5') }}</h3>
+                <p>{{ __('home.card5_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" alt="فحص مخبري" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" alt="{{ __('imagealt.lab_test') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="سهم صغير" />
+                <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" />
             </div>
         </div>
     </div>
@@ -298,54 +294,52 @@
 </div>
 
 
-<section class="section sectionz sectionzz anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+<section class="section sectionz sectionzz anima" data-aos="fade-zoom-in">
     <div class="medical-facility-showcase showcasez">
         <div class="showcase-container">
             <div class="content-wrapper">
                 <main class="main-content main-contentz">
                     <div class="content-header">
                         <h1 class="brand-title">
-                            <span class="brand-name">عالمياً</span>
-                            <span class="brand-tagline"> رعاية صحية موثوقة</span>
+                            <span class="brand-name">{{ __('home.brand_name') }}</span>
+                            <span class="brand-tagline">{{ __('home.brand_tagline') }}</span>
                         </h1>
                         <h2 class="main-headline">
-                            <span class="headline-part">مستشفى د. خالد الرحيّمي</span>
-                            <span class="headline-emphasis"> – رعاية طبية بمستوى عالمي</span>
+                            <span class="headline-part">{{ __('home.headline') }}</span>
+                            <span class="headline-emphasis">{{ __('home.headline_emp') }}</span>
                         </h2>
                         <p class="facility-description">
-                            نحن نؤمن أن الرعاية الاستثنائية تبدأ بأشخاص استثنائيين. لهذا السبب نجمع بين أحدث
-                            التقنيات الطبية مع الاستشاريين والأطباء المتخصصين لتقديم رعاية تتمحور حول المريض،
-                            تجمع بين التميز الطبي والرحمة الحقيقية.
+                            {{ __('home.description') }}
                         </p>
                     </div>
                     <div class="features-grid">
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="{{ __('imagealt.arrow_up') }}" />
                             </div>
                             <h3 class="feature-title">
-                                أطباء واستشاريون معتمدون دولياً
+                                {{ __('home.feature_title1') }}
                             </h3>
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="{{ __('imagealt.arrow_up') }}" />
                             </div>
-                            <h3 class="feature-title">أحدث التقنيات والمعدات الطبية</h3>
+                            <h3 class="feature-title">{{ __('home.feature_title2') }}</h3>
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="{{ __('imagealt.arrow_up') }}" />
                             </div>
                             <h3 class="feature-title">
-                                رعاية عالية الجودة وفعّالة من حيث التكلفة
+                                {{ __('home.feature_title3') }}
                             </h3>
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="رمز السهم لأعلى" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" alt="{{ __('imagealt.arrow_up') }}" />
                             </div>
-                            <h3 class="feature-title">قبول جميع شركات التأمين الكبرى</h3>
+                            <h3 class="feature-title">{{ __('home.feature_title4') }}</h3>
                         </article>
                     </div>
                 </main>
@@ -355,15 +349,15 @@
                   background-image: url('frontend_v2/assets/Icons/Union.png');
                   background-size: cover;
                   background-position: center;
-                " role="img" aria-label="داخل المنشأة الطبية"></div>
+                " role="img" aria-label="{{ __('imagealt.medical_facility') }}"></div>
                         <div class="experience-badge" style="right: unset;">
                             <div class="badge-content">
                                 <div class="badge-text">
-                                    <span class="years-number">20+</span>
+                                    <span class="years-number">{{ __('home.year_no') }}</span>
                                     <br />
-                                    <span class="years-label">سنة من</span>
+                                    <span class="years-label">{{ __('home.year') }}</span>
                                     <br />
-                                    <span class="experience-label">الخبرة</span>
+                                    <span class="experience-label">{{ __('home.experience') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -374,34 +368,34 @@
         <section class="awards-section">
             <div class="awards-container">
                 <div class="award-item">
-                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="أيقونة جائزة" class="award-image" />
+                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="{{ __('imagealt.award') }}" class="award-image" />
                     <div class="award-text">
-                        <h3>مراجع راضي</h3>
-                        <p>1,300,000 +</p>
+                        <h3>{{ __('home.award_title1') }}</h3>
+                        <p>{{ __('home.no1') }}</p>
                     </div>
                 </div>
                 <div class="award-item">
-                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="أيقونة جائزة" class="award-image" />
+                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="{{ __('imagealt.award') }}" class="award-image" />
                     <div class="award-text">
-                        <h3>طبيب في خدمتك</h3>
-                        <p>60 +</p>
+                        <h3>{{ __('home.award_title2') }}</h3>
+                        <p>{{ __('home.no2') }}</p>
                     </div>
                 </div>
                 <div class="award-item">
-                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="أيقونة جائزة" class="award-image" />
+                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="{{ __('imagealt.award') }}" class="award-image" />
                     <div class="award-text">
                         <h3>
-                            فروع في المملكة <br />
-                            العربية السعودية
+                            {{ __('home.award_title3_1') }} <br />
+                            {{ __('home.award_title3_2') }}
                         </h3>
-                        <p>8</p>
+                        <p class="">{{ __('home.no3') }}</p>
                     </div>
                 </div>
                 <div class="award-item">
-                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="أيقونة جائزة" class="award-image" />
+                    <img src="{{ asset('frontend_v2/assets/Icons/award.png') }}" alt="{{ __('imagealt.award') }}" class="award-image" />
                     <div class="award-text">
-                        <h3>سنوات من الخبرة</h3>
-                        <p>20 +</p>
+                        <h3>{{ __('home.award_title4') }}</h3>
+                        <p>{{ __('home.no4') }}</p>
                     </div>
                 </div>
             </div>
@@ -413,33 +407,31 @@
     <div class="team-section">
         <div class="team-container">
             <div class="team-header">
-                <h2 class="section-title">تعرف على الفريق</h2>
+                <h2 class="section-title">{{ __('home.team_card_title') }}</h2>
                 <div class="header-content" style="align-items: center; gap: 2px">
-                    <h2 class="main-headline" dir="rtl">
-                        <span class="headline-part">تعرف على أطبائنا المتخصصين في</span>
+                    <h2 class="main-headline">
+                        <span class="headline-part">{{ __('home.team_card_head') }}</span>
                         <span class="headline-emphasis">DRK</span>
                     </h2>
 
                     <div>
                         <div class="satisfied-patients" style="position: unset; box-shadow: unset">
-                            <div class="avatarsz">
-                                <img src="{{ asset('frontend_v2/assets/images/ds1.png') }}" alt="الصورة 1" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds2.png') }}" alt="الصورة 2" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds3.png') }}" alt="الصورة 3" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds4.png') }}" alt="الصورة 4" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds5.png') }}" alt="الصورة 5" />
+                            <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
+                                <img src="{{ asset('frontend_v2/assets/images/ds1.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds2.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds3.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds4.png') }}" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds5.png') }}" alt="{{ __('imagealt.photo') }}" />
                             </div>
                             <div class="text">
                                 <span class="count">+50</span><br />
-                                <span class="label">طبيب ماهر</span>
+                                <span class="label">{{ __('home.team_card_label') }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="team-description" dir="rtl">
-                    يجمع فريقنا الطبي بين أكثر من 20 عامًا من الخبرة وأحدث التطورات في التكنولوجيا الطبية.
-                    يضم المستشفى مجموعة متميزة من الاستشاريين والأخصائيين المعتمدين دوليًا،
-                    المكرسين لمعالجة السبب الجذري للأمراض وتعزيز صحة ورفاهية كل مريض.
+                <p class="team-description">
+                    {{ __('home.team_card_desc') }}
                 </p>
 
             </div>
@@ -451,11 +443,11 @@
                         <div class="card-background"></div>
                         <div class="card-watermark"></div>
                         <div>
-                            <img src="{{asset('images').'/'.$item->image}}" alt="دنيا _ اخصائية الجلدية و التجميل. الليزر " class="doctor-image" />
+                            <img src="{{asset('images').'/'.$item->image}}" alt="{{ $item->name_ar }}" class="doctor-image" />
                             <div class="doctor-info">
                                 <div class="doctor-details">
-                                    <h3 class="doctor-name">{{ $item->name_ar }}</h3>
-                                    <p class="doctor-specialty">{{ $item->department_name }}</p>
+                                    <h3 class="doctor-name">{{ app()->getLocale() === 'ar' ? $item->name_ar : $item->name_en }}</h3>
+                                    <p class="doctor-specialty">{{ app()->getLocale() === 'ar' ? $item->department_ar : $item->department_en }}</p>
                                 </div>
                             </div>
                         </div>
@@ -465,10 +457,10 @@
                 <a href="{{ route('services') }}" style="text-decoration: none;">
                     <div class="view-all-section">
                         <button class="view-all-button" type="button">
-                            <span class="view-all-text">عرض جميع الأطباء</span>
+                            <span class="view-all-text">{{ __('home.team_card_btn') }}</span>
                         </button>
                         <div>
-                            <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-linestr.png') }}" alt="سهم" />
+                            <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-linestr.png') }}" alt="{{ __('imagealt.arrow') }}" />
                         </div>
                     </div>
                 </a>
@@ -477,15 +469,15 @@
     </div>
 </section>
 
-<section class="section sectionzz  anima" data-aos="fade-zoom-in" dir="rtl" lang="ar">
+<section class="section sectionzz  anima" data-aos="fade-zoom-in">
     <div class="departments-section">
         <div class="departments-container">
             <div class="departments-content">
-                <div class="departments-header" style="left: 0 !important; right: 60px !important;">
-                    <h2 class="departments-label" dir="rtl">أقسامنا</h2>
-                    <h2 class="main-headline" dir="rtl">
-                        <span class="headline-emphasis">أقسامنا الطبية المتخصصة</span>
-                        <span class="headline-part"> والمتنوعة</span>
+                <div class="departments-header" @if(app()->getLocale() === 'ar') style="left: 0 !important; right: 60px !important;" @endif>
+                    <h2 class="departments-label">{{ __('home.department_title') }}</h2>
+                    <h2 class="main-headline">
+                        <span class="headline-emphasis">{{ __('home.department_subtitle') }}</span>
+                        <span class="headline-part">{{ __('home.department_subtitle1') }}</span>
                     </h2>
 
                 </div>
@@ -496,12 +488,12 @@
                             <article class="department-card">
                                 <div class="department-image-container">
                                     <img class="department-image"
-                                        src="{{ asset('images').'/'.$row->image}}" alt="{{$row->department_ar}}"></img>
+                                        src="{{ asset('images').'/'.$row->image}}" alt="{{ app()->getLocale() === 'ar' ? $row->department_ar : $row->department_en }}"></img>
                                     <div class="department-icon">
-                                        <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="سهم صغير" />
+                                        <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" alt="{{ __('imagealt.arrow') }}" />
                                     </div>
                                 </div>
-                                <h3 class="department-name">{{$row->department_ar}}</h3>
+                                <h3 class="department-name">{{ app()->getLocale() === 'ar' ? $row->department_ar : $row->department_en }}</h3>
                                 <p class="department-description">
                                     {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($row->department_details)), 40) }}
                                 </p>
@@ -513,18 +505,17 @@
                 <div class="appointment-cta">
                     <div class="appointment-content">
                         <div class="appointment-textz">
-                            <h2 class="appointment-title">احجز موعدك الآن</h2>
+                            <h2 class="appointment-title">{{ __('home.appointment_title') }}</h2>
                             <p class="appointment-description">
-                                ابدأ رحلتك نحو رعاية صحية عالمية المستوى.
-                                فريقنا الطبي جاهز لتقديم علاج شخصي يناسب احتياجاتك بدقة واهتمام.
+                                {{ __('home.appointment_description') }}
                             </p>
 
                         </div>
                         <div class="appointment-button-container">
                             <a href="tel:0550655152">
                                 <button class="appointment-buttonz">
-                                    <span class="appointment-textb">احجز موعدًا</span>
-                                    <div class="doctor-icon-container"><img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="سهم صغير" />
+                                    <span class="appointment-textb">{{ __('home.appointment_btn') }}</span>
+                                    <div class="doctor-icon-container"><img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="{{ __('imagealt.arrow') }}" />
                                     </div>
                                 </button>
                             </a>
@@ -537,38 +528,38 @@
     </div>
 </section>
 
-<section class="section topz anima" data-aos="fade-zoom-in" dir="rtl">
+<section class="section topz anima" data-aos="fade-zoom-in">
     <div class="partners-section">
         <div class="partners-header">
-            <h2 class="main-headline" dir="rtl">
-                <span class="headline-part">شركاؤنا في</span>
-                <span class="headline-emphasis">النجاح</span>
+            <h2 class="main-headline">
+                <span class="headline-part">{{ __('home.partners_head') }}</span>
+                <span class="headline-emphasis">{{ __('home.partners_head_emp') }}</span>
             </h2>
 
-            <p dir="rtl">
-                نحن نفخر بالتعاون مع المؤسسات والمنظمات الرائدة لضمان <br>
-                رعاية صحية ترتقي إلى المعايير العالمية. التزامنا بالتميز يبدأ <br>
-                من خلال الشراكات الموثوقة التي نبنيها.
+            <p>
+                {{ __('home.partners_head_desc') }} <br>
+                {{ __('home.partners_head_desc1') }} <br>
+                {{ __('home.partners_head_desc2') }}
             </p>
 
         </div>
 
         <div class="partners-logos-grid">
             @foreach ($partner as $item)
-            <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->partner_ar}}" />
+            <img src="{{asset('images').'/'.$item->image}}" alt="{{ app()->getLocale() === 'ar' ? $item->partner_ar : $item->partner_en }}" />
             @endforeach
 
         </div>
     </div>
     <div class="partners-section" style="margin-bottom: 0px !important;">
         <div class="partners-header">
-            <h2 class="main-headline" dir="rtl">
-                <span class="headline-emphasis">شركات</span>
-                <span class="headline-part">التأمين</span>
+            <h2 class="main-headline">
+                <span class="headline-emphasis">{{ __('home.insurance_head') }}</span>
+                <span class="headline-part">{{ __('home.insurance_head_emp') }}</span>
             </h2>
-            <p dir="rtl">
-                نحن نتعاون مع جميع شركات التأمين الكبرى لضمان تغطية شاملة<br>
-                وتجربة رعاية صحية سلسة.
+            <p>
+                {{ __('home.insurance_head_desc') }}<br>
+                {{ __('home.insurance_head_desc1') }}
             </p>
 
 
@@ -576,26 +567,26 @@
 
         <div class="partners-logos-gridzz">
             @foreach ($insurance as $item)
-            <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->insurance_ar}}" />
+            <img src="{{asset('images').'/'.$item->image}}" alt="{{ app()->getLocale() === 'ar' ? $item->insurance_ar : $item->insurance_en }}" />
             @endforeach
         </div>
     </div>
 </section>
 
-<section id="blog" class="section sectionzz" dir="rtl">
+<section id="blog" class="section sectionzz">
     <div class="medical-facility-showcase">
         <div class="showcase-container" style="align-items: flex-start">
             <div class="blog-header  anima" data-aos="fade-zoom-in">
-                <h2 class="blog-category">مدونتنا</h2>
+                <h2 class="blog-category">{{ __('home.blog_section') }}</h2>
                 <h2 class="main-headline">
-                    <span class="headline-part">نصائح</span>
-                    <span class="headline-emphasis">الصحة والعافية</span>
-                    <span class="headline-part">الطبية</span>
+                    <span class="headline-part">{{ __('home.blog_section_head') }}</span>
+                    <span class="headline-emphasis">{{ __('home.blog_section_head1') }}</span>
+                    <span class="headline-part">{{ __('home.blog_section_head2') }}</span>
                 </h2>
-                <p class="blog-description" dir="rtl">
-                    اكتشف أحدث المقالات الطبية، ونصائح العافية، ورؤى الخبراء المصممة <br>
-                    لمساعدتك على اتخاذ قرارات واثقة بشأن صحتك. نحن نشاركك المعرفة <br>
-                    التي تحتاجها لتظل في أفضل حال دائمًا.
+                <p class="blog-description">
+                    {{ __('home.blog_section_desc') }} <br>
+                    {{ __('home.blog_section_desc1') }} <br>
+                    {{ __('home.blog_section_desc2') }}
                 </p>
 
             </div>
@@ -605,14 +596,22 @@
             <div class="blog-grid  anima" data-aos="fade-zoom-in">
                 @foreach ($article as $item)
                 <article class="blog-card  {{ count($article) === 1 ? 'single-blog' : '' }}">
-                    <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title_ar}}" class="blog-image" />
+                    <img src="{{asset('images').'/'.$item->image}}" alt="{{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}" class="blog-image" />
                     <div class="blog-content">
                         <div class="blog-card-header">
                             <h3 class="blog-card-title">
-                                {{$item->title_ar}}
+                                {{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}
                             </h3>
+                            @php
+                            $date = $item->created_at->locale(app()->getLocale())->translatedFormat('d F Y');
+                            if (app()->getLocale() === 'ar') {
+                            $western = ['0','1','2','3','4','5','6','7','8','9'];
+                            $eastern = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+                            $date = str_replace($western, $eastern, $date);
+                            }
+                            @endphp
                             <time class="blog-date" datetime="{{ $item->created_at->format('Y-m-d') }}">
-                                {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
+                                {{ $date }}
                             </time>
                         </div>
                         <div class="blog-card-body">
@@ -621,7 +620,7 @@
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
                                 <span class="link-text">عرض التفاصيل</span>
-                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="سهم صغير" class="link-arrow" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="{{ __('imagealt.arrow') }}" class="link-arrow" />
                             </a>
                         </div>
                     </div>
@@ -658,23 +657,22 @@
     </div>
 </section>
 
-<section class="section sectionz sectionzz tonbotz" style="padding: 40px 0px" dir="rtl">
+<section class="section sectionz sectionzz tonbotz" style="padding: 40px 0px">
     <div class="partners-section" style="text-align: start">
         <div class="faq-container anima" data-aos="fade-zoom-in">
             <div class="faq-header">
                 <div class="header-content">
-                    <p class="section-label">هل لديك أسئلة؟</p>
+                    <p class="section-label">{{ __('home.faq_title') }}</p>
 
                     <h2 class="main-headline">
-                        <span class="headline-part">الأسئلة الشائعة</span>
+                        <span class="headline-part">{{ __('home.faq_frequent') }}</span>
                         <span class="headline-emphasis">(FAQ)</span>
                     </h2>
 
                     <p class="description">
-                        نحن هنا لمساعدتك والإجابة على جميع استفساراتك بأسرع وقت ممكن.
-                        إذا لم تجد ما تبحث عنه، <br>
+                        {{ __('home.faq_desc') }} <br>
                         <a href="https://wa.me/966138955555" style="font-weight: bold;color: #000;">
-                            تواصل معنا الآن
+                            {{ __('home.faq_desc1') }}
                         </a>
                     </p>
                 </div>
@@ -686,79 +684,75 @@
             <div class="faq-list">
                 <article class="faq-item expanded" data-faq="1">
                     <div class="faq-question">
-                        <h3 class="question-text">كيف يمكنني حجز موعد؟</h3>
+                        <h3 class="question-text">{{ __('home.faq_q1') }}</h3>
                         <button class="toggle-button" aria-expanded="true" aria-controls="answer-1">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="{{ __('imagealt.close') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-1">
                         <p class="answer-text">
-                            يمكنك الحجز بسهولة عبر موقعنا الإلكتروني، الاتصال بخط المساعدة المتاح على مدار الساعة،
-                            أو زيارة المستشفى مباشرة.
-                            قد تتوفر المواعيد في نفس اليوم حسب التخصص.
+                            {{ __('home.faq_a1') }}
                         </p>
                     </div>
                 </article>
 
                 <article class="faq-item" data-faq="2">
                     <div class="faq-question">
-                        <h3 class="question-text">ماذا يجب أن أحضر في زيارتي الأولى؟</h3>
+                        <h3 class="question-text">{{ __('home.faq_q2') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-2">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="{{ __('imagealt.close') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-2">
                         <p class="answer-text">
-                            يرجى إحضار بطاقة الهوية، بطاقة التأمين الصحي، وأي تقارير أو نتائج فحوصات طبية سابقة.
+                            {{ __('home.faq_a2') }}
                         </p>
                     </div>
                 </article>
 
                 <article class="faq-item" data-faq="3">
                     <div class="faq-question">
-                        <h3 class="question-text">هل تقدمون الاستشارات الطبية عن بعد أو الافتراضية؟</h3>
+                        <h3 class="question-text">{{ __('home.faq_q3') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-3">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="{{ __('imagealt.close') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-3">
                         <p class="answer-text">
-                            نعم، نقدم استشارات افتراضية مع أطبائنا الخبراء لتسهيل الوصول إلى الرعاية الصحية من أي
-                            مكان.
+                            {{ __('home.faq_a3') }}
                         </p>
                     </div>
                 </article>
 
                 <article class="faq-item" data-faq="4">
                     <div class="faq-question">
-                        <h3 class="question-text">هل تتوفر خدمات الطوارئ؟</h3>
+                        <h3 class="question-text">{{ __('home.faq_q4') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-4">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="{{ __('imagealt.close') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-4">
                         <p class="answer-text">
-                            بالتأكيد. قسم الطوارئ لدينا مجهز بالكامل ويعمل على مدار الساعة لخدمتك في أي حالة طارئة.
+                            {{ __('home.faq_a4') }}
                         </p>
                     </div>
                 </article>
 
                 <article class="faq-item" data-faq="5">
                     <div class="faq-question">
-                        <h3 class="question-text">كيف يمكنني الوصول إلى نتائج المختبر أو الأشعة؟</h3>
+                        <h3 class="question-text">{{ __('home.faq_q5') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-5">
-                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="رمز إغلاق" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="رمز إضافة" />
+                            <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" alt="{{ __('imagealt.close') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-5">
                         <p class="answer-text">
-                            يمكن الحصول على النتائج مباشرة من المختبر، أو الوصول إليها عبر حسابك الإلكتروني للمرضى،
-                            أو تقديمها لك من قبل الطبيب المعالج.
+                            {{ __('home.faq_a5') }}
                         </p>
                     </div>
                 </article>
@@ -769,19 +763,19 @@
 
 
 
-<section class="section sectionzz" dir="rtl">
+<section class="section sectionzz">
     <div class="medical-facility-showcase">
         <div class="testimonials-container">
             <div class="testimonials-header anima" data-aos="fade-zoom-in">
                 <p class="section-label" style="margin-bottom: 25px">
-                    آراء المرضى
+                   {{ __('home.testimonial_title') }}
                 </p>
                 <h2 class="main-headline">
-                    <span class="headline-emphasis">قصص </span>
-                    <span class="headline-part">مرضانا</span>
+                    <span class="headline-emphasis">{{ __('home.testimonial_head') }}</span>
+                    <span class="headline-part">{{ __('home.testimonial_head_emp') }}</span>
                 </h2>
                 <p class="section-description">
-                    لكل مريض قصة. استمعوا إلى رحلاتهم واكتشفوا الرعاية الرحيمة وراء عملنا.
+                    {{ __('home.testimonial_desc') }}
                 </p>
             </div>
 
@@ -791,22 +785,21 @@
                         <div class="card-header">
                             <div class="card-header-content">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="اقتباس" class="quote-image" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="{{ __('imagealt.quote') }}" class="quote-image" />
                                 </div>
                                 <div class="rating-container">
                                     <span class="rating-score">5.0</span>
-                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="{{ __('imagealt.star') }}" class="rating-stars" />
                                 </div>
                             </div>
                             <blockquote class="testimonial-text">
-                                "تجربتي مع قسم النساء والتوليد كانت ممتازة للغاية. دعم الفريق الطبي لي في كل خطوة
-                                وجعلني أشعر بالراحة والطمأنينة التامة. ممتنة جدًا لرعايتهم." 😊
+                                {{ __('home.testimonial_quote') }}
                             </blockquote>
                         </div>
                         <div class="card-divider"></div>
                         <div class="customer-info">
-                            <h3 class="customer-name">السيدة سارة العتيبي</h3>
-                            <p class="customer-location">الأحساء، المملكة العربية السعودية</p>
+                            <h3 class="customer-name">{{ __('home.testimonial_customer') }}</h3>
+                            <p class="customer-location">{{ __('home.testimonial_customer_loc') }}</p>
                         </div>
                     </div>
                 </article>
@@ -816,22 +809,21 @@
                         <div class="card-header">
                             <div class="card-header-content">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="اقتباس" class="quote-image" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="{{ __('imagealt.quote') }}" class="quote-image" />
                                 </div>
                                 <div class="rating-container">
                                     <span class="rating-score">5.0</span>
-                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="{{ __('imagealt.star') }}" class="rating-stars" />
                                 </div>
                             </div>
                             <blockquote class="testimonial-text">
-                                "كان ابني بحاجة إلى متابعة دقيقة، وكان فريق الأطفال صبورًا جدًا وشرح كل شيء بوضوح.
-                                شعرت بالاطمئنان والثقة في رعايتهم." 👶✨
+                                {{ __('home.testimonial_quote1') }}
                             </blockquote>
                         </div>
                         <div class="card-divider"></div>
                         <div class="customer-info">
-                            <h3 class="customer-name">السيد محمد الغامدي</h3>
-                            <p class="customer-location">الفُرسان، المملكة العربية السعودية</p>
+                            <h3 class="customer-name">{{ __('home.testimonial_customer1') }}</h3>
+                            <p class="customer-location">{{ __('home.testimonial_customer_loc1') }}</p>
                         </div>
                     </div>
                 </article>
@@ -841,22 +833,21 @@
                         <div class="card-header">
                             <div class="card-header-content">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="اقتباس" class="quote-image" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="{{ __('imagealt.quote') }}" class="quote-image" />
                                 </div>
                                 <div class="rating-container">
                                     <span class="rating-score">5.0</span>
-                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="{{ __('imagealt.star') }}" class="rating-stars" />
                                 </div>
                             </div>
                             <blockquote class="testimonial-text">
-                                "كان قسم الطوارئ سريعًا ومنظمًا بشكل جيد. منذ لحظة دخولنا، شعرنا بالأمان وفي أيدٍ
-                                أمينة. جزاهم الله خيرًا."
+                                {{ __('home.testimonial_quote2') }}
                             </blockquote>
                         </div>
                         <div class="card-divider"></div>
                         <div class="customer-info">
-                            <h3 class="customer-name">السيد عبدالله الشمراني</h3>
-                            <p class="customer-location">العزيزية، المملكة العربية السعودية</p>
+                            <h3 class="customer-name">{{ __('home.testimonial_customer2') }}</h3>
+                            <p class="customer-location">{{ __('home.testimonial_customer_loc2') }}</p>
                         </div>
                     </div>
                 </article>
@@ -866,22 +857,21 @@
                         <div class="card-header">
                             <div class="card-header-content">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="اقتباس" class="quote-image" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="{{ __('imagealt.quote') }}" class="quote-image" />
                                 </div>
                                 <div class="rating-container">
                                     <span class="rating-score">5.0</span>
-                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="تقييم 5 نجوم" class="rating-stars" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" alt="{{ __('imagealt.star') }}" class="rating-stars" />
                                 </div>
                             </div>
                             <blockquote class="testimonial-text">
-                                "أجريت عملية جراحية لتخفيف الوزن في المستشفى، وكانت النتائج مذهلة وغيرت حياتي
-                                للأفضل. كان الفريق محترفًا ودعمني طوال فترة التعافي. أنصح بشدة بخدماتهم." 👍
+                                {{ __('home.testimonial_quote3') }}
                             </blockquote>
                         </div>
                         <div class="card-divider"></div>
                         <div class="customer-info">
-                            <h3 class="customer-name">السيدة ريم القحطاني</h3>
-                            <p class="customer-location">الدمام، المملكة العربية السعودية</p>
+                            <h3 class="customer-name">{{ __('home.testimonial_customer3') }}</h3>
+                            <p class="customer-location">{{ __('home.testimonial_customer_loc3') }}</p>
                         </div>
                     </div>
                 </article>

@@ -147,13 +147,21 @@
         <div class="blog-detail-container">
             <!-- Header -->
             <div class="blog-detail-header">
-                <h1>{{$article->title_ar}}</h1>
-                <p class="blog-meta">{{ \Carbon\Carbon::parse($article->created_at)->translatedFormat('d F Y') }}</p>
+                <h1>{{ app()->getLocale() === 'ar' ? $article->title_ar : $article->title_en }}</h1>
+                @php
+                $date = $article->created_at->locale(app()->getLocale())->translatedFormat('d F Y');
+                if (app()->getLocale() === 'ar') {
+                $western = ['0','1','2','3','4','5','6','7','8','9'];
+                $eastern = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+                $date = str_replace($western, $eastern, $date);
+                }
+                @endphp
+                <p class="blog-meta">{{ $date }}</p>
                 <!-- <p class="blog-meta">By Dr. Khalid Al-Ruhaimi | April 15, 2025 | 6 min read</p> -->
             </div>
 
             <!-- Featured Image -->
-            <img src="{{asset('images').'/'.$article->image}}" alt="{{$article->title_ar}}" class="blog-featured-image" />
+            <img src="{{asset('images').'/'.$article->image}}" alt="{{ app()->getLocale() === 'ar' ? $article->title_ar : $article->title_en }}" class="blog-featured-image" />
 
             <!-- Blog Content -->
             <div class="blog-contentz">
@@ -186,8 +194,8 @@
                     @foreach ($articles as $item)
                     <a href="{{route('articleDetails', ['surl' => $item->slug])}}">
                         <div class="related-card">
-                            <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title_ar}}">
-                            <h4>{{$item->title_ar}}</h4>
+                            <img src="{{asset('images').'/'.$item->image}}" alt="{{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}">
+                            <h4>{{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}</h4>
                         </div>
                     </a>
                     @endforeach

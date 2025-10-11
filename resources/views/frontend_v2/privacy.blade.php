@@ -1,6 +1,62 @@
 @extends('frontend_v2.layouts.FrontendLayout')
 @section('content')
+
 <style>
+
+  @media (min-width: 300px) and (max-width: 750px) {
+    .appointment-cta {
+      width: unset;
+      padding: 15px;
+      left: unset;
+      top: unset;
+      height: auto;
+      margin: 0px 15px;
+      bottom: -170px;
+    }
+
+    .departments-container {
+      width: 100%;
+      max-width: 1666px;
+      height: 800px;
+      position: relative;
+    }
+  }
+
+  .hospital-logoz {
+    width: 100%;
+    height: auto;
+    margin-right: unset !important;
+    margin-left: 40px;
+  }
+
+  .close-buttonzzl {
+    position: absolute;
+    top: 20px;
+    right: unset !important;
+    left: 20px !important;
+    background: none;
+    border: none;
+    font-size: 41px;
+    cursor: pointer;
+    color: #000;
+  }
+
+  .nav-link2:hover {
+    color: #980a50;
+    border-right: 5px solid #980a50 !important;
+    border-left: unset;
+  }
+
+  .dropdown-contentz a:hover {
+    border-right: 5px solid #980a50;
+    border-left: unset;
+  }
+
+  .service-logo-container {
+    right: unset !important;
+    left: 10px !important;
+  }
+
   /* --- Privacy Policy Section Styles --- */
   .privacy-policy-section {
     background: #f8f9fa;
@@ -73,81 +129,66 @@
   }
 </style>
 
-
-
-<footer class="hospital-footer" style="margin-bottom: 20px;margin-top: 120px;">
-  <!-- About + Footer Content (your existing code) -->
+<footer class="hospital-footer" style="margin-bottom: 20px; margin-top: 120px;">
+  <!-- محتوى الفوتر -->
 
   <section class="privacy-policy">
     <div class="privacy-container">
-      <h1 class="privacy-title">Privacy Policy</h1>
+      <h1 class="privacy-title">{{ __('privacy.title') }}</h1>
 
       <p>
-        At Dr. Khalid Al-Ruhaimi Hospital (“we,” “our,” “us”), we are committed
-        to safeguarding your privacy and protecting your personal information.
-        This Privacy Policy explains how we collect, use, share, and protect
-        your data, as well as your rights as a user of our website and services.
+        {{ __('privacy.description')}}
       </p>
 
-      <h3>1. Information We Collect</h3>
+      <h3>{{ __('privacy.1') }}</h3>
       <ul>
-        <li><strong>Personal Information:</strong> such as your name, email address, phone number, home address, and
-          insurance details when booking appointments or submitting inquiries.</li>
-        <li><strong>Medical and Sensitive Information:</strong> including medical history, test results, or health
-          records, which are collected strictly for medical and treatment purposes in compliance with applicable
-          healthcare regulations.</li>
-        <li><strong>Technical Information:</strong> such as IP address, browser type, device details, and cookies, to
-          improve performance and security of our website.</li>
+        <li>{!! __('privacy.1_1') !!}</li>
+        <li>{!! __('privacy.1_2') !!}</li>
+        <li>{!! __('privacy.1_3') !!}</li>
       </ul>
 
-      <h3>2. How We Use Your Information</h3>
+      <h3>{{ __('privacy.2') }}</h3>
       <ul>
-        <li>To process appointment bookings, inquiries, and medical requests.</li>
-        <li>To communicate with you regarding appointments, results, and important updates.</li>
-        <li>To enhance our website, user experience, and service quality.</li>
-        <li>To comply with applicable laws, regulations, and health authority requirements in Saudi Arabia.</li>
+        <li>{{ __('privacy.2_1') }}</li>
+        <li>{{ __('privacy.2_2') }}</li>
+        <li>{{ __('privacy.2_3') }}</li>
+        <li>{{ __('privacy.2_4') }}</li>
       </ul>
 
-      <h3>3. Sharing of Information</h3>
+      <h3>{{ __('privacy.3') }}</h3>
       <ul>
-        <li>We do not sell or trade your personal data to third parties.</li>
-        <li>Information may be shared with trusted third parties only where necessary, such as insurance providers,
-          laboratories, or government health authorities, under strict confidentiality obligations.</li>
-        <li>Technical service providers (e.g., payment gateways or booking systems) may access limited information to
-          fulfill service requirements.</li>
+        <li>{{ __('privacy.3_1') }}</li>
+        <li>{{ __('privacy.3_2') }}</li>
+        <li>{{ __('privacy.3_3') }}</li>
       </ul>
 
-      <h3>4. Data Retention and Security</h3>
+      <h3>{{ __('privacy.4') }}</h3>
       <ul>
-        <li>Your data is retained only as long as required for providing services and meeting legal obligations.</li>
-        <li>We use advanced security measures including SSL encryption, firewalls, anti-malware protections, and
-          restricted access for authorized staff only.</li>
+        <li>{{ __('privacy.4_1') }}</li>
+        <li>{{ __('privacy.4_2') }}</li>
       </ul>
 
-      <h3>5. Cookies and Tracking Technologies</h3>
+      <h3>{{ __('privacy.5') }}</h3>
       <ul>
-        <li>Our website uses cookies to optimize performance, store session preferences, and analyze site usage.</li>
-        <li>You may disable cookies via your browser settings, but this may affect the functionality of the site.</li>
+        <li>{{ __('privacy.5_1') }}</li>
+        <li>{{ __('privacy.5_2') }}</li>
       </ul>
 
-      <h3>6. Your Rights</h3>
+      <h3>{{ __('privacy.6') }}</h3>
       <ul>
-        <li>You have the right to access, update, or request deletion of your personal data, where legally applicable.
-        </li>
-        <li>You may object to certain processing activities (e.g., marketing communications) or request data
-          portability.</li>
-        <li>Requests can be submitted via the contact details provided below.</li>
+        <li>{{ __('privacy.6_1') }}</li>
+        <li>{{ __('privacy.6_2') }}</li>
+        <li>{{ __('privacy.6_3') }}</li>
       </ul>
 
-      <h3>7. Children’s Privacy</h3>
-      <p>Our services are not directed to children under the age of 18, and we do not knowingly collect information
-        from them.</p>
-
-      <h3>8. Updates to This Policy</h3>
+      <h3>{{ __('privacy.7') }}</h3>
       <p>
-        We may update this Privacy Policy from time to time. The “last updated”
-        date will appear at the top of this page. Continued use of the website
-        following updates constitutes acceptance of the revised policy.
+        {{ __('privacy.7_1') }}
+      </p>
+
+      <h3>{{ __('privacy.8') }}</h3>
+      <p>
+        {{ __('privacy.8_1') }}
       </p>
     </div>
   </section>

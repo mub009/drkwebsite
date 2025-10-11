@@ -1,6 +1,18 @@
 @extends('frontend_v2.layouts.FrontendLayout')
 @section('content')
 <style>
+    .close-buttonzzl {
+        position: absolute;
+        top: 20px;
+        right: unset !important;
+        left: 20px !important;
+        background: none;
+        border: none;
+        font-size: 41px;
+        cursor: pointer;
+        color: #000;
+    }
+
     .bg-layer {
         position: absolute;
         inset: 0;
@@ -432,41 +444,49 @@
     }
 </style>
 
-<section class="section " style="margin-top: 150px;margin-bottom: 0px;">
+<section class="section" style="margin-top: 150px; margin-bottom: 0px;">
     <div class="team-section">
         <div class="team-container">
-            <div class="team-header ">
+            <div class="team-header">
 
                 <h1 class="hero-title" style="text-align: center;">
-                    <span class="headline-emphasis">Health & Beauty Blog – Dr. Khaled Al Ruhaimi</span>
+                    <span class="headline-emphasis">{{ __('blog.title') }}</span>
                 </h1>
 
                 <p class="hed_des">
-                    Explore expert tips on health, beauty & wellness. Stay updated with trusted insights. Read our
-                    blog and learn more today.
+                    {{ __('blog.description') }}
                 </p>
+
+
             </div>
-
-
         </div>
     </div>
 </section>
 
+
 <section class="section sectionzz">
-    <div class="medical-facility-showcase" style="background-color: #fff;padding-top: 10px;">
+    <div class="medical-facility-showcase" style="background-color: #fff;">
         <div class="showcase-container" style="align-items: flex-start">
 
             <div class="blog-grid">
                 @foreach ($articles as $item)
                 <article class="blog-card {{ count($articles) === 1 ? 'single-blog' : '' }}">
-                    <img src="{{asset('images').'/'.$item->image}}" alt="{{$item->title}}" class="blog-image" />
+                    <img src="{{asset('images').'/'.$item->image}}" alt="{{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}" class="blog-image" />
                     <div class="blog-content">
                         <div class="blog-card-header">
                             <h3 class="blog-card-title">
-                                {{$item->title_ar}}
+                                {{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}
                             </h3>
+                            @php
+                            $date = $item->created_at->locale(app()->getLocale())->translatedFormat('d F Y');
+                            if (app()->getLocale() === 'ar') {
+                            $western = ['0','1','2','3','4','5','6','7','8','9'];
+                            $eastern = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+                            $date = str_replace($western, $eastern, $date);
+                            }
+                            @endphp
                             <time class="blog-date" datetime="{{ $item->created_at->format('Y-m-d') }}">
-                                {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
+                                {{ $date }}
                             </time>
                         </div>
                         <div class="blog-card-body">
@@ -474,8 +494,8 @@
                                 {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_ar)), 60) }}
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
-                                <span class="link-text">View Details</span>
-                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="Arrow Right Icon" class="link-arrow" />
+                                <span class="link-text">{{ __('blog.view_details') }}</span>
+                                <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="{{ __('imagealt.arrow') }}" class="link-arrow" />
                             </a>
                         </div>
                     </div>
@@ -508,24 +528,22 @@
                 @endif
         </div>
     </div>
-
 </section>
-
 
 <section class="cta-section">
     <div class="cta-container">
-        <h2 class="cta-title">Contact Us</h2>
+        <h2 class="cta-title">{{ __('blog.cta_title') }}</h2>
         <h3 class="cta-subtitle">
-            Have a question about one of these articles or want to know which service is right for you?.
+            {{ __('blog.cta_subtitle') }}
         </h3>
 
         <div class="cta-actions">
             <a href="tel:+966138955555" class="cta-phone">
-                <i class="fas fa-phone"></i> +966 13 895 5555
+                <i class="fas fa-phone"></i> {{ __('blog.number') }}
             </a>
 
             <a href="https://wa.me/966138955555" target="_blank" class="cta-whatsapp">
-                <i class="fab fa-whatsapp"></i> Book Your Consultation Now
+                <i class="fab fa-whatsapp"></i> {{ __('blog.btn_book') }}
             </a>
         </div>
     </div>
