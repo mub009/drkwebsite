@@ -27,7 +27,7 @@ class FrontEndController extends Controller
             ->orderBy('sort', 'asc')
             ->get();
 
-        $data['article'] = Article::latest()->paginate(4);
+        $data['article'] = Article::latest()->take(4)->get();
         $data['department'] = Department::whereNotNull('department_ar')
             ->orderBy('sort', 'asc')
             ->get();

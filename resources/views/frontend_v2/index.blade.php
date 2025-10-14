@@ -631,32 +631,6 @@
                 </article>
                 @endforeach
             </div>
-
-
-        </div>
-        <div class="pagination">
-            {{-- Previous Button --}}
-            @if ($article->onFirstPage())
-            <span class="prev disabled">«</span>
-            @else
-            <a href="{{ $article->previousPageUrl() }}#blog" class="prev">«</a>
-            @endif
-
-            {{-- Page Numbers --}}
-            @for ($i = 1; $i <= $article->lastPage(); $i++)
-                @if ($i == $article->currentPage())
-                <a href="{{ $article->url($i) }}#blog" class="active">{{ $i }}</a>
-                @else
-                <a href="{{ $article->url($i) }}#blog">{{ $i }}</a>
-                @endif
-                @endfor
-
-                {{-- Next Button --}}
-                @if ($article->hasMorePages())
-                <a href="{{ $article->nextPageUrl() }}#blog" class="next">»</a>
-                @else
-                <span class="next disabled">»</span>
-                @endif
         </div>
     </div>
 </section>

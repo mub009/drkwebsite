@@ -110,7 +110,7 @@
 
     .related-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
@@ -165,8 +165,7 @@
 
             <!-- Blog Content -->
             <div class="blog-contentz">
-                <!-- {!! $article->article_ar !!} -->
-                {!! app()->getLocale() === 'ar' ? $article->article_ar : $article->article_en !!}
+                {!! html_entity_decode(app()->getLocale() === 'ar' ? $article->article_ar : $article->article_en) !!}
             </div>
 
             <!-- Tags -->
