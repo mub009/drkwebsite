@@ -517,10 +517,19 @@
 
             {{-- Page Numbers --}}
             @for ($i = 1; $i <= $articles->lastPage(); $i++)
+                @php
+                $pageNum = $i;
+                if (app()->getLocale() === 'ar') {
+                $western = ['0','1','2','3','4','5','6','7','8','9'];
+                $eastern = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+                $pageNum = str_replace($western, $eastern, $i);
+                }
+                @endphp
+
                 @if ($i == $articles->currentPage())
-                <a href="{{ $articles->url($i) }}" class="active">{{ $i }}</a>
+                <a href="{{ $articles->url($i) }}" class="active">{{ $pageNum }}</a>
                 @else
-                <a href="{{ $articles->url($i) }}">{{ $i }}</a>
+                <a href="{{ $articles->url($i) }}">{{ $pageNum }}</a>
                 @endif
                 @endfor
 
