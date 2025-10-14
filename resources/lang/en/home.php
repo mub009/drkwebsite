@@ -94,6 +94,7 @@ return [
     'blog_section_desc' => 'Discover the latest medical articles, wellness tips, and expert insights designed',
     'blog_section_desc1' => 'to help you make confident decisions about your health.We share the knowledge',
     'blog_section_desc2' => 'you need to stay at your best, always.',
+    'blog_btn' => 'View Details',
     'faq_title' => 'Have Questions?',
     'faq_frequent' => 'Frequently Asked Questions',
     'faq_desc' => 'We’re here to help and answer all your inquiries as quickly as possible.

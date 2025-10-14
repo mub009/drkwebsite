@@ -165,7 +165,8 @@
 
             <!-- Blog Content -->
             <div class="blog-contentz">
-                {!! $article->article_ar !!}
+                <!-- {!! $article->article_ar !!} -->
+                {!! app()->getLocale() === 'ar' ? $article->article_ar : $article->article_en !!}
             </div>
 
             <!-- Tags -->

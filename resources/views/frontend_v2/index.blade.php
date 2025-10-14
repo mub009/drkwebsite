@@ -616,10 +616,14 @@
                         </div>
                         <div class="blog-card-body">
                             <p class="blog-excerpt">
+                                @if (app()->getLocale() == 'ar')
                                 {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_ar)), 60) }}
+                                @else
+                                {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_en)), 60) }}
+                                @endif
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
-                                <span class="link-text">عرض التفاصيل</span>
+                                <span class="link-text">{{ __('home.blog_btn') }}</span>
                                 <img src="{{ asset('frontend_v2/assets/Icons/smallarrow.png') }}" alt="{{ __('imagealt.arrow') }}" class="link-arrow" />
                             </a>
                         </div>
@@ -768,7 +772,7 @@
         <div class="testimonials-container">
             <div class="testimonials-header anima" data-aos="fade-zoom-in">
                 <p class="section-label" style="margin-bottom: 25px">
-                   {{ __('home.testimonial_title') }}
+                    {{ __('home.testimonial_title') }}
                 </p>
                 <h2 class="main-headline">
                     <span class="headline-emphasis">{{ __('home.testimonial_head') }}</span>

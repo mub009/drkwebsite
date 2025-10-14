@@ -491,7 +491,11 @@
                         </div>
                         <div class="blog-card-body">
                             <p class="blog-excerpt">
+                                @if (app()->getLocale() == 'ar')
                                 {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_ar)), 60) }}
+                                @else
+                                {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_en)), 60) }}
+                                @endif
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
                                 <span class="link-text">{{ __('blog.view_details') }}</span>
