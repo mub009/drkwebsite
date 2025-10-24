@@ -37,7 +37,6 @@ $(document).ready(function () {
         let validImageFormats = ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/svg+xml'];
         let isValidImage = imageFile ? validImageFormats.includes(imageFile.type) : true;
         let errors = {};
-
         if (!titleEn) errors.title_en = 'Title (English) is required.';
         if (!titleAr) errors.title_ar = 'Title (Arabic) is required.';
         if (!metaDescription) errors.meta_description = 'Meta Description is required.';
@@ -46,8 +45,6 @@ $(document).ready(function () {
         if (!contentEn || contentEn === '<p><br></p>') errors.article_en = 'Article (English) content is required.';
         if (!contentAr || contentAr === '<p><br></p>') errors.article_ar = 'Article (Arabic) content is required.';
         if (!slug) errors.slug = 'Slug is required.';
-        if (!image) errors.image = 'Thumbnail image is required.';
-        if (!isValidImage) errors.image = 'Image format must be JPEG, PNG, JPG, GIF, or SVG.';
 
         if (Object.keys(errors).length > 0) {
             for (let field in errors) {
@@ -75,7 +72,6 @@ $(document).ready(function () {
             });
             return;
         }
-
         $('#content_en_data').val(contentEn);
         $('#content_ar_data').val(contentAr);
 

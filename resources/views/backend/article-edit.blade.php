@@ -23,6 +23,13 @@
                     <input type="text" class="form-control" id="title_ar" name="title_ar" value="{{ old('title_ar', $article->title_ar) }}">
                 </div>
                 <div class="mb-3">
+                    <label for="image" class="form-label">Thumbnail Image</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                    @if($article->image)
+                    <img src="{{ asset('images/' . $article->image) }}" alt="Article Image" class="img-thumbnail mt-2" style="width: 100px;">
+                    @endif
+                </div>
+                <div class="mb-3">
                     <label for="article_en" class="form-label">Article(English)</label>
                     <div id="snow-toolbar">
                         <span class="ql-formats">
@@ -86,17 +93,21 @@
                 </div>
                 <input type="hidden" id="content_en_data" name="article_en" value="{{ old('article_en', $article->article_en) }}">
                 <input type="hidden" id="content_ar_data" name="article_ar" value="{{ old('article_ar', $article->article_ar) }}">
-
+                <div class="mb-3">
+                    <label for="meta_title" class="form-label">Meta Title</label>
+                    <input type="text" class="form-control" id="meta_title" name="meta_title" value="{{ old('meta_title', $article->meta_title) }}">
+                </div>
+                <div class="mb-3">
+                    <label for="meta_description" class="form-label">Meta Description</label>
+                    <input type="text" class="form-control" id="meta_description" name="meta_description" value="{{ old('meta_description', $article->meta_description) }}">
+                </div>
+                <div class="mb-3">
+                    <label for="keyword" class="form-label">Keyword</label>
+                    <input type="text" class="form-control" id="keyword" name="keyword" value="{{ old('keyword', $article->keyword) }}">
+                </div>
                 <div class="mb-3">
                     <label for="slug" class="form-label">Slug</label>
                     <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug', $article->slug) }}">
-                </div>
-                <div class="mb-3">
-                    <label for="image" class="form-label">Thumbnail Image</label>
-                    <input type="file" class="form-control" id="image" name="image">
-                    @if($article->image)
-                    <img src="{{ asset('images/' . $article->image) }}" alt="Article Image" class="img-thumbnail mt-2" style="width: 100px;">
-                    @endif
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
                 <a href="{{ route('articles.index') }}" class="btn btn-secondary">Cancel</a>
