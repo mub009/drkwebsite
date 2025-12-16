@@ -207,3 +207,38 @@ AOS.init({
     mirror: true,            // Animate out when scrolling up
     anchorPlacement: 'top-bottom' // More consistent triggering
 });
+
+
+
+
+
+
+
+
+  const select = document.getElementById("branchSelect");
+  const trigger = select.querySelector(".select-trigger");
+  const options = select.querySelectorAll(".option");
+  const input = document.getElementById("branchInput");
+
+  trigger.addEventListener("click", () => {
+    select.classList.toggle("open");
+  });
+
+  options.forEach(option => {
+    option.addEventListener("click", () => {
+      options.forEach(o => o.classList.remove("active"));
+      option.classList.add("active");
+
+      trigger.querySelector("span").textContent = option.textContent;
+      input.value = option.dataset.value;
+
+      select.classList.remove("open");
+    });
+  });
+
+  document.addEventListener("click", e => {
+    if (!select.contains(e.target)) {
+      select.classList.remove("open");
+    }
+  });
+

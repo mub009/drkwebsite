@@ -2,6 +2,684 @@
 @section('content')
 
 <style>
+    @media (max-width: 600px) {
+        .d-zom {
+            zoom: 85% !important;
+        }
+
+        .h-cot {
+            height: 750px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .h-cotz {
+            width: 90%;
+        }
+    }
+
+    .custom-select {
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .select-trigger {
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 12px;
+        padding: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .select-trigger:hover {
+        border-color: #980a50;
+    }
+
+    .select-trigger span {
+        color: #444;
+    }
+
+    .arrow {
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #555;
+        border-bottom: 2px solid #555;
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+
+    .custom-select.open .arrow {
+        transform: rotate(-135deg);
+    }
+
+    /* Dropdown card */
+    .select-options {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 99;
+    }
+
+    .custom-select.open .select-options {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Options */
+    .option {
+        padding: 14px 18px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .option:hover {
+        background: #f7f7f7;
+    }
+
+    .option.active {
+        background: #ffebf5;
+        font-weight: 600;
+        color: #980a50;
+    }
+
+
+
+    /* Two-column form rows */
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 18px;
+    }
+
+    /* Remove double spacing */
+    .form-row .form-group {
+        margin-bottom: 0;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* =========================
+   FORM CARD
+========================= */
+    .enquiry-card {
+        width: 60%;
+        /* max-width: 420px; */
+        padding: 35px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 18px 40px rgba(152, 10, 80, 0.15);
+    }
+
+    /* =========================
+   FORM GROUP
+========================= */
+    .enquiry-form .form-group {
+        margin-bottom: 22px;
+        position: relative;
+    }
+
+    /* =========================
+   LABEL
+========================= */
+    .enquiry-form label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #000000;
+        margin-bottom: 6px;
+        display: block;
+    }
+
+    /* =========================
+   INPUT & SELECT
+========================= */
+    .enquiry-form input,
+    .enquiry-form select {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        background: #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .enquiry-form input::placeholder {
+        color: #aaa;
+    }
+
+    .enquiry-form input:focus,
+    .enquiry-form select:focus {
+        border-color: #980a50;
+        box-shadow: 0 0 0 3px rgba(152, 10, 80, 0.15);
+        outline: none;
+    }
+
+    /* =========================
+   SELECT ARROW FIX
+========================= */
+    .enquiry-form select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg fill='%23980a50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        background-size: 18px;
+    }
+
+    /* =========================
+   BUTTON
+========================= */
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #980a50, #c2185b);
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(152, 10, 80, 0.35);
+    }
+
+    /* =========================
+   MOBILE
+========================= */
+    @media (max-width: 768px) {
+        .enquiry-card {
+            padding: 25px;
+            border-radius: 16px;
+        }
+    }
+
+
+    .bg-layer {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .bg-layer.show {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .hero-actions {
+        width: unset !important;
+    }
+
+    .sub-maintez {
+        font-size: 25px;
+        color: #ffffff;
+        margin-bottom: 50px;
+    }
+
+    .hero-content {
+        gap: 20px !important;
+    }
+
+
+    .offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        padding: 50px 200px;
+        z-index: 1000;
+    }
+
+    .offer-image {
+        background-color: transparent;
+        /* transparent background */
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .offer-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background: transparent;
+        border-radius: 40px;
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .offer-image:hover {
+        transform: scale(1.05);
+    }
+
+    .of2 {
+        display: none;
+    }
+
+    @media (min-width: 890px) and (max-width: 1550px) {
+
+        .offer-grid {
+            display: grid;
+            padding: 50px 130px !important;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        }
+    }
+
+    /* @media (min-width: 300px) and (max-width: 500px) {
+            .section {
+                margin-top: 120px !important;
+            }
+        } */
+
+    @media (min-width: 300px) and (max-width: 700px) {
+
+
+        .offer-grid {
+            display: grid;
+            padding: 20px !important;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        }
+
+        .hero-title {
+            font-size: 12vw;
+            padding: unset;
+        }
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .topz {
+        margin-top: 80px !important;
+    }
+
+    @media (min-width: 300px) and (max-width: 700px) {
+
+        .enquiry-card {
+            width: 100%;
+            padding: 15px;
+            background: #ffffff;
+        }
+
+        .ent-header {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 1100px) {
+
+        .doctor-card,
+        .tab-container {
+            zoom: 70%;
+        }
+
+        .ent-header {
+            width: 100% !important;
+        }
+
+        .ent-card {
+            flex-direction: column;
+        }
+
+        .ent-card {
+            /* background: unset !important; */
+            /* box-shadow: unset !important; */
+            padding: 10px !important;
+
+        }
+
+        /* .ent-department {
+                padding: 40px 10px !important;
+            } */
+
+        .ent-header p {
+            font-size: 16px !important;
+        }
+
+        .ent-header h2 {
+            font-size: 25px !important;
+        }
+
+        .ent-body h3 {
+            font-size: 20px !important;
+        }
+
+        .ent-services li {
+            font-size: 15px !important;
+        }
+
+        .hero-title {
+            font-size: 13vw !important;
+        }
+
+        .main-headline {
+            font-size: 25px !important;
+        }
+    }
+
+    .topz {
+        margin-top: 0px !important;
+    }
+
+    .department-gallery {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .gallery-img {
+        overflow: hidden;
+        border-radius: 20px;
+        height: 200px;
+    }
+
+    .gallery-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+    }
+
+
+    .img3 {
+        grid-column: span 2;
+    }
+
+    .ent-department {
+        /* padding: 40px 40px; */
+        border-radius: 16px;
+        background-color: #ffebf5;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ent-card {
+        /* background: #fff; */
+        border-radius: 16px;
+        /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+        padding: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+        align-items: start;
+        align-items: center;
+    }
+
+    .ent-header {
+        width: 60%;
+    }
+
+    .ent-header h2 {
+        font-size: 35px;
+        font-weight: 700;
+        color: #980a50;
+        margin-bottom: 15px;
+    }
+
+    .ent-header p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #000000;
+        font-weight: 400;
+    }
+
+    .ent-body h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #980a50;
+    }
+
+    .ent-services {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ent-services li {
+        padding-left: 25px;
+        position: relative;
+        margin-bottom: 12px;
+        font-size: 18px;
+        color: #000000;
+        font-weight: 500;
+    }
+
+    .ent-services li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #980a50;
+        font-size: 16px;
+    }
+
+    .tab-container {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    /* Optional: Style scrollbar for Chrome/Safari */
+    .tab-buttons::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .tab-buttons::-webkit-scrollbar-thumb {
+        background: #ffebf5;
+        border-radius: 4px;
+    }
+
+    .tab-buttons::-webkit-scrollbar-track {
+        background: #ffebf5;
+    }
+
+
+    .tab-buttons {
+        scrollbar-width: thin;
+        scrollbar-color: #980a50 #eee;
+    }
+
+
+
+    .tab-buttons button {
+        white-space: nowrap;
+        padding: 10px 16px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        background-color: #f8f8f8;
+        color: #000000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .tab-buttons button.active,
+    .tab-buttons button:hover {
+        background-color: #980a50;
+        color: #fff;
+        border-color: #980a50;
+    }
+
+
+    .card-dr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 50px !important;
+    }
+
+    .tabs {
+        width: 100%;
+        margin: auto;
+
+    }
+
+
+
+    /* .tab-content {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+            height: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .tab-content.active {
+            opacity: 1;
+            transform: translateX(0);
+            height: auto;
+            pointer-events: auto;
+        } */
+
+    @media (max-width: 1650px) {
+        .slider-wrap {
+            width: 100%;
+            padding-bottom: 30px !important;
+            padding-top: 0px !important;
+        }
+
+        .slider-track {
+            gap: 1px !important;
+        }
+    }
+
+    @media (max-width: 1650px) {
+        .slider-wrap {
+            width: 100%;
+            top: 400px;
+            padding-bottom: 100px !important;
+            padding-top: 100px !important;
+        }
+
+    }
+
+    @media (max-width: 700px) {
+        .slider-wrap {
+            width: 100%;
+            padding-bottom: 30px !important;
+            padding-top: 0px !important;
+            top: 350px !important;
+        }
+
+    }
+
+    /* Wrapper */
+    .slider-wrap {
+        top: 300px;
+        width: 100%;
+        padding-bottom: 100px;
+        padding-top: 100px;
+        overflow: hidden;
+        position: relative;
+    }
+
+
+
+
+
+
+    /* Slider Track */
+    .slider-track {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 1px;
+        animation: scroll 25s linear infinite;
+        width: max-content;
+    }
+
+    .slider-wrap:hover .slider-track {
+        animation-play-state: paused;
+    }
+
+    /* Card */
+    .slider-card {
+        width: 350px;
+        /* height: 340px; */
+        /* border-radius: 20px; */
+        overflow: hidden;
+        /* background: #111; */
+        flex-shrink: 0;
+        /* box-shadow: 0 6px 18px rgba(0,0,0,0.3); */
+        transition: transform 0.4s ease;
+    }
+
+    .slider-card:hover {
+        transform: translateY(-10px) scale(1.50);
+    }
+
+    /* Image */
+    .slider-card img {
+        width: 70%;
+        /* height: 100%; */
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    /* Animation */
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
     .blog-card.single-blog {
         width: 50%;
     }
@@ -739,11 +1417,71 @@
     </div>
 </section>
 
+<section class="section sectionzz anima" data-aos="fade-zoom-in" dir="ltr">
+    <div class="departments-section h-cot">
+        <div class="departments-container">
+            <div class="departments-content">
+                <div class="departments-header h-cotz">
+                    <h2 class="departments-label">{{ __('home.specialHealthOffersL') }}</h2>
 
+                    <h2 class="main-headline">
+                        <span class="headline-emphasis">{{ __('home.exclusiveMedicalOffersL') }}</span>
+                        <span class="headline-part">{{ __('home.acrossOurSpecializedDeptL') }}</span>
+                    </h2>
+
+
+                    <p class="section-description" style="margin-top: 0px;">
+                        {{ __('home.exploreDescrL') }}
+                    </p>
+                </div>
+
+
+                <div class="slider-wrap">
+                    <div class="slider-track">
+
+                        <!-- Track 1 -->
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md1.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md2.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md3.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md4.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md5.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md6.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md7.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md8.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md9.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md10.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md11.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md12.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md13.png') }}"></div>
+
+                        <!-- Track 2 (duplicate for infinite effect) -->
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md1.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md2.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md3.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md4.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md5.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md6.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md7.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md8.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md9.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md10.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md11.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md12.png') }}"></div>
+                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md13.png') }}"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
 
 <section class="section sectionzz">
-    <div class="medical-facility-showcase">
-        <div class="testimonials-container">
+    <div class="medical-facility-showcase d-zom" style="background-color: #ffffff !important;">
+        <div class="testimonials-container" style="margin-bottom: 50px;">
             <div class="testimonials-header anima" data-aos="fade-zoom-in">
                 <p class="section-label" style="margin-bottom: 25px">
                     {{ __('home.testimonial_title') }}
@@ -854,7 +1592,88 @@
                     </div>
                 </article>
             </div>
+
+
+
         </div>
+
+        <div id="Rays" class="tab-content">
+            <section id="rays" class="section" style="margin-bottom: 0px;">
+                <div class="ent-department">
+                    <div class="ent-card">
+                        <div class="ent-header">
+                            <h2>{{ __('home.enquiryBook') }}</h2>
+                            <p>
+                               {{ __('home.enquiryBookP') }}
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div class="ent-body enquiry-card">
+                            <form action="submit-enquiry.php" method="POST" class="enquiry-form">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>{{ __('home.enquiryNameL') }}</label>
+                                        <input type="text" name="name" placeholder="{{ __('home.enquiryNamePH') }}" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>{{ __('home.enquiryPhoneL') }}</label>
+                                        <input type="tel" name="phone" placeholder="{{ __('home.enquiryPhonePH') }}" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>{{ __('home.hospitalBranchL') }}</label>
+
+                                        <div class="custom-select" id="branchSelect">
+                                            <div class="select-trigger">
+                                                <span>{{ __('home.hospitalBranchSL') }}</span>
+                                                <i class="arrow"></i>
+                                            </div>
+
+                                            <div class="select-options">
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street">Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Hospital – Dammam">Dr. Khalid Al-Ruhaimi Hospital – Dammam</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan</div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Hidden input to submit value -->
+                                        <input type="hidden" name="branch" id="branchInput" required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>{{ __('home.emailAddressL') }}</label>
+                                        <input type="email" name="email" placeholder="{{ __('home.emailAddressPH') }}" required>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="submit-btn">
+                                    {{ __('home.submitEnquiryL') }}
+                                </button>
+
+                            </form>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </div>
 </section>
 

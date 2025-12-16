@@ -88,7 +88,7 @@
         }
     </style>
 
-    <a href="https://wa.me/966138955555" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/920010436" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <img src="{{ asset('frontend_v2/assets/logos/WhatsApp.svg.webp') }}" alt="WhatsApp Chat" width="48" height="48">
     </a>
 
