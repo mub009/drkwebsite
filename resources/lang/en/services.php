@@ -18,5 +18,5 @@ return [
     'cta_title' => 'Contact Us',
     'cta_subtitle' => 'Don’t wait any longer, your health and beauty are in safe hands.',
     'book_btn' => 'Book Your Consultation Now',
-    'number' => '+966 13 895 5555',
+    'number' => '+920010436',
 ];

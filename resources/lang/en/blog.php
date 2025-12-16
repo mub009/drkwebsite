@@ -9,5 +9,5 @@ return [
     'cta_title' => 'Contact Us',
     'cta_subtitle' => 'Have a question about one of these articles or want to know which service is right for you?',
     'btn_book' => 'Book Your Consultation Now',
-    'number' => '+966 13 895 5555',
+    'number' => '+920010436',
 ];

@@ -7,7 +7,7 @@ return [
     'hospital_description' => 'At Dr. Khalid Al-Ruhaimi Hospital, we are committed to delivering world-class healthcare that combines
           advanced medical technology, expert physicians, and a compassionate, human touch.',
     'address_line' => 'Dr. Khalid Al-Ruhaimi Hospital, Prince Mohammed Bin Fahd Street, Al Khobar, Saudi Arabia',
-    'contact_phone' => 'Phone: +966 13 895 5555',
+    'contact_phone' => 'Phone: +920010436',
     'contact_email' => 'Email: info@dralruhaimi.com',
     'navigation' => 'Footer navigation',
     'nav_title_quick' => 'Quick access',
@@ -33,7 +33,7 @@ return [
     'social_tiktok' => 'TikTok',
     'social_twitter' => 'Twitter',
 
-    'number' => '+966 13 895 5555',
+    'number' => '+920010436',
 
     'copyright' => '© 2025 Dr. Khalid Al-Ruhaimi Hospital. All rights reserved.',
 ];

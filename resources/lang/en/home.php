@@ -135,4 +135,25 @@ return [
                   👍',
     'testimonial_customer3' => 'Mrs. Reem Al-Qahtani',
     'testimonial_customer_loc3' => 'Dammam, Saudi Arabia',
+
+    'enquiryBook' => 'Book an Enquiry',
+    'enquiryBookP' => ' Your health matters to us. Share your details and let our experienced medical support
+                                team assist you with appointments, doctor consultations, and treatment information.
+                                We are here to support you every step of the way.',
+    'enquiryNameL' => 'Full Name',
+    'enquiryNamePH' => 'Enter your full name',
+    'enquiryPhoneL' => 'Phone Number',
+    'enquiryPhonePH' => 'Enter phone number',
+    'hospitalBranchL' => 'Hospital Branch',
+    'hospitalBranchSL' => 'Select branch',
+    'emailAddressL' => 'Email Address',
+    'emailAddressPH' => 'Enter email address',
+    'submitEnquiryL' => 'Submit Enquiry',
+
+    'specialHealthOffersL' => 'Special Health Offers',
+    'exclusiveMedicalOffersL' => 'Exclusive medical offers',
+    'acrossOurSpecializedDeptL' => 'across our specialized departments',
+    'exploreDescrL' => 'Explore exclusive health care offers across our departments, designed to make
+                        quality medical services more accessible for you and your family.',
+
 ];

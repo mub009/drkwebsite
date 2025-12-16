@@ -2223,7 +2223,9 @@ nav.main-navigation {
 .testimonial-card {
   border-radius: 26px;
   background-color: rgba(255, 255, 255, 1);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow:
+  0 12px 30px rgba(152, 10, 80, 0.15),
+  0 2px 8px rgba(0, 0, 0, 0.04);
   align-self: stretch;
   display: flex;
   min-width: 240px;
