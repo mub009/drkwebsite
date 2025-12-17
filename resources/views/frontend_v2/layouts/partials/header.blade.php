@@ -157,7 +157,7 @@
                     <span class="language-option" data-language="en">EN</span>
                     <span class="language-option" data-language="ar">AR</span>
                 </div>
-                <a href="tel:0550655152">
+                <a href="tel:920010436">
                     <button class="book-now-button bnon">
                         <span class="book">{{ __('header.book_now') }}</span>
                         <img src="{{ asset('frontend_v2/assets/Icons/Arrow2.png') }}" alt="{{ __('imagealt.arrow') }}" />
