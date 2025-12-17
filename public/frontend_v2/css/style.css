@@ -34,38 +34,65 @@ body {
 .container {
   width: 1500px;
 }
-  .whatsapp-float {
+.social-float {
   position: fixed;
   bottom: 40px;
   right: 20px;
   z-index: 1200;
-  /* background-color: #25D366; */
-  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-float a {
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
   border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  justify-content: center;
-  display: flex;
+}
+
+.social-float a:hover {
+  transform: scale(1.1);
+}
+
+.social-float img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Mobile optimization */
+@media (max-width: 700px) {
+  .social-float {
+    right: 10px;
+    bottom: 25px;
+  }
+
+  .social-float a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-float img {
+    width: 22px;
+    height: 22px;
+  }
 }
 @media (min-width: 300px) and (max-width: 700px) {
-.whatsapp-float img {
-  width: 40px !important;
-  height: 40px !important;
-  background-color: transparent !important;
-}
+
 .cta-section{
   border-radius: unset !important;
 }
 .form-map-wrapper{
   padding: unset !important;
 }
-.whatsapp-float{
-  right: 10px !important;
+
 }
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
+
 header {
   background-color: #fff;
   padding: 5px 30px;
