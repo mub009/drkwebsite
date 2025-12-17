@@ -1421,7 +1421,7 @@
     <div class="departments-section h-cot">
         <div class="departments-container">
             <div class="departments-content">
-                <div class="departments-header h-cotz">
+                <div class="departments-header h-cotz" style="left: unset !important;right: 50px !important;align-items: end;text-align: end;">
                     <h2 class="departments-label">{{ __('home.specialHealthOffersL') }}</h2>
 
                     <h2 class="main-headline">
@@ -1623,7 +1623,7 @@
 
                                     <div class="form-group">
                                         <label>{{ __('home.enquiryPhoneL') }}</label>
-                                        <input type="tel" name="phone" placeholder="{{ __('home.enquiryPhonePH') }}" required>
+                                        <input type="tel" name="phone" placeholder="{{ __('home.enquiryPhonePH') }}" required style="text-align: end;">
                                     </div>
                                 </div>
 

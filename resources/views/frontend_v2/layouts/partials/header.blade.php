@@ -86,11 +86,36 @@
             right: unset !important;
             left: 10px !important;
         }
+
+        
     </style>
 
-    <a href="https://wa.me/920010436" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <!-- <a href="https://wa.me/920010436" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <img src="{{ asset('frontend_v2/assets/logos/WhatsApp.svg.webp') }}" alt="WhatsApp Chat" width="48" height="48">
-    </a>
+    </a> -->
+
+    <div class="social-float">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/920010436" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="{{ asset('frontend_v2/assets/logos/WhatsApp11.svg.jpg') }}" alt="WhatsApp">
+  </a>
+
+  <!-- Phone -->
+  <a href="tel:+920010436" aria-label="Call Us">
+    <img src="{{ asset('frontend_v2/assets/logos/Telephone.png') }}" alt="Phone">
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="_blank" aria-label="Instagram">
+    <img src="{{ asset('frontend_v2/assets/logos/insta.png') }}" alt="Instagram">
+  </a>
+
+  <!-- TikTok -->
+  <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="_blank" aria-label="TikTok">
+    <img src="{{ asset('frontend_v2/assets/logos/ticktok.png') }}" alt="TikTok">
+  </a>
+</div>
+    
 
     <!-- <div class="loader-screen">
         <div class="loader"></div>
