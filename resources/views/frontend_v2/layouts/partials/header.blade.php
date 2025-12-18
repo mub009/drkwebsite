@@ -90,18 +90,18 @@
         
     </style>
 
-    <!-- <a href="https://wa.me/920010436" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <!-- <a href="https://wa.me/+966920010436" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <img src="{{ asset('frontend_v2/assets/logos/WhatsApp.svg.webp') }}" alt="WhatsApp Chat" width="48" height="48">
     </a> -->
 
     <div class="social-float">
   <!-- WhatsApp -->
-  <a href="https://wa.me/920010436" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/+966920010436" target="_blank" aria-label="Chat on WhatsApp">
     <img src="{{ asset('frontend_v2/assets/logos/WhatsApp11.svg.jpg') }}" alt="WhatsApp">
   </a>
 
   <!-- Phone -->
-  <a href="tel:+920010436" aria-label="Call Us">
+  <a href="tel:+966920010436" aria-label="Call Us">
     <img src="{{ asset('frontend_v2/assets/logos/Telephone.png') }}" alt="Phone">
   </a>
 
@@ -157,7 +157,7 @@
                     <span class="language-option" data-language="en">EN</span>
                     <span class="language-option" data-language="ar">AR</span>
                 </div>
-                <a href="tel:920010436">
+                <a href="tel:+966920010436">
                     <button class="book-now-button bnon">
                         <span class="book">{{ __('header.book_now') }}</span>
                         <img src="{{ asset('frontend_v2/assets/Icons/Arrow2.png') }}" alt="{{ __('imagealt.arrow') }}" />

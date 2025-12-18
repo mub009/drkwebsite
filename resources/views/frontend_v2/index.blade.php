@@ -755,7 +755,7 @@
 
         <div class="hero-actions">
             <div class="appointment-button-container">
-                <a href="tel:920010436">
+                <a href="tel:+966920010436">
                     <button class="appointment-button">
                         <span class="appointment-text">{{ __('home.appointment') }}</span>
                         <div class="doctor-icon-container">
@@ -1190,7 +1190,7 @@
 
                         </div>
                         <div class="appointment-button-container">
-                            <a href="tel:920010436">
+                            <a href="tel:+966920010436">
                                 <button class="appointment-buttonz">
                                     <span class="appointment-textb">{{ __('home.appointment_btn') }}</span>
                                     <div class="doctor-icon-container"><img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="{{ __('imagealt.arrow') }}" />
