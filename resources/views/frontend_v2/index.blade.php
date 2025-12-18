@@ -2,6 +2,12 @@
 @section('content')
 
 <style>
+     @media (max-width: 1650px) {
+        .enq-sub{
+            margin-top: 50px !important;
+        }
+        }
+   
     @media (max-width: 600px) {
         .d-zom {
             zoom: 85% !important;
@@ -1207,6 +1213,86 @@
 </section>
 
 <section class="section topz anima" data-aos="fade-zoom-in">
+
+
+<div class="medical-facility-showcase enq-sub" style="margin-bottom: 80px;">
+ <div id="Rays" class="tab-content">
+            <section id="rays" class="section" style="margin-bottom: 0px;">
+                <div class="ent-department">
+                    <div class="ent-card" style="padding: 0px !important;">
+                        <div class="ent-header">
+                            <h2>{{ __('home.enquiryBook') }}</h2>
+                            <p>
+                               {{ __('home.enquiryBookP') }}
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div class="ent-body enquiry-card">
+                            <form action="submit-enquiry.php" method="POST" class="enquiry-form">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>{{ __('home.enquiryNameL') }}</label>
+                                        <input type="text" name="name" placeholder="{{ __('home.enquiryNamePH') }}" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>{{ __('home.enquiryPhoneL') }}</label>
+                                        <input type="tel" name="phone" placeholder="{{ __('home.enquiryPhonePH') }}" required style="text-align: end;">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>{{ __('home.hospitalBranchL') }}</label>
+
+                                        <div class="custom-select" id="branchSelect">
+                                            <div class="select-trigger">
+                                                <span>{{ __('home.hospitalBranchSL') }}</span>
+                                                <i class="arrow"></i>
+                                            </div>
+
+                                            <div class="select-options">
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street">Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Hospital – Dammam">Dr. Khalid Al-Ruhaimi Hospital – Dammam</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya</div>
+                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan</div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Hidden input to submit value -->
+                                        <input type="hidden" name="branch" id="branchInput" required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>{{ __('home.emailAddressL') }}</label>
+                                        <input type="email" name="email" placeholder="{{ __('home.emailAddressPH') }}" required>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="submit-btn">
+                                    {{ __('home.submitEnquiryL') }}
+                                </button>
+
+                            </form>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+</div>
     <div class="partners-section">
         <div class="partners-header">
             <h2 class="main-headline">
@@ -1597,82 +1683,7 @@
 
         </div>
 
-        <div id="Rays" class="tab-content">
-            <section id="rays" class="section" style="margin-bottom: 0px;">
-                <div class="ent-department">
-                    <div class="ent-card">
-                        <div class="ent-header">
-                            <h2>{{ __('home.enquiryBook') }}</h2>
-                            <p>
-                               {{ __('home.enquiryBookP') }}
-                            </p>
-
-                        </div>
-
-
-
-
-                        <div class="ent-body enquiry-card">
-                            <form action="submit-enquiry.php" method="POST" class="enquiry-form">
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>{{ __('home.enquiryNameL') }}</label>
-                                        <input type="text" name="name" placeholder="{{ __('home.enquiryNamePH') }}" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>{{ __('home.enquiryPhoneL') }}</label>
-                                        <input type="tel" name="phone" placeholder="{{ __('home.enquiryPhonePH') }}" required style="text-align: end;">
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>{{ __('home.hospitalBranchL') }}</label>
-
-                                        <div class="custom-select" id="branchSelect">
-                                            <div class="select-trigger">
-                                                <span>{{ __('home.hospitalBranchSL') }}</span>
-                                                <i class="arrow"></i>
-                                            </div>
-
-                                            <div class="select-options">
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street">Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Hospital – Dammam">Dr. Khalid Al-Ruhaimi Hospital – Dammam</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan</div>
-
-                                            </div>
-                                        </div>
-
-                                        <!-- Hidden input to submit value -->
-                                        <input type="hidden" name="branch" id="branchInput" required>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <label>{{ __('home.emailAddressL') }}</label>
-                                        <input type="email" name="email" placeholder="{{ __('home.emailAddressPH') }}" required>
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="submit-btn">
-                                    {{ __('home.submitEnquiryL') }}
-                                </button>
-
-                            </form>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-            </section>
-        </div>
+       
 
     </div>
 </section>
