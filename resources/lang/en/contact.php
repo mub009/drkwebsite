@@ -6,7 +6,7 @@ return [
     'description' => 'Have questions or need care? Contact us now and book your consultation with expert doctors. We’re here to help you.',
     'head' => 'Contact Options',
     'location' => 'Saudi Arabia – Prince Mohammed Bin Fahd Street',
-    'number' => '+920010436',
+    'number' => '+966920010436',
     'whatsapp' => 'Chat on WhatsApp',
     'working_hours' => 'Working Hours',
     'working_hours1' => '<strong>Saturday – Thursday:</strong> 9:00 AM – 10:00 PM',

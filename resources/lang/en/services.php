@@ -18,5 +18,5 @@ return [
     'cta_title' => 'Contact Us',
     'cta_subtitle' => 'Don’t wait any longer, your health and beauty are in safe hands.',
     'book_btn' => 'Book Your Consultation Now',
-    'number' => '+920010436',
+    'number' => '+966920010436',
 ];
