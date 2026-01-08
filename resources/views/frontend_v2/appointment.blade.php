@@ -746,11 +746,11 @@
     <div class="team-section">
         <div class="team-container">
             <h1 class="hero-title" style="text-align: center;">
-                <span class="headline-emphasis">{{ __('about.headline') }}</span>
+                <span class="headline-emphasis">{{ __('appointment.title') }}</span>
             </h1>
 
             <p class="hed_des" style="text-align: center;">
-                {{ __('about.description') }}
+                {{ __('appointment.description') }}
             </p>
 
         </div>
