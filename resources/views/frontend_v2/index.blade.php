@@ -2,12 +2,12 @@
 @section('content')
 
 <style>
-     @media (max-width: 1650px) {
-        .enq-sub{
+    @media (max-width: 1650px) {
+        .enq-sub {
             margin-top: 50px !important;
         }
-        }
-   
+    }
+
     @media (max-width: 600px) {
         .d-zom {
             zoom: 85% !important;
@@ -1179,7 +1179,10 @@
                                 </div>
                                 <h3 class="department-name">{{ app()->getLocale() === 'ar' ? $row->department_ar : $row->department_en }}</h3>
                                 <p class="department-description">
-                                    {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($row->department_details)), 40) }}
+                                    {{ app()->getLocale() === 'ar'
+        ? \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($row->department_details_ar)), 40)
+        : \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($row->department_details_en)), 40)
+    }}
                                 </p>
                             </article>
                             @endforeach
@@ -1215,15 +1218,15 @@
 <section class="section topz anima" data-aos="fade-zoom-in">
 
 
-<div class="medical-facility-showcase enq-sub" style="margin-bottom: 80px;">
- <div id="Rays" class="tab-content">
+    <div class="medical-facility-showcase enq-sub" style="margin-bottom: 80px;">
+        <div id="Rays" class="tab-content">
             <section id="rays" class="section" style="margin-bottom: 0px;">
                 <div class="ent-department">
                     <div class="ent-card" style="padding: 0px !important;">
                         <div class="ent-header">
                             <h2>{{ __('home.enquiryBook') }}</h2>
                             <p>
-                               {{ __('home.enquiryBookP') }}
+                                {{ __('home.enquiryBookP') }}
                             </p>
 
                         </div>
@@ -1292,7 +1295,7 @@
                 </div>
             </section>
         </div>
-</div>
+    </div>
     <div class="partners-section">
         <div class="partners-header">
             <h2 class="main-headline">
@@ -1379,7 +1382,7 @@
                             </time>
                         </div>
                         <div class="blog-card-body">
-                            <p class="blog-excerpt">
+                            <p class="blog-excerpt ertret">
                                 @if (app()->getLocale() == 'ar')
                                 {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_ar)), 60) }}
                                 @else
@@ -1683,7 +1686,7 @@
 
         </div>
 
-       
+
 
     </div>
 </section>

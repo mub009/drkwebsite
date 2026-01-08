@@ -262,7 +262,7 @@
                     </li>
                     <li>
                         <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/966138955555" target="_blank" class="whatsapp-btn">{{ __('contact.whatsapp') }}</a>
+                        <a href="https://wa.me/+966920010436" target="_blank" class="whatsapp-btn">{{ __('contact.whatsapp') }}</a>
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>

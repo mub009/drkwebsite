@@ -509,11 +509,11 @@
         </h3>
 
         <div class="cta-actions">
-            <a href="tel:+966138955555" class="cta-phone">
+            <a href="tel:+966920010436" class="cta-phone">
                 <i class="fas fa-phone"></i> {{ __('services.number') }}
             </a>
 
-            <a href="https://wa.me/966138955555" target="_blank" class="cta-whatsapp">
+            <a href="https://wa.me/+966920010436" target="_blank" class="cta-whatsapp">
                 <i class="fab fa-whatsapp"></i> {{ __('services.book_btn') }}
             </a>
         </div>

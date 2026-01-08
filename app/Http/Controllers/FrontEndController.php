@@ -44,6 +44,31 @@ class FrontEndController extends Controller
         return view('frontend_v2.blog', $data);
     }
 
+
+     public function offers()
+    {
+        Carbon::setLocale(app()->getLocale());
+
+        $data = array();
+        $data['offers'] = Offer::latest()->paginate(4);
+        return view('frontend_v2.offers', $data);
+    }
+
+
+      public function appointment()
+    {
+        Carbon::setLocale(app()->getLocale());
+
+        $data = array();
+          $data['department'] = Department::whereNotNull('department_ar')
+            ->orderBy('sort', 'asc')
+            ->get();
+        // $data['offers'] = Offer::latest()->paginate(4);
+        return view('frontend_v2.appointment', $data);
+    }
+
+    
+
     public function articleDetails($slug = null)
     {
         Carbon::setLocale(app()->getLocale());
