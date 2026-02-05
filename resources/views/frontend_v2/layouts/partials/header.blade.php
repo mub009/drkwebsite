@@ -139,6 +139,7 @@
                     <a href="{{ route('blog') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no2') }} </span>{{ __('header.nav_blog') }}</a>
                     <a href="{{ route('about') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no3') }} </span>{{ __('header.nav_about') }}</a>
                     <a href="{{ route('contact_us') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no4') }} </span>{{ __('header.nav_contact') }}</a>
+                    <a href="{{ route('offerFrontEnd') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no5') }} </span>{{ __('header.offer') }}</a>
                     <div class="footer-line2"></div>
                     <div class="footer-tail-end">
                         <div>{{ __('header.footer_tail') }}</div>
@@ -150,6 +151,7 @@
                 <a href="{{ route('blog') }}" class="nav-link">{{ __('header.nav_blog') }}</a>
                 <a href="{{ route('about') }}" class="nav-link">{{ __('header.nav_about') }}</a>
                 <a href="{{ route('contact_us') }}" class="nav-link">{{ __('header.nav_contact') }}</a>
+                <a href="{{ route('offerFrontEnd') }}" class="nav-link">{{ __('header.offer') }}</a>
             </nav>
             <div class="header-actions">
                 <div class="language-selector lnon" onclick="toggleLanguage()">

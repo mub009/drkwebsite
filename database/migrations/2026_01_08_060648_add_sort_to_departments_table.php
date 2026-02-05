@@ -6,21 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
-{
-    Schema::table('departments', function (Blueprint $table) {
-        $table->integer('sort')->default(0)->after('id');
-    });
-}
+    {
+        if (Schema::hasTable('departments') && !Schema::hasColumn('departments', 'sort')) {
+            Schema::table('departments', function (Blueprint $table) {
+                $table->integer('sort')->default(0)->after('id');
+            });
+        }
+    }
 
-public function down(): void
-{
-    Schema::table('departments', function (Blueprint $table) {
-        $table->dropColumn('sort');
-    });
-}
-
+    public function down(): void
+    {
+        if (Schema::hasTable('departments') && Schema::hasColumn('departments', 'sort')) {
+            Schema::table('departments', function (Blueprint $table) {
+                $table->dropColumn('sort');
+            });
+        }
+    }
 };
