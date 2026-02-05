@@ -64,7 +64,7 @@
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a href="tel:+966920010436" >
+                                            <a href="tel:+966920010436">
                                                 <div class="top-bar__icon">
                                                     <img src="{{ asset('frontend/frontend/images/icons/phone-svg.png')}}" draggable="false" alt="snapchat" class="socialmedia-icon" style="
     width: 60%;
@@ -120,7 +120,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="blogDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                الأقسام </a>
+                                    الأقسام </a>
                                 <div class="dropdown-menu " aria-labelledby="blogDropdown">
                                     @foreach($departments as $department)
                                     <a class="dropdown-item" href="{{route('departmentDetails',['surl'=>$department->slug])}}">{{ $department->department_ar }}</a>
@@ -135,19 +135,19 @@
 
                                 <div class="dropdown-menu " aria-labelledby="blogDropdown">
                                     @foreach($branch as $row)
-                                     <a class="dropdown-item" href="{{route('branch_location',['clinicId'=>$row->id])}}">{{ $row->branchname_ar }}</a>
+                                    <a class="dropdown-item" href="{{route('branch_location',['clinicId'=>$row->id])}}">{{ $row->branchname_ar }}</a>
                                     @endforeach
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('doctors')}}">
-                                   الأطباء </a>
+                                    الأطباء </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('offer')}}">
-                                   العروض </a>
+                                    العروض </a>
                             </li>
-                            
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('contact_us')}}">
                                     تواصل معنا </a>

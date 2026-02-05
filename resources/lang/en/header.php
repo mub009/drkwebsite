@@ -12,7 +12,9 @@ return [
     'nav_no2' => '02.',
     'nav_no3' => '03.',
     'nav_no4' => '04.',
+    'nav_no5' => '05.',
     'book_now' => 'Book Now',
+    'offer' => 'Offer',
 
 
 
