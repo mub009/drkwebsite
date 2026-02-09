@@ -1260,14 +1260,15 @@
                                             </div>
 
                                             <div class="select-options">
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street">Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Hospital – Dammam">Dr. Khalid Al-Ruhaimi Hospital – Dammam</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan</div>
-
+                                                <div class="option" data-value="الدمام - حي الريان">الدمام - حي الريان</div>
+                                                <div class="option" data-value="الدمام - حي الفرسان">الدمام - حي الفرسان</div>
+                                                <div class="option" data-value="الخبر - حي العليا">الخبر - حي العليا</div>
+                                                <div class="option" data-value="الخبر - حي العزيزية">الخبر - حي العزيزية</div>
+                                                <div class="option" data-value="الخبر - شارع البيبسي">الخبر - شارع البيبسي</div>
+                                                <div class="option" data-value="الاحساء - حي الفتح">الاحساء - حي الفتح</div>
+                                                <div class="option" data-value="الرياض - حي قرطبة">الرياض - حي قرطبة</div>
                                             </div>
+
                                         </div>
 
                                         <!-- Hidden input to submit value -->
@@ -1287,7 +1288,7 @@
 
                             </form>
                         </div>
-                        
+
 
 
 
@@ -1362,7 +1363,7 @@
 
             <div class="blog-grid  anima" data-aos="fade-zoom-in">
                 @foreach ($article as $item)
-                
+
                 <article class="blog-card  {{ count($article) === 1 ? 'single-blog' : '' }}">
                     <img src="{{asset('images').'/'.$item->image}}" alt="{{ app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en }}" class="blog-image" />
                     <div class="blog-content">
@@ -1383,7 +1384,7 @@
                             </time>
                         </div>
                         <div class="blog-card-body">
-                            
+
                             <p class="blog-excerpt ertret">
                                 @if (app()->getLocale() == 'ar')
                                 {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_ar)), 60) }}
@@ -1695,102 +1696,102 @@
 
 
 <div id="bookingSuccess" class="drk-success-modal" style="display:none;">
-                            <div class="drk-success-box">
-                                <div class="drk-icon">
-                                    <i class="ti ti-check"></i>
-                                </div>
-                                <h4>Enquiry Submitted</h4>
-                                <p id="successMessage"></p>
-                                <button class="drk-close-btn" onclick="hideSuccess()">Okay</button>
-                            </div>
-                        </div>
+    <div class="drk-success-box">
+        <div class="drk-icon">
+            <i class="ti ti-check"></i>
+        </div>
+        <h4>Enquiry Submitted</h4>
+        <p id="successMessage"></p>
+        <button class="drk-close-btn" onclick="hideSuccess()">Okay</button>
+    </div>
+</div>
 
-                        <style>
-                            /* Overlay */
-                            .drk-success-modal {
-                                position: fixed;
-                                inset: 0;
-                                background: rgba(0, 0, 0, 0.55);
-                                display: none;
-                                align-items: center;
-                                justify-content: center;
-                                z-index: 9999;
-                            }
+<style>
+    /* Overlay */
+    .drk-success-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
 
-                            /* Modal Box */
-                            .drk-success-box {
-                                background: #ffffff;
-                                max-width: 420px;
-                                width: 90%;
-                                padding: 32px 26px;
-                                border-radius: 18px;
-                                text-align: center;
-                                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-                                animation: scaleFade 0.4s ease;
-                            }
+    /* Modal Box */
+    .drk-success-box {
+        background: #ffffff;
+        max-width: 420px;
+        width: 90%;
+        padding: 32px 26px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        animation: scaleFade 0.4s ease;
+    }
 
-                            /* Icon */
-                            .drk-icon {
-                                width: 72px;
-                                height: 72px;
-                                margin: 0 auto 18px;
-                                background: linear-gradient(135deg, #980a50, #c2185b);
-                                border-radius: 50%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            }
+    /* Icon */
+    .drk-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 18px;
+        background: linear-gradient(135deg, #980a50, #c2185b);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-                            .drk-icon i {
-                                font-size: 36px;
-                                color: #fff;
-                            }
+    .drk-icon i {
+        font-size: 36px;
+        color: #fff;
+    }
 
-                            /* Title */
-                            .drk-success-box h4 {
-                                font-size: 20px;
-                                font-weight: 600;
-                                margin-bottom: 10px;
-                                color: #c2185b;
-                            }
+    /* Title */
+    .drk-success-box h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #c2185b;
+    }
 
-                            /* Text */
-                            .drk-success-box p {
-                                font-size: 14.5px;
-                                line-height: 1.6;
-                                color: #4b5563;
-                                margin-bottom: 22px;
-                            }
+    /* Text */
+    .drk-success-box p {
+        font-size: 14.5px;
+        line-height: 1.6;
+        color: #4b5563;
+        margin-bottom: 22px;
+    }
 
-                            /* Button */
-                            .drk-close-btn {
-                                border: none;
-                                padding: 10px 28px;
-                                border-radius: 30px;
-                                background: #c2185b;
-                                color: #fff;
-                                font-size: 14px;
-                                cursor: pointer;
-                                transition: 0.3s ease;
-                            }
+    /* Button */
+    .drk-close-btn {
+        border: none;
+        padding: 10px 28px;
+        border-radius: 30px;
+        background: #c2185b;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
 
-                            .drk-close-btn:hover {
-                                background: #c2185b;
-                            }
+    .drk-close-btn:hover {
+        background: #c2185b;
+    }
 
-                            /* Animation */
-                            @keyframes scaleFade {
-                                from {
-                                    opacity: 0;
-                                    transform: scale(0.9);
-                                }
+    /* Animation */
+    @keyframes scaleFade {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
 
-                                to {
-                                    opacity: 1;
-                                    transform: scale(1);
-                                }
-                            }
-                        </style>
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
 @endsection
 
 @push('scripts')

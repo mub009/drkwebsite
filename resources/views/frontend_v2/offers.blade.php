@@ -118,7 +118,7 @@
         margin-top: 80px !important;
     }
 
-/* 
+    /* 
     @media (min-width: 300px) and (max-width: 1100px) {
 
         .doctor-card,
@@ -1246,14 +1246,15 @@
                                             </div>
 
                                             <div class="select-options">
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street">Dr. Khalid Al-Ruhaimi Medical Complex – Pepsi Street</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Hospital – Dammam">Dr. Khalid Al-Ruhaimi Hospital – Dammam</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Azizia</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Ahsa</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Olaya</div>
-                                                <div class="option" data-value="Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan">Dr. Khalid Al-Ruhaimi Medical Complex – Al-Fursan</div>
-
+                                                <div class="option" data-value="الدمام - حي الريان">الدمام - حي الريان</div>
+                                                <div class="option" data-value="الدمام - حي الفرسان">الدمام - حي الفرسان</div>
+                                                <div class="option" data-value="الخبر - حي العليا">الخبر - حي العليا</div>
+                                                <div class="option" data-value="الخبر - حي العزيزية">الخبر - حي العزيزية</div>
+                                                <div class="option" data-value="الخبر - شارع البيبسي">الخبر - شارع البيبسي</div>
+                                                <div class="option" data-value="الاحساء - حي الفتح">الاحساء - حي الفتح</div>
+                                                <div class="option" data-value="الرياض - حي قرطبة">الرياض - حي قرطبة</div>
                                             </div>
+
                                         </div>
 
                                         <!-- Hidden input to submit value -->

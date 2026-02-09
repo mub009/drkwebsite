@@ -804,31 +804,15 @@
                                             </div>
 
                                             <div class="select-options">
-                                                <div class="option" data-value="Dammam">
-                                                    {{ __('home.branch1') }}
-                                                </div>
-                                                <div class="option" data-value="Al Fursan">
-                                                    {{ __('home.branch2') }}
-                                                </div>
-                                                <div class="option" data-value="Al Olaya">
-                                                    {{ __('home.branch3') }}
-                                                </div>
-                                                <div class="option" data-value="Al Aziziyah">
-                                                    {{ __('home.branch4') }}
-                                                </div>
-                                                <div class="option" data-value="Pepsi">
-                                                    {{ __('home.branch5') }}
-                                                </div>
-                                                <div class="option" data-value="Al-Fath">
-                                                    {{ __('home.branch6') }}
-                                                </div>
-
-                                                <div class="option" data-value="Qurtubah">
-                                                    {{ __('home.branch7') }}
-                                                </div>
-
-
+                                                <div class="option" data-value="الدمام - حي الريان">الدمام - حي الريان</div>
+                                                <div class="option" data-value="الدمام - حي الفرسان">الدمام - حي الفرسان</div>
+                                                <div class="option" data-value="الخبر - حي العليا">الخبر - حي العليا</div>
+                                                <div class="option" data-value="الخبر - حي العزيزية">الخبر - حي العزيزية</div>
+                                                <div class="option" data-value="الخبر - شارع البيبسي">الخبر - شارع البيبسي</div>
+                                                <div class="option" data-value="الاحساء - حي الفتح">الاحساء - حي الفتح</div>
+                                                <div class="option" data-value="الرياض - حي قرطبة">الرياض - حي قرطبة</div>
                                             </div>
+
                                         </div>
 
 
