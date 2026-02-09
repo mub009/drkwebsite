@@ -82,6 +82,12 @@
       </a>
     </li>
     <li class="menu-item">
+      <a href="{{ route('enquiry.index') }}" class="menu-link">
+        <i class="menu-icon fa-solid fa-tags"></i>
+        <div data-i18n="Enquiry">Enquiry</div>
+      </a>
+    </li>
+    <li class="menu-item">
       <a href="{{ route('socialmedias.index') }}" class="menu-link">
         <i class="menu-icon fa-solid fa-hashtag"></i>
         <div data-i18n="Socialmedia">Social Media</div>

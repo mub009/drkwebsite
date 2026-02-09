@@ -795,41 +795,41 @@
                                     <div class="form-group">
                                         <label>{{ __('home.hospitalBranchL') }}</label>
 
-                                    <div class="custom-select" id="branchSelect">
-    <input type="hidden" name="branch" id="branchInput" required>
+                                        <div class="custom-select" id="branchSelect">
+                                            <input type="hidden" name="branch" id="branchInput" required>
 
-    <div class="select-trigger">
-        <span id="selectedText">{{ __('home.hospitalBranchSL') }}</span>
-        <i class="arrow"></i>
-    </div>
+                                            <div class="select-trigger">
+                                                <span id="selectedText">{{ __('home.hospitalBranchSL') }}</span>
+                                                <i class="arrow"></i>
+                                            </div>
 
-    <div class="select-options">
-        <div class="option" data-value="Dammam">
-        {{ __('home.branch1') }}
-        </div>
-        <div class="option" data-value="Al Fursan">
-           {{ __('home.branch2') }}
-        </div>
-        <div class="option" data-value="Al Olaya">
-          {{ __('home.branch3') }}
-        </div>
-        <div class="option" data-value="Al Aziziyah">
-       {{ __('home.branch4') }}
-        </div>
-        <div class="option" data-value="Pepsi">
-           {{ __('home.branch5') }}
-        </div>
-        <div class="option" data-value="Al-Fath">
-          {{ __('home.branch6') }}
-        </div>
+                                            <div class="select-options">
+                                                <div class="option" data-value="Dammam">
+                                                    {{ __('home.branch1') }}
+                                                </div>
+                                                <div class="option" data-value="Al Fursan">
+                                                    {{ __('home.branch2') }}
+                                                </div>
+                                                <div class="option" data-value="Al Olaya">
+                                                    {{ __('home.branch3') }}
+                                                </div>
+                                                <div class="option" data-value="Al Aziziyah">
+                                                    {{ __('home.branch4') }}
+                                                </div>
+                                                <div class="option" data-value="Pepsi">
+                                                    {{ __('home.branch5') }}
+                                                </div>
+                                                <div class="option" data-value="Al-Fath">
+                                                    {{ __('home.branch6') }}
+                                                </div>
 
-         <div class="option" data-value="Qurtubah">
-          {{ __('home.branch7') }}
-        </div>
+                                                <div class="option" data-value="Qurtubah">
+                                                    {{ __('home.branch7') }}
+                                                </div>
 
-         
-    </div>
-</div>
+
+                                            </div>
+                                        </div>
 
 
                                         <!-- Hidden input to submit value -->
@@ -862,36 +862,36 @@
 
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const select = document.getElementById('branchSelect');
-    const trigger = select.querySelector('.select-trigger');
-    const options = select.querySelector('.select-options');
-    const selectedText = document.getElementById('selectedText');
-    const hiddenInput = document.getElementById('branchInput');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const select = document.getElementById('branchSelect');
+            const trigger = select.querySelector('.select-trigger');
+            const options = select.querySelector('.select-options');
+            const selectedText = document.getElementById('selectedText');
+            const hiddenInput = document.getElementById('branchInput');
 
-    // Open / close dropdown
-    trigger.addEventListener('click', function () {
-        select.classList.toggle('open');
-    });
+            // Open / close dropdown
+            trigger.addEventListener('click', function() {
+                select.classList.toggle('open');
+            });
 
-    // Select option
-    options.querySelectorAll('.option').forEach(option => {
-        option.addEventListener('click', function () {
-            selectedText.textContent = this.textContent;
-            hiddenInput.value = this.dataset.value;
-            select.classList.remove('open');
+            // Select option
+            options.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', function() {
+                    selectedText.textContent = this.textContent;
+                    hiddenInput.value = this.dataset.value;
+                    select.classList.remove('open');
+                });
+            });
+
+            // Close on outside click
+            document.addEventListener('click', function(e) {
+                if (!select.contains(e.target)) {
+                    select.classList.remove('open');
+                }
+            });
         });
-    });
-
-    // Close on outside click
-    document.addEventListener('click', function (e) {
-        if (!select.contains(e.target)) {
-            select.classList.remove('open');
-        }
-    });
-});
-</script>
+    </script>
 
 
 
