@@ -36,7 +36,6 @@ function changeBackground() {
 
 setInterval(changeBackground, 3000);
 
-
 // slideshow
 
 const scrollContainer = document.querySelector(".departments-scroll-container");
@@ -76,7 +75,6 @@ function smoothAutoScroll() {
     }
     requestAnimationFrame(smoothAutoScroll);
 }
-
 
 // FAQS
 
@@ -118,11 +116,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Close all others (accordion behavior)
         faqItems.forEach((otherItem) => {
-            if (otherItem !== item && otherItem.classList.contains("expanded")) {
+            if (
+                otherItem !== item &&
+                otherItem.classList.contains("expanded")
+            ) {
                 otherItem.classList.remove("expanded");
                 const otherButton = otherItem.querySelector(".toggle-button");
                 const otherAnswer = otherItem.querySelector(".faq-answer");
-                if (otherButton) otherButton.setAttribute("aria-expanded", "false");
+                if (otherButton)
+                    otherButton.setAttribute("aria-expanded", "false");
                 if (otherAnswer) otherAnswer.style.maxHeight = "0";
                 announceStateChange(otherItem, false);
             }
@@ -142,9 +144,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
                 const rect = item.getBoundingClientRect();
-                const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                const isVisible =
+                    rect.top >= 0 && rect.bottom <= window.innerHeight;
                 if (!isVisible) {
-                    item.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                    item.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                    });
                 }
             }, 150);
         }
@@ -154,7 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", function () {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            const expandedItems = document.querySelectorAll(".faq-item.expanded");
+            const expandedItems =
+                document.querySelectorAll(".faq-item.expanded");
             expandedItems.forEach((item) => {
                 const answer = item.querySelector(".faq-answer");
                 if (answer) {
@@ -193,52 +200,82 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-
-
-
-
-
 AOS.init({
-    duration: 1000,           // Slightly faster animation
-    once: false,             // Animate on every scroll (in and out)
-    offset: 180,             // Start animation slightly before it's fully in viewport
-    easing: 'ease-out-back', // Smoother and spring-like easing
-    mirror: true,            // Animate out when scrolling up
-    anchorPlacement: 'top-bottom' // More consistent triggering
+    duration: 1000, // Slightly faster animation
+    once: false, // Animate on every scroll (in and out)
+    offset: 180, // Start animation slightly before it's fully in viewport
+    easing: "ease-out-back", // Smoother and spring-like easing
+    mirror: true, // Animate out when scrolling up
+    anchorPlacement: "top-bottom", // More consistent triggering
 });
 
+const select = document.getElementById("branchSelect");
+const trigger = select.querySelector(".select-trigger");
+const options = select.querySelectorAll(".option");
+const input = document.getElementById("branchInput");
 
-
-
-
-
-
-
-  const select = document.getElementById("branchSelect");
-  const trigger = select.querySelector(".select-trigger");
-  const options = select.querySelectorAll(".option");
-  const input = document.getElementById("branchInput");
-
-  trigger.addEventListener("click", () => {
+trigger.addEventListener("click", () => {
     select.classList.toggle("open");
-  });
+});
 
-  options.forEach(option => {
+options.forEach((option) => {
     option.addEventListener("click", () => {
-      options.forEach(o => o.classList.remove("active"));
-      option.classList.add("active");
+        options.forEach((o) => o.classList.remove("active"));
+        option.classList.add("active");
 
-      trigger.querySelector("span").textContent = option.textContent;
-      input.value = option.dataset.value;
+        trigger.querySelector("span").textContent = option.textContent;
+        input.value = option.dataset.value;
 
-      select.classList.remove("open");
+        select.classList.remove("open");
     });
-  });
+});
 
-  document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
     if (!select.contains(e.target)) {
-      select.classList.remove("open");
+        select.classList.remove("open");
     }
-  });
+});
 
+document
+    .querySelector(".enquiry-form")
+    .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const form = this;
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-CSRF-TOKEN": document.querySelector(
+                    'meta[name="csrf-token"]',
+                ).content,
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.status) {
+                    showSuccessModal(data.message);
+                    form.reset();
+                    trigger.querySelector("span").textContent = "Select Branch";
+                    input.value = "";
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch((err) => {
+                console.error(err);
+                alert("Something went wrong!");
+            });
+    });
+
+function showSuccessModal(message) {
+    document.getElementById("successMessage").innerHTML = message;
+    document.getElementById("bookingSuccess").style.display = "flex";
+
+    setTimeout(hideSuccess, 5000);
+}
+
+function hideSuccess() {
+    document.getElementById("bookingSuccess").style.display = "none";
+}

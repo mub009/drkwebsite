@@ -7,6 +7,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\SocialmediaController;
@@ -111,6 +112,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/offers/{id}/show', [OfferController::class, 'show'])->name('offers.show');
     // Route::get('/offers', [OfferController::class, 'getOffer']);
 
+    // Enquiry Routes
+    Route::get('/enquiry', [EnquiryController::class, 'index'])->name('enquiry.index');
+    Route::get('/enquiry/dataTablesForEnquiry', [EnquiryController::class, 'dataTablesForEnquiry'])->name('enquiry.dataTablesForEnquiry');
 
     // Socialmedia Routes
     Route::get('/socialmedias', [SocialmediaController::class, 'index'])->name('socialmedias.index');
@@ -175,6 +179,8 @@ Route::middleware(['setLocale'])->group(function () {
     Route::get('/departmentDetails/{surl}', [FrontEndController::class, 'departmentDetails'])->name('departmentDetails');
     Route::get('/privacy_policy', [FrontEndController::class, 'privacy_policy'])->name('privacy_policy');
     Route::get('/services', [FrontEndController::class, 'services'])->name('services');
+
+    Route::post('/enquiry_submit', [FrontEndController::class, 'enquirySubmit'])->name('enquirySubmit');
 
     Route::post('/change-language', [LanguageController::class, 'changeLanguage'])->name('change.language');
 });

@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EnquiryRequest;
 use App\Models\Department;
 use App\Models\Doctor;
 use App\Models\Article;
 use App\Models\Offer;
 use App\Models\Branch;
+use App\Models\Enquiry;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
 {
-    
+
     public function home()
     {
         Carbon::setLocale(app()->getLocale());
@@ -45,7 +48,7 @@ class FrontEndController extends Controller
     }
 
 
-     public function offers()
+    public function offers()
     {
         Carbon::setLocale(app()->getLocale());
 
@@ -55,19 +58,19 @@ class FrontEndController extends Controller
     }
 
 
-      public function appointment()
+    public function appointment()
     {
         Carbon::setLocale(app()->getLocale());
 
         $data = array();
-          $data['department'] = Department::whereNotNull('department_ar')
+        $data['department'] = Department::whereNotNull('department_ar')
             ->orderBy('sort', 'asc')
             ->get();
         // $data['offers'] = Offer::latest()->paginate(4);
         return view('frontend_v2.appointment', $data);
     }
 
-    
+
 
     public function articleDetails($slug = null)
     {
@@ -140,8 +143,20 @@ class FrontEndController extends Controller
             ->select('doctors.*', 'departments.department_ar as department_ar', 'departments.department_en as department_en', 'departments.id as dept_id')
             ->orderBy('sort', 'asc')
             ->get();
-        
+
         $data['department'] = Department::whereNotNull('department_ar')->orderBy('sort', 'asc')->get();
         return view('frontend_v2.services', $data);
+    }
+
+
+    public function enquirySubmit(EnquiryRequest $request)
+    {
+        $enquiry = Enquiry::create($request->validated());
+
+        return response()->json([
+            'status' => true,
+            'data'   => $enquiry,
+            'message' => 'Thank you for contacting <strong>DRK Hospital</strong>.<br>Our team will reach out shortly.'
+        ]);
     }
 }

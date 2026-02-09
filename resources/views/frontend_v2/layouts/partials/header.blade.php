@@ -17,6 +17,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
 
