@@ -21,15 +21,13 @@
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 
 <body>
     <style>
-        
-
         /* .loader:before {
             content: "مستشفى الدكتور خالد الرحيمي...";
         } */
@@ -63,14 +61,27 @@
         .close-buttonzzl {
             position: absolute;
             top: 20px;
-            right: unset !important;
-            left: 20px !important;
+            /* right: unset !important;
+            left: 20px !important; */
             background: none;
             border: none;
             font-size: 41px;
             cursor: pointer;
             color: #000;
         }
+
+        /* English (LTR) */
+        html[dir="ltr"] .close-buttonzzl {
+            right: 20px !important;
+            left: unset !important;
+        }
+
+        /* Arabic (RTL) */
+        html[dir="rtl"] .close-buttonzzl {
+            right: unset !important;
+            left: 20px !important;
+        }
+
 
         .nav-link2:hover {
             color: #980a50;
@@ -87,8 +98,6 @@
             right: unset !important;
             left: 10px !important;
         }
-
-        
     </style>
 
     <!-- <a href="https://wa.me/+966920010436" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
@@ -96,27 +105,27 @@
     </a> -->
 
     <div class="social-float">
-  <!-- WhatsApp -->
-  <a href="https://wa.me/+966920010436" target="_blank" aria-label="Chat on WhatsApp">
-    <img src="{{ asset('frontend_v2/assets/logos/WhatsApp11.svg.jpg') }}" alt="WhatsApp">
-  </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/+966920010436" target="_blank" aria-label="Chat on WhatsApp">
+            <img src="{{ asset('frontend_v2/assets/logos/WhatsApp11.svg.jpg') }}" alt="WhatsApp">
+        </a>
 
-  <!-- Phone -->
-  <a href="tel:+966920010436" aria-label="Call Us">
-    <img src="{{ asset('frontend_v2/assets/logos/Telephone.png') }}" alt="Phone">
-  </a>
+        <!-- Phone -->
+        <a href="tel:+966920010436" aria-label="Call Us">
+            <img src="{{ asset('frontend_v2/assets/logos/Telephone.png') }}" alt="Phone">
+        </a>
 
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="_blank" aria-label="Instagram">
-    <img src="{{ asset('frontend_v2/assets/logos/insta.png') }}" alt="Instagram">
-  </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="_blank" aria-label="Instagram">
+            <img src="{{ asset('frontend_v2/assets/logos/insta.png') }}" alt="Instagram">
+        </a>
 
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="_blank" aria-label="TikTok">
-    <img src="{{ asset('frontend_v2/assets/logos/ticktok.png') }}" alt="TikTok">
-  </a>
-</div>
-    
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="_blank" aria-label="TikTok">
+            <img src="{{ asset('frontend_v2/assets/logos/ticktok.png') }}" alt="TikTok">
+        </a>
+    </div>
+
 
     <!-- <div class="loader-screen">
         <div class="loader"></div>
@@ -136,11 +145,12 @@
                         <span class="language-option" data-language="en">EN</span>
                         <span class="language-option" data-language="ar">AR</span>
                     </div>
-                    <a href="{{ route('services') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no1') }} </span>{{ __('header.nav_services') }}</a>
-                    <a href="{{ route('blog') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no2') }} </span>{{ __('header.nav_blog') }}</a>
-                    <a href="{{ route('about') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no3') }} </span>{{ __('header.nav_about') }}</a>
-                    <a href="{{ route('contact_us') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no4') }} </span>{{ __('header.nav_contact') }}</a>
-                    <a href="{{ route('offerFrontEnd') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no5') }} </span>{{ __('header.offer') }}</a>
+                    <a href="{{ route('home') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no1') }} </span>{{ __('header.nav_home') }}</a>
+                    <a href="{{ route('services') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no2') }} </span>{{ __('header.nav_services') }}</a>
+                    <a href="{{ route('blog') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no3') }} </span>{{ __('header.nav_blog') }}</a>
+                    <a href="{{ route('about') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no4') }} </span>{{ __('header.nav_about') }}</a>
+                    <a href="{{ route('contact_us') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no5') }} </span>{{ __('header.nav_contact') }}</a>
+                    <a href="{{ route('offerFrontEnd') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no6') }} </span>{{ __('header.nav_offer') }}</a>
                     <div class="footer-line2"></div>
                     <div class="footer-tail-end">
                         <div>{{ __('header.footer_tail') }}</div>
@@ -148,11 +158,12 @@
                 </div>
             </nav>
             <nav class="main-navigation" role="navigation" aria-label="{{ __('header.main_navigation') }}">
+                <a href="{{ route('home') }}" class="nav-link">{{ __('header.nav_home') }}</a>
                 <a href="{{ route('services') }}" class="nav-link">{{ __('header.nav_services') }}</a>
                 <a href="{{ route('blog') }}" class="nav-link">{{ __('header.nav_blog') }}</a>
                 <a href="{{ route('about') }}" class="nav-link">{{ __('header.nav_about') }}</a>
                 <a href="{{ route('contact_us') }}" class="nav-link">{{ __('header.nav_contact') }}</a>
-                <a href="{{ route('offerFrontEnd') }}" class="nav-link">{{ __('header.offer') }}</a>
+                <a href="{{ route('offerFrontEnd') }}" class="nav-link">{{ __('header.nav_offer') }}</a>
             </nav>
             <div class="header-actions">
                 <div class="language-selector lnon" onclick="toggleLanguage()">

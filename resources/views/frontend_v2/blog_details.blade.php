@@ -12,7 +12,7 @@
         margin-bottom: 30px;
     }
 
-    .blog-detail-header h1 {
+    .blog-detail-header h2 {
         font-size: 50px;
         color: #0a2440;
         margin-bottom: 10px;
@@ -147,7 +147,7 @@
         <div class="blog-detail-container">
             <!-- Header -->
             <div class="blog-detail-header">
-                <h1>{{ app()->getLocale() === 'ar' ? $article->title_ar : $article->title_en }}</h1>
+                <h2>{{ app()->getLocale() === 'ar' ? $article->title_ar : $article->title_en }}</h2>
                 @php
                 $date = $article->created_at->locale(app()->getLocale())->translatedFormat('d F Y');
                 if (app()->getLocale() === 'ar') {

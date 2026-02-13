@@ -13,8 +13,10 @@ return [
     'nav_no3' => '03.',
     'nav_no4' => '04.',
     'nav_no5' => '05.',
+    'nav_no6' => '06.',
     'book_now' => 'Book Now',
-    'offer' => 'Offer',
+    'nav_offer' => 'Offer',
+    'nav_home' => 'Home',
 
 
 
