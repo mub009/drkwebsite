@@ -4,13 +4,24 @@
     .close-buttonzzl {
         position: absolute;
         top: 20px;
-        right: unset !important;
-        left: 20px !important;
+        /* right: unset !important;
+        left: 20px !important; */
         background: none;
         border: none;
         font-size: 41px;
         cursor: pointer;
         color: #000;
+    }
+
+    html[dir="ltr"] .close-buttonzzl {
+        right: 20px !important;
+        left: unset !important;
+    }
+
+    /* Arabic (RTL) */
+    html[dir="rtl"] .close-buttonzzl {
+        right: unset !important;
+        left: 20px !important;
     }
 
     .bg-layer {
@@ -491,11 +502,7 @@
                         </div>
                         <div class="blog-card-body">
                             <p class="blog-excerpt">
-                                @if (app()->getLocale() == 'ar')
-                                {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_ar)), 60) }}
-                                @else
-                                {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($item->article_en)), 60) }}
-                                @endif
+                                {!! html_entity_decode(app()->getLocale() === 'ar' ? $item->title_ar : $item->title_en) !!}
                             </p>
                             <a href="{{route('articleDetails', ['surl' => $item->slug])}}" class="blog-link">
                                 <span class="link-text">{{ __('blog.view_details') }}</span>

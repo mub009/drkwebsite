@@ -740,6 +740,16 @@
         font-size: 14px;
         padding: 10px 16px;
     }
+  .rightzz {
+  right: 50px !important;
+}
+
+@media (max-width: 768px) {
+  .rightzz {
+    right: unset !important;
+  }
+}
+
 </style>
 
 
@@ -1509,7 +1519,7 @@
     <div class="departments-section h-cot">
         <div class="departments-container">
             <div class="departments-content">
-                <div class="departments-header h-cotz" style="left: unset !important;right: 50px !important;align-items: end;text-align: end;">
+                <div class="departments-header h-cotz rightzz" style="left: unset !important;align-items: end;text-align: end;">
                     <h2 class="departments-label">{{ __('home.specialHealthOffersL') }}</h2>
 
                     <h2 class="main-headline">

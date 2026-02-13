@@ -13,15 +13,24 @@
     .close-buttonzzl {
         position: absolute;
         top: 20px;
-        right: unset !important;
-        left: 20px !important;
+        /* right: unset !important;
+        left: 20px !important; */
         background: none;
         border: none;
         font-size: 41px;
         cursor: pointer;
         color: #000;
     }
+html[dir="ltr"] .close-buttonzzl {
+  right: 20px !important;
+  left: unset !important;
+}
 
+/* Arabic (RTL) */
+html[dir="rtl"] .close-buttonzzl {
+  right: unset !important;
+  left: 20px !important;
+}
     .bg-layer {
         position: absolute;
         inset: 0;

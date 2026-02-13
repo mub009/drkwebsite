@@ -112,8 +112,7 @@
             processing: true,
             serverSide: true,
             ajax: "{{ route('socialmedias.dataTablesForSocialmedias') }}",
-            columns: [
-                {
+            columns: [{
                     data: 'tiktok_name',
                     name: 'tiktok_name',
                     render: function(data) {
