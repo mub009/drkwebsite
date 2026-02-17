@@ -1,3 +1,10 @@
+<style>
+    .nav-column h2 {
+        color: white !important;
+        border-bottom: none;
+        margin-top: 0;
+    }
+</style>
 <footer class="hospital-footer topz">
     <section class="about-section">
         <div class="about-container">
