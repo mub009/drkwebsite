@@ -807,7 +807,8 @@
                 <p class="service-description">{{ __('home.insurance_desc') }}</p>
                 <div class="learn-more-link">
                     <div class="learn-more-arrow">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                        <a href="{{ route('about') }}" class="menu-link">
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
                     </div>
                     <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                 </div>
@@ -827,7 +828,8 @@
                 <p class="service-description">{{ __('home.our_doctors_desc') }}</p>
                 <div class="learn-more-link">
                     <div class="learn-more-arrow">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                        <a href="{{ route('about') }}" class="menu-link">
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
                     </div>
                     <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                 </div>
@@ -847,7 +849,8 @@
                 <p class="service-description">{{ __('home.our_specialities_desc') }}</p>
                 <div class="learn-more-link">
                     <div class="learn-more-arrow">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                        <a href="{{ route('about') }}" class="menu-link">
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
                     </div>
                     <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                 </div>
@@ -936,7 +939,8 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii1.png') }}" alt="{{ __('imagealt.doctor') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                <a href="{{ route('contact_us') }}" class="menu-link">
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
             </div>
         </div>
 
@@ -947,7 +951,8 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii2.png') }}" alt="{{ __('imagealt.confirmed_appointment') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                <a href="{{ route('contact_us') }}" class="menu-link">
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
             </div>
         </div>
 
@@ -958,7 +963,8 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii3.jpg') }}" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                <a href="{{ route('contact_us') }}" class="menu-link">
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
             </div>
         </div>
 
@@ -969,7 +975,8 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii4.png') }}" alt="{{ __('imagealt.video_consultation') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                <a href="{{ route('contact_us') }}" class="menu-link">
+                <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
             </div>
         </div>
 
@@ -980,7 +987,8 @@
             </div>
             <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" alt="{{ __('imagealt.lab_test') }}" class="card-image" />
             <div class="card-button light-btn">
-                <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                <a href="{{ route('contact_us') }}" class="menu-link">
+                <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
             </div>
         </div>
     </div>
