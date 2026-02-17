@@ -114,6 +114,16 @@
         gap: 20px;
     }
 
+    @media (min-width: 300px) and (max-width: 750px) {
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: unset !important;
+            gap: 20px;
+        }
+
+    }
+
     .related-card {
         background: #fff;
         border-radius: 12px;

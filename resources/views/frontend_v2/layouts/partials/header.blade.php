@@ -5,8 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="{{ asset('frontend_v2/assets/logos/Logo2.png') }}">
-    <title>{{ __('header.title') }}</title>
-    <meta name="description" content="{{ __('header.description') }}" />
+    <title>
+        @if(isset($article->title_en))
+        {{ $article->title_en }}
+        @else
+        {{ __('header.title') }}
+        @endif
+    </title>
+    <meta name="description" content="{{ isset($article) && isset($article->article_en) ? $article->article_en : __('header.description') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
