@@ -515,38 +515,48 @@
             </div>
         </div>
         <div class="pagination">
-            {{-- Previous Button --}}
-            @if ($articles->onFirstPage())
-            <span class="prev disabled">«</span>
-            @else
-            <a href="{{ $articles->previousPageUrl() }}" class="prev">«</a>
-            @endif
 
-            {{-- Page Numbers --}}
-            @for ($i = 1; $i <= $articles->lastPage(); $i++)
-                @php
-                $pageNum = $i;
-                if (app()->getLocale() === 'ar') {
+    {{-- Previous Button --}}
+    @if ($articles->onFirstPage())
+        <span class="prev disabled">«</span>
+    @else
+        <a href="{{ $articles->previousPageUrl() }}" class="prev">«</a>
+    @endif
+
+
+    @php
+        $start = max($articles->currentPage() - 1, 1);
+        $end = min($articles->currentPage() + 1, $articles->lastPage());
+    @endphp
+
+
+    {{-- Page Numbers (only 3 visible) --}}
+    @for ($i = $start; $i <= $end; $i++)
+        @php
+            $pageNum = $i;
+            if (app()->getLocale() === 'ar') {
                 $western = ['0','1','2','3','4','5','6','7','8','9'];
                 $eastern = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
                 $pageNum = str_replace($western, $eastern, $i);
-                }
-                @endphp
+            }
+        @endphp
 
-                @if ($i == $articles->currentPage())
-                <a href="{{ $articles->url($i) }}" class="active">{{ $pageNum }}</a>
-                @else
-                <a href="{{ $articles->url($i) }}">{{ $pageNum }}</a>
-                @endif
-                @endfor
+        @if ($i == $articles->currentPage())
+            <a href="{{ $articles->url($i) }}" class="active">{{ $pageNum }}</a>
+        @else
+            <a href="{{ $articles->url($i) }}">{{ $pageNum }}</a>
+        @endif
+    @endfor
 
-                {{-- Next Button --}}
-                @if ($articles->hasMorePages())
-                <a href="{{ $articles->nextPageUrl() }}" class="next">»</a>
-                @else
-                <span class="next disabled">»</span>
-                @endif
-        </div>
+
+    {{-- Next Button --}}
+    @if ($articles->hasMorePages())
+        <a href="{{ $articles->nextPageUrl() }}" class="next">»</a>
+    @else
+        <span class="next disabled">»</span>
+    @endif
+
+</div>
     </div>
 </section>
 
