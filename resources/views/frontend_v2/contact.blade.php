@@ -1080,13 +1080,13 @@
                                             </div>
 
                                             <div class="select-options">
-                                                <div class="option" data-value="الدمام - حي الريان">الدمام - حي الريان</div>
-                                                <div class="option" data-value="الدمام - حي الفرسان">الدمام - حي الفرسان</div>
-                                                <div class="option" data-value="الخبر - حي العليا">الخبر - حي العليا</div>
-                                                <div class="option" data-value="الخبر - حي العزيزية">الخبر - حي العزيزية</div>
-                                                <div class="option" data-value="الخبر - شارع البيبسي">الخبر - شارع البيبسي</div>
-                                                <div class="option" data-value="الاحساء - حي الفتح">الاحساء - حي الفتح</div>
-                                                <div class="option" data-value="الرياض - حي قرطبة">الرياض - حي قرطبة</div>
+                                                <div class="option" data-value="الدمام - حي الريان">{{ __('contact.branch1') }}</div>
+                                                <div class="option" data-value="الدمام - حي الفرسان">{{ __('contact.branch2') }}</div>
+                                                <div class="option" data-value="الخبر - حي العليا">{{ __('contact.branch3') }}</div>
+                                                <div class="option" data-value="الخبر - حي العزيزية">{{ __('contact.branch4') }}</div>
+                                                <div class="option" data-value="الخبر - شارع البيبسي">{{ __('contact.branch5') }}</div>
+                                                <div class="option" data-value="الاحساء - حي الفتح">{{ __('contact.branch6') }}</div>
+                                                <div class="option" data-value="الرياض - حي قرطبة">{{ __('contact.branch7') }}</div>
                                             </div>
 
                                         </div>

@@ -806,11 +806,12 @@
                 <h3 class="service-category">{{ __('home.insurance') }}</h3>
                 <p class="service-description">{{ __('home.insurance_desc') }}</p>
                 <div class="learn-more-link">
+                    <a href="{{ route('about') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
                     <div class="learn-more-arrow">
-                        <a href="{{ route('about') }}" class="menu-link">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </div>
                     <span class="learn-more-text">{{ __('home.learn_more') }}</span>
+                    </a>
                 </div>
             </div>
         </article>
@@ -827,11 +828,12 @@
                 <h3 class="service-category">{{ __('home.our_doctors') }}</h3>
                 <p class="service-description">{{ __('home.our_doctors_desc') }}</p>
                 <div class="learn-more-link">
-                    <div class="learn-more-arrow">
-                        <a href="{{ route('about') }}" class="menu-link">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
+                    <a href="{{ route('about') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
+                    <div class="learn-more-arrow"> 
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </div>
                     <span class="learn-more-text">{{ __('home.learn_more') }}</span>
+                    </a>
                 </div>
             </div>
         </article>
@@ -848,11 +850,12 @@
                 <h3 class="service-category">{{ __('home.our_specialities') }}</h3>
                 <p class="service-description">{{ __('home.our_specialities_desc') }}</p>
                 <div class="learn-more-link">
+                    <a href="{{ route('about') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;"> 
                     <div class="learn-more-arrow">
-                        <a href="{{ route('about') }}" class="menu-link">
-                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
+                        <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                     </div>
                     <span class="learn-more-text">{{ __('home.learn_more') }}</span>
+                    </a>
                 </div>
             </div>
         </article>
@@ -867,7 +870,7 @@
         <!-- Left Section -->
         <div class="left-section">
             <div class="left-image">
-                <img src="{{ asset('frontend_v2/assets/images/image6.jpg') }}" alt="{{ __('imagealt.doctor') }}" />
+                <img src="{{ asset('frontend_v2/assets/images/image7.jpeg') }}" alt="{{ __('imagealt.doctor') }}" />
             </div>
 
             <div class="badge-emergency" style="left: 90px !important;">{{ __('home.emergency') }}</div>
@@ -1183,7 +1186,7 @@
                     </h2>
 
                 </div>
-                <a href="{{ route('services') }}">
+                <a href="{{ route('contact_us') }}">
                     <div class="departments-scroll-container">
                         <div class="departments-grid">
                             @foreach($department as $row)
@@ -1278,13 +1281,13 @@
                                             </div>
 
                                             <div class="select-options">
-                                                <div class="option" data-value="الدمام - حي الريان">الدمام - حي الريان</div>
-                                                <div class="option" data-value="الدمام - حي الفرسان">الدمام - حي الفرسان</div>
-                                                <div class="option" data-value="الخبر - حي العليا">الخبر - حي العليا</div>
-                                                <div class="option" data-value="الخبر - حي العزيزية">الخبر - حي العزيزية</div>
-                                                <div class="option" data-value="الخبر - شارع البيبسي">الخبر - شارع البيبسي</div>
-                                                <div class="option" data-value="الاحساء - حي الفتح">الاحساء - حي الفتح</div>
-                                                <div class="option" data-value="الرياض - حي قرطبة">الرياض - حي قرطبة</div>
+                                                <div class="option" data-value="الدمام - حي الريان">{{ __('home.branch1') }}</div>
+                                                <div class="option" data-value="الدمام - حي الفرسان">{{ __('home.branch2') }}</div>
+                                                <div class="option" data-value="الخبر - حي العليا">{{ __('home.branch3') }}</div>
+                                                <div class="option" data-value="الخبر - حي العزيزية">{{ __('home.branch4') }}</div>
+                                                <div class="option" data-value="الخبر - شارع البيبسي">{{ __('home.branch5') }}</div>
+                                                <div class="option" data-value="الاحساء - حي الفتح">{{ __('home.branch6') }}</div>
+                                                <div class="option" data-value="الرياض - حي قرطبة">{{ __('home.branch7') }}</div>
                                             </div>
 
                                         </div>
