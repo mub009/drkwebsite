@@ -1095,6 +1095,32 @@
                                         <input type="hidden" name="branch" id="branchInput" required>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label>Services</label>
+
+                                        <div class="custom-select" id="serviceSelect">
+                                            <div class="select-trigger">
+                                                <span>Services</span>
+                                                <i class="arrow"></i>
+                                            </div>
+                                            <div class="select-options">
+                                                @if($services->isNotEmpty())
+                                               
+                                                @foreach($services as $item)
+                                                <div class="option" data-value="{{ $item->id }}">
+                                                    {{ app()->getLocale() === 'ar' ? $item->service_ar : $item->service_en }}
+                                                </div>
+                                                @endforeach
+
+                                                @else
+                                                <div class="option">No services found</div>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <input type="hidden" name="service" id="serviceInput" required>
+                                    </div>
+
 
                                     <div class="form-group">
                                         <label>{{ __('home.emailAddressL') }}</label>

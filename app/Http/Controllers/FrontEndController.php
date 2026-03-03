@@ -9,8 +9,8 @@ use App\Models\Article;
 use App\Models\Offer;
 use App\Models\Branch;
 use App\Models\Enquiry;
+use App\Models\Service;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
 {
@@ -34,7 +34,7 @@ class FrontEndController extends Controller
         $data['department'] = Department::whereNotNull('department_ar')
             ->orderBy('sort', 'asc')
             ->get();
-
+        $data['services'] = Service::all();
         return view('frontend_v2.index', $data);
     }
 
@@ -103,6 +103,7 @@ class FrontEndController extends Controller
     public function contact_us()
     {
         $data['branch'] = Branch::orderBy('sort', 'asc')->get();
+         $data['services'] = Service::all();
         return view('frontend_v2.contact', $data);
     }
 
@@ -114,6 +115,7 @@ class FrontEndController extends Controller
             ->orderBy('sort', 'asc')
             ->get();
         $data['department'] = Department::whereNotNull('department_ar')->get();
+        
         return view('frontend.doctor', $data);
     }
 

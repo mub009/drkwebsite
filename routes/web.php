@@ -15,6 +15,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\InsuranceController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\SEOController;
+use App\Http\Controllers\ServiceController;
 use App\Models\TableSetting;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Response;
@@ -159,6 +160,17 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/insurances/{id}/delete', [InsuranceController::class, 'destroy'])->name('insurances.destroy');
     Route::get('/insurances/{id}/show', [InsuranceController::class, 'show'])->name('insurances.show');
     // Route::get('/insurances', [InsuranceController::class, 'getInsurance']);
+
+    //service 
+    Route::get('/service/service', [ServiceController::class, 'service'])->name('service.service');
+    Route::get('/service/addservice', [ServiceController::class, 'addservice'])->name('service.add');
+    Route::post('/service/store', [ServiceController::class, 'store'])->name('service.store');
+    Route::get('/service/dataTablesForservice', [ServiceController::class, 'dataTablesForservice'])->name('service.dataTablesForservice');
+    Route::get('/service/{id}/edit', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::put('/service/update', [ServiceController::class, 'update'])->name('service.update');
+    Route::delete('/service/{id}/delete', [ServiceController::class, 'destroy'])->name('service.destroy');
+
+     
 });
 
 
