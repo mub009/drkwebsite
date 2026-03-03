@@ -1,23 +1,54 @@
-const select = document.getElementById("branchSelect");
-const trigger = select.querySelector(".select-trigger");
-const options = select.querySelectorAll(".option");
-const input = document.getElementById("branchInput");
+const branchSelect = document.getElementById("branchSelect");
+const branchTrigger = branchSelect.querySelector(".select-trigger");
+const branchOptions = branchSelect.querySelectorAll(".option");
+const branchInput = document.getElementById("branchInput");
 
-trigger.addEventListener("click", () => {
-    select.classList.toggle("open");
+branchTrigger.addEventListener("click", () => {
+    branchSelect.classList.toggle("open");
 });
 
-options.forEach((option) => {
+branchOptions.forEach((option) => {
     option.addEventListener("click", () => {
-        trigger.querySelector("span").textContent = option.textContent;
-        input.value = option.dataset.value;
-        select.classList.remove("open");
+        branchOptions.forEach((o) => o.classList.remove("active"));
+        option.classList.add("active");
+
+        branchTrigger.querySelector("span").textContent = option.textContent;
+        branchInput.value = option.dataset.value;
+
+        branchSelect.classList.remove("open");
     });
 });
 
 document.addEventListener("click", (e) => {
-    if (!select.contains(e.target)) {
-        select.classList.remove("open");
+    if (!branchSelect.contains(e.target)) {
+        branchSelect.classList.remove("open");
+    }
+});
+
+const serviceSelect = document.getElementById("serviceSelect");
+const serviceTrigger = serviceSelect.querySelector(".select-trigger");
+const serviceOptions = serviceSelect.querySelectorAll(".option");
+const serviceInput = document.getElementById("serviceInput");
+
+serviceTrigger.addEventListener("click", () => {
+    serviceSelect.classList.toggle("open");
+});
+
+serviceOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+        serviceOptions.forEach((o) => o.classList.remove("active"));
+        option.classList.add("active");
+
+        serviceTrigger.querySelector("span").textContent = option.textContent;
+        serviceInput.value = option.dataset.value;
+
+        serviceSelect.classList.remove("open");
+    });
+});
+
+document.addEventListener("click", (e) => {
+    if (!serviceSelect.contains(e.target)) {
+        serviceSelect.classList.remove("open");
     }
 });
 

@@ -118,6 +118,12 @@
       </a>
     </li>
     <li class="menu-item">
+      <a href="{{route('service.service')}}" class="menu-link">
+        <i class="menu-icon fa-solid fa-wrench"></i>
+        <div data-i18n="Service">Service</div>
+      </a>
+    </li>
+    <li class="menu-item">
       <a href="{{route('activities')}}" class="menu-link">
         <i class="menu-icon fa-solid fa-chart-line"></i>
         <div data-i18n="Activity">Activity</div>
