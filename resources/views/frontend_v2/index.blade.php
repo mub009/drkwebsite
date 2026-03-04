@@ -1297,11 +1297,11 @@
                                     </div>
                                      
                                     <div class="form-group">
-                                        <label>Services</label>
+                                        <label>{{ __('home.services') }}</label>
 
                                         <div class="custom-select" id="serviceSelect">
                                             <div class="select-trigger">
-                                                <span>Services</span>
+                                                <span>{{ __('home.servicesselect') }}</span>
                                                 <i class="arrow"></i>
                                             </div>
                                             <div class="select-options">
@@ -1591,34 +1591,21 @@
                     <div class="slider-track">
 
                         <!-- Track 1 -->
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md1.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md2.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md3.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md4.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md5.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md6.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md7.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md8.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md9.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md10.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md11.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md12.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md13.png') }}"></div>
-
-                        <!-- Track 2 (duplicate for infinite effect) -->
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md1.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md2.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md3.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md4.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md5.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md6.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md7.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md8.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md9.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md10.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md11.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md12.png') }}"></div>
-                        <div class="slider-card"><img src="{{ asset('frontend_v2/assets/Offer/md13.png') }}"></div>
+                        @foreach($offers as $offer)
+                        <div class="slider-card">
+                            <a href="https://wa.me/+966920010436" target="_blank">
+                                <img src="{{ asset('images/' . $offer->image) }}" alt="{{ $offer->offer_en }}">
+                            </a>
+                        </div>
+                        @endforeach
+                        <!-- Track 2 -->
+                        @foreach($offers as $offer)
+                        <div class="slider-card">
+                            <a href="https://wa.me/+966920010436" target="_blank">
+                                <img src="{{ asset('images/' . $offer->image) }}" alt="{{ $offer->offer_en }}">
+                            </a>
+                        </div>
+                        @endforeach
 
                     </div>
                 </div>

@@ -1167,47 +1167,19 @@
 </section>
 
 <div class="offer-grid of1">
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md1.png') }}" alt="Offer 1"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md2.png') }}" alt="Offer 2"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md3.png') }}" alt="Offer 3"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md4.png') }}" alt="Offer 4"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md5.png') }}" alt="Offer 5"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md6.png') }}" alt="Offer 6"></div>
-    </a>
 
+    @forelse($offers as $offer)
     <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md7.png') }}" alt="Offer 7"></div>
+        <div class="offer-image">
+            <img src="{{ asset('images/' . $offer->image) }}"
+                alt="{{ app()->getLocale() === 'ar' ? $offer->offer_ar : $offer->offer_en }}">
+        </div>
     </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md8.png') }}" alt="Offer 8"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md9.png') }}" alt="Offer 9"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md10.png') }}" alt="Offer 10"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md11.png') }}" alt="Offer 11"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md12.png') }}" alt="Offer 12"></div>
-    </a>
-    <a href="https://wa.me/+966920010436" target="_blank">
-        <div class="offer-image"><img src="{{ asset('frontend_v2/assets/Offer/md13.png') }}" alt="Offer 13"></div>
-    </a>
-    <!-- <div class="offer-image"><img src="/Assets/Offer/" alt="Offer 6"></div> -->
+    @empty
+    <p style="text-align:center;">{{ __('offer.no_offers') }}</p>
+    @endforelse
+
+
 
 </div>
 
@@ -1257,19 +1229,45 @@
                                             </div>
 
                                             <div class="select-options">
-                                                <div class="option" data-value="الدمام - حي الريان">الدمام - حي الريان</div>
-                                                <div class="option" data-value="الدمام - حي الفرسان">الدمام - حي الفرسان</div>
-                                                <div class="option" data-value="الخبر - حي العليا">الخبر - حي العليا</div>
-                                                <div class="option" data-value="الخبر - حي العزيزية">الخبر - حي العزيزية</div>
-                                                <div class="option" data-value="الخبر - شارع البيبسي">الخبر - شارع البيبسي</div>
-                                                <div class="option" data-value="الاحساء - حي الفتح">الاحساء - حي الفتح</div>
-                                                <div class="option" data-value="الرياض - حي قرطبة">الرياض - حي قرطبة</div>
+                                                <div class="option" data-value="الدمام - حي الريان">{{ __('offer.branch1') }}</div>
+                                                <div class="option" data-value="الدمام - حي الفرسان">{{ __('offer.branch2') }}</div>
+                                                <div class="option" data-value="الخبر - حي العليا">{{ __('offer.branch3') }}</div>
+                                                <div class="option" data-value="الخبر - حي العزيزية">{{ __('offer.branch4') }}</div>
+                                                <div class="option" data-value="الخبر - شارع البيبسي">{{ __('offer.branch5') }}</div>
+                                                <div class="option" data-value="الاحساء - حي الفتح">{{ __('offer.branch6') }}</div>
+                                                <div class="option" data-value="الرياض - حي قرطبة">{{ __('offer.branch7') }}</div>
                                             </div>
 
                                         </div>
 
                                         <!-- Hidden input to submit value -->
                                         <input type="hidden" name="branch" id="branchInput" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>{{ __('offer.services') }}</label>
+
+                                        <div class="custom-select" id="serviceSelect">
+                                            <div class="select-trigger">
+                                                <span>{{ __('offer.servicesselect') }}</span>
+                                                <i class="arrow"></i>
+                                            </div>
+                                            <div class="select-options">
+                                                @if($services->isNotEmpty())
+
+                                                @foreach($services as $item)
+                                                <div class="option" data-value="{{ $item->id }}">
+                                                    {{ app()->getLocale() === 'ar' ? $item->service_ar : $item->service_en }}
+                                                </div>
+                                                @endforeach
+
+                                                @else
+                                                <div class="option">No services found</div>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <input type="hidden" name="service" id="serviceInput" required>
                                     </div>
 
 

@@ -1,10 +1,11 @@
 @extends('backend.layouts.backendLayout')
 @section('title', 'Offer')
 @section('content')
-<div id="content-area">
+<div id="content-area" style="zoom: 90%;">
     <div class="card">
         <div class="card-body">
-            <h1 class="card-title">Offer</h1>
+            <h2 class="card-title">OFFER Table</h2>
+
             <div class="d-flex justify-content-end mb-3">
                 <a href="{{route('offers.add')}}"><button type="button" class="btn btn-primary">
                         Add New Offer
@@ -22,6 +23,7 @@
                             <th>Offer Image</th>
                             <th>Actual Price</th>
                             <th>Offer Price</th>
+                            <th>Active</th>
                             <th>Sort</th>
                             <th>Created At</th>
                             <th>Actions</th>
@@ -103,6 +105,31 @@
             showAlert(sessionStorage.getItem('editMessage'), 'success', 'alert-box1');
             sessionStorage.removeItem('editMessage');
         }
+
+        $('#offers-table').on('change', '.toggle-active', function() {
+            var offerId = $(this).data('id');
+            var activeStatus = $(this).is(':checked') ? 1 : 0;
+
+            $.ajax({
+                url: "{{ url('offers') }}/" + offerId + "/toggle-active",
+                type: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    active: activeStatus
+                },
+                success: function(response) {
+                    if (response.status) {
+                        showAlert('Active status updated successfully!', 'success', 'alert-box1');
+                    } else {
+                        showAlert('Failed to update Active status.', 'danger', 'alert-box1');
+                    }
+                },
+                error: function(xhr) {
+                    showAlert('Error updating Active status: ' + (xhr.responseJSON.message || 'Unknown error'), 'danger', 'alert-box1');
+                }
+            });
+        });
+
         var table = $('#offers-table').DataTable({
             processing: true,
             serverSide: true,
@@ -142,6 +169,27 @@
                     name: 'offer_price',
                     render: function(data) {
                         return data ? data.substring(0, 23) + '' : '';
+                    }
+                },
+                {
+                    data: 'active',
+                    name: 'active',
+                    width: '100px',
+                    orderable: false,
+                    searchable: false,
+                    render: function(data, type, row) {
+                        const checked = data == 1 ? 'checked' : '';
+                        return `
+            <div class="form-check form-switch" style="width:100px; padding-left: 2.5em;">
+                <input 
+                    class="form-check-input toggle-active" 
+                    type="checkbox" 
+                    role="switch"
+                    data-id="${row.id}"
+                    style="width: 40px; height: 20px; cursor: pointer;"
+                    ${checked}>
+            </div>
+        `;
                     }
                 },
                 {

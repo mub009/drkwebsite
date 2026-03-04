@@ -19,4 +19,26 @@ return [
     'branch5' => 'Al Khobar - Pepsi Street',
     'branch6' => 'Al Ahsa - Al Fath District',
     'branch7' => 'Riyadh - Qurtubah District',
+
+    'services' => 'Services',
+    'servicesselect' => 'Select Services',
+
+    'branchname1' => 'Dr. Khaled Al Rahimi Hospital - Dammam ',
+    'branchdescription1' => '24/7 full-service hospital with inpatient, surgical, and emergency care.  ',
+    'branchmanager1' => 'Branch Manager : ',
+    'branch_manager_name1' => 'A. Abdulwahab Al-Qahtani',
+    'branch_manager_phoneno1' => 'Manager PhoneNo :',
+    'location1' => 'Dammam Branch',
+    'Contact1' => 'Contact Branch',
+    'Directions1' => 'Get Directions',
+
+    'branchname2' => 'Dr. Khaled Al Rahimi Medical Complex – Pepsi Street',
+    'branchdescription2' => '24/7 full-service hospital with inpatient, surgical, and emergency care.',
+    'branchmanager2' => 'Branch Manager : ',
+    'branch_manager_name2' => 'A. Nouf Al-Omari',
+    'branch_manager_phoneno2' => 'Manager PhoneNo :',
+    'location2' => 'Pepsi Street Branch',
+    'Contact2' => 'Contact Branch',
+    'Directions2' => 'Get Directions',
+
 ];

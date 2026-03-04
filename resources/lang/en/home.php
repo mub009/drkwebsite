@@ -117,22 +117,17 @@ return [
         'testimonial_head' => 'Our Patient',
         'testimonial_head_emp' => 'Stories',
         'testimonial_desc' => 'Every patient has a story. Hear their journeys and discover the compassionate care behind our work.',
-        'testimonial_quote' => '"My experience with the Obstetrics & Gynecology department was beyond excellent. The medical team
-                  supported me every step of the way and made me feel completely comfortable and reassured.
-                  Truly grateful for their care." 😊',
+        'testimonial_quote' => '"Honestly, I was worried about the surgery and injections, but Dr. Khaled reassured me and explained all the details clearly. I had the procedure under anesthesia, and the results were very natural exactly as I expected. What impressed me most was their follow-up care after the operation. They never left me alone for a moment, and they answered all my questions warmly and patiently. Thank you from the bottom of my heart."',
         'testimonial_customer' => 'Mrs. Sarah Al-Otaibi',
         'testimonial_customer_loc' => 'Al-Ahsa, Saudi Arabia',
-        'testimonial_quote1' => '"My son needed close follow-up, and the Pediatrics team was so patient and explained everything clearly.
-                  I felt truly reassured and confident in their care." 👶✨',
+        'testimonial_quote1' => '"I tried their fillers and Botox, and the work was clean, precise, and without exaggeration. The clinic is elegant and classy, and the appointments are very punctual. I highly recommend anyone looking for natural and subtle results to visit them. It was an excellent experience, and I will definitely repeat it."',
         'testimonial_customer1' => 'Mr. Mohammed Al-Ghamdi',
         'testimonial_customer_loc1' => 'Al-Fursan, Saudi Arabia',
-        'testimonial_quote2' => '"The Emergency Department was fast and well-organized. From the moment we walked in,
-                  we felt safe and in good hands. May God reward them."',
+        'testimonial_quote2' => '"My son was tired once, and honestly, the quick emergency response and accurate diagnosis made the difference for us. The doctor was very patient with my son and listened to all my questions without showing any frustration. The hospital is organized, and the service is fast and efficient without complications."',
         'testimonial_customer2' => 'Mr. Abdullah Al-Shamrani',
         'testimonial_customer_loc2' => 'Al-Aziziyah, Saudi Arabia',
-        'testimonial_quote3' => '"I underwent bariatric surgery at the hospital, and the results changed my life for the better.
-                  The team was professional and supported me throughout my recovery. Highly recommend their services."
-                  👍',
+        'testimonial_quote3' => '"I visited them during a busy and crowded time, but they were active like a beehive. The procedures were fast, and we didn’t have to wait for hours like in other places. The nurses were kind and checked on us frequently to see if we needed anything. May God bless them they truly deserve the highest praise."
+                ',
         'testimonial_customer3' => 'Mrs. Reem Al-Qahtani',
         'testimonial_customer_loc3' => 'Dammam, Saudi Arabia',
 
@@ -146,6 +141,9 @@ return [
         'enquiryPhonePH' => 'Enter phone number',
         'hospitalBranchL' => 'Hospital Branch',
         'hospitalBranchSL' => 'Select branch',
+        'services' => 'Services',
+        'servicesselect' => 'Select Services',
+
         'emailAddressL' => 'Email Address',
         'emailAddressPH' => 'Enter email address',
         'submitEnquiryL' => 'Submit Enquiry',
