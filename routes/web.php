@@ -111,6 +111,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/offers/update', [OfferController::class, 'update'])->name('offers.update');
     Route::delete('/offers/{id}/delete', [OfferController::class, 'destroy'])->name('offers.destroy');
     Route::get('/offers/{id}/show', [OfferController::class, 'show'])->name('offers.show');
+    Route::post('/offers/{id}/toggle-active', [OfferController::class, 'toggleactive'])->name('offers.toggleactive');
     // Route::get('/offers', [OfferController::class, 'getOffer']);
 
     // Enquiry Routes
@@ -169,8 +170,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/service/{id}/edit', [ServiceController::class, 'edit'])->name('service.edit');
     Route::put('/service/update', [ServiceController::class, 'update'])->name('service.update');
     Route::delete('/service/{id}/delete', [ServiceController::class, 'destroy'])->name('service.destroy');
-
-     
 });
 
 

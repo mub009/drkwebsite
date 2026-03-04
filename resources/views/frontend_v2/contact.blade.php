@@ -965,6 +965,383 @@
         font-size: 14px;
         padding: 10px 16px;
     }
+
+    .bg-layer {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .bg-layer.show {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .hero-actions {
+        width: unset !important;
+    }
+
+    .sub-maintez {
+        font-size: 25px;
+        color: #ffffff;
+        margin-bottom: 50px;
+    }
+
+    .hero-content {
+        gap: 20px !important;
+    }
+
+
+    .offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .offer-image {
+        background-color: transparent;
+        /* transparent background */
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .offer-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background: transparent;
+        border-radius: 40px;
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .offer-image:hover {
+        transform: scale(1.05);
+    }
+
+    .of2 {
+        display: none;
+    }
+
+    @media (min-width: 300px) and (max-width: 600px) {
+        .of2 {
+            display: block !important;
+        }
+
+        .of1 {
+            display: none !important;
+        }
+
+        .hero-title {
+            font-size: 12vw;
+            padding: unset;
+        }
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .topz {
+        margin-top: 80px !important;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1550px) {
+        .branches-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 1000px) {
+        .branches-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            width: unset !important;
+            padding: 20px 10px;
+        }
+
+        .info-grid {
+            grid-template-columns: 1fr !important;
+        }
+
+        .btn-group {
+            flex-direction: column !important;
+        }
+
+        .br-cd {
+            padding: unset !important;
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 600px) {
+        .hero-title {
+            font-size: 15vw !important;
+            padding: unset;
+        }
+
+        .sub-maintez {
+            font-size: 25px !important;
+            margin-bottom: 10px !important;
+            padding: 0px 5px;
+        }
+
+        .branch-card h3 {
+            font-size: 20px !important;
+        }
+
+        .branch-card p {
+            font-size: 14px !important;
+        }
+
+        .branches-grid {
+            grid-template-columns: repeat(1, 1fr) !important;
+            width: unset !important;
+            padding: 0px 10px;
+        }
+
+        .topz {
+            margin-top: 50px !important;
+        }
+
+        .br-cd {
+            padding: unset !important;
+        }
+
+        .info-grid {
+            grid-template-columns: 1fr !important;
+        }
+
+        .btn-group {
+            flex-direction: column !important;
+        }
+    }
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 999;
+        transition: top 0.3s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .manager-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .manager-info .emoji {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .manager-info .text {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.4;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .info-grid li {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .branch-card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* Hover Effect */
+    .branch-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Optional image zoom on hover */
+    .branch-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .branch-card:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Inner content */
+    .br-cd {
+        padding: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .branch-card h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #0a2440;
+    }
+
+    .branch-card p {
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 16px;
+    }
+
+    .branch-card ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .branch-card ul li {
+        font-size: 14px;
+        color: #000000;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        transition: background 0.3s ease, color 0.3s ease;
+        flex: 1;
+    }
+
+    .btn:not(.outline) {
+        background-color: #980a50;
+        color: white;
+    }
+
+    .btn.outline {
+        background-color: transparent;
+        color: #980a50;
+        border: 2px solid #980a50;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .br-cd {
+        padding: 20px;
+    }
+
+    .branches-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cards in one row */
+        gap: 30px;
+        width: 80%;
+    }
+
+    /* Responsive behavior for smaller screens */
+    @media (max-width: 992px) {
+        .branches-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .branches-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .branch-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .branch-card img {
+        width: 100%;
+        height: 250px;
+        /* object-fit: cover; */
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .branch-card h3 {
+        font-size: 25px;
+        font-weight: 700;
+        color: #0a2440;
+        margin-bottom: 10px;
+    }
+
+    .branch-card p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .branch-card ul {
+        list-style: none;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .branch-card ul li {
+        margin-bottom: 5px;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 10px;
+    }
+
+
+
+    .btn:hover {
+        opacity: 0.9;
+    }
 </style>
 
 <section class="section" style="margin-top: 150px; margin-bottom: 0px;">
@@ -985,7 +1362,7 @@
     </div>
 </section>
 
-<section class="section" style="margin-top: 50px !important;">
+<!-- <section class="section" style="margin-top: 50px !important;">
     <div class="containerz">
         <div class="form-map-wrapper">
 
@@ -1033,7 +1410,246 @@
 
         </div>
     </div>
+</section> -->
+
+
+<!-- <section class="section " style="margin-bottom: 50px !important; margin-top: 120px !important;">
+
+    <div class="hero-content">
+        <h1 class="hero-title ">
+            <span class="headline-emphasis">Our Medical Branches</span>
+        </h1>
+        <h3 class="sub-maintez" style="color: black;font-size: 30px;">Explore our specialized medical branches,
+            equipped with advanced facilities and expert care across Saudi Arabia.</h3>
+
+    </div>
+
+</section> -->
+
+<section class="section">
+    <div class="branches-grid">
+
+
+        <!-- Branch Card 1 -->
+
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br1.png') }}" alt="Dr. Khaled Al Rahimi Hospital">
+            <div class="br-cd">
+                <h3>{{ __('contact.branchname1') }}</h3>
+                <p> {{ __('contact.branchdescription1') }}</p>
+
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">{{ __('contact.branchmanager1') }}<br>
+                            <strong>{{ __('contact.branch_manager_name1') }}</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">{{ __('contact.branch_manager_phoneno1') }}<br>
+                            <strong>920010436</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.location1') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>Open 24/7 Hours</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:920010436" class="btn">{{ __('contact.Contact1') }}</a>
+                    <a href="https://maps.app.goo.gl/UmEhmnbEFADFbEnw9" class="btn outline">{{ __('contact.Directions1') }}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br2.png') }}" alt="Pepsi Street Branch">
+            <div class="br-cd">
+                <h3>{{ __('contact.branchname2') }}</h3>
+                <p>{{ __('contact.branchdescription1') }}</p>
+
+                <ul class="info-grid">
+
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">{{ __('contact.branchmanager2') }}<br>
+                            <strong>{{ __('contact.branch_manager_name2') }}</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">{{ __('contact.branch_manager_phoneno2') }}<br>
+                            <strong>0531290801</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.location2') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:0531290801" class="btn">{{ __('contact.Contact2') }}</a>
+                    <a href="https://maps.app.goo.gl/HdWz6dGk3g4fpgbt6" class="btn outline">{{ __('contact.Directions2') }}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat for other 5 branches -->
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br3.jpg') }}" alt="Aziziyah Branch">
+            <div class="br-cd">
+                <h3>Dr. Khaled Al Rahimi Medical Complex – Aziziyah</h3>
+                <p>General and specialist services with comprehensive care and diagnostics.</p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">Branch Manager :<br>
+                            <strong>A. Kholoud Al-Omari</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">Manager PhoneNo :<br>
+                            <strong>0550655152</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>Aziziyah Branch</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                </ul>
+
+
+                <div class="btn-group">
+                    <a href="tel:0550655152" class="btn">Contact Branch</a>
+                    <a href="https://maps.app.goo.gl/Tn1q36mtuBZrPqBNA" class="btn outline">Get Directions</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br4.webp') }}" alt="Al-Ahsa Branch">
+            <div class="br-cd">
+                <h3>Dr. Khaled Al Rahimi Medical Complex – Al-Ahsa</h3>
+                <p>Advanced outpatient and diagnostic services in the Al-Ahsa region.</p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">Branch Manager :<br>
+                            <strong>A. Kamila Al-Essa</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">Manager PhoneNo :<br>
+                            <strong>0553155889</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>Al-Ahsa Branch</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                </ul>
+
+
+                <div class="btn-group">
+                    <a href="tel:0553155889" class="btn">Contact Branch</a>
+                    <a href="https://maps.app.goo.gl/YmvK83EXgKMcY43v9" class="btn outline">Get Directions</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br5.webp') }}" alt="Al-Ulya District Branch">
+            <div class="br-cd">
+                <h3>Dr. Khaled Al Rahimi Medical Complex – Al-Ulya District</h3>
+                <p>Specialist care with a focus on patient comfort and technology.</p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">Branch Manager :<br>
+                            <strong>A. Ilham Al-Maliki</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">Manager PhoneNo :<br>
+                            <strong>0537203335</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>Al-Ulya Branch</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:0537203335" class="btn">Contact Branch</a>
+                    <a href="https://maps.app.goo.gl/wBrgsji62MzwmT4i6" class="btn outline">Get Directions</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br6.webp') }}" alt="Al Fursan Branch">
+            <div class="br-cd">
+                <h3>Dr. Khaled Al Rahimi Medical Complex – Al Fursan</h3>
+                <p>A full-fledged general medical complex with advanced diagnostics and specialist consultations.
+                </p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">Branch Manager :<br>
+                            <strong>A. Arwa Al-Ghamdi</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">Manager PhoneNo :<br>
+                            <strong>0550645012</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>Al Fursan Branch</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:0550645012" class="btn">Contact Branch</a>
+                    <a href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" class="btn outline">Get Directions</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br7.png') }}" alt="Al Fursan Branch">
+            <div class="br-cd">
+                <h3>Dr. Khaled Al Rahimi Medical Complex – Al Fursan</h3>
+                <p>A full-fledged general medical complex with advanced diagnostics and specialist consultations.
+                </p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">Branch Manager :<br>
+                            <strong>A. Arwa Al-Ghamdi</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">Manager PhoneNo :<br>
+                            <strong>0550645012</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>Al Fursan Branch</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:0550645012" class="btn">Contact Branch</a>
+                    <a href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" class="btn outline">Get Directions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </section>
+
 
 <section class="section topz anima" data-aos="fade-zoom-in">
 
@@ -1096,16 +1712,16 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Services</label>
+                                        <label>{{ __('contact.services') }}</label>
 
                                         <div class="custom-select" id="serviceSelect">
                                             <div class="select-trigger">
-                                                <span>Services</span>
+                                                <span>{{ __('contact.servicesselect') }}</span>
                                                 <i class="arrow"></i>
                                             </div>
                                             <div class="select-options">
                                                 @if($services->isNotEmpty())
-                                               
+
                                                 @foreach($services as $item)
                                                 <div class="option" data-value="{{ $item->id }}">
                                                     {{ app()->getLocale() === 'ar' ? $item->service_ar : $item->service_en }}

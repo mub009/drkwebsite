@@ -16,49 +16,52 @@ class OfferController extends Controller
     }
     public function dataTablesForOffers()
     {
-            $query = Offer::query();
-            return DataTables::of($query)
-                ->addColumn('offer_en', function ($row) {
-                    return $row->offer_en;
-                })
-                ->addColumn('offer_ar', function ($row) {
-                    return $row->offer_ar;
-                })
-                ->addColumn('sort', function ($row) {
-                    return $row->sort;
-                })
-                ->addColumn('image', function ($row) {
-                    if ($row->image) {
-                        return $imageUrl = asset('images/' . $row->image); // Ensure this path is correct
-                    } else {
-                        return 'No Image';
-                    }
-                })
-                ->addColumn('actual_price', function ($row) {
-                    return $row->actual_price;
-                })
-                ->addColumn('offer_price', function ($row) {
-                    return $row->offer_price;
-                })
-                ->editColumn('created_at', function ($row) {
-                    return $row->created_at->format('Y-m-d H:i:s');
-                })
-                ->filterColumn('offer_en', function ($query, $keyword) {
-                    $query->where('offer_en', 'like', "%{$keyword}%");
-                })
-                ->filterColumn('offer_ar', function ($query, $keyword) {
-                    $query->where('offer_ar', 'like', "%{$keyword}%");
-                })
-                ->filterColumn('actual_price', function ($query, $keyword) {
-                    $query->where('actual_price', 'like', "%{$keyword}%");
-                })
-                ->filterColumn('offer_price', function ($query, $keyword) {
-                    $query->where('offer_price', 'like', "%{$keyword}%");
-                })
-                ->orderColumn('sort', function ($query) {
-                    $query->orderBy('sort', 'asc');
-                })
-                ->make(true);
+        $query = Offer::query();
+        return DataTables::of($query)
+            ->addColumn('offer_en', function ($row) {
+                return $row->offer_en;
+            })
+            ->addColumn('offer_ar', function ($row) {
+                return $row->offer_ar;
+            })
+            ->addColumn('sort', function ($row) {
+                return $row->sort;
+            })
+            ->addColumn('image', function ($row) {
+                if ($row->image) {
+                    return $imageUrl = asset('images/' . $row->image); // Ensure this path is correct
+                } else {
+                    return 'No Image';
+                }
+            })
+            ->addColumn('active', function ($row) {
+                return $row->active;
+            })
+            ->addColumn('actual_price', function ($row) {
+                return $row->actual_price;
+            })
+            ->addColumn('offer_price', function ($row) {
+                return $row->offer_price;
+            })
+            ->editColumn('created_at', function ($row) {
+                return $row->created_at->format('Y-m-d H:i:s');
+            })
+            ->filterColumn('offer_en', function ($query, $keyword) {
+                $query->where('offer_en', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('offer_ar', function ($query, $keyword) {
+                $query->where('offer_ar', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('actual_price', function ($query, $keyword) {
+                $query->where('actual_price', 'like', "%{$keyword}%");
+            })
+            ->filterColumn('offer_price', function ($query, $keyword) {
+                $query->where('offer_price', 'like', "%{$keyword}%");
+            })
+            ->orderColumn('sort', function ($query) {
+                $query->orderBy('sort', 'asc');
+            })
+            ->make(true);
     }
     public function addOffers()
     {
@@ -73,6 +76,7 @@ class OfferController extends Controller
             $offer->offer_ar = $request->offer_ar;
             $offer->actual_price = $request->actual_price;
             $offer->offer_price = $request->offer_price;
+            $offer->active = $request->active;
             $offer->sort = $totalOffers + 1;
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
@@ -162,12 +166,22 @@ class OfferController extends Controller
     {
         $offer = Offer::findOrFail($id);
         $offer->delete();
-        return response()->json(['status' => true, 'message' => 'Offer deleted successfully'],'');
+        return response()->json(['status' => true, 'message' => 'Offer deleted successfully'], '');
     }
     public function show(Request $request, $id)
     {
         $offer = Offer::find($id);
 
         return view('backend.offer-show', compact('offer'));
+    }
+    public function toggleactive(Request $request, $id)
+    {
+        $offer = Offer::findOrFail($id);
+        $offer->active = $request->input('active');
+        if ($offer->save()) {
+            return response()->json(['status' => true]);
+        } else {
+            return response()->json(['status' => false]);
+        }
     }
 }

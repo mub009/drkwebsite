@@ -35,6 +35,7 @@ class FrontEndController extends Controller
             ->orderBy('sort', 'asc')
             ->get();
         $data['services'] = Service::all();
+        $data['offers'] = Offer::where('active', 1)->get();
         return view('frontend_v2.index', $data);
     }
 
@@ -53,7 +54,8 @@ class FrontEndController extends Controller
         Carbon::setLocale(app()->getLocale());
 
         $data = array();
-        $data['offers'] = Offer::latest()->paginate(4);
+        $data['offers'] = Offer::latest()->get();
+        $data['services'] = Service::all();
         return view('frontend_v2.offers', $data);
     }
 
@@ -96,14 +98,14 @@ class FrontEndController extends Controller
 
     public function offer()
     {
-        $data['offer'] = Offer::whereNotNull('image')->orderBy('sort', 'asc')->get();
+        $data = Offer::where('is_active', 1);
         return view('frontend.offer', $data);
     }
 
     public function contact_us()
     {
         $data['branch'] = Branch::orderBy('sort', 'asc')->get();
-         $data['services'] = Service::all();
+        $data['services'] = Service::all();
         return view('frontend_v2.contact', $data);
     }
 
@@ -115,7 +117,7 @@ class FrontEndController extends Controller
             ->orderBy('sort', 'asc')
             ->get();
         $data['department'] = Department::whereNotNull('department_ar')->get();
-        
+
         return view('frontend.doctor', $data);
     }
 

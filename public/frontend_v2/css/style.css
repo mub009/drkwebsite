@@ -1552,10 +1552,10 @@ nav.main-navigation {
   width: 682px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 20px;
   position: absolute;
   left: 60px;
-  top: 84px;
+  top: 60px;
 }
 
 .departments-label {
