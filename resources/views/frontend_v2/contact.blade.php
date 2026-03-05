@@ -1425,229 +1425,238 @@
     </div>
 
 </section> -->
-
 <section class="section">
     <div class="branches-grid">
 
-
-        <!-- Branch Card 1 -->
-
+        <!-- card 1 -->
 
         <div class="branch-card">
-            <img src="{{ asset('demo/Assets/images/br1.png') }}" alt="Dr. Khaled Al Rahimi Hospital">
+            <img src="{{ asset('demo/Assets/images/br2.png') }}" alt="Pepsi Street Branch">
             <div class="br-cd">
-                <h3>{{ __('contact.branchname1') }}</h3>
-                <p> {{ __('contact.branchdescription1') }}</p>
+                <h3>{{ __('contact.branch-name1') }}</h3>
+                <p>{{ __('contact.branch-description1') }}</p>
 
 
                 <ul class="info-grid">
                     <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">{{ __('contact.branchmanager1') }}<br>
-                            <strong>{{ __('contact.branch_manager_name1') }}</strong>
+                        <div class="text">{{ __('contact.branch-manager1') }}<br>
+                            <strong>{{ __('contact.manager-name1') }}</strong>
                         </div>
                     </li>
                     <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">{{ __('contact.branch_manager_phoneno1') }}<br>
+                        <div class="text">{{ __('contact.manager-phoneno1') }}<br>
                             <strong>920010436</strong>
                         </div>
                     </li>
 
-                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.location1') }}</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>Open 24/7 Hours</li>
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branchpin1') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours1') }}</li>
                 </ul>
 
                 <div class="btn-group">
-                    <a href="tel:920010436" class="btn">{{ __('contact.Contact1') }}</a>
+                    <a href="tel:920010436" class="btn">{{ __('contact.branchbtn1') }}</a>
                     <a href="https://maps.app.goo.gl/UmEhmnbEFADFbEnw9" class="btn outline">{{ __('contact.Directions1') }}</a>
                 </div>
             </div>
         </div>
 
-        <div class="branch-card">
-            <img src="{{ asset('demo/Assets/images/br2.png') }}" alt="Pepsi Street Branch">
-            <div class="br-cd">
-                <h3>{{ __('contact.branchname2') }}</h3>
-                <p>{{ __('contact.branchdescription1') }}</p>
 
-                <ul class="info-grid">
-
-                    <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">{{ __('contact.branchmanager2') }}<br>
-                            <strong>{{ __('contact.branch_manager_name2') }}</strong>
-                        </div>
-                    </li>
-                    <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">{{ __('contact.branch_manager_phoneno2') }}<br>
-                            <strong>0531290801</strong>
-                        </div>
-                    </li>
-                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.location2') }}</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
-                </ul>
-
-                <div class="btn-group">
-                    <a href="tel:0531290801" class="btn">{{ __('contact.Contact2') }}</a>
-                    <a href="https://maps.app.goo.gl/HdWz6dGk3g4fpgbt6" class="btn outline">{{ __('contact.Directions2') }}</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Repeat for other 5 branches -->
-        <div class="branch-card">
-            <img src="{{ asset('demo/Assets/images/br3.jpg') }}" alt="Aziziyah Branch">
-            <div class="br-cd">
-                <h3>Dr. Khaled Al Rahimi Medical Complex – Aziziyah</h3>
-                <p>General and specialist services with comprehensive care and diagnostics.</p>
-
-                <ul class="info-grid">
-                    <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">Branch Manager :<br>
-                            <strong>A. Kholoud Al-Omari</strong>
-                        </div>
-                    </li>
-                    <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">Manager PhoneNo :<br>
-                            <strong>0550655152</strong>
-                        </div>
-                    </li>
-
-                    <li class="manager-info"><span class="emoji">📌 </span>Aziziyah Branch</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
-                </ul>
-
-
-                <div class="btn-group">
-                    <a href="tel:0550655152" class="btn">Contact Branch</a>
-                    <a href="https://maps.app.goo.gl/Tn1q36mtuBZrPqBNA" class="btn outline">Get Directions</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="branch-card">
-            <img src="{{ asset('demo/Assets/images/br4.webp') }}" alt="Al-Ahsa Branch">
-            <div class="br-cd">
-                <h3>Dr. Khaled Al Rahimi Medical Complex – Al-Ahsa</h3>
-                <p>Advanced outpatient and diagnostic services in the Al-Ahsa region.</p>
-
-                <ul class="info-grid">
-                    <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">Branch Manager :<br>
-                            <strong>A. Kamila Al-Essa</strong>
-                        </div>
-                    </li>
-                    <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">Manager PhoneNo :<br>
-                            <strong>0553155889</strong>
-                        </div>
-                    </li>
-
-                    <li class="manager-info"><span class="emoji">📌 </span>Al-Ahsa Branch</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
-                </ul>
-
-
-                <div class="btn-group">
-                    <a href="tel:0553155889" class="btn">Contact Branch</a>
-                    <a href="https://maps.app.goo.gl/YmvK83EXgKMcY43v9" class="btn outline">Get Directions</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div class="branch-card">
-            <img src="{{ asset('demo/Assets/images/br5.webp') }}" alt="Al-Ulya District Branch">
-            <div class="br-cd">
-                <h3>Dr. Khaled Al Rahimi Medical Complex – Al-Ulya District</h3>
-                <p>Specialist care with a focus on patient comfort and technology.</p>
-
-                <ul class="info-grid">
-                    <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">Branch Manager :<br>
-                            <strong>A. Ilham Al-Maliki</strong>
-                        </div>
-                    </li>
-                    <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">Manager PhoneNo :<br>
-                            <strong>0537203335</strong>
-                        </div>
-                    </li>
-
-                    <li class="manager-info"><span class="emoji">📌 </span>Al-Ulya Branch</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
-                </ul>
-
-                <div class="btn-group">
-                    <a href="tel:0537203335" class="btn">Contact Branch</a>
-                    <a href="https://maps.app.goo.gl/wBrgsji62MzwmT4i6" class="btn outline">Get Directions</a>
-                </div>
-            </div>
-        </div>
+        <!-- card 2 -->
 
         <div class="branch-card">
             <img src="{{ asset('demo/Assets/images/br6.webp') }}" alt="Al Fursan Branch">
             <div class="br-cd">
-                <h3>Dr. Khaled Al Rahimi Medical Complex – Al Fursan</h3>
-                <p>A full-fledged general medical complex with advanced diagnostics and specialist consultations.
+                <h3>{{ __('contact.branch-name2') }}</h3>
+                <p>
+                    {{ __('contact.branch-description2') }}
                 </p>
 
                 <ul class="info-grid">
                     <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">Branch Manager :<br>
-                            <strong>A. Arwa Al-Ghamdi</strong>
+                        <div class="text">{{ __('contact.branch-manager2') }}<br>
+                            <strong>{{ __('contact.manager-name2') }}</strong>
                         </div>
                     </li>
                     <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">Manager PhoneNo :<br>
+                        <div class="text">{{ __('contact.manager-phoneno2') }}<br>
                             <strong>0550645012</strong>
                         </div>
                     </li>
 
-                    <li class="manager-info"><span class="emoji">📌 </span>Al Fursan Branch</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branch-namepin2') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours2') }}</li>
                 </ul>
 
                 <div class="btn-group">
-                    <a href="tel:0550645012" class="btn">Contact Branch</a>
-                    <a href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" class="btn outline">Get Directions</a>
+                    <a href="tel:0550645012" class="btn">{{ __('contact.branchbtn2') }}</a>
+                    <a href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" class="btn outline">{{ __('contact.Directions2') }}</a>
                 </div>
 
             </div>
         </div>
+
+
+        <!-- card 3 -->
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br3.jpg') }}" alt="Aziziyah Branch">
+            <div class="br-cd">
+                <h3>{{ __('contact.branch-name3') }}</h3>
+                <p>{{ __('contact.branch-description3') }}</p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">{{ __('contact.branch-manager3') }}<br>
+                            <strong>{{ __('contact.manager-name3') }}</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">{{ __('contact.manager-phoneno3') }}<br>
+                            <strong>0550655152</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branch-namepin3') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours3') }}</li>
+                </ul>
+
+
+                <div class="btn-group">
+                    <a href="tel:0550655152" class="btn">{{ __('contact.branchbtn3') }}</a>
+                    <a href="https://maps.app.goo.gl/Tn1q36mtuBZrPqBNA" class="btn outline">{{ __('contact.Directions3') }}</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- card 4 -->
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br1.png') }}" alt="Dr. Khaled Al Rahimi Hospital">
+            <div class="br-cd">
+                <h3>{{ __('contact.branch-name4') }}</h3>
+                <p>{{ __('contact.branch-description4') }}</p>
+
+                <ul class="info-grid">
+
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">{{ __('contact.branch-manager4') }}<br>
+                            <strong>{{ __('contact.manager-name4') }}</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">{{ __('contact.manager-phoneno4') }}<br>
+                            <strong>0531290801</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branch-namepin4') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours4') }}</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:0531290801" class="btn">{{ __('contact.branchbtn4') }}</a>
+                    <a href="https://maps.app.goo.gl/HdWz6dGk3g4fpgbt6" class="btn outline">{{ __('contact.Directions4') }}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 5 -->
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br4.webp') }}" alt="Al-Ahsa Branch">
+            <div class="br-cd">
+                <h3>{{ __('contact.branch-name5') }}</h3>
+                <p>{{ __('contact.branch-description5') }}</p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">{{ __('contact.branch-manager5') }}<br>
+                            <strong>{{ __('contact.manager-name5') }}</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">{{ __('contact.manager-phoneno5') }}<br>
+                            <strong>0553155889</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branch-namepin5') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours5') }}</li>
+                </ul>
+
+
+                <div class="btn-group">
+                    <a href="tel:0553155889" class="btn">{{ __('contact.branchbtn5') }}</a>
+                    <a href="https://maps.app.goo.gl/YmvK83EXgKMcY43v9" class="btn outline">{{ __('contact.Directions5') }}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 6 -->
+
+        <div class="branch-card">
+            <img src="{{ asset('demo/Assets/images/br5.webp') }}" alt="Al-Ulya District Branch">
+            <div class="br-cd">
+                <h3>{{ __('contact.branch-name6') }}</h3>
+                <p>{{ __('contact.branch-description6') }}</p>
+
+                <ul class="info-grid">
+                    <li class="manager-info"><span class="emoji">👤 </span>
+                        <div class="text">{{ __('contact.branch-manager6') }}<br>
+                            <strong>{{ __('contact.manager-name6') }}</strong>
+                        </div>
+                    </li>
+                    <li class="manager-info"><span class="emoji">☎️ </span>
+                        <div class="text">{{ __('contact.manager-phoneno6') }}<br>
+                            <strong>0537203335</strong>
+                        </div>
+                    </li>
+
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branch-namepin6') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours6') }}</li>
+                </ul>
+
+                <div class="btn-group">
+                    <a href="tel:0537203335" class="btn">{{ __('contact.branchbtn6') }}</a>
+                    <a href="https://maps.app.goo.gl/wBrgsji62MzwmT4i6" class="btn outline">{{ __('contact.Directions6') }}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 7 -->
 
         <div class="branch-card">
             <img src="{{ asset('demo/Assets/images/br7.png') }}" alt="Al Fursan Branch">
             <div class="br-cd">
-                <h3>Dr. Khaled Al Rahimi Medical Complex – Al Fursan</h3>
-                <p>A full-fledged general medical complex with advanced diagnostics and specialist consultations.
+                <h3>{{ __('contact.branch-name7') }}</h3>
+                <p>
+                    {{ __('contact.branch-description7') }}
                 </p>
 
                 <ul class="info-grid">
                     <li class="manager-info"><span class="emoji">👤 </span>
-                        <div class="text">Branch Manager :<br>
-                            <strong>A. Arwa Al-Ghamdi</strong>
+                        <div class="text">{{ __('contact.branch-manager7') }}<br>
+                            <strong>{{ __('contact.manager-name7') }}</strong>
                         </div>
                     </li>
                     <li class="manager-info"><span class="emoji">☎️ </span>
-                        <div class="text">Manager PhoneNo :<br>
+                        <div class="text">{{ __('contact.manager-phoneno7') }}<br>
                             <strong>0550645012</strong>
                         </div>
                     </li>
 
-                    <li class="manager-info"><span class="emoji">📌 </span>Al Fursan Branch</li>
-                    <li class="manager-info"><span class="emoji">⏰ </span>9:00 AM – 11:00 PM</li>
+                    <li class="manager-info"><span class="emoji">📌 </span>{{ __('contact.branch-namepin7') }}</li>
+                    <li class="manager-info"><span class="emoji">⏰ </span>{{ __('contact.branch-hours7') }}</li>
                 </ul>
 
                 <div class="btn-group">
-                    <a href="tel:0550645012" class="btn">Contact Branch</a>
-                    <a href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" class="btn outline">Get Directions</a>
+                    <a href="tel:0550645012" class="btn">{{ __('contact.branchbtn7') }}</a>
+                    <a href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" class="btn outline">{{ __('contact.Directions7') }}</a>
                 </div>
 
             </div>
         </div>
-
-    </div>
+        
 </section>
 
 
