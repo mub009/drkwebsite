@@ -19,4 +19,11 @@ return [
     'cta_subtitle' => 'Don’t wait any longer, your health and beauty are in safe hands.',
     'book_btn' => 'Book Your Consultation Now',
     'number' => '+966920010436',
+
+    'department' => 'Department',
+    'about-doctor' => ' About Doctor',
+    'medical-center' => ' DRK Care Medical Center',
+    'description' => ' Providing world-class medical excellence. Trust our experienced specialists for your health.',
+
+
 ];

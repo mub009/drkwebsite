@@ -186,6 +186,7 @@ Route::middleware(['setLocale'])->group(function () {
     Route::get('/main_offers', [FrontEndController::class, 'offer'])->name('offer');
     Route::get('/contact_us', [FrontEndController::class, 'contact_us'])->name('contact_us');
     Route::get('/doctors', [FrontEndController::class, 'doctors'])->name('doctors');
+    Route::get('/doctorsinformation/{id}', [FrontEndController::class, 'doctorsinformation'])->name('doctorsinformation');
     Route::get('/branch_location/{clinicId}', [FrontEndController::class, 'branch_location'])->name('branch_location');
     Route::get('/departmentDetails/{surl}', [FrontEndController::class, 'departmentDetails'])->name('departmentDetails');
     Route::get('/privacy_policy', [FrontEndController::class, 'privacy_policy'])->name('privacy_policy');
