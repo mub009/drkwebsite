@@ -2,8 +2,6 @@
 @section('content')
 
 <style>
-
-
     @media (min-width: 300px) and (max-width: 500px) {
         .sectionii {
             margin-top: 120px !important;
@@ -21,16 +19,18 @@
         cursor: pointer;
         color: #000;
     }
-html[dir="ltr"] .close-buttonzzl {
-  right: 20px !important;
-  left: unset !important;
-}
 
-/* Arabic (RTL) */
-html[dir="rtl"] .close-buttonzzl {
-  right: unset !important;
-  left: 20px !important;
-}
+    html[dir="ltr"] .close-buttonzzl {
+        right: 20px !important;
+        left: unset !important;
+    }
+
+    /* Arabic (RTL) */
+    html[dir="rtl"] .close-buttonzzl {
+        right: unset !important;
+        left: 20px !important;
+    }
+
     .bg-layer {
         position: absolute;
         inset: 0;
@@ -375,7 +375,7 @@ html[dir="rtl"] .close-buttonzzl {
 <section class="section sectionii" style=" margin-top: 150px;">
     <div class="team-section">
         <div class="team-container">
-            <div class="team-header anima" data-aos="fade-zoom-in" >
+            <div class="team-header anima" data-aos="fade-zoom-in">
                 <h1 class="hero-title" style="text-align: center;">
                     <span class="headline-emphasis">{{ __('services.heading') }}</span>
                 </h1>
@@ -393,7 +393,7 @@ html[dir="rtl"] .close-buttonzzl {
                     <div>
                         <div class="satisfied-patients" style="position: unset; box-shadow: unset">
                             <div class="avatarsz">
-                                <img src="{{ asset('/frontend_v2/assets/images/ds1.png') }}" alt= "{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('/frontend_v2/assets/images/ds1.png') }}" alt="{{ __('imagealt.photo') }}" />
                                 <img src="{{ asset('/frontend_v2/assets/images/ds2.png') }}" alt="{{ __('imagealt.photo') }}" />
                                 <img src="{{ asset('/frontend_v2/assets/images/ds3.png') }}" alt="{{ __('imagealt.photo') }}" />
                                 <img src="{{ asset('/frontend_v2/assets/images/ds4.png') }}" alt="{{ __('imagealt.photo') }}" />
@@ -406,7 +406,7 @@ html[dir="rtl"] .close-buttonzzl {
                         </div>
                     </div>
                 </div>
-                <p class="team-description" >
+                <p class="team-description">
                     {{ __('services.team_desc') }}
                 </p>
 
@@ -419,7 +419,7 @@ html[dir="rtl"] .close-buttonzzl {
                         <button class="active" data-tab="all-doctors">{{ __('services.all_doctors') }}</button>
                         @foreach ($department as $dept)
                         <button data-tab="tab-{{ $dept->id }}">
-                           {{ app()->getLocale() === 'ar' ? $dept->department_ar : $dept->department_en }}
+                            {{ app()->getLocale() === 'ar' ? $dept->department_ar : $dept->department_en }}
                         </button>
                         @endforeach
 
@@ -431,20 +431,33 @@ html[dir="rtl"] .close-buttonzzl {
                     <div class="card-dr">
 
                         @foreach ($doctors as $doctor)
-                        <article class="doctor-card" >
-                            <div class="card-background"></div>
-                            <div class="card-watermark">DRK</div>
-                            <div>
-                                <img src="{{asset('images').'/'.$doctor->image}}" alt="{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}" class="doctor-image" />
-                                <div class="doctor-info">
-                                    <div class="doctor-details">
-                                        <h3 class="doctor-name">{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}</h3>
-                                        <p class="doctor-specialty">{{ app()->getLocale() === 'ar' ? $doctor->department_ar : $doctor->department_en }}
-                                </p>
+
+                      <a href="{{ route('doctorsinformation', $doctor->id) }}" class="doctor-link">
+                            <article class="doctor-card">
+                                <div class="card-background"></div>
+                                <div class="card-watermark">DRK</div>
+
+                                <div>
+                                    <img src="{{ asset('images').'/'.$doctor->image }}"
+                                        alt="{{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}"
+                                        class="doctor-image" />
+
+                                    <div class="doctor-info">
+                                        <div class="doctor-details">
+                                            <h3 class="doctor-name">
+                                                {{ app()->getLocale() === 'ar' ? $doctor->name_ar : $doctor->name_en }}
+                                            </h3>
+
+                                            <p class="doctor-specialty">
+                                                {{ app()->getLocale() === 'ar' ? $doctor->department_ar : $doctor->department_en }}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
+
+                            </article>
+                        </a>
+
                         @endforeach
                     </div>
                 </div>
@@ -510,7 +523,7 @@ html[dir="rtl"] .close-buttonzzl {
     </div>
 </section>
 
-<section class="cta-section" >
+<section class="cta-section">
     <div class="cta-container">
         <h2 class="cta-title">{{ __('services.cta_title') }}</h2>
         <h3 class="cta-subtitle">

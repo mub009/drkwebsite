@@ -47,7 +47,19 @@ class FrontEndController extends Controller
         $data['articles'] = Article::latest()->paginate(4);
         return view('frontend_v2.blog', $data);
     }
+    public function doctorsinformation($id)
+    {
+        $doctor = Doctor::join('departments', 'doctors.department', '=', 'departments.id')
+            ->select(
+                'doctors.*',
+                'departments.department_ar',
+                'departments.department_en'
+            )
+            ->where('doctors.id', $id)
+            ->firstOrFail();
 
+        return view('frontend_v2.doctorsinformation', compact('doctor'));
+    }
 
     public function offers()
     {

@@ -52,7 +52,7 @@
                         </span>
                     </div>
                     <div id="doctor-description-editor"></div>
-                    <input type="hidden" name="doctor_description" id="doctor_description" value="{{ old('doctor_description', $doctor->doctor_description) }}>
+                    <input type="hidden" name="doctor_description" id="doctor_description" value="{{ old('doctor_description', $doctor->doctor_description) }}">
                 </div>
                 <div class="mb-3">
                     <label for="department" class="form-label">Department</label>
