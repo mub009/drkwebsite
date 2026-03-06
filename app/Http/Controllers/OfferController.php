@@ -37,12 +37,12 @@ class OfferController extends Controller
             ->addColumn('active', function ($row) {
                 return $row->active;
             })
-            ->addColumn('actual_price', function ($row) {
-                return $row->actual_price;
-            })
-            ->addColumn('offer_price', function ($row) {
-                return $row->offer_price;
-            })
+            // ->addColumn('actual_price', function ($row) {
+            //     return $row->actual_price;
+            // })
+            // ->addColumn('offer_price', function ($row) {
+            //     return $row->offer_price;
+            // })
             ->editColumn('created_at', function ($row) {
                 return $row->created_at->format('Y-m-d H:i:s');
             })
@@ -52,12 +52,12 @@ class OfferController extends Controller
             ->filterColumn('offer_ar', function ($query, $keyword) {
                 $query->where('offer_ar', 'like', "%{$keyword}%");
             })
-            ->filterColumn('actual_price', function ($query, $keyword) {
-                $query->where('actual_price', 'like', "%{$keyword}%");
-            })
-            ->filterColumn('offer_price', function ($query, $keyword) {
-                $query->where('offer_price', 'like', "%{$keyword}%");
-            })
+            // ->filterColumn('actual_price', function ($query, $keyword) {
+            //     $query->where('actual_price', 'like', "%{$keyword}%");
+            // })
+            // ->filterColumn('offer_price', function ($query, $keyword) {
+            //     $query->where('offer_price', 'like', "%{$keyword}%");
+            // })
             ->orderColumn('sort', function ($query) {
                 $query->orderBy('sort', 'asc');
             })
@@ -74,9 +74,9 @@ class OfferController extends Controller
             $offer = new Offer;
             $offer->offer_en = $request->offer_en;
             $offer->offer_ar = $request->offer_ar;
-            $offer->actual_price = $request->actual_price;
-            $offer->offer_price = $request->offer_price;
-            $offer->active = $request->active;
+            // $offer->actual_price = $request->actual_price;
+            // $offer->offer_price = $request->offer_price;
+            $offer->active = $request->has('active') ? 1 : 0;
             $offer->sort = $totalOffers + 1;
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
@@ -135,8 +135,8 @@ class OfferController extends Controller
             $offer = Offer::findOrFail($request->id);
             $offer->offer_en = $request->offer_en;
             $offer->offer_ar = $request->offer_ar;
-            $offer->actual_price = $request->actual_price;
-            $offer->offer_price = $request->offer_price;
+            // $offer->actual_price = $request->actual_price;
+            // $offer->offer_price = $request->offer_price;
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images'), $imageName);

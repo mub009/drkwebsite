@@ -22,14 +22,14 @@
                                 <label for="image" class="form-label">Offer Image</label>
                                 <input type="file" class="form-control" id="image" name="image" accept="image/*">
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <label for="actual_price" class="form-label">Actual Price</label>
                                 <input type="number" class="form-control" id="actual_price" name="actual_price" aria-label="actual_price" fdprocessedid="2ibxem">
                             </div>
                             <div class="mb-3">
                                 <label for="offer_price" class="form-label">Offer Price</label>
                                 <input type="number" class="form-control" id="offer_price" name="offer_price" aria-label="actual_price" fdprocessedid="2ibxem">
-                            </div>
+                            </div> -->
                             <div class="row justify-content-end">
                                 <div class="col-sm-6">
                                     <button type="submit" class="btn btn-primary">Save</button>
