@@ -24,9 +24,6 @@
                             <!-- <th>Actual Price</th>
                             <th>Offer Price</th> -->
                             <th>Carousel</th>
-                            <!-- <th>Actual Price</th>
-                            <th>Offer Price</th> -->
-                            <th>Active</th>
                             <th>Sort</th>
                             <th>Created At</th>
                             <th>Actions</th>
