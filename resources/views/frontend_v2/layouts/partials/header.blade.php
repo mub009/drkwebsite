@@ -12,6 +12,15 @@
         {{ __('header.title') }}
         @endif
     </title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZBSXQC03RG');
+</script>
     <meta name="description" content="{{ isset($article) && isset($article->article_en) ? $article->article_en : __('header.description') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
