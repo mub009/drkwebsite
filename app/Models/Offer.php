@@ -13,7 +13,8 @@ class Offer extends Model
         'offer_en',
         'offer_ar',
         'image',
-        // 'actual_price',
-        // 'offer_price',
+        'actual_price',
+        'offer_price',
+        'with_carousel'
     ];
 }

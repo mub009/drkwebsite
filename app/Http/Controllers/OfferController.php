@@ -34,8 +34,8 @@ class OfferController extends Controller
                     return 'No Image';
                 }
             })
-            ->addColumn('active', function ($row) {
-                return $row->active;
+            ->addColumn('with_carousel', function ($row) {
+                return $row->with_carousel;
             })
             // ->addColumn('actual_price', function ($row) {
             //     return $row->actual_price;
@@ -77,6 +77,9 @@ class OfferController extends Controller
             // $offer->actual_price = $request->actual_price;
             // $offer->offer_price = $request->offer_price;
             $offer->active = $request->has('active') ? 1 : 0;
+            // $offer->actual_price = $request->actual_price;
+            // $offer->offer_price = $request->offer_price;
+            // $offer->with_carousel = $request->with_carousel;
             $offer->sort = $totalOffers + 1;
             if ($request->hasFile('image')) {
                 $imageName = time() . '.' . $request->image->extension();
@@ -177,7 +180,7 @@ class OfferController extends Controller
     public function toggleactive(Request $request, $id)
     {
         $offer = Offer::findOrFail($id);
-        $offer->active = $request->input('active');
+        $offer->with_carousel = $request->input('with_carousel');
         if ($offer->save()) {
             return response()->json(['status' => true]);
         } else {

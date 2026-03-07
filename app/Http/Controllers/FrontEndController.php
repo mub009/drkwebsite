@@ -35,7 +35,7 @@ class FrontEndController extends Controller
             ->orderBy('sort', 'asc')
             ->get();
         $data['services'] = Service::all();
-        $data['offers'] = Offer::where('active', 1)->get();
+        $data['offers'] = Offer::where('with_carousel', 1)->get();
         return view('frontend_v2.index', $data);
     }
 
@@ -110,7 +110,7 @@ class FrontEndController extends Controller
 
     public function offer()
     {
-        $data = Offer::where('is_active', 1);
+        $data = Offer::where('with_carousel', 1);
         return view('frontend.offer', $data);
     }
 
