@@ -16,8 +16,8 @@ class OfferRequest extends FormRequest
             'offer_en' => 'required|string|max:255',
             'offer_ar' => 'required|string|max:255',
             'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'actual_price' => 'nullable|string|max:255',
-            'offer_price' => 'nullable|string|max:255',
+            // 'actual_price' => 'required|string|max:255',
+            // 'offer_price' => 'required|string|max:255',
         ];
     }
 }
