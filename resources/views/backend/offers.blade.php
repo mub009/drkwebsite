@@ -4,7 +4,7 @@
 <div id="content-area" style="zoom: 90%;">
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title">OFFER Table</h2>
+            <h2 class="card-title">Offer Table</h2>
 
             <div class="d-flex justify-content-end mb-3">
                 <a href="{{route('offers.add')}}"><button type="button" class="btn btn-primary">
@@ -21,9 +21,9 @@
                             <th>Offer Name (English)</th>
                             <th>Offer Name (Arabic)</th>
                             <th>Offer Image</th>
-                            <th>Actual Price</th>
-                            <th>Offer Price</th>
-                            <th>Active</th>
+                            <!-- <th>Actual Price</th>
+                            <th>Offer Price</th> -->
+                            <th>Carousel</th>
                             <th>Sort</th>
                             <th>Created At</th>
                             <th>Actions</th>
@@ -157,23 +157,23 @@
                         return `<img src="${data}" style="width: 50px; height: auto;">`;
                     }
                 },
+                // {
+                //     data: 'actual_price',
+                //     name: 'actual_price',
+                //     render: function(data) {
+                //         return data ? data.substring(0, 23) + '' : '';
+                //     }
+                // },
+                // {
+                //     data: 'offer_price',
+                //     name: 'offer_price',
+                //     render: function(data) {
+                //         return data ? data.substring(0, 23) + '' : '';
+                //     }
+                // },
                 {
-                    data: 'actual_price',
-                    name: 'actual_price',
-                    render: function(data) {
-                        return data ? data.substring(0, 23) + '' : '';
-                    }
-                },
-                {
-                    data: 'offer_price',
-                    name: 'offer_price',
-                    render: function(data) {
-                        return data ? data.substring(0, 23) + '' : '';
-                    }
-                },
-                {
-                    data: 'active',
-                    name: 'active',
+                    data: 'with_carousel',
+                    name: 'with_carousel',
                     width: '100px',
                     orderable: false,
                     searchable: false,

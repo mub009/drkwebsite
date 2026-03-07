@@ -15,5 +15,6 @@ class Offer extends Model
         'image',
         'actual_price',
         'offer_price',
+        'with_carousel'
     ];
 }

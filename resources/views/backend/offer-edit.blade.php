@@ -27,14 +27,14 @@
                     <img src="{{ asset('images/' . $offer->image) }}" alt="Offer Image" class="img-thumbnail mt-2" style="width: 100px;">
                     @endif
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="actual_price" class="form-label">Actual Price</label>
                     <input type="text" class="form-control" id="actual_price" name="actual_price" value="{{ old('actual_price', $offer->actual_price) }}">
                 </div>
                 <div class="mb-3">
                     <label for="offer_price" class="form-label">Offer Price</label>
                     <input type="text" class="form-control" id="offer_price" name="offer_price" value="{{ old('offer_price', $offer->offer_price) }}">
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-primary">Update</button>
                 <a href="{{ route('offers.index') }}" class="btn btn-secondary">Cancel</a>
             </form>

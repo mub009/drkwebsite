@@ -9,8 +9,8 @@ $(document).ready(function() {
         // Get form field values
         let offerEn = $('#offer_en').val().trim();
         let offerAr = $('#offer_ar').val().trim();
-        let actualPrice = $('#actual_price').val().trim();
-        let offerPrice = $('#offer_price').val().trim();
+        // let actualPrice = $('#actual_price').val().trim();
+        // let offerPrice = $('#offer_price').val().trim();
         let image = $('#image').val();
 
         let errors = {};
@@ -18,8 +18,8 @@ $(document).ready(function() {
         // Validate fields
         if (!offerEn) errors.offer_en = 'Offer Name (English) is required.';
         if (!offerAr) errors.offer_ar = 'Offer Name (Arabic) is required.';
-        if (!actualPrice) errors.actual_price = 'Actual Price is required.';
-        if (!offerPrice) errors.offer_price = 'Offer Price is required.';
+        // if (!actualPrice) errors.actual_price = 'Actual Price is required.';
+        // if (!offerPrice) errors.offer_price = 'Offer Price is required.';
         if (!image) errors.image = 'Offer Image is required.';
 
         // Display error messages if any
