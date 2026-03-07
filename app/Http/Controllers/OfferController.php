@@ -76,9 +76,6 @@ class OfferController extends Controller
             $offer->offer_ar = $request->offer_ar;
             // $offer->actual_price = $request->actual_price;
             // $offer->offer_price = $request->offer_price;
-            $offer->active = $request->has('active') ? 1 : 0;
-            // $offer->actual_price = $request->actual_price;
-            // $offer->offer_price = $request->offer_price;
             // $offer->with_carousel = $request->with_carousel;
             $offer->sort = $totalOffers + 1;
             if ($request->hasFile('image')) {
