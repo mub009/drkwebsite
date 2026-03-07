@@ -828,7 +828,7 @@
                 <h3 class="service-category">{{ __('home.our_doctors') }}</h3>
                 <p class="service-description">{{ __('home.our_doctors_desc') }}</p>
                 <div class="learn-more-link">
-                    <a href="{{ route('about') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
+                    <a href="{{ route('services') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
                         <div class="learn-more-arrow">
                             <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                         </div>
@@ -850,7 +850,7 @@
                 <h3 class="service-category">{{ __('home.our_specialities') }}</h3>
                 <p class="service-description">{{ __('home.our_specialities_desc') }}</p>
                 <div class="learn-more-link">
-                    <a href="{{ route('about') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
+                    <a href="{{ route('services') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
                         <div class="learn-more-arrow">
                             <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" alt="{{ __('imagealt.arrow') }}" />
                         </div>

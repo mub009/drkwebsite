@@ -21,8 +21,8 @@
                             <th>Offer Name (English)</th>
                             <th>Offer Name (Arabic)</th>
                             <th>Offer Image</th>
-                            <th>Actual Price</th>
-                            <th>Offer Price</th>
+                            <!-- <th>Actual Price</th>
+                            <th>Offer Price</th> -->
                             <th>Active</th>
                             <th>Sort</th>
                             <th>Created At</th>
@@ -157,20 +157,20 @@
                         return `<img src="${data}" style="width: 50px; height: auto;">`;
                     }
                 },
-                {
-                    data: 'actual_price',
-                    name: 'actual_price',
-                    render: function(data) {
-                        return data ? data.substring(0, 23) + '' : '';
-                    }
-                },
-                {
-                    data: 'offer_price',
-                    name: 'offer_price',
-                    render: function(data) {
-                        return data ? data.substring(0, 23) + '' : '';
-                    }
-                },
+                // {
+                //     data: 'actual_price',
+                //     name: 'actual_price',
+                //     render: function(data) {
+                //         return data ? data.substring(0, 23) + '' : '';
+                //     }
+                // },
+                // {
+                //     data: 'offer_price',
+                //     name: 'offer_price',
+                //     render: function(data) {
+                //         return data ? data.substring(0, 23) + '' : '';
+                //     }
+                // },
                 {
                     data: 'active',
                     name: 'active',
