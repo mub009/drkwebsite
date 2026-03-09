@@ -1,6 +1,39 @@
 @extends('backend.layouts.backendLayout')
 @section('title', 'Offer')
 @section('content')
+<link rel="stylesheet" href="../../assets/vendor/libs/spinkit/spinkit.css" />
+<style>
+    #loader-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.29);
+        z-index: 9990;
+    }
+
+    #loader-center {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+</style>
+<div id="loader-overlay">
+    <div id="loader-center">
+        <div class="sk-chase sk-primary">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+</div>
 <div id="content-area" style="zoom: 90%;">
     <div class="card">
         <div class="card-body">
@@ -237,6 +270,7 @@
         });
         $('#offers-table').on('click', '.delete-offer', function() {
             var offerId = $(this).data('id');
+            $("#loader-overlay").show()
             if (confirm('Are you sure you want to delete this offer?')) {
                 $.ajax({
                     url: "{{ url('offers') }}/" + offerId + "/delete",
@@ -245,6 +279,7 @@
                         _token: '{{ csrf_token() }}'
                     },
                     success: function(response) {
+                        $("#loader-overlay").hide();
                         if (response.status) {
                             Swal.fire({
                                 title: 'Good job!',
@@ -256,6 +291,7 @@
                                 buttonsStyling: false
                             }).then(() => {
                                 setTimeout(() => {
+                                    $("#loader-overlay").show();
                                     window.location.href = "{{route('offers.index')}}";
                                 }, 0);
                             });
@@ -265,6 +301,7 @@
                         }
                     },
                     error: function(xhr) {
+                        $("#loader-overlay").hide();
                         console.log('Error deleting offer: ' + (xhr.responseJSON.message || 'Unknown error'));
                     }
                 });

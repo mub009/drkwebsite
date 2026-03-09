@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('#addOfferForm').on('submit', function(e) {
+$(document).ready(function () {
+    $('#addOfferForm').on('submit', function (e) {
         e.preventDefault();
 
         // Clear previous error messages
@@ -47,13 +47,15 @@ $(document).ready(function() {
 
         // Submit the form via AJAX
         let formData = new FormData(this);
+        $("#loader-overlay").show()
         $.ajax({
             url: offerStoreUrl,
             type: 'POST',
             data: formData,
             processData: false,
             contentType: false,
-            success: function(response) {
+            success: function (response) {
+                $("#loader-overlay").hide();
                 if (response.status) {
                     Swal.fire({
                         title: 'Good job!',
@@ -64,11 +66,13 @@ $(document).ready(function() {
                         },
                         buttonsStyling: false
                     }).then(() => {
+                        $("#loader-overlay").show();
                         window.location.href = offerIndexUrl;
                     });
                 }
             },
-            error: function(xhr) {
+            error: function (xhr) {
+                $("#loader-overlay").hide();
                 if (xhr.status === 422) {
                     $('.invalid-feedback').remove();
                     let errors = xhr.responseJSON.errors;
@@ -87,7 +91,7 @@ $(document).ready(function() {
     });
 
     // Clear validation on input
-    $('#addOfferForm input').on('input', function() {
+    $('#addOfferForm input').on('input', function () {
         $(this).removeClass('is-invalid');
         $(this).next('.invalid-feedback').remove();
     });
