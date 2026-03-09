@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('#offer-form').on('submit', function(e) {
+$(document).ready(function () {
+    $('#offer-form').on('submit', function (e) {
         e.preventDefault();
         let formData = new FormData(this);
         $('.invalid-feedback').remove();
@@ -41,13 +41,15 @@ $(document).ready(function() {
         }
 
         // Submit the form via AJAX
+        $("#loader-overlay").show()
         $.ajax({
             url: $(this).attr('action'),
             method: 'POST',
             data: formData,
             processData: false,
             contentType: false,
-            success: function(response) {
+            success: function (response) {
+                $("#loader-overlay").hide();
                 if (response.status) {
                     Swal.fire({
                         title: 'Good job!',
@@ -58,13 +60,15 @@ $(document).ready(function() {
                         },
                         buttonsStyling: false
                     }).then(() => {
+                        $("#loader-overlay").show();
                         window.location.href = offerIndexUrl;
                     });
                 } else {
                     console.log('Error updating offer: ' + response.message);
                 }
             },
-            error: function(xhr) {
+            error: function (xhr) {
+                $("#loader-overlay").hide();
                 if (xhr.status === 422) {
                     Swal.fire({
                         title: 'Error!',
@@ -83,7 +87,7 @@ $(document).ready(function() {
     });
 
     // Remove validation error when input changes
-    $('#offer-form input').on('input change', function() {
+    $('#offer-form input').on('input change', function () {
         $(this).removeClass('is-invalid');
         $(this).next('.invalid-feedback').remove();
     });
