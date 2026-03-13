@@ -462,7 +462,7 @@
                 <i class="fas fa-user"></i>{{ __('services.about-doctor') }}
             </h3>
             <p class="bio-text">
-                {{ $doctor->doctor_description }}
+               {!! $doctor->doctor_description !!}
             </p>
         </div>
     </div>

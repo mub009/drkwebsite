@@ -64,6 +64,7 @@ class DoctorController extends Controller
                 ->orderColumn('sort', function ($query) {
                     $query->orderBy('sort', 'asc');
                 })
+                ->rawColumns(['doctor_description']) 
                 ->make(true);
     }
     public function addDoctors()
