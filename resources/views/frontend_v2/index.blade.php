@@ -750,6 +750,169 @@
             right: unset !important;
         }
     }
+
+
+    /* Medical_device */
+
+    .mdc-wrapper {
+        max-width: 1350px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .mdc-header-text {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .mdc-desc {
+        color: #555;
+        font-size: 1.15rem;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 15px auto 0;
+    }
+
+    .mdc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .mdc-card {
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .mdc-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 50px rgba(152, 10, 80, 0.12);
+        border-color: rgba(152, 10, 80, 0.1);
+    }
+
+    .mdc-image-wrapper {
+        width: 100%;
+        height: 240px;
+        background: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mdc-image-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(250, 250, 250, 1) 100%);
+        pointer-events: none;
+    }
+
+    .mdc-image-wrapper img {
+        max-width: 100%;
+        object-fit: fill;
+        transition: transform 0.6s ease;
+        z-index: 1;
+    }
+
+    .mdc-card:hover .mdc-image-wrapper img {
+        transform: scale(1.08);
+    }
+
+    .mdc-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(135deg, #c20c66, #980a50);
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        z-index: 2;
+        box-shadow: 0 4px 15px rgba(152, 10, 80, 0.3);
+    }
+
+    .mdc-content {
+        padding: 30px 30px 40px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .mdc-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1f24;
+        margin-bottom: 12px;
+        font-family: inherit;
+    }
+
+    .mdc-definition {
+        font-size: 0.95rem;
+        color: #6c757d;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .mdc-benefits {
+        margin-top: auto;
+    }
+
+    .mdc-benefits-title {
+        font-size: 1rem;
+        color: #212529;
+        margin-bottom: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mdc-benefits-title i {
+        color: #980a50;
+        margin-right: 8px;
+        font-size: 1.2rem;
+    }
+
+    .mdc-benefits ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mdc-benefits li {
+        font-size: 0.9rem;
+        color: #495057;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .mdc-benefits li i {
+        color: #980a50;
+        font-size: 1.1rem;
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+        .mdc-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 
 
@@ -1236,6 +1399,226 @@
     </div>
 </section>
 
+
+<section class="Medical-devices section sectionzz tonbotz"
+    style="padding: 60px 0; background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%);">
+
+
+    <div class="mdc-wrapper">
+        <div class="mdc-header-text anima" data-aos="fade-up">
+            <h2 class="main-headline" style="justify-content: center;">
+                <span class="headline-part">{{ __('home.medical_aesthetic') }}</span>
+                <span class="headline-emphasis" style="color:#980a50">{{ __('home.devices') }}</span>
+            </h2>
+            <p class="mdc-desc">
+                {{ __('home.medical_aesthetic_description') }}
+            </p>
+        </div>
+
+        <div class="mdc-grid">
+            <!-- Bi-one Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="100">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.life_resonance') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز Bi-one (بي وان).png') }}" alt="Bi-one Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.title') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition1') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i> {{ __('home.stretch_marks') }}</li>
+                            <li><i class="bx bx-check-circle"></i> {{ __('home.scar_improvement') }}</li>
+                            <li><i class="bx bx-check-circle"></i> {{ __('home.skin_lifting') }}</li>
+                            <li><i class="bx bx-check-circle"></i> {{ __('home.skin_vitality') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Ultherapy Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="200">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.fda-approved') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الألثيرا (Ultherapy).png') }}" alt="Ultherapy Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.ultherapy_device') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition2') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.non_surgical') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.eyebrow') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.double') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.long-lasting') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- HIFU Card -->
+            <article class="mdc-card 
+            anima" data-aos="fade-up" data-aos-delay="300">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.high-intensity') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الهايفو (HIFU - الاتيفاء).png') }}" alt="HIFU Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.hifu_device') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition3') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.facial') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.wrinkle') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.body') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.safe') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Endolift Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="400">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.eufoton_laser') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الإندولفت (Endolift).png') }}" alt="Endolift Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.endolift_device') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition4') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.localized') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.immediate') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.extreme') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.operating') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Emsculpt Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="500">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.hifem_tech') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الإيمسكلبت (Emsculpt).png') }}" alt="Emsculpt Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.emsculpt') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition5') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.muscle') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.intense') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.total') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.physical') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Fractional CO2 Laser Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="600">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.resurfacing') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/الفراكشنال ليزر (Fractional CO2 Laser).png') }}" alt="Fractional CO2 Laser" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.fractional') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition6') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.acne') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.pigmentation') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.pore') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.advanced') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Exilis Ultra 360 Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="700">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.ultrasound') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الإكسيليس (Exilis Ultra 360).webp') }}" alt="Exilis Ultra 360 Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.exilis') }}</h3>
+                    <p class="mdc-definition">
+                        {{ __('home.Definition7') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.body') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.cellulite') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.face') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.skin') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Scarlet S Card -->
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="800">
+                <div class="mdc-image-wrapper">
+                    <div class="mdc-badge">{{ __('home.microneedling') }}</div>
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز السكارليت (Scarlet S).png') }}" alt="Scarlet S Device" />
+                </div>
+                <div class="mdc-content">
+                    <h3 class="mdc-title">{{ __('home.scarlet') }}</h3>
+                    <p class="mdc-definition">
+
+                        {{ __('home.Definition8') }}
+                    </p>
+                    <div class="mdc-benefits">
+                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <ul>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.pore_scar') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.sagging') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.instant') }}</li>
+                            <li><i class="bx bx-check-circle"></i>{{ __('home.oily_skin') }}</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
 <section class="section topz anima" data-aos="fade-zoom-in">
 
 
@@ -1295,7 +1678,7 @@
                                         <!-- Hidden input to submit value -->
                                         <input type="hidden" name="branch" id="branchInput" required>
                                     </div>
-                                     
+
                                     <div class="form-group">
                                         <label>{{ __('home.services') }}</label>
 
@@ -1306,7 +1689,7 @@
                                             </div>
                                             <div class="select-options">
                                                 @if($services->isNotEmpty())
-                                               
+
                                                 @foreach($services as $item)
                                                 <div class="option" data-value="{{ $item->id }}">
                                                     {{ app()->getLocale() === 'ar' ? $item->service_ar : $item->service_en }}

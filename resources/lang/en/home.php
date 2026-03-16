@@ -164,4 +164,94 @@ return [
         'branch7' => 'Riyadh - Qurtubah District',
 
 
+        'medical_aesthetic' => 'Advanced Medical Aesthetic',
+        'devices' => 'Devices',
+        'medical_aesthetic_description' => 'Experience world-class cosmetic and aesthetic care with our cutting-edge, state-of-the-art medical equipment
+                                            designed for your beauty and well-being.',
+
+
+        'life_resonance' => 'Life Resonance',
+        'title' => 'Bi-one Device',
+        'Definition1' => 'An Italian-made device based on "Life Resonance" technology. It emits low-frequency electromagnetic fields
+                          to reactivate collagen and elastin safely without surgery.',
+        'key_benefits' => ' Key Benefits',
+        'stretch_marks' => 'Stretch Marks Treatment',
+        'scar_improvement' => 'Scar Improvement',
+        'skin_lifting' => 'Skin Lifting & Tightening',
+        'skin_vitality' => 'Skin Vitality Restoration',
+
+
+        'fda-approved' => 'High-Intensity Focus',
+        'ultherapy_device' => 'Ultherapy Device',
+        'Definition2' => 'The only FDA-approved device for non-surgical face and neck lifting. It uses Micro-focused Ultrasound
+                          technology targeting deep skin layers (SMAS).',
+        'non_surgical' => ' Non-surgical Face Lift',
+        'eyebrow' => 'Eyebrow & Eyelid Lifting',
+        'double' => 'Double Chin Treatment',
+        'long-lasting' => 'Long-lasting Results',
+
+
+
+        'high-intensity' => 'High-Intensity Focus',
+        'hifu_device' => 'HIFU Device',
+        'Definition3' => 'High-Intensity Focused Ultrasound. A highly precise procedure where focused ultrasound waves create
+                          thermal coagulation points, strongly tightening the skin.',
+        'facial' => ' Facial Contouring (V-Line)',
+        'wrinkle' => ' Wrinkle Reduction',
+        'body' => ' Body Sagging Tightening',
+        'safe' => ' Safe Non-Surgical Alternative',
+
+
+        'eufoton_laser' => 'Eufoton Laser',
+        'endolift_device' => 'Endolift Device',
+        'Definition4' => 'Modern laser technology relying on fine optical fibers inserted under the skin. It targets water and fat
+                          in tissues, providing tightening from the "inside".',
+        'localized' => 'Localized Fat Dissolving',
+        'immediate' => 'Immediate Tightening',
+        'extreme' => 'Extreme Precision',
+        'operating' => 'No Operating Room Needed',
+
+
+
+
+        'hifem_tech' => 'HIFEM Tech',
+        'emsculpt' => 'Emsculpt Device',
+        'Definition5' => 'The worlds first device treating muscles, not just skin. It relies on HIFEM technology causing
+                          supramaximal muscle contractions unachievable through exercise.',
+        'muscle' => 'Muscle Mass Building',
+        'intense' => 'Intense Fat Burning',
+        'total' => 'Total Body Sculpting',
+        'physical' => 'Physical Strength Boost',
+
+
+        'resurfacing' => 'Skin Resurfacing',
+        'fractional' => 'Fractional CO2 Laser',
+        'Definition6' => 'An ablative laser that splits the beam into thousands of small dots. Healing healthy skin areas rapidly
+                          regenerate the damaged skin.',
+        'acne' => 'Acne Scar Treatment',
+        'pigmentation' => 'Pigmentation Removal',
+        'pore' => 'Pore Minimization',
+        'advanced' => 'Advanced Skin Resurfacing',
+
+
+        'ultrasound' => 'RF + Ultrasound',
+        'exilis' => 'Exilis Ultra 360',
+        'Definition7' => 'An advanced device combining Radiofrequency (RF) and Ultrasound simultaneously. Energy reaches different
+                          depths safely via a built-in cooling system.',
+        'body' => 'Body Contouring',
+        'cellulite' => 'Cellulite Treatment',
+        'face' => 'Face & Neck Tightening',
+        'skin' => 'Skin Quality Improvement',
+
+
+
+        'microneedling' => 'RF Microneedling',
+        'scarlet' => 'Scarlet S Device',
+        'Definition8' => 'A technique based on Microneedling connected to a head emitting Radiofrequency (RF). Heat is released
+                          directly into tissues for deep energy coverage.',
+        'pore_scar' => 'Pore & Scar Treatment',
+        'sagging' => 'Sagging Skin Tightening',
+        'instant' => 'Instant Freshnes',
+        'oily_skin' => 'Oily Skin Management',
+
 ];
