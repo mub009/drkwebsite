@@ -170,7 +170,7 @@
         }
 
         .hero-title {
-            font-size: 13vw !important;
+            font-size: 8vw !important;
         }
 
         .main-headline {
