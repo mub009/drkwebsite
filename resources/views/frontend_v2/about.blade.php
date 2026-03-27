@@ -49,10 +49,10 @@
       <div class="content-wrapper">
         <main class="main-content main-contentz">
           <div class="content-header">
-            <h1 class="brand-title">
+            <h4 class="brand-title">
               <span class="brand-name">DRK</span>
               <span class="brand-tagline">{{ __('about.tagline') }}</span>
-            </h1>
+            </h4>
             <h2 class="main-headline">
               <span class="headline-part"></span>
             </h2>
@@ -142,10 +142,10 @@
         </aside>
         <main class="main-content main-contentz">
           <div class="content-header">
-            <h1 class="brand-title">
+            <h4 class="brand-title">
               <span class="brand-name">DRK</span>
               <span class="brand-tagline">{{ __('about.tagline2') }}</span>
-            </h1>
+            </h4>
             <h2 class="main-headline">
               <span class="headline-part">{{ __('about.experts') }}</span>
             </h2>

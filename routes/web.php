@@ -176,7 +176,7 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['setLocale'])->group(function () {
 
     Route::get('/', [FrontEndController::class, 'home']);
-    Route::get('/home', [FrontEndController::class, 'home'])->name('home');
+    Route::get('/', [FrontEndController::class, 'home'])->name('home');
     Route::get('/articleDetails/{surl}', [FrontEndController::class, 'articleDetails'])->name('articleDetails');
     Route::get('/about', [FrontEndController::class, 'about'])->name('about');
     Route::get('/blog', [FrontEndController::class, 'blog'])->name('blog');

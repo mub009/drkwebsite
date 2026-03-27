@@ -8,10 +8,10 @@
 <footer class="hospital-footer topz">
     <section class="about-section">
         <div class="about-container">
-            <h1 class="about-title">
+            <h2 class="about-title">
                 {{ __('footer.about_title') }}
                 <span class="hospital-name">DRK</span>
-            </h1>
+</h2>
             <p class="hospital-credentials">
                 {{ __('footer.hospital_credentials') }}
             </p>

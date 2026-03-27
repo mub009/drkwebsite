@@ -148,17 +148,17 @@
                 type: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
-                    active: activeStatus
+                    with_carousel: activeStatus
                 },
                 success: function(response) {
                     if (response.status) {
-                        showAlert('Active status updated successfully!', 'success', 'alert-box1');
+                        showAlert('Carousel status updated successfully!', 'success', 'alert-box1');
                     } else {
-                        showAlert('Failed to update Active status.', 'danger', 'alert-box1');
+                        showAlert('Failed to update Carousel status.', 'danger', 'alert-box1');
                     }
                 },
                 error: function(xhr) {
-                    showAlert('Error updating Active status: ' + (xhr.responseJSON.message || 'Unknown error'), 'danger', 'alert-box1');
+                    showAlert('Error: ' + (xhr.responseJSON.message || 'Unknown error'), 'danger', 'alert-box1');
                 }
             });
         });
