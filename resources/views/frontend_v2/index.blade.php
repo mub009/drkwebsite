@@ -1168,10 +1168,10 @@
             <div class="content-wrapper">
                 <main class="main-content main-contentz">
                     <div class="content-header">
-                        <h1 class="brand-title">
+                        <h4 class="brand-title">
                             <span class="brand-name">{{ __('home.brand_name') }}</span>
                             <span class="brand-tagline">{{ __('home.brand_tagline') }}</span>
-                        </h1>
+                        </h4>
                         <h2 class="main-headline">
                             <span class="headline-part">{{ __('home.headline') }}</span>
                             <span class="headline-emphasis">{{ __('home.headline_emp') }}</span>
@@ -1951,6 +1951,8 @@
     </div>
 </section>
 
+@if($offers->count() > 0)
+
 <section class="section sectionzz anima" data-aos="fade-zoom-in" dir="ltr">
     <div class="departments-section h-cot">
         <div class="departments-container">
@@ -1963,17 +1965,14 @@
                         <span class="headline-part">{{ __('home.acrossOurSpecializedDeptL') }}</span>
                     </h2>
 
-
                     <p class="section-description" style="margin-top: 0px;">
                         {{ __('home.exploreDescrL') }}
                     </p>
                 </div>
 
-
                 <div class="slider-wrap">
                     <div class="slider-track">
 
-                        <!-- Track 1 -->
                         @foreach($offers as $offer)
                         <div class="slider-card">
                             <a href="https://wa.me/+966920010436" target="_blank">
@@ -1981,7 +1980,6 @@
                             </a>
                         </div>
                         @endforeach
-                        <!-- Track 2 -->
                         @foreach($offers as $offer)
                         <div class="slider-card">
                             <a href="https://wa.me/+966920010436" target="_blank">
@@ -1994,11 +1992,12 @@
                 </div>
 
             </div>
-
-
         </div>
     </div>
 </section>
+
+@endif
+
 
 <section class="section sectionzz">
     <div class="medical-facility-showcase d-zom" style="background-color: #ffffff !important;">
