@@ -20,6 +20,14 @@ class FrontEndController extends Controller
         Carbon::setLocale(app()->getLocale());
 
         $data = [];
+        if (app()->getLocale() == 'ar') {
+            $data['meta_title']       = 'مستشفى د. خالد الرحيمي - رعاية طبية متقدمة';
+            $data['meta_description'] = 'نقدم خدمات طبية وجراحية وتجميلية بأعلى معايير الجودة والخصوصية. احجز موعدك اليوم مع نخبة الأطباء.';
+        } else {
+            $data['meta_title']       = 'Dr. Khaled Al Ruhaimi Hospital - Advanced Care';
+            $data['meta_description'] = 'Get top medical, surgical & cosmetic care with trusted doctors and modern technology. Book your appointment today';
+        }
+
         $data['doctors'] = Doctor::join('departments', 'doctors.department', '=', 'departments.id')
             ->select(
                 'doctors.*',
@@ -44,6 +52,15 @@ class FrontEndController extends Controller
         Carbon::setLocale(app()->getLocale());
 
         $data = array();
+
+        if (app()->getLocale() == 'ar') {
+            $data['meta_title']       = 'مدونة الصحة والجمال - مستشفى د. خالد الرحيمي';
+            $data['meta_description'] = ' اكتشف نصائح طبية وجمالية موثوقة، واطّلع على أحدث المقالات حول الصحة والعناية. اقرأ مدونتنا الآن.';
+        } else {
+            $data['meta_title']       = 'Health & Beauty Blog - Dr. Khaled Al Ruhaimi';
+            $data['meta_description'] = ' Explore expert tips on health, beauty & wellness. Stay updated with trusted insights. Read our blog and learn more today';
+        }
+
         $data['articles'] = Article::latest()->paginate(4);
         return view('frontend_v2.blog', $data);
     }
@@ -105,7 +122,17 @@ class FrontEndController extends Controller
 
     public function about()
     {
-        return view('frontend_v2.about');
+        $data = [];
+
+        if (app()->getLocale() == 'ar') {
+            $data['meta_title']       = 'عن مستشفى د. خالد الرحيمي';
+            $data['meta_description'] = ' تعرف على رسالتنا وخدماتنا وأطبائنا المتميزين. اكتشف سبب ثقة المرضى بنا واحجز موعدك اليوم.';
+        } else {
+            $data['meta_title']       = 'About Dr. Khaled Al Ruhaimi Hospital';
+            $data['meta_description'] = 'Learn about our mission, expert doctors & advanced medical care. Discover why patients trust us and book your visit today.';
+        }
+
+        return view('frontend_v2.about', $data);
     }
 
     public function offer()
@@ -116,7 +143,17 @@ class FrontEndController extends Controller
 
     public function contact_us()
     {
-        $data['branch'] = Branch::orderBy('sort', 'asc')->get();
+        $data = [];
+
+        if (app()->getLocale() == 'ar') {
+            $data['meta_title']       = 'اتصل بمستشفى د. خالد الرحيمي اليوم';
+            $data['meta_description'] = ' لديك استفسار أو تحتاج لموعد؟ تواصل معنا الآن واحجز استشارتك مع نخبة الأطباء. نحن هنا لخدمتك.';
+        } else {
+            $data['meta_title']       = 'Contact Dr. Khaled Al Ruhaimi Hospital Today';
+            $data['meta_description'] = 'Have questions or need care? Contact us now and book your consultation with expert doctors. We\'re here to help you.';
+        }
+
+        $data['branch']   = Branch::orderBy('sort', 'asc')->get();
         $data['services'] = Service::all();
         return view('frontend_v2.contact', $data);
     }
@@ -155,6 +192,15 @@ class FrontEndController extends Controller
     public function services()
     {
         $data = [];
+
+        if (app()->getLocale() == 'ar') {
+            $data['meta_title']       = 'خدمات طبية وتجميلية - مستشفى د. خالد الرحيمي';
+            $data['meta_description'] = 'اختر من بين خدماتنا الطبية والجراحية والتجميلية المصممة لاحتياجاتك. اكتشف خبرة أطبائنا واحجز الآن.';
+        } else {
+            $data['meta_title']       = 'Medical & Cosmetic Services - Al Ruhaimi Hospital';
+            $data['meta_description'] = 'Discover advanced medical, surgical & cosmetic services tailored to your needs. Choose your specialty and book your visit now.';
+        }
+
         $data['doctors'] = Doctor::join('departments', 'doctors.department', '=', 'departments.id')
             ->select('doctors.*', 'departments.department_ar as department_ar', 'departments.department_en as department_en', 'departments.id as dept_id')
             ->orderBy('sort', 'asc')

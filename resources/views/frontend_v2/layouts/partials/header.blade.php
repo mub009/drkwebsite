@@ -8,6 +8,8 @@
     <title>
         @if(isset($article->meta_title))
         {{ $article->meta_title }}
+        @elseif(isset($meta_title))
+        {{ $meta_title }}
         @else
         {{ __('header.title') }}
         @endif
