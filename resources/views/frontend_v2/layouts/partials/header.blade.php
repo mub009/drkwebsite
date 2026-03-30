@@ -15,14 +15,17 @@
         @endif
     </title>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-ZBSXQC03RG');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZBSXQC03RG');
+    </script>
     <meta name="description" content="{{ isset($article) && isset($article->meta_description) ? $article->meta_description : __('header.description') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,17 +33,32 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
         rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" /> -->
+    <!-- <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> -->
+    <!-- <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" /> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet"> -->
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Preload -->
+    <link rel="preload" href="{{ asset('frontend_v2/css/style.css') }}" as="style">
+    <link rel="preload" href="{{ asset('frontend_v2/css/stylesub.css') }}" as="style">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 </head>
 
 <body>
