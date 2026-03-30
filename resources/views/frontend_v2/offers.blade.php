@@ -1176,7 +1176,7 @@
         </div>
     </a>
     @empty
-    <p style="text-align:center;">{{ __('offer.no_offers') }}</p>
+    <p style="text-align:center;"></p>
     @endforelse
 
 
