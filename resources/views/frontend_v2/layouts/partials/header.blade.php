@@ -15,24 +15,6 @@
         @endif
     </title>
 
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="high">
-
-    <!-- 2. Google Tag Manager (Optimized: Load after page load) -->
-    <script>
-        window.addEventListener('load', function() {
-            var script = document.createElement('script');
-            script.src = "https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG";
-            script.async = true;
-            document.head.appendChild(script);
-
-            script.onload = function() {
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-ZBSXQC03RG');
-            };
-        });
-    </script>
 
     <meta name="description" content="{{ isset($article) && isset($article->meta_description) ? $article->meta_description : __('header.description') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -42,17 +24,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
-    <!-- 4. Non-blocking CSS (Icons) -->
+    <!-- 4. Non-blocking CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.png') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image2.png') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/mage3.jpeg') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image4.jpg') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="high">
+
     <!-- Main Styles -->
     <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
 
-    <!-- 5. Scripts (AOS Fix Included) -->
+    <!-- 5. Scripts  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -191,7 +179,7 @@
                     <a href="{{ route('blog') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no3') }} </span>{{ __('header.nav_blog') }}</a>
                     <a href="{{ route('about') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no4') }} </span>{{ __('header.nav_about') }}</a>
                     <a href="{{ route('contact_us') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no5') }} </span>{{ __('header.nav_contact') }}</a>
-                    <a href="{{ route('offerFrontEnd') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no6') }} </span>{{ __('header.nav_offer') }}</a>
+                    <a href="{{ route('offers') }}" class="nav-link2"><span class="spanz">{{ __('header.nav_no6') }} </span>{{ __('header.nav_offer') }}</a>
                     <div class="footer-line2"></div>
                     <div class="footer-tail-end">
                         <div>{{ __('header.footer_tail') }}</div>
@@ -204,7 +192,7 @@
                 <a href="{{ route('blog') }}" class="nav-link">{{ __('header.nav_blog') }}</a>
                 <a href="{{ route('about') }}" class="nav-link">{{ __('header.nav_about') }}</a>
                 <a href="{{ route('contact_us') }}" class="nav-link">{{ __('header.nav_contact') }}</a>
-                <a href="{{ route('offerFrontEnd') }}" class="nav-link">{{ __('header.nav_offer') }}</a>
+                <a href="{{ route('offers') }}" class="nav-link">{{ __('header.nav_offer') }}</a>
             </nav>
             <div class="header-actions">
                 <div class="language-selector lnon" onclick="toggleLanguage()">
@@ -228,3 +216,13 @@
             </div>
         </div>
     </header>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-ZBSXQC03RG');
+    </script>
