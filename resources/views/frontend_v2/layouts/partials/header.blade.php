@@ -14,51 +14,57 @@
         {{ __('header.title') }}
         @endif
     </title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
+
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="high">
+
+    <!-- 2. Google Tag Manager (Optimized: Load after page load) -->
     <script>
-        window.dataLayer = window.dataLayer || [];
+        window.addEventListener('load', function() {
+            var script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG";
+            script.async = true;
+            document.head.appendChild(script);
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-ZBSXQC03RG');
+            script.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-ZBSXQC03RG');
+            };
+        });
     </script>
+
     <meta name="description" content="{{ isset($article) && isset($article->meta_description) ? $article->meta_description : __('header.description') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- 3. Fonts Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
-        rel="stylesheet" />
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" /> -->
-    <!-- <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> -->
-    <!-- <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" /> -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- 4. Non-blocking CSS (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
+
+    <!-- 5. Scripts (AOS Fix Included) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 120
+            });
+        });
+    </script>
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <!-- Preload -->
-    <link rel="preload" href="{{ asset('frontend_v2/css/style.css') }}" as="style">
-    <link rel="preload" href="{{ asset('frontend_v2/css/stylesub.css') }}" as="style">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-    <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 </head>
 
 <body>
