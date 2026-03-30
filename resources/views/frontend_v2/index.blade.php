@@ -1428,12 +1428,12 @@
                         {{ __('home.Definition1') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i> {{ __('home.stretch_marks') }}</li>
-                            <li><i class="bx bx-check-circle"></i> {{ __('home.scar_improvement') }}</li>
-                            <li><i class="bx bx-check-circle"></i> {{ __('home.skin_lifting') }}</li>
-                            <li><i class="bx bx-check-circle"></i> {{ __('home.skin_vitality') }}</li>
+                            <li><i class="ti ti-circle-check"></i> {{ __('home.stretch_marks') }}</li>
+                            <li><i class="ti ti-circle-check"></i> {{ __('home.scar_improvement') }}</li>
+                            <li><i class="ti ti-circle-check"></i> {{ __('home.skin_lifting') }}</li>
+                            <li><i class="ti ti-circle-check"></i> {{ __('home.skin_vitality') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1452,12 +1452,12 @@
                         {{ __('home.Definition2') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.non_surgical') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.eyebrow') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.double') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.long-lasting') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.non_surgical') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.eyebrow') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.double') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.long-lasting') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1477,12 +1477,12 @@
                         {{ __('home.Definition3') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.facial') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.wrinkle') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.body') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.safe') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.facial') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.wrinkle') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.body') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.safe') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1501,12 +1501,12 @@
                         {{ __('home.Definition4') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.localized') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.immediate') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.extreme') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.operating') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.localized') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.immediate') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.extreme') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.operating') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1525,12 +1525,12 @@
                         {{ __('home.Definition5') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.muscle') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.intense') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.total') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.physical') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.muscle') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.intense') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.total') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.physical') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1549,12 +1549,12 @@
                         {{ __('home.Definition6') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.acne') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.pigmentation') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.pore') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.advanced') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.acne') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.pigmentation') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.pore') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.advanced') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1573,12 +1573,12 @@
                         {{ __('home.Definition7') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.body') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.cellulite') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.face') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.skin') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.body') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.cellulite') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.face') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.skin') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1598,12 +1598,12 @@
                         {{ __('home.Definition8') }}
                     </p>
                     <div class="mdc-benefits">
-                        <h4 class="mdc-benefits-title"><i class="bx bxs-star"></i>{{ __('home.key_benefits') }}</h4>
+                        <h4 class="mdc-benefits-title"><i class="ti ti-star"></i>{{ __('home.key_benefits') }}</h4>
                         <ul>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.pore_scar') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.sagging') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.instant') }}</li>
-                            <li><i class="bx bx-check-circle"></i>{{ __('home.oily_skin') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.pore_scar') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.sagging') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.instant') }}</li>
+                            <li><i class="ti ti-circle-check"></i>{{ __('home.oily_skin') }}</li>
                         </ul>
                     </div>
 
