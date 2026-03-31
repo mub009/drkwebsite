@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.png') }}" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image2.png') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.webp') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image2.webp') }}" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/mage3.jpeg') }}" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image4.jpg') }}" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="high">
