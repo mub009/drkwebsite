@@ -1,8 +1,8 @@
 const images = [
-    "/frontend_v2/assets/images/image1.png",
-    "/frontend_v2/assets/images/image2.png",
+    "/frontend_v2/assets/images/image1.webp",
+    "/frontend_v2/assets/images/image2.webp",
     "/frontend_v2/assets/images/image3.jpeg",
-    "/frontend_v2/assets/images/image4.jpg",
+    "/frontend_v2/assets/images/image4.webp",
     "/frontend_v2/assets/images/image5.webp",
 ];
 

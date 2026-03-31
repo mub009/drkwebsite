@@ -1041,9 +1041,9 @@
             <div class="satisfied-patients">
                 <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
                     <img src="{{ asset('frontend_v2/assets/images/p1.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
-                    <img src="{{ asset('frontend_v2/assets/images/p2.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
-                    <img src="{{ asset('frontend_v2/assets/images/p3.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
-                    <img src="{{ asset('frontend_v2/assets/images/p4.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p2.webp') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p3.webp') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p4.webp') }}" alt="{{ __('imagealt.avatar') }}" />
                 </div>
                 <div class="text">
                     <span class="count">{{ __('home.count') }}</span><br />
@@ -1214,7 +1214,7 @@
                 <aside class="hero-image-section">
                     <div class="hero-image-container">
                         <div class="hero-image" style="
-                  background-image: url('frontend_v2/assets/Icons/Union.png');
+                  background-image: url('frontend_v2/assets/Icons/Union.webp');
                   background-size: cover;
                   background-position: center;
                 " role="img" aria-label="{{ __('imagealt.medical_facility') }}"></div>
@@ -1444,7 +1444,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="200">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.fda-approved') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الألثيرا (Ultherapy).png') }}" alt="Ultherapy Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices2.webp') }}" alt="Ultherapy Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.ultherapy_device') }}</h3>
@@ -1541,7 +1541,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="600">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.resurfacing') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/الفراكشنال ليزر (Fractional CO2 Laser).png') }}" alt="Fractional CO2 Laser" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices6.webp') }}" alt="Fractional CO2 Laser" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.fractional') }}</h3>
