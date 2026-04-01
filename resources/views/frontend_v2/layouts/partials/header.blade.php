@@ -22,35 +22,48 @@
     <!-- 3. Fonts Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-
+    <!-- <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"> -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    </noscript>
     <!-- 4. Non-blocking CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
+
+<!-- AOS CSS non-blocking -->
+<link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      media="print" 
+      onload="this.media='all'; initAOS();">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</noscript>
+
+<!-- AOS JS -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.webp') }}" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image2.webp') }}" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/mage3.jpeg') }}" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image4.jpg') }}" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.webp') }}" fetchpriority="high" type="image/webp">
+
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image3.jpeg') }}" fetchpriority="low">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image4.jpg') }}" fetchpriority="low">
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="low">
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <!-- 5. Scripts  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 1000,
-                once: true,
-                offset: 120
-            });
-        });
-    </script>
+
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
 </head>
@@ -141,12 +154,12 @@
 
         <!-- Phone -->
         <a href="tel:+966920010436" aria-label="Call Us">
-            <img src="{{ asset('frontend_v2/assets/logos/Telephone.png') }}" alt="Phone">
+            <img src="{{ asset('frontend_v2/assets/logos/Telephone.webp') }}" alt="Phone">
         </a>
 
         <!-- Instagram -->
         <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="_blank" aria-label="Instagram">
-            <img src="{{ asset('frontend_v2/assets/logos/insta.png') }}" alt="Instagram">
+            <img src="{{ asset('frontend_v2/assets/logos/insta.webp') }}" alt="Instagram">
         </a>
 
         <!-- TikTok -->
@@ -163,7 +176,7 @@
     <header class="site-header">
         <div class="header-container">
             <a href="{{ Route('home') }}">
-                <img src="{{ asset('frontend_v2/assets/Icons/logo.png') }}" alt="{{ __('imagealt.logo') }}" class="hospital-logo" />
+                <img src="{{ asset('frontend_v2/assets/Icons/logo.webp') }}" alt="{{ __('imagealt.logo') }}" class="hospital-logo" />
             </a>
             <div id="overlay" class="overlayz"></div>
             <nav class="main-nav2" id="mainNav2">
@@ -217,9 +230,10 @@
         </div>
     </header>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBSXQC03RG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
