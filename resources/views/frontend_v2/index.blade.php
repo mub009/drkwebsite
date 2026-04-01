@@ -918,10 +918,11 @@
 
 
 <section class="hero services-section " style="margin-top: 80px !important;">
-    @php $heroImg = asset('frontend_v2/assets/images/image1.webp'); @endphp
-    <div class="hero-bg hero-bg-1"
-        style="background-image: url('{{ $heroImg }}')"></div>
+    <div class="hero-bg hero-bg-1 show"
+        style="background-image: url('{{ asset('frontend_v2/assets/images/image1.webp') }}')">
+    </div>
     <div class="hero-bg hero-bg-2"></div>
+    <div class="hero-bg hero-bg-2 show"></div>
     <div class="overlay"></div>
 
     <div class="hero-content">
@@ -940,7 +941,7 @@
                     <button class="appointment-button">
                         <span class="appointment-text">{{ __('home.appointment') }}</span>
                         <div class="doctor-icon-container">
-                            <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" alt="{{ __('imagealt.arrow') }}" />
+                            <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" />
                         </div>
                     </button>
                 </a>
@@ -954,7 +955,7 @@
 <section class="services-section services-section">
     <div class="services-grid">
         <div class="services-header fade-in">
-            <img src="{{ asset('frontend_v2/assets/Icons/istock-doc.png') }}" alt="{{ __('imagealt.doctor') }}" class="services-image" />
+            <img src="{{ asset('frontend_v2/assets/Icons/istock-doc.png') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="services-image" />
             <h2 class="services-title">{{ __('home.service_title') }}</h2>
             <div class="section-divider-vertical"></div>
         </div>
@@ -1035,14 +1036,14 @@
         <!-- Left Section -->
         <div class="left-section">
             <div class="left-image">
-                <img src="{{ asset('frontend_v2/assets/images/image7.webp') }}" alt="{{ __('imagealt.doctor') }}" />
+                <img src="{{ asset('frontend_v2/assets/images/image7.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" />
             </div>
 
             <div class="badge-emergency" style="left: 90px !important;">{{ __('home.emergency') }}</div>
 
             <div class="satisfied-patients">
                 <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
-                    <img src="{{ asset('frontend_v2/assets/images/p1.jpg') }}" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/p1.webp') }}" alt="{{ __('imagealt.avatar') }}" />
                     <img src="{{ asset('frontend_v2/assets/images/p2.webp') }}" alt="{{ __('imagealt.avatar') }}" />
                     <img src="{{ asset('frontend_v2/assets/images/p3.webp') }}" alt="{{ __('imagealt.avatar') }}" />
                     <img src="{{ asset('frontend_v2/assets/images/p4.webp') }}" alt="{{ __('imagealt.avatar') }}" />

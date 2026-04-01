@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ isset($article) && isset($article->meta_description) ? $article->meta_description : __('header.description') }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
     <link rel="icon" href="{{ asset('frontend_v2/assets/logos/Logo2.png') }}">
     <title>
         @if(isset($article->meta_title))
@@ -15,55 +22,22 @@
         @endif
     </title>
 
+    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.webp') }}" fetchpriority="high" type="image/webp">
 
-    <meta name="description" content="{{ isset($article) && isset($article->meta_description) ? $article->meta_description : __('header.description') }}" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
 
-    <!-- 3. Fonts Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"> -->
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
     </noscript>
-    <!-- 4. Non-blocking CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
 
-<!-- AOS CSS non-blocking -->
-<link rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      media="print" 
-      onload="this.media='all'; initAOS();">
-<noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/tabler/tabler-icons.min.css') }}" media="print" onload="this.media='all'">
 
-<!-- AOS JS -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
-
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image1.webp') }}" fetchpriority="high" type="image/webp">
-
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image3.jpeg') }}" fetchpriority="low">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image4.jpg') }}" fetchpriority="low">
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/image5.webp') }}" fetchpriority="low">
-
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend_v2/css/stylesub.css') }}" />
-
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <!-- 5. Scripts  -->
-
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
     <script defer src="{{ asset('frontend_v2/js/scriptsub.js') }}"></script>
 </head>
