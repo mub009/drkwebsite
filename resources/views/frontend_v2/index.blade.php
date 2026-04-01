@@ -918,7 +918,9 @@
 
 
 <section class="hero services-section " style="margin-top: 80px !important;">
-    <div class="hero-bg hero-bg-1"></div>
+    @php $heroImg = asset('frontend_v2/assets/images/image1.webp'); @endphp
+    <div class="hero-bg hero-bg-1"
+        style="background-image: url('{{ $heroImg }}')"></div>
     <div class="hero-bg hero-bg-2"></div>
     <div class="overlay"></div>
 
@@ -1033,7 +1035,7 @@
         <!-- Left Section -->
         <div class="left-section">
             <div class="left-image">
-                <img src="{{ asset('frontend_v2/assets/images/image7.jpeg') }}" alt="{{ __('imagealt.doctor') }}" />
+                <img src="{{ asset('frontend_v2/assets/images/image7.webp') }}" alt="{{ __('imagealt.doctor') }}" />
             </div>
 
             <div class="badge-emergency" style="left: 90px !important;">{{ __('home.emergency') }}</div>
@@ -1075,7 +1077,7 @@
                 </div>
 
                 <div class="vertical-divider">
-                    <img src="{{ asset('frontend_v2/assets/images/Heart.png') }}" alt="{{ __('imagealt.heart') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/Heart.webp') }}" alt="{{ __('imagealt.heart') }}" />
                 </div>
 
                 <div class="column">
@@ -1103,7 +1105,7 @@
                 <h3>{{ __('home.card1') }}</h3>
                 <p>{{ __('home.card1_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii1.png') }}" alt="{{ __('imagealt.doctor') }}" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii1.webp') }}" alt="{{ __('imagealt.doctor') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -1420,7 +1422,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="100">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.life_resonance') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز Bi-one (بي وان).png') }}" alt="Bi-one Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices1.webp') }}" alt="Bi-one Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.title') }}</h3>
@@ -1465,11 +1467,10 @@
             </article>
 
             <!-- HIFU Card -->
-            <article class="mdc-card 
-            anima" data-aos="fade-up" data-aos-delay="300">
+            <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="300">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.high-intensity') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الهايفو (HIFU - الاتيفاء).png') }}" alt="HIFU Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices3.webp') }}" alt="HIFU Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.hifu_device') }}</h3>
@@ -1493,7 +1494,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="400">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.eufoton_laser') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الإندولفت (Endolift).png') }}" alt="Endolift Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices4.webp') }}" alt="Endolift Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.endolift_device') }}</h3>
@@ -1517,7 +1518,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="500">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.hifem_tech') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الإيمسكلبت (Emsculpt).png') }}" alt="Emsculpt Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices5.webp') }}" alt="Emsculpt Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.emsculpt') }}</h3>
@@ -1565,7 +1566,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="700">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.ultrasound') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز الإكسيليس (Exilis Ultra 360).webp') }}" alt="Exilis Ultra 360 Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices7.webp') }}" alt="Exilis Ultra 360 Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.exilis') }}</h3>
@@ -1589,7 +1590,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="800">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.microneedling') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/جهاز السكارليت (Scarlet S).png') }}" alt="Scarlet S Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices8.webp') }}" alt="Scarlet S Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.scarlet') }}</h3>

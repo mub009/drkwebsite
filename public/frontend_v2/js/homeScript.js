@@ -6,6 +6,17 @@ const images = [
     "/frontend_v2/assets/images/image5.webp",
 ];
 
+// Hero (first) image — HIGH priority
+// const heroPreload = new Image();
+// heroPreload.fetchPriority = "high";
+// heroPreload.src = images[0];
+
+images.slice(1).forEach(src => {
+    const img = new Image();
+    img.fetchPriority = "low";
+    img.src = src;
+}); 
+
 const bg1 = document.querySelector(".hero-bg-1");
 const bg2 = document.querySelector(".hero-bg-2");
 
@@ -13,8 +24,8 @@ let currentIndex = 0;
 let isBg1Active = true;
 
 // Initialize first background
-bg1.style.backgroundImage = `url('${images[0]}')`;
-bg1.classList.add("show");
+// bg1.style.backgroundImage = `url('${images[0]}')`;
+// bg1.classList.add("show");
 
 function changeBackground() {
     const nextIndex = (currentIndex + 1) % images.length;
