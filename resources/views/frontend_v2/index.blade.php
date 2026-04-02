@@ -913,14 +913,20 @@
             grid-template-columns: 1fr;
         }
     }
+    .hero-bg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 </style>
 
 
 
 <section class="hero services-section " style="margin-top: 80px !important;">
-    <div class="hero-bg hero-bg-1 show"
-        style="background-image: url('{{ asset('frontend_v2/assets/images/image1.webp') }}')">
+      <div class="hero-bg hero-bg-1 show">
+        <img src="{{ asset('frontend_v2/assets/images/image1.webp') }}" alt="Hero Image">
     </div>
+
     <div class="hero-bg hero-bg-2"></div>
     <div class="hero-bg hero-bg-2 show"></div>
     <div class="overlay"></div>
