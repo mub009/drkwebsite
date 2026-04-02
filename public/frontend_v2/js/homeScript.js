@@ -1,9 +1,9 @@
 const images = [
-    "/frontend_v2/assets/images/image1.webp",
-    "/frontend_v2/assets/images/image2.webp",
-    "/frontend_v2/assets/images/image3.jpeg",
-    "/frontend_v2/assets/images/image4.webp",
-    "/frontend_v2/assets/images/image5.webp",
+    "/frontend_v2/assets/images/carousel1.webp",
+    "/frontend_v2/assets/images/carousel2.webp",
+    "/frontend_v2/assets/images/carousel3.webp",
+    "/frontend_v2/assets/images/carousel4.webp",
+    "/frontend_v2/assets/images/carousel5.webp",
 ];
 
 // Hero (first) image — HIGH priority
@@ -24,8 +24,8 @@ let currentIndex = 0;
 let isBg1Active = true;
 
 // Initialize first background
-// bg1.style.backgroundImage = `url('${images[0]}')`;
-// bg1.classList.add("show");
+bg1.style.backgroundImage = `url('${images[0]}')`;
+bg1.classList.add("show");
 
 function changeBackground() {
     const nextIndex = (currentIndex + 1) % images.length;
