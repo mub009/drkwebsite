@@ -147,17 +147,17 @@
 
         <!-- Phone -->
         <a href="tel:+966920010436" aria-label="Call Us">
-            <img src="{{ asset('frontend_v2/assets/logos/Telephone.webp') }}" alt="Phone">
+            <img src="{{ asset('frontend_v2/assets/logos/Telephonelogo.webp') }}" alt="Phone">
         </a>
 
         <!-- Instagram -->
         <a href="https://www.instagram.com/dr.kalruhaimi?igsh=MWdzaDBlNXZwNHV2OA==" target="_blank" aria-label="Instagram">
-            <img src="{{ asset('frontend_v2/assets/logos/insta.webp') }}" alt="Instagram">
+            <img src="{{ asset('frontend_v2/assets/logos/instalogo.webp') }}" alt="Instagram">
         </a>
 
         <!-- TikTok -->
         <a href="https://www.tiktok.com/@drkhalidalruhaimi?lang=ar" target="_blank" aria-label="TikTok">
-            <img src="{{ asset('frontend_v2/assets/logos/ticktok.png') }}" alt="TikTok">
+            <img src="{{ asset('frontend_v2/assets/logos/ticktoklogo.webp') }}" alt="TikTok">
         </a>
     </div>
 
