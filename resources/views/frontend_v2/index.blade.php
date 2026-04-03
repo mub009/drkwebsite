@@ -913,11 +913,12 @@
             grid-template-columns: 1fr;
         }
     }
-    .hero-bg img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+
+    .services-image {
+        width: 154px;
+        height: 154px;
+    }
+    
 </style>
 
 
@@ -961,7 +962,7 @@
 <section class="services-section services-section">
     <div class="services-grid">
         <div class="services-header fade-in">
-            <img src="{{ asset('frontend_v2/assets/Icons/istock-doc.png') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="services-image" />
+            <img src="{{ asset('frontend_v2/assets/Icons/istock1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="services-image" />
             <h2 class="services-title">{{ __('home.service_title') }}</h2>
             <div class="section-divider-vertical"></div>
         </div>
@@ -991,7 +992,7 @@
         <!-- Doctors -->
         <article class="service-card">
             <div class="service-logo-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" loading="lazy"alt="{{ __('imagealt.logo') }}" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" loading="lazy" alt="{{ __('imagealt.logo') }}" />
             </div>
             <div class="service-icon-container">
                 <img src="{{ asset('frontend_v2/assets/Icons/Doctors.png') }}" loading="lazy" alt="{{ __('imagealt.doctor_icon') }}" />
@@ -1002,7 +1003,7 @@
                 <div class="learn-more-link">
                     <a href="{{ route('services') }}" class="menu-link" style="display: flex; align-items: center; gap: 8px;">
                         <div class="learn-more-arrow">
-                            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" loading="lazy"alt="{{ __('imagealt.arrow') }}" />
+                            <img src="{{ asset('frontend_v2/assets/Icons/arrow-down.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" />
                         </div>
                         <span class="learn-more-text">{{ __('home.learn_more') }}</span>
                     </a>
@@ -1013,7 +1014,7 @@
         <!-- Specialities -->
         <article class="service-card">
             <div class="service-logo-container">
-                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" loading="lazy"alt="{{ __('imagealt.logo') }}" />
+                <img src="{{ asset('frontend_v2/assets/Icons/Mask.png') }}" loading="lazy" alt="{{ __('imagealt.logo') }}" />
             </div>
             <div class="service-icon-container">
                 <img src="{{ asset('frontend_v2/assets/Icons/Specialities.png') }}" loading="lazy" alt="{{ __('imagealt.specialities') }}" />
@@ -1042,17 +1043,17 @@
         <!-- Left Section -->
         <div class="left-section">
             <div class="left-image">
-                <img src="{{ asset('frontend_v2/assets/images/image7.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" />
+                <img src="{{ asset('frontend_v2/assets/images/image1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" />
             </div>
 
             <div class="badge-emergency" style="left: 90px !important;">{{ __('home.emergency') }}</div>
 
             <div class="satisfied-patients">
                 <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
-                    <img src="{{ asset('frontend_v2/assets/images/p1.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
-                    <img src="{{ asset('frontend_v2/assets/images/p2.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
-                    <img src="{{ asset('frontend_v2/assets/images/p3.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
-                    <img src="{{ asset('frontend_v2/assets/images/p4.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/Patients1.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/Patients2.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/Patients3.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/Patients4.webp') }}" loading="lazy" alt="{{ __('imagealt.avatar') }}" />
                 </div>
                 <div class="text">
                     <span class="count">{{ __('home.count') }}</span><br />
@@ -1084,7 +1085,7 @@
                 </div>
 
                 <div class="vertical-divider">
-                    <img src="{{ asset('frontend_v2/assets/images/Heart.webp') }}" loading="lazy"alt="{{ __('imagealt.heart') }}" />
+                    <img src="{{ asset('frontend_v2/assets/images/Heart.webp') }}" loading="lazy" alt="{{ __('imagealt.heart') }}" />
                 </div>
 
                 <div class="column">
@@ -1115,7 +1116,7 @@
             <img src="{{ asset('frontend_v2/assets/images/ii1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
-                    <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy"alt="{{ __('imagealt.arrow') }}" /></a>
+                    <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
             </div>
         </div>
 
@@ -1160,7 +1161,7 @@
                 <h3>{{ __('home.card5') }}</h3>
                 <p>{{ __('home.card5_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" loading="lazy"alt="{{ __('imagealt.lab_test') }}" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" loading="lazy" alt="{{ __('imagealt.lab_test') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -1200,7 +1201,7 @@
                         </article>
                         <article class="feature-item">
                             <div class="feature-icon">
-                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}"  loading="lazy" alt="{{ __('imagealt.arrow_up') }}" />
+                                <img src="{{ asset('frontend_v2/assets/Icons/arrow-up-line.png') }}" loading="lazy" alt="{{ __('imagealt.arrow_up') }}" />
                             </div>
                             <h3 class="feature-title">{{ __('home.feature_title2') }}</h3>
                         </article>
@@ -1294,7 +1295,7 @@
                     <div>
                         <div class="satisfied-patients" style="position: unset; box-shadow: unset">
                             <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
-                                <img src="{{ asset('frontend_v2/assets/images/ds1.png') }}" loading="lazy"alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds1.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
                                 <img src="{{ asset('frontend_v2/assets/images/ds2.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
                                 <img src="{{ asset('frontend_v2/assets/images/ds3.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
                                 <img src="{{ asset('frontend_v2/assets/images/ds4.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
@@ -1365,7 +1366,7 @@
                             <article class="department-card">
                                 <div class="department-image-container">
                                     <img class="department-image"
-                                        src="{{ asset('images').'/'.$row->image}}" loading="lazy"alt="{{ app()->getLocale() === 'ar' ? $row->department_ar : $row->department_en }}"></img>
+                                        src="{{ asset('images').'/'.$row->image}}" loading="lazy" alt="{{ app()->getLocale() === 'ar' ? $row->department_ar : $row->department_en }}"></img>
                                     <div class="department-icon">
                                         <img src="{{ asset('frontend_v2/assets/Icons/Mainarrow.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" />
                                     </div>
@@ -1453,7 +1454,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="200">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.fda-approved') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices2.webp') }}" loading="lazy"alt="Ultherapy Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices2.webp') }}" loading="lazy" alt="Ultherapy Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.ultherapy_device') }}</h3>
@@ -1477,7 +1478,7 @@
             <article class="mdc-card anima" data-aos="fade-up" data-aos-delay="300">
                 <div class="mdc-image-wrapper">
                     <div class="mdc-badge">{{ __('home.high-intensity') }}</div>
-                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices3.webp') }}" loading="lazy"alt="HIFU Device" />
+                    <img src="{{ asset('/frontend_v2/assets/MedicalDevices/medicaldevices3.webp') }}" loading="lazy" alt="HIFU Device" />
                 </div>
                 <div class="mdc-content">
                     <h3 class="mdc-title">{{ __('home.hifu_device') }}</h3>
@@ -1885,7 +1886,7 @@
                         <h3 class="question-text">{{ __('home.faq_q1') }}</h3>
                         <button class="toggle-button" aria-expanded="true" aria-controls="answer-1">
                             <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" loading="lazy" alt="{{ __('imagealt.close') }}" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}"loading="lazy" alt="{{ __('imagealt.add') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-1">
@@ -1900,7 +1901,7 @@
                         <h3 class="question-text">{{ __('home.faq_q2') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-2">
                             <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" loading="lazy" alt="{{ __('imagealt.close') }}" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy"alt="{{ __('imagealt.add') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-2">
@@ -1915,7 +1916,7 @@
                         <h3 class="question-text">{{ __('home.faq_q3') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-3">
                             <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" loading="lazy" alt="{{ __('imagealt.close') }}" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy"alt="{{ __('imagealt.add') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-3">
@@ -1930,7 +1931,7 @@
                         <h3 class="question-text">{{ __('home.faq_q4') }}</h3>
                         <button class="toggle-button" aria-expanded="false" aria-controls="answer-4">
                             <img class="close-icon" src="{{ asset('frontend_v2/assets/Icons/Vector1.png') }}" loading="lazy" alt="{{ __('imagealt.close') }}" />
-                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy"alt="{{ __('imagealt.add') }}" />
+                            <img class="plus-icon" src="{{ asset('frontend_v2/assets/Icons/Vector.png') }}" loading="lazy" alt="{{ __('imagealt.add') }}" />
                         </button>
                     </div>
                     <div class="faq-answer" id="answer-4">
@@ -2033,7 +2034,7 @@
                                 </div>
                                 <div class="rating-container">
                                     <span class="rating-score">5.0</span>
-                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}"loading="lazy" alt="{{ __('imagealt.star') }}" class="rating-stars" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/star.png') }}" loading="lazy" alt="{{ __('imagealt.star') }}" class="rating-stars" />
                                 </div>
                             </div>
                             <blockquote class="testimonial-text">
@@ -2077,7 +2078,7 @@
                         <div class="card-header">
                             <div class="card-header-content">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="{{ __('imagealt.quote') }}"  loading="lazy"class="quote-image" />
+                                    <img src="{{ asset('frontend_v2/assets/Icons/xdot1.png') }}" alt="{{ __('imagealt.quote') }}" loading="lazy" class="quote-image" />
                                 </div>
                                 <div class="rating-container">
                                     <span class="rating-score">5.0</span>
