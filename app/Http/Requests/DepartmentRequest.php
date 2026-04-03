@@ -15,7 +15,7 @@ class DepartmentRequest extends FormRequest
         return [
             'department_en' => 'required|string|max:255',
             'department_ar' => 'required|string|max:255',
-            'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'department_details' => 'required|string',
             'slug' => 'required|string|unique:departments,slug|max:255',
         ];

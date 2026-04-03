@@ -35,7 +35,7 @@ $(document).ready(function() {
         let department = $('#department').val();
         let doctorDescription = doctorDescriptionContent.trim();
         let imageFile = $('#image')[0].files[0];
-        let validImageFormats = ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/svg+xml'];
+        let validImageFormats = ['image/jpeg', 'image/png','image/webp',  'image/jpg', 'image/gif', 'image/svg+xml'];
         let isValidImage = imageFile ? validImageFormats.includes(imageFile.type) : true;
         let errors = {};
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
         if (!nameAr) errors.name_ar = 'Name (Arabic) is required.';
         if (!doctorDescription || doctorDescription === '<p><br></p>') errors.doctor_description = 'Doctor Description is required.';
         if (!department) errors.department = 'Department is required.';
-        if (!isValidImage) errors.image = 'Image format must be JPEG, PNG, JPG, GIF, or SVG.';
+        if (!isValidImage) errors.image = 'Image format must be JPEG, PNG, JPG,webp, GIF, or SVG.';
 
         if (Object.keys(errors).length > 0) {
             for (let field in errors) {
