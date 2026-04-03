@@ -30,7 +30,7 @@ $(document).ready(function() {
 
         // Image format validation
         let imageFile = $('#image')[0].files[0];
-        let validImageFormats = ['image/jpeg', 'image/png', 'image/gif', 'image/jpg', 'image/svg+xml'];
+        let validImageFormats = ['image/jpeg', 'image/png','image/webp', 'image/gif', 'image/jpg', 'image/svg+xml'];
         let isValidImage = imageFile ? validImageFormats.includes(imageFile.type) : true;
 
         let errors = {};
@@ -40,7 +40,7 @@ $(document).ready(function() {
         if (!departmentDetails) errors.department_details = 'Department details are required.';
         if (!slug) errors.slug = 'Slug is required.';
         if (!image) errors.image = 'Department image is required.';
-        if (!isValidImage) errors.image = 'Image format must be JPEG, JPG, PNG, GIF, or SVG.';
+        if (!isValidImage) errors.image = 'Image format must be JPEG, JPG, PNG, webp, GIF, or SVG.';
 
         // Display error messages if any
         if (Object.keys(errors).length > 0) {

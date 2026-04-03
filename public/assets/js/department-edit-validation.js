@@ -29,7 +29,7 @@ $(document).ready(function() {
         let departmentDetails = $('#department_details').val().trim();
         let slug = $('#slug').val().trim();
         let imageFile = $('#image')[0].files[0];
-        let validImageFormats = ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/svg+xml'];
+        let validImageFormats = ['image/jpeg', 'image/png','image/webp',  'image/jpg', 'image/gif', 'image/svg+xml'];
         let isValidImage = imageFile ? validImageFormats.includes(imageFile.type) : true;
         let errors = {};
 
@@ -38,7 +38,7 @@ $(document).ready(function() {
         if (!departmentAr) errors.department_ar = 'Department (Arabic) is required.';
         if (!departmentDetails) errors.department_details = 'Department Details are required.';
         if (!slug) errors.slug = 'Slug is required.';
-        if (!isValidImage) errors.image = 'Image format must be JPEG, PNG, JPG, GIF, or SVG.';
+        if (!isValidImage) errors.image = 'Image format must be JPEG, PNG, JPG, GIF, webp, or SVG.';
 
         // If there are validation errors, display them and prevent form submission
         if (Object.keys(errors).length > 0) {

@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <link rel="preload" as="image" href="{{ asset('frontend_v2/assets/images/carousel1.webp') }}" fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="/frontend_v2/assets/images/carousel1.webp" fetchpriority="high">
 
     <!-- <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"> -->
