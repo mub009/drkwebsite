@@ -6,7 +6,7 @@
 
 <section class="hero services-section" style="margin-top:80px!important;">
 
-    <div class="hero-bg hero-bg-1 show"></div>
+    <div class="hero-bg hero-bg-1"></div>
     <div class="hero-bg hero-bg-2"></div>
 
     <div class="overlay"></div>
@@ -30,7 +30,7 @@
 
                         <div class="doctor-icon-container">
                             <img src="{{ asset('frontend_v2/assets/Icons/Arrow.png') }}"
-                                loading="lazy"
+                                loading="lazy" style="width:100%; height:auto;"
                                 alt="{{ __('imagealt.arrow') }}">
                         </div>
 
@@ -208,7 +208,7 @@
                 <h3>{{ __('home.card2') }}</h3>
                 <p>{{ __('home.card2_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii2.png') }}" loading="lazy" alt="{{ __('imagealt.confirmed_appointment') }}" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii2.webp') }}" loading="lazy" alt="{{ __('imagealt.confirmed_appointment') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -220,7 +220,7 @@
                 <h3>{{ __('home.card3') }}</h3>
                 <p>{{ __('home.card3_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii3.jpg') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii3.webp') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -244,7 +244,7 @@
                 <h3>{{ __('home.card5') }}</h3>
                 <p>{{ __('home.card5_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii5.jpg') }}" loading="lazy" alt="{{ __('imagealt.lab_test') }}" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/ii5.webp') }}" loading="lazy" alt="{{ __('imagealt.lab_test') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -378,11 +378,11 @@
                     <div>
                         <div class="satisfied-patients" style="position: unset; box-shadow: unset">
                             <div class="{{ app()->getLocale() == 'ar' ? 'avatarsz' : 'avatars' }}">
-                                <img src="{{ asset('frontend_v2/assets/images/ds1.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds2.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds3.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds4.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
-                                <img src="{{ asset('frontend_v2/assets/images/ds5.png') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds1.webp') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds2.webp') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds3.webp') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds4.webp') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
+                                <img src="{{ asset('frontend_v2/assets/images/ds5.webp') }}" loading="lazy" alt="{{ __('imagealt.photo') }}" />
                             </div>
                             <div class="text">
                                 <span class="count">+50</span><br />
