@@ -52,8 +52,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <link rel="preload" as="image" href="/frontend_v2/assets/images/carousel1.webp" fetchpriority="high">
-
     <!-- <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"> -->
     <!-- 4. Non-blocking CSS -->
@@ -142,7 +140,7 @@
     <div class="social-float">
         <!-- WhatsApp -->
         <a href="https://wa.me/+966920010436" target="_blank" aria-label="Chat on WhatsApp">
-            <img src="{{ asset('frontend_v2/assets/logos/WhatsApp11.svg.jpg') }}" alt="WhatsApp">
+            <img src="{{ asset('frontend_v2/assets/logos/WhatsApp.webp') }}" alt="WhatsApp">
         </a>
 
         <!-- Phone -->
@@ -169,7 +167,7 @@
     <header class="site-header">
         <div class="header-container">
             <a href="{{ Route('home') }}">
-                <img src="{{ asset('frontend_v2/assets/Icons/logo.webp') }}" alt="{{ __('imagealt.logo') }}" class="hospital-logo" />
+                <img src="{{ asset('frontend_v2/assets/Icons/drklogo.webp') }}" alt="{{ __('imagealt.logo') }}" class="hospital-logo" />
             </a>
             <div id="overlay" class="overlayz"></div>
             <nav class="main-nav2" id="mainNav2">
