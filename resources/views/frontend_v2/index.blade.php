@@ -196,7 +196,19 @@
                 <h3>{{ __('home.card1') }}</h3>
                 <p>{{ __('home.card1_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="card-image" />
+            <!-- <img src="{{ asset('frontend_v2/assets/images/ii1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="card-image" /> -->
+<img
+  src="{{ asset('frontend_v2/assets/images/ii1-medium.webp') }}"
+  srcset="
+    {{ asset('frontend_v2/assets/images/ii1-small.webp') }} 480w,
+    {{ asset('frontend_v2/assets/images/ii1-medium.webp') }} 768w,
+    {{ asset('frontend_v2/assets/images/ii1-large.png') }} 1200w
+  "
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
+  loading="lazy"
+  alt="Doctor"
+  class="card-image"
+/>
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -220,7 +232,7 @@
                 <h3>{{ __('home.card3') }}</h3>
                 <p>{{ __('home.card3_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii3.webp') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
+            <img src="{{ asset('frontend_v2/assets/images/iii3.webp') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
