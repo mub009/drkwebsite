@@ -126,7 +126,19 @@
         <!-- Left Section -->
         <div class="left-section">
             <div class="left-image">
-                <img src="{{ asset('frontend_v2/assets/images/emergencyimage1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" />
+                <!-- <img src="{{ asset('frontend_v2/assets/images/emergencyimage1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" /> -->
+                <img
+                    src="/frontend_v2/assets/images/emergencyimage1.webp"
+                    srcset="
+/frontend_v2/assets/images/emergencyimage1.webp 400w,
+ /frontend_v2/assets/images/emergencyimage1.webp 500w,
+ /frontend_v2/assets/images/emergencyimage1.webp 650w
+"
+                    sizes="(max-width:768px) 455px, 400px"
+                    loading="lazy"
+                    alt="طبيب"
+                    width="455"
+                    height="455">
             </div>
 
             <div class="badge-emergency" style="left: 90px !important;">{{ __('home.emergency') }}</div>
@@ -168,7 +180,17 @@
                 </div>
 
                 <div class="vertical-divider">
-                    <img src="{{ asset('frontend_v2/assets/images/Heart.webp') }}" loading="lazy" alt="{{ __('imagealt.heart') }}" />
+                    <!-- <img src="{{ asset('frontend_v2/assets/images/Heart.webp') }}" loading="lazy" alt="{{ __('imagealt.heart') }}" /> -->
+                    <img
+                        src="/frontend_v2/assets/images/Heart.webp"
+                        srcset="
+/frontend_v2/assets/images/Heart.webp 200w,
+/frontend_v2/assets/images/Heart.webp 400w,
+/frontend_v2/assets/images/Heart.webp 800w
+"
+                        sizes="(max-width:768px) 100vw, 350px"
+                        loading="lazy"
+                        alt="قلب">
                 </div>
 
                 <div class="column">
@@ -190,6 +212,7 @@
 
     </div>
 
+
     <div class="services-gridz">
         <div class="card light">
             <div class="card-content">
@@ -197,18 +220,17 @@
                 <p>{{ __('home.card1_desc') }}</p>
             </div>
             <!-- <img src="{{ asset('frontend_v2/assets/images/ii1.webp') }}" loading="lazy" alt="{{ __('imagealt.doctor') }}" class="card-image" /> -->
-<img
-  src="{{ asset('frontend_v2/assets/images/ii1-medium.webp') }}"
-  srcset="
-    {{ asset('frontend_v2/assets/images/ii1-small.webp') }} 480w,
-    {{ asset('frontend_v2/assets/images/ii1-medium.webp') }} 768w,
-    {{ asset('frontend_v2/assets/images/ii1-large.png') }} 1200w
-  "
-  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
-  loading="lazy"
-  alt="Doctor"
-  class="card-image"
-/>
+            <img
+                src="/frontend_v2/assets/images/ii1.webp"
+                srcset="
+/frontend_v2/assets/images/ii1.webp 200w,
+ /frontend_v2/assets/images/ii1.webp 400w,
+ /frontend_v2/assets/images/ii1.webp 800w
+"
+                sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 400px"
+                loading="lazy"
+                alt="Doctor"
+                class="card-image">
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -220,7 +242,18 @@
                 <h3>{{ __('home.card2') }}</h3>
                 <p>{{ __('home.card2_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii2.webp') }}" loading="lazy" alt="{{ __('imagealt.confirmed_appointment') }}" class="card-image" />
+            <!-- <img src="{{ asset('frontend_v2/assets/images/ii2.webp') }}" loading="lazy" alt="{{ __('imagealt.confirmed_appointment') }}" class="card-image" /> -->
+            <img
+                src="/frontend_v2/assets/images/ii2.webp"
+                srcset="
+/frontend_v2/assets/images/ii2.webp 200w,
+ /frontend_v2/assets/images/ii2.webp 450w,
+ /frontend_v2/assets/images/ii2.webp 900w
+"
+                sizes="(max-width:768px) 164px, 437px"
+                loading="lazy"
+                alt="موعد مؤكد"
+                class="card-image">
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -232,7 +265,18 @@
                 <h3>{{ __('home.card3') }}</h3>
                 <p>{{ __('home.card3_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/iii3.webp') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" />
+            <!-- <img src="{{ asset('frontend_v2/assets/images/iii3.webp') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" /> -->
+            <img
+                src="/frontend_v2/assets/images/iii3.webp"
+                srcset="
+/frontend_v2/assets/images/iii3.webp 200w,
+ /frontend_v2/assets/images/iii3.webp 450w,
+ /frontend_v2/assets/images/iii3.webp 900w
+"
+                sizes="(max-width:768px) 162px, 433px"
+                loading="lazy"
+                alt="توصيل الأدوية"
+                class="card-image">
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -244,7 +288,17 @@
                 <h3>{{ __('home.card4') }}</h3>
                 <p>{{ __('home.card4_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/card4.webp') }}" loading="lazy" alt="{{ __('imagealt.video_consultation') }}" class="card-image" />
+            <!-- <img src="{{ asset('frontend_v2/assets/images/card4.webp') }}" loading="lazy" alt="{{ __('imagealt.video_consultation') }}" class="card-image" /> -->
+            <img
+                src="/frontend_v2/assets/images/card4.webp"
+                srcset="
+/frontend_v2/assets/images/card4.webp 180w,
+/frontend_v2/assets/images/card4.webp 450w
+"
+                sizes="(max-width:768px) 437px, 164px"
+                loading="lazy"
+                alt="استشارة فيديو"
+                class="card-image">
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow4.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
@@ -256,7 +310,18 @@
                 <h3>{{ __('home.card5') }}</h3>
                 <p>{{ __('home.card5_desc') }}</p>
             </div>
-            <img src="{{ asset('frontend_v2/assets/images/ii5.webp') }}" loading="lazy" alt="{{ __('imagealt.lab_test') }}" class="card-image" />
+            <!-- <img src="{{ asset('frontend_v2/assets/images/ii5.webp') }}" loading="lazy" alt="{{ __('imagealt.lab_test') }}" class="card-image" /> -->
+            <img
+                src="/frontend_v2/assets/images/ii5.webp"
+                srcset="
+/frontend_v2/assets/images/ii5.webp 200w,
+ /frontend_v2/assets/images/ii5.webp 450w,
+ /frontend_v2/assets/images/ii5.webp 900w
+"
+                sizes="(max-width:768px) 433px, 162px"
+                loading="lazy"
+                alt="فحص مخبري"
+                class="card-image">
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src=" {{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>

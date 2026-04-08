@@ -140,7 +140,18 @@
     <div class="social-float">
         <!-- WhatsApp -->
         <a href="https://wa.me/+966920010436" target="_blank" aria-label="Chat on WhatsApp">
-            <img src="{{ asset('frontend_v2/assets/logos/WhatsApp.webp') }}" alt="WhatsApp">
+            <!-- <img src="{{ asset('frontend_v2/assets/logos/WhatsApp.webp') }}" alt="WhatsApp"> -->
+            <img
+                src="/frontend_v2/assets/logos/WhatsApp.webp"
+                srcset="
+/frontend_v2/assets/logos/WhatsApp.webp 32w,
+ /frontend_v2/assets/logos/WhatsApp.webp 64w,
+ /frontend_v2/assets/logos/WhatsApp.webp 128w
+"
+                sizes="(max-width:768px) 39px, 28px"
+                alt="WhatsApp"
+                width="39"
+                height="39">
         </a>
 
         <!-- Phone -->
