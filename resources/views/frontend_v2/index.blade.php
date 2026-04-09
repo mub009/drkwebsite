@@ -266,17 +266,18 @@
                 <p>{{ __('home.card3_desc') }}</p>
             </div>
             <!-- <img src="{{ asset('frontend_v2/assets/images/iii3.webp') }}" loading="lazy" alt="{{ __('imagealt.medication_delivery') }}" class="card-image" /> -->
-            <img
-                src="/frontend_v2/assets/images/iii3.webp"
-                srcset="
-/frontend_v2/assets/images/iii3.webp 200w,
- /frontend_v2/assets/images/iii3.webp 450w,
- /frontend_v2/assets/images/iii3.webp 900w
-"
-                sizes="(max-width:768px) 162px, 433px"
-                loading="lazy"
-                alt="توصيل الأدوية"
-                class="card-image">
+            <img 
+  src="/frontend_v2/assets/images/ii3-medium.webp"
+  srcset="
+    /frontend_v2/assets/images/ii3-small.webp 200w,
+    /frontend_v2/assets/images/ii3-medium.webp 450w,
+    /frontend_v2/assets/images/ii3-large.webp 800w
+  "
+  sizes="(max-width:768px) 162px, 433px"
+  loading="lazy"
+  alt="توصيل الأدوية"
+  class="card-image"
+>
             <div class="card-button light-btn">
                 <a href="{{ route('contact_us') }}" class="menu-link">
                     <img src="{{ asset('frontend_v2/assets/Icons/Arrow3.png') }}" loading="lazy" alt="{{ __('imagealt.arrow') }}" /></a>
