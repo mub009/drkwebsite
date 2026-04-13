@@ -36,13 +36,7 @@
     </noscript>
 
     <!-- AOS CSS non-blocking -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-        media="print"
-        onload="this.media='all'; initAOS();">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    </noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script defer src="{{ asset('frontend_v2/js/script.js') }}"></script>
