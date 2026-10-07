@@ -15,6 +15,26 @@
     @media(max-width:650px){.container{width:min(100% - 30px,520px)}.site-header{height:auto;min-height:72px;padding:12px 0}.nav{gap:10px;flex-wrap:wrap}.nav-links{order:3;width:100%;overflow:auto;justify-content:flex-start;padding:2px 0 4px;gap:20px}.nav-links a{white-space:nowrap}.nav-actions{margin-inline-start:auto}.book-button{padding:10px 14px}.brand-mark{width:39px;height:39px}.brand-copy strong{font-size:12px}.hero{padding:54px 0 43px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero h1{font-size:39px}.hero p{font-size:14px}.phone-panel{padding:22px}.branches{padding:53px 0 62px}.section-head{display:block}.section-head p{max-width:none}.filters{margin:20px 0 21px;gap:7px}.filter-button{padding:8px 12px}.branch-grid{grid-template-columns:1fr;gap:13px}.branch-card{min-height:0;padding:20px}.branch-desc{min-height:0}.bottom-contact{padding-bottom:55px}.bottom-card{display:block;padding:26px 23px}.bottom-copy h2{font-size:22px}.bottom-phone{margin-top:19px;justify-content:space-between}.bottom-phone .number{font-size:22px}.footer-main{display:grid;grid-template-columns:1fr;gap:22px}.footer-bottom{display:grid;grid-template-columns:1fr;gap:7px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
+  <main>
+  <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="ar">مستشفى د. خالد الرحيمي</span><span class="en">DR. KHALID ALRUHAIMI HOSPITAL</span></div>
+          <h1><span class="ar">نحن هنا<br>لخدمتكم</span><span class="en">We are here<br>to help</span></h1>
+          <p><span class="ar">تعرّف على فروعنا واختر الأقرب إليك. للاستفسارات والحجز، تواصل مع فريقنا عبر الرقم الموحد.</span><span class="en">Find the branch closest to you. For enquiries and appointments, contact our team using the central number.</span></p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#branches"><span class="ar">استعرض الفروع</span><span class="en">Explore branches</span><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="secondary-link" href="tel:+966920010436"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ar">920010436</span><span class="en">920010436</span></a>
+          </div>
+        </div>
+        <a class="phone-panel" href="tel:+966920010436" id="contact">
+          <div class="phone-top"><span class="phone-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="ar">للتواصل والحجز</span><span class="en">Contact and appointments</span></span></div>
+          <strong class="phone-number">920010436</strong>
+          <p class="phone-note"><span class="ar">رقم موحد للتواصل مع فريقنا</span><span class="en">One number to reach our team</span></p>
+          <div class="phone-bottom"><strong><span class="ar">اضغط للاتصال</span><span class="en">Tap to call</span></strong><span class="phone-arrow"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+      </div>
+    </section>
     <section class="branches" id="branches">
       <div class="container">
         <div class="section-head">
@@ -88,7 +108,13 @@
         </div>
       </div>
     </section>
-
+  <section class="bottom-contact">
+      <div class="container bottom-card">
+        <div class="bottom-copy"><h2><span class="ar">هل تحتاج إلى مساعدة؟</span><span class="en">Need help?</span></h2><p><span class="ar">فريقنا جاهز لمساعدتك في الاستفسارات والحجوزات.</span><span class="en">Our team is ready to help with appointments and enquiries.</span></p></div>
+        <div class="bottom-phone"><a class="number" href="tel:+966920010436">920010436</a><a class="primary-link" href="tel:+966920010436"><span class="ar">اتصل بنا</span><span class="en">Call us</span><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+    </section>
+        </main>
 @endsection
 
 @push('scripts')
