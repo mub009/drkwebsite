@@ -115,6 +115,26 @@
       </div>
     </section>
         </main>
+        <script>
+    const filterButtons = [...document.querySelectorAll('.filter-button')];
+    const branchCards = [...document.querySelectorAll('.branch-card')];
+    const emptyState = document.getElementById('emptyState');
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      const selected = button.dataset.filter;
+      let visible = 0;
+      filterButtons.forEach(item => {
+        const active = item === button;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      branchCards.forEach(card => {
+        const show = selected === 'all' || card.dataset.city === selected;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      emptyState.style.display = visible ? 'none' : 'block';
+    }));
+  </script>
 @endsection
 
 @push('scripts')
