@@ -2,109 +2,76 @@
 
 return [
 
-    'headline' => 'Contact Dr. Khaled Al Ruhaimi Hospital Today',
-    'description' => 'Have questions or need care? Contact us now and book your consultation with expert doctors. We’re here to help you.',
-    'head' => 'Contact Options',
-    'location' => 'Saudi Arabia – Prince Mohammed Bin Fahd Street',
-    'number' => '+966920010436',
-    'whatsapp' => 'Chat on WhatsApp',
-    'working_hours' => 'Working Hours',
-    'working_hours1' => '<strong>Saturday – Thursday:</strong> 9:00 AM – 10:00 PM',
-    'working_hours2' => '<strong>Friday:</strong> Closed',
+    // Hero
+    'hero_eyebrow' => 'DR. KHALID ALRUHAIMI HOSPITAL',
+    'hero_title' => 'We are here<br>to help',
+    'hero_text' => 'Find the branch closest to you. For enquiries and appointments, contact our team using the central number.',
+    'explore_branches' => 'Explore branches',
 
-    'branch1' => 'Dammam - Al Rayan District',
-    'branch2' => 'Dammam - Al Fursan District',
-    'branch3' => 'Al Khobar - Al Olaya District',
-    'branch4' => 'Al Khobar - Al Aziziyah District',
-    'branch5' => 'Al Khobar - Pepsi Street',
-    'branch6' => 'Al Ahsa - Al Fath District',
-    'branch7' => 'Riyadh - Qurtubah District',
+    // Phone panel
+    'phone_title' => 'Contact and appointments',
+    'phone_note' => 'One number to reach our team',
+    'tap_to_call' => 'Tap to call',
 
-    'services' => 'Services',
-    'servicesselect' => 'Select Services',
+    // Branches section
+    'locations_kicker' => 'OUR LOCATIONS',
+    'branches_title' => 'Our branches',
+    'branches_text' => 'Choose a branch, open its map, or visit its existing branch details page.',
 
-    // card 1
+    // Filters
+    'filter_label' => 'Filter branches',
+    'filter_all' => 'All branches',
+    'filter_dammam' => 'Dammam',
+    'filter_khobar' => 'Al Khobar',
+    'filter_ahsa' => 'Al Ahsa',
+    'filter_riyadh' => 'Riyadh',
 
-    'branch-name1' => 'Dr. Khaled Al Rahimi Hospital - Dammam ',
-    'branch-description1' => '24/7 full-service hospital with inpatient, surgical, and emergency care.',
-    'branch-manager1' => 'Branch Manager :',
-    'manager-name1' => 'A. Abdulwahab Al-Qahtani',
-    'manager-phoneno1' => 'Manager PhoneNo :',
-    'branchpin1' => 'Dammam Branch',
-    'branch-hours1' => 'Open 24/7 Hours',
-    'branchbtn1' => 'Contact Branch',
-    'Directions1' => 'Get Directions',
+    // Branch cards
+    'branch_number' => 'BRANCH :number',
 
-    // card 2
+    'branch_name1' => 'Dr. Khalid Alruhaimi Hospital',
+    'branch_location1' => 'Dammam',
+    'branch_description1' => 'A full-service hospital with inpatient, surgery, and emergency services available around the clock.',
+    'branch_hours1' => 'Open 24 hours',
 
-    'branch-name2' => 'Dr. Khaled Al Rahimi Medical Complex – Al Fursan',
-    'branch-description2' => 'A full-fledged general medical complex with advanced diagnostics and specialist consultations.',
-    'branch-manager2' => 'Branch Manager :',
-    'manager-name2' => 'A. Arwa Al-Ghamdi',
-    'manager-phoneno2' => 'Manager PhoneNo :',
-    'branch-namepin2' => 'Al Fursan Branch',
-    'branch-hours2' => '9:00 AM – 11:00 PM',
-    'branchbtn2' => 'Contact Branch',
-    'Directions2' => 'Get Directions',
+    'branch_name2' => 'Al Fursan Medical Complex',
+    'branch_location2' => 'Al Fursan · Dammam',
+    'branch_description2' => 'An integrated medical complex offering diagnostic services and specialist consultations.',
+    'branch_hours2' => '9:00 AM – 11:00 PM',
 
-    // card 3
+    'branch_name3' => 'Al Aziziyah Medical Complex',
+    'branch_location3' => 'Al Aziziyah · Al Khobar',
+    'branch_description3' => 'General and specialist services, comprehensive care, and integrated diagnostics.',
+    'branch_hours3' => '9:00 AM – 11:00 PM',
 
-    'branch-name3' => 'Dr. Khaled Al Rahimi Medical Complex – Aziziyah',
-    'branch-description3' => 'General and specialist services with comprehensive care and diagnostics.',
-    'branch-manager3' => 'Branch Manager :',
-    'manager-name3' => 'A. Kholoud Al-Omari',
-    'manager-phoneno3' => 'Manager PhoneNo :',
-    'branch-namepin3' => 'Aziziyah Branch',
-    'branch-hours3' => '9:00 AM – 11:00 PM',
-    'branchbtn3' => 'Contact Branch',
-    'Directions3' => 'Get Directions',
+    'branch_name4' => 'Pepsi Street Medical Complex',
+    'branch_location4' => 'Pepsi Street · Al Khobar',
+    'branch_description4' => 'A branch equipped with modern diagnostic technology and a specialist medical team.',
+    'branch_hours4' => '9:00 AM – 11:00 PM',
 
-    // card 4
+    'branch_name5' => 'Al Ahsa Medical Complex',
+    'branch_location5' => 'Al Fath · Al Ahsa',
+    'branch_description5' => 'Outpatient clinic services and advanced diagnostics in Al Ahsa.',
+    'branch_hours5' => '9:00 AM – 11:00 PM',
 
-    'branch-name4' => 'Dr. Khaled Al Rahimi Medical Complex – Pepsi Street',
-    'branch-description4' => 'Equipped with modern diagnostics and an expert medical team.',
-    'branch-manager4' => 'Branch Manager :',
-    'manager-name4' => 'A. Kholoud Al-Omari',
-    'manager-phoneno4' => 'Manager PhoneNo :',
-    'branch-namepin4' => 'Pepsi Street Branch',
-    'branch-hours4' => '9:00 AM – 11:00 PM',
-    'branchbtn4' => 'Contact Branch',
-    'Directions4' => 'Get Directions',
+    'branch_name6' => 'Al Olaya Medical Complex',
+    'branch_location6' => 'Al Olaya · Al Khobar',
+    'branch_description6' => 'Specialist care focused on patient comfort and modern technology.',
+    'branch_hours6' => '9:00 AM – 11:00 PM',
 
-    // card 5
+    'branch_name7' => 'Dr. Khalid Alruhaimi Hospital – Riyadh',
+    'branch_location7' => 'Qurtubah · Riyadh',
+    'branch_description7' => 'Contact our team for the branch location and visit details.',
+    'branch_hours7' => 'Call to confirm opening hours',
 
-    'branch-name5' => 'Dr. Khaled Al Rahimi Medical Complex – Al-Ahsa',
-    'branch-description5' => 'Advanced outpatient and diagnostic services in the Al-Ahsa region.',
-    'branch-manager5' => 'Branch Manager :',
-    'manager-name5' => 'A. Kamila Al-Essa',
-    'manager-phoneno5' => 'Manager PhoneNo :',
-    'branch-namepin5' => 'Al-Ahsa Branch',
-    'branch-hours5' => '9:00 AM – 11:00 PM',
-    'branchbtn5' => 'Contact Branch',
-    'Directions5' => 'Get Directions',
+    'directions' => 'Directions',
+    'branch_details' => 'Branch details',
+    'call_for_directions' => 'Call for directions',
+    'no_branches' => 'No branches in this area.',
 
-    // card 6
-
-    'branch-name6' => 'Dr. Khaled Al Rahimi Medical Complex – Al-Ulya District',
-    'branch-description6' => 'Specialist care with a focus on patient comfort and technology.',
-    'branch-manager6' => 'Branch Manager :',
-    'manager-name6' => 'A. Ilham Al-Maliki',
-    'manager-phoneno6' => 'Manager PhoneNo :',
-    'branch-namepin6' => 'Al-Ulya Branch',
-    'branch-hours6' => '9:00 AM – 11:00 PM',
-    'branchbtn6' => 'Contact Branch',
-    'Directions6' => 'Get Directions',
-
-    // card 7
-
-    'branch-name7' => 'Dr. Khaled Al Rahimi Medical Complex – Al Fursan',
-    'branch-description7' => 'A full-fledged general medical complex with advanced diagnostics and specialist consultations.',
-    'branch-manager7' => 'Branch Manager :',
-    'manager-name7' => 'A. Arwa Al-Ghamdi',
-    'manager-phoneno7' => 'Manager PhoneNo :',
-    'branch-namepin7' => 'Al Fursan Branch',
-    'branch-hours7' => '9:00 AM – 11:00 PM',
-    'branchbtn7' => 'Contact Branch',
-    'Directions7' => 'Get Directions',
+    // Bottom contact
+    'need_help' => 'Need help?',
+    'need_help_text' => 'Our team is ready to help with appointments and enquiries.',
+    'call_us' => 'Call us',
 
 ];
