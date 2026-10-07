@@ -15,8 +15,8 @@
     @media(max-width:650px){.container{width:min(100% - 30px,520px)}.site-header{height:auto;min-height:72px;padding:12px 0}.nav{gap:10px;flex-wrap:wrap}.nav-links{order:3;width:100%;overflow:auto;justify-content:flex-start;padding:2px 0 4px;gap:20px}.nav-links a{white-space:nowrap}.nav-actions{margin-inline-start:auto}.book-button{padding:10px 14px}.brand-mark{width:39px;height:39px}.brand-copy strong{font-size:12px}.hero{padding:54px 0 43px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero h1{font-size:39px}.hero p{font-size:14px}.phone-panel{padding:22px}.branches{padding:53px 0 62px}.section-head{display:block}.section-head p{max-width:none}.filters{margin:20px 0 21px;gap:7px}.filter-button{padding:8px 12px}.branch-grid{grid-template-columns:1fr;gap:13px}.branch-card{min-height:0;padding:20px}.branch-desc{min-height:0}.bottom-contact{padding-bottom:55px}.bottom-card{display:block;padding:26px 23px}.bottom-copy h2{font-size:22px}.bottom-phone{margin-top:19px;justify-content:space-between}.bottom-phone .number{font-size:22px}.footer-main{display:grid;grid-template-columns:1fr;gap:22px}.footer-bottom{display:grid;grid-template-columns:1fr;gap:7px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
-  <main>
-  <section class="hero">
+ <main>
+    <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">{{ __('contact.hero_eyebrow') }}</div>
@@ -24,17 +24,18 @@
           <p>{{ __('contact.hero_text') }}</p>
           <div class="hero-actions">
             <a class="primary-link" href="#branches">{{ __('contact.explore_branches') }}<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a class="secondary-link" href="tel:+966920010436"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>920010436</a>
+            <a class="secondary-link" href="tel:+966920010436"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><bdi class="latin-numerals">920010436</bdi></a>
           </div>
         </div>
         <a class="phone-panel" href="tel:+966920010436" id="contact">
           <div class="phone-top"><span class="phone-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>{{ __('contact.phone_title') }}</span></div>
-          <strong class="phone-number">920010436</strong>
+          <strong class="phone-number"><bdi class="latin-numerals">920010436</bdi></strong>
           <p class="phone-note">{{ __('contact.phone_note') }}</p>
           <div class="phone-bottom"><strong>{{ __('contact.tap_to_call') }}</strong><span class="phone-arrow"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
         </a>
       </div>
     </section>
+
     <section class="branches" id="branches">
       <div class="container">
         <div class="section-head">
@@ -54,7 +55,7 @@
             <p class="branch-location">{{ __('contact.branch_location1') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description1') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours1') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/UmEhmnbEFADFbEnw9" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link details" href="https://www.dralruhaimi.com/branch_location/13">{{ __('contact.branch_details') }}</a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/UmEhmnbEFADFbEnw9" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <article class="branch-card" data-city="dammam">
             <div class="card-top"><span class="branch-number">{{ __('contact.branch_number', ['number' => '02']) }}</span><span class="pin-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg></span></div>
@@ -62,7 +63,7 @@
             <p class="branch-location">{{ __('contact.branch_location2') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description2') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours2') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link details" href="https://www.dralruhaimi.com/branch_location/14">{{ __('contact.branch_details') }}</a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/kyaTLQfZhAZBBZAw6" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <article class="branch-card" data-city="khobar">
             <div class="card-top"><span class="branch-number">{{ __('contact.branch_number', ['number' => '03']) }}</span><span class="pin-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg></span></div>
@@ -70,7 +71,7 @@
             <p class="branch-location">{{ __('contact.branch_location3') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description3') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours3') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/Tn1q36mtuBZrPqBNA" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link details" href="https://www.dralruhaimi.com/branch_location/15">{{ __('contact.branch_details') }}</a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/Tn1q36mtuBZrPqBNA" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <article class="branch-card" data-city="khobar">
             <div class="card-top"><span class="branch-number">{{ __('contact.branch_number', ['number' => '04']) }}</span><span class="pin-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg></span></div>
@@ -78,7 +79,7 @@
             <p class="branch-location">{{ __('contact.branch_location4') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description4') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours4') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/HdWz6dGk3g4fpgbt6" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link details" href="https://www.dralruhaimi.com/branch_location/17">{{ __('contact.branch_details') }}</a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/HdWz6dGk3g4fpgbt6" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <article class="branch-card" data-city="ahsa">
             <div class="card-top"><span class="branch-number">{{ __('contact.branch_number', ['number' => '05']) }}</span><span class="pin-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg></span></div>
@@ -86,7 +87,7 @@
             <p class="branch-location">{{ __('contact.branch_location5') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description5') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours5') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/YmvK83EXgKMcY43v9" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link details" href="https://www.dralruhaimi.com/branch_location/16">{{ __('contact.branch_details') }}</a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/YmvK83EXgKMcY43v9" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <article class="branch-card" data-city="khobar">
             <div class="card-top"><span class="branch-number">{{ __('contact.branch_number', ['number' => '06']) }}</span><span class="pin-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg></span></div>
@@ -94,7 +95,7 @@
             <p class="branch-location">{{ __('contact.branch_location6') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description6') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours6') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/wBrgsji62MzwmT4i6" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link details" href="https://www.dralruhaimi.com/branch_location/18">{{ __('contact.branch_details') }}</a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/wBrgsji62MzwmT4i6" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <article class="branch-card" data-city="riyadh">
             <div class="card-top"><span class="branch-number">{{ __('contact.branch_number', ['number' => '07']) }}</span><span class="pin-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg></span></div>
@@ -102,19 +103,20 @@
             <p class="branch-location">{{ __('contact.branch_location7') }}</p>
             <p class="branch-desc">{{ __('contact.branch_description7') }}</p>
             <div class="branch-meta"><svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>{{ __('contact.branch_hours7') }}</span></div>
-            <div class="card-actions"><a class="small-link map" href="tel:+966920010436">{{ __('contact.call_for_directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+            <div class="card-actions"><a class="small-link map" href="https://maps.app.goo.gl/RbHjkgpxM6qpvGwu5?g_st=ic" target="_blank" rel="noopener">{{ __('contact.directions') }}<svg class="icon sm" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="small-link contact" href="tel:+966920010436">{{ __('contact.branch_contact') }}</a></div>
           </article>
           <p class="empty-state" id="emptyState">{{ __('contact.no_branches') }}</p>
         </div>
       </div>
     </section>
-  <section class="bottom-contact">
+
+    <section class="bottom-contact">
       <div class="container bottom-card">
         <div class="bottom-copy"><h2>{{ __('contact.need_help') }}</h2><p>{{ __('contact.need_help_text') }}</p></div>
-        <div class="bottom-phone"><a class="number" href="tel:+966920010436">920010436</a><a class="primary-link" href="tel:+966920010436">{{ __('contact.call_us') }}<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="bottom-phone"><a class="number" href="tel:+966920010436"><bdi class="latin-numerals">920010436</bdi></a><a class="primary-link" href="tel:+966920010436">{{ __('contact.call_us') }}<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2.2 1.7a15 15 0 0 0 4.5 4.5L16 12l5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-2.2.8-4 2-4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
     </section>
-        </main>
+  </main>
         <script>
     const filterButtons = [...document.querySelectorAll('.filter-button')];
     const branchCards = [...document.querySelectorAll('.branch-card')];
@@ -138,5 +140,5 @@
 @endsection
 
 @push('scripts')
-<script src="{{ asset('frontend_v2/js/contactus.js') }}" defer></script>
+<script src="{{ asset('frontend_v2/js/contactfilter.js') }}" defer></script>
 @endpush

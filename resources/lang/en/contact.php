@@ -16,7 +16,7 @@ return [
     // Branches section
     'locations_kicker' => 'OUR LOCATIONS',
     'branches_title' => 'Our branches',
-    'branches_text' => 'Choose a branch, open its map, or visit its existing branch details page.',
+    'branches_text' => 'Choose a branch to view its map location, or contact us using the central number.',
 
     // Filters
     'filter_label' => 'Filter branches',
@@ -37,34 +37,35 @@ return [
     'branch_name2' => 'Al Fursan Medical Complex',
     'branch_location2' => 'Al Fursan · Dammam',
     'branch_description2' => 'An integrated medical complex offering diagnostic services and specialist consultations.',
-    'branch_hours2' => '9:00 AM – 11:00 PM',
+    'branch_hours2' => '9:00 AM – 9:00 PM',
 
     'branch_name3' => 'Al Aziziyah Medical Complex',
     'branch_location3' => 'Al Aziziyah · Al Khobar',
     'branch_description3' => 'General and specialist services, comprehensive care, and integrated diagnostics.',
-    'branch_hours3' => '9:00 AM – 11:00 PM',
+    'branch_hours3' => '1:00 PM – 9:00 PM',
 
     'branch_name4' => 'Pepsi Street Medical Complex',
     'branch_location4' => 'Pepsi Street · Al Khobar',
     'branch_description4' => 'A branch equipped with modern diagnostic technology and a specialist medical team.',
-    'branch_hours4' => '9:00 AM – 11:00 PM',
+    'branch_hours4' => '1:00 PM – 9:00 PM',
 
     'branch_name5' => 'Al Ahsa Medical Complex',
     'branch_location5' => 'Al Fath · Al Ahsa',
     'branch_description5' => 'Outpatient clinic services and advanced diagnostics in Al Ahsa.',
-    'branch_hours5' => '9:00 AM – 11:00 PM',
+    'branch_hours5' => '1:00 PM – 9:00 PM',
 
     'branch_name6' => 'Al Olaya Medical Complex',
     'branch_location6' => 'Al Olaya · Al Khobar',
     'branch_description6' => 'Specialist care focused on patient comfort and modern technology.',
-    'branch_hours6' => '9:00 AM – 11:00 PM',
+    'branch_hours6' => '1:00 PM – 9:00 PM',
 
-    'branch_name7' => 'Dr. Khalid Alruhaimi Hospital – Riyadh',
+    'branch_name7' => 'Dr. Khalid Alruhaimi Medical Complex – Qurtubah',
     'branch_location7' => 'Qurtubah · Riyadh',
-    'branch_description7' => 'Contact our team for the branch location and visit details.',
-    'branch_hours7' => 'Call to confirm opening hours',
+    'branch_description7' => 'Dr. Khalid Alruhaimi Medical Complex in Qurtubah, Riyadh.',
+    'branch_hours7' => '1:00 PM – 9:00 PM',
 
     'directions' => 'Directions',
+    'branch_contact' => 'Contact',
     'branch_details' => 'Branch details',
     'call_for_directions' => 'Call for directions',
     'no_branches' => 'No branches in this area.',
